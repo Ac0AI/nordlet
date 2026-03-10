@@ -9,9 +9,10 @@ import {
 
 export const SITE = {
   name: "NordLet",
-  tagline: "Slipp kemikalier och tömningsstationer — för gott.",
+  category: "Frihetstoan",
+  tagline: "Frihetstoan. För dig som vägrar planera efter tömningsstationer.",
   description:
-    "Den vattenlösa husbilstoaletten som ger dig total frihet. Ingen anslutning. Inga kemikalier. Bara ren komfort.",
+    "Nordens första vattenlösa husbilstoalett. Ingen anslutning. Inga kemikalier. Total frihet, oavsett var du parkerar.",
   email: "info@nordlet.se",
   phone: "+46 70 123 45 67",
 };
@@ -26,9 +27,9 @@ export const NAV_LINKS = [
 
 // --- SOCIAL PROOF (Cialdini #3) --- specifika siffror
 export const SOCIAL_PROOF_STATS = [
-  { number: "2 300+", label: "nöjda husbilsägare i Norden" },
+  { number: "2 300+", label: "har valt Frihetstoan" },
   { number: "4.8", label: "av 5 i snittbetyg" },
-  { number: "96%", label: "rekommenderar NordLet" },
+  { number: "96%", label: "rekommenderar till andra" },
 ];
 
 export const PAIN_POINTS = [
@@ -81,7 +82,7 @@ export const FEATURES = [
     icon: Hand,
     title: "Ett knapptryck",
     description:
-      "Tryck en knapp — klart. Ingen manuell hantering av avfall.",
+      "Tryck en knapp, klart. Ingen manuell hantering av avfall.",
   },
   {
     icon: Leaf,
@@ -136,14 +137,14 @@ export const TESTIMONIALS = [
     name: "Margareta & Lars",
     location: "Göteborg",
     vehicle: "Hymer B-ML 780",
-    text: "Vi har rest med husbil i 15 år och det här är det bästa vi köpt. Att slippa tömningsstationerna är en dröm. Barnen skrattade åt oss — tills de provade själva på semestern. Nu vill de ha en till sin egen husvagn.",
+    text: "Vi har rest med husbil i 15 år och det här är det bästa vi köpt. Att slippa tömningsstationerna är en dröm. Barnen skrattade åt oss, tills de provade själva på semestern. Nu vill de ha en till sin egen husvagn.",
     rating: 5,
   },
   {
     name: "Bengt",
     location: "Malmö",
     vehicle: "Knaus Van TI Plus",
-    text: "Jag var skeptisk först — min fru fick övertyga mig. Men efter två månader vill jag aldrig gå tillbaka. Helt luktfritt, otroligt enkelt. Ångrar bara att jag inte köpte den tidigare.",
+    text: "Jag var skeptisk först, min fru fick övertyga mig. Men efter två månader vill jag aldrig gå tillbaka. Helt luktfritt, otroligt enkelt. Ångrar bara att jag inte köpte den tidigare.",
     rating: 5,
   },
   {
@@ -166,7 +167,7 @@ export const FAQS = [
   {
     question: "Hur fungerar det egentligen?",
     answer:
-      "NordLet använder en patenterad värmeförseglingsteknik. Efter varje användning förseglas avfallet automatiskt i en biologiskt nedbrytbar påse. Helt utan vatten, kemikalier eller manuell hantering. Du trycker på en knapp — resten sker automatiskt.",
+      "NordLet använder en patenterad värmeförseglingsteknik. Efter varje användning förseglas avfallet automatiskt i en biologiskt nedbrytbar påse. Helt utan vatten, kemikalier eller manuell hantering. Du trycker på en knapp. Resten sker automatiskt.",
   },
   {
     question: "Luktar det verkligen inte?",
@@ -176,7 +177,7 @@ export const FAQS = [
   {
     question: "Är det svårt att installera?",
     answer:
-      "Nej, det kräver ingen installation alls. NordLet är fristående och batteridrift — du ställer den bara på plats. Ingen vattenanslutning, inget avlopp, inga kablar. De flesta har den igång inom 5 minuter.",
+      "Nej, det kräver ingen installation alls. NordLet är fristående och batteridrift. Du ställer den bara på plats. Ingen vattenanslutning, inget avlopp, inga kablar. De flesta har den igång inom 5 minuter.",
   },
   {
     question: "Hur lång tid räcker batteriet?",
@@ -191,7 +192,7 @@ export const FAQS = [
   {
     question: "Var köper jag påsar?",
     answer:
-      "Påsar beställer du enkelt via oss. Varje rulle räcker till 30 användningar. Vi erbjuder också prenumeration så du aldrig står utan — och då får du 15% rabatt.",
+      "Påsar beställer du enkelt via oss. Varje rulle räcker till 30 användningar. Vi erbjuder också prenumeration så du aldrig står utan, och då får du 15% rabatt.",
   },
   {
     question: "Kan jag returnera om jag inte är nöjd?",

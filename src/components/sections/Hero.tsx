@@ -28,7 +28,7 @@ export function Hero() {
               ))}
             </div>
             <span className="text-sm text-text-muted font-medium">
-              Älskad av 2 300+ husbilsägare i Norden
+              2 300+ husbilsägare har valt Frihetstoan
             </span>
           </motion.div>
 
@@ -40,10 +40,12 @@ export function Hero() {
             className="text-4xl sm:text-5xl lg:text-6xl leading-[1.15] tracking-tight text-text"
             style={{ fontFamily: "var(--font-dm-serif)" }}
           >
-            Slipp tömningsstationer
+            Frihetstoan
+            <span className="text-accent italic">. För dig som</span>
             <br />
-            och kemikalier —{" "}
-            <span className="text-accent italic">för gott.</span>
+            vägrar planera efter
+            <br className="sm:hidden" />{" "}
+            tömningsstationer.
           </motion.h1>
 
           {/* Subheadline — Cialdini #7 Unity: "vi som älskar husbilslivet" */}
@@ -53,9 +55,9 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl mx-auto"
           >
-            Du som älskar friheten med husbilen vet att toalettfrågan är det
-            enda krånglet. NordLet löser det — med batteridrift,
-            värmeförsegling och biologiskt nedbrytbara påsar.
+            NordLet Frihetstoan är Nordens första vattenlösa husbilstoalett.
+            Ingen vattenanslutning. Inga kemikalier. Inga tömningsstationer.
+            Bara total frihet. Oavsett var du parkerar.
           </motion.p>
 
           {/* CTA + Scarcity — Cialdini #6 */}
@@ -67,7 +69,7 @@ export function Hero() {
           >
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button href="#bestall" size="large">
-                Beställ din NordLet nu
+                Beställ Frihetstoan nu
               </Button>
               <Button
                 href="#sa-fungerar-det"
@@ -79,7 +81,7 @@ export function Hero() {
             </div>
             {/* Scarcity nudge */}
             <p className="mt-4 text-sm text-accent font-medium">
-              Begränsat antal kvar i lager — fri frakt vid beställning idag
+              Begränsat antal kvar i lager. Fri frakt vid beställning idag.
             </p>
             {/* Phone — prominent for 50-70 demographic */}
             <div className="mt-6 flex items-center justify-center gap-2">
@@ -91,7 +93,7 @@ export function Hero() {
               >
                 {SITE.phone}
               </a>
-              <span className="text-sm text-text-light ml-1">— ring oss direkt</span>
+              <span className="text-sm text-text-light ml-1">ring oss direkt</span>
             </div>
           </motion.div>
 

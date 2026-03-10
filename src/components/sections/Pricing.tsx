@@ -8,11 +8,11 @@ import { SITE } from "@/lib/constants";
 
 const packages = [
   {
-    name: "NordLet Toalett",
-    price: "4 995",
-    description: "Toaletten med allt du behöver för att komma igång.",
+    name: "Frihetstoan",
+    price: "14 900",
+    description: "Allt du behöver för att komma igång.",
     features: [
-      "NordLet vattenlös toalett",
+      "NordLet Frihetstoan",
       "1 rulle påsar (30 användningar)",
       "USB-laddkabel",
       "Svensk bruksanvisning",
@@ -22,12 +22,12 @@ const packages = [
   },
   {
     name: "Startpaketet",
-    price: "5 995",
-    originalPrice: "6 485",
+    price: "16 900",
+    originalPrice: "18 380",
     description: "Vårt mest populära val. Allt för en hel säsong.",
     features: [
-      "NordLet vattenlös toalett",
-      "3 rullar påsar (90 användningar)",
+      "NordLet Frihetstoan",
+      "5 rullar påsar (150 användningar)",
       "USB-laddkabel + 12V-adapter",
       "Bärväska för förvaring",
       "Svensk bruksanvisning",
@@ -99,8 +99,8 @@ export function Pricing() {
                 {/* Cost comparison anchor */}
                 <p className="mt-2 text-sm text-accent font-medium">
                   {pkg.popular
-                    ? "Spara 490 kr jämfört med separat köp"
-                    : "Kostar mindre än 2 säsonger kemikalier"}
+                    ? "Spara 1 480 kr jämfört med separat köp"
+                    : "Betalar sig själv på under 5 säsonger"}
                 </p>
 
                 <ul className="mt-8 space-y-3 flex-grow">

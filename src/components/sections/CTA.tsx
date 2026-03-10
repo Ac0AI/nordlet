@@ -19,16 +19,16 @@ export function CTA() {
               Redo att resa friare?
             </h2>
             <p className="mt-5 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl mx-auto">
-              Anslut dig till de 2 300+ husbilsägare som redan gjort bytet.
-              Du har 30 dagars öppet köp — är du inte nöjd, får du pengarna
-              tillbaka. Inga frågor.
+              Anslut dig till 2 300+ husbilsägare som redan valt Frihetstoan.
+              Du har 30 dagars öppet köp. Inte nöjd? Pengarna tillbaka.
+              Inga frågor.
             </p>
 
             {/* Risk reversal — Cialdini #2 Commitment + #1 Reciprocity */}
             <div className="mt-8 inline-flex items-center gap-2 bg-green-light rounded-full px-5 py-2.5">
               <ShieldCheck size={18} className="text-green" />
               <span className="text-sm font-semibold text-green">
-                Riskfritt köp — 30 dagars pengarna-tillbaka-garanti
+                Riskfritt köp. 30 dagars pengarna-tillbaka-garanti
               </span>
             </div>
 
@@ -52,7 +52,7 @@ export function CTA() {
 
             {/* Scarcity — Cialdini #6 */}
             <p className="mt-4 text-sm text-accent font-medium">
-              Begränsat antal i lager — vi skickar inom 1–2 arbetsdagar
+              Begränsat antal i lager. Vi skickar inom 1–2 arbetsdagar.
             </p>
 
             <div className="mt-6 text-text-muted text-base">

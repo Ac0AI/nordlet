@@ -13,7 +13,7 @@ const rows = [
   { feature: "Installation krävs", traditional: true, nordlet: false },
   { feature: "Batteridrift", traditional: false, nordlet: true },
   { feature: "Biologiskt nedbrytbar", traditional: false, nordlet: true },
-  { feature: "Fristående — flytta fritt", traditional: false, nordlet: true },
+  { feature: "Fristående, flytta fritt", traditional: false, nordlet: true },
   { feature: "Släng i vanliga soporna", traditional: false, nordlet: true },
 ];
 
@@ -42,7 +42,7 @@ export function Comparison() {
               className="text-3xl sm:text-4xl tracking-tight text-text"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              NordLet vs. traditionell husbilstoalett
+              Frihetstoan vs. traditionell husbilstoalett
             </h2>
           </div>
         </AnimateOnScroll>
@@ -57,7 +57,7 @@ export function Comparison() {
               </div>
               <div className="w-28 sm:w-36 text-center">
                 <span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">
-                  NordLet
+                  Frihetstoan
                 </span>
               </div>
             </div>

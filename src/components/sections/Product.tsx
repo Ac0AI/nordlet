@@ -6,11 +6,11 @@ import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 import { Check } from "lucide-react";
 
 const highlights = [
-  "Helt vattenlös — ställ den var du vill",
-  "Batteridrift — ingen elanslutning",
+  "Helt vattenlös. Ställ den var du vill",
+  "Batteridrift. Ingen elanslutning",
   "Luktfri värmeförsegling efter varje användning",
-  "Biologiskt nedbrytbara påsar — släng i vanliga soporna",
-  "Kompakt design — passar alla husbilar och husvagnar",
+  "Biologiskt nedbrytbara påsar. Släng i vanliga soporna",
+  "Kompakt design som passar alla husbilar och husvagnar",
 ];
 
 export function Product() {
@@ -46,19 +46,19 @@ export function Product() {
           {/* Text */}
           <AnimateOnScroll delay={0.15}>
             <p className="text-accent font-semibold text-sm tracking-widest uppercase mb-4">
-              Introduktion
+              Frihetstoan
             </p>
             <h2
               className="text-3xl sm:text-4xl tracking-tight text-text leading-snug"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Möt NordLet — toaletten som ger dig friheten tillbaka.
+              Möt NordLet Frihetstoan
             </h2>
             <p className="mt-5 text-text-muted leading-relaxed text-lg">
-              NordLet är ingen vanlig campingtoalett. Det är en smart, vattenlös
-              lösning som helt ersätter din gamla husbilstoalett. Ingen
-              installation. Ingen anslutning. Du packar upp den, ställer den på
-              plats, och börjar använda den direkt.
+              Frihetstoan är ingen vanlig campingtoalett. Det är Nordens första
+              vattenlösa husbilstoalett som helt ersätter din gamla lösning.
+              Ingen installation. Ingen anslutning. Du packar upp den, ställer
+              den på plats, och börjar använda den direkt.
             </p>
 
             <ul className="mt-8 space-y-4">
@@ -73,7 +73,7 @@ export function Product() {
             </ul>
 
             <div className="mt-10">
-              <Button href="#bestall">Beställ din NordLet</Button>
+              <Button href="#bestall">Beställ Frihetstoan</Button>
             </div>
           </AnimateOnScroll>
         </div>

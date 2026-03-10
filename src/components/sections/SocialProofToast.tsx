@@ -58,7 +58,7 @@ export function SocialProofToast() {
             {n.name} i {n.location}
           </p>
           <p className="text-xs text-text-muted">
-            beställde NordLet — {n.time}
+            beställde Frihetstoan, {n.time}
           </p>
         </div>
       </div>

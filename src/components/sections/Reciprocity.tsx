@@ -26,7 +26,7 @@ export function Reciprocity() {
                 style={{ fontFamily: "var(--font-dm-serif)" }}
               >
                 &quot;7 misstag husbilsägare gör
-                <br className="hidden sm:block" /> med toaletten — och hur du undviker dem&quot;
+                <br className="hidden sm:block" /> med toaletten (och hur du undviker dem)&quot;
               </h3>
               <p className="mt-4 text-white/60 text-base leading-relaxed max-w-lg mx-auto">
                 Ladda ner vår kostnadsfria guide och lär dig hur erfarna

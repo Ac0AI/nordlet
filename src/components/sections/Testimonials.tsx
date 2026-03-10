@@ -18,10 +18,10 @@ export function Testimonials() {
               className="text-3xl sm:text-4xl tracking-tight text-text"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Vad andra husbilsägare säger
+              Vad andra Frihetstoa-ägare säger
             </h2>
             <p className="mt-3 text-text-muted text-lg">
-              96% av våra kunder rekommenderar NordLet till andra
+              96% av våra kunder rekommenderar Frihetstoan till andra
             </p>
           </div>
         </AnimateOnScroll>
@@ -46,7 +46,7 @@ export function Testimonials() {
                   </div>
                   <p className="font-semibold text-text text-sm">{t.name}</p>
                   <p className="text-text-light text-sm">
-                    {t.location} — {t.vehicle}
+                    {t.location}, {t.vehicle}
                   </p>
                 </div>
               </div>

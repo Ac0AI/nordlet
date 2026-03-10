@@ -8,7 +8,7 @@ const authorityItems = [
   {
     icon: Newspaper,
     label: "Testad & rekommenderad",
-    detail: "Uppmärksammad i Husbil & Husvagn — Sveriges största husbilstidning",
+    detail: "Uppmärksammad i Husbil & Husvagn, Sveriges största husbilstidning",
   },
   {
     icon: Award,

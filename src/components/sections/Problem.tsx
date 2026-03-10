@@ -15,7 +15,7 @@ export function Problem() {
               className="text-3xl sm:text-4xl tracking-tight text-text"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Vi som älskar husbilslivet vet...
+              Vi husbilsägare vet...
             </h2>
             <p className="mt-3 text-text-muted text-lg max-w-xl mx-auto">
               Friheten är fantastisk. Men toalettfrågan? Den kan förstöra
