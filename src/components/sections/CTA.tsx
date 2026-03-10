@@ -8,7 +8,7 @@ import { Mail, Phone, ShieldCheck } from "lucide-react";
 
 export function CTA() {
   return (
-    <section id="bestall" className="py-20 sm:py-28">
+    <section className="py-20 sm:py-28">
       <Container>
         <AnimateOnScroll>
           <div className="max-w-3xl mx-auto text-center">
@@ -16,25 +16,24 @@ export function CTA() {
               className="text-3xl sm:text-5xl tracking-tight text-text leading-snug"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Redo att resa friare?
+              Redo att slippa kassettanken?
             </h2>
             <p className="mt-5 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl mx-auto">
-              Anslut dig till 2 300+ husbilsägare som redan valt Frihetstoan.
+              Anslut dig till 2 300+ husbilsägare som redan slängt toamedlet.
               Du har 30 dagars öppet köp. Inte nöjd? Pengarna tillbaka.
               Inga frågor.
             </p>
 
-            {/* Risk reversal — Cialdini #2 Commitment + #1 Reciprocity */}
             <div className="mt-8 inline-flex items-center gap-2 bg-green-light rounded-full px-5 py-2.5">
               <ShieldCheck size={18} className="text-green" />
               <span className="text-sm font-semibold text-green">
-                Riskfritt köp. 30 dagars pengarna-tillbaka-garanti
+                Riskfritt köp. 30 dagars pengarna-tillbaka-garanti.
               </span>
             </div>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button
-                href={`mailto:${SITE.email}?subject=Beställning NordLet`}
+                href={`mailto:${SITE.email}?subject=Beställning Frihetstoan`}
                 size="large"
               >
                 <Mail size={18} className="mr-2.5" />
@@ -50,7 +49,6 @@ export function CTA() {
               </Button>
             </div>
 
-            {/* Scarcity — Cialdini #6 */}
             <p className="mt-4 text-sm text-accent font-medium">
               Begränsat antal i lager. Vi skickar inom 1–2 arbetsdagar.
             </p>
@@ -71,7 +69,6 @@ export function CTA() {
               </a>
             </div>
 
-            {/* Trust badges */}
             <div className="mt-12 flex flex-wrap justify-center gap-6 sm:gap-10">
               {TRUST_BADGES.map((badge) => (
                 <div

@@ -10,7 +10,6 @@ export function Problem() {
       <Container>
         <AnimateOnScroll>
           <div className="text-center mb-14">
-            {/* Unity — Cialdini #7: in-group language */}
             <h2
               className="text-3xl sm:text-4xl tracking-tight text-text"
               style={{ fontFamily: "var(--font-dm-serif)" }}
@@ -18,7 +17,7 @@ export function Problem() {
               Vi husbilsägare vet...
             </h2>
             <p className="mt-3 text-text-muted text-lg max-w-xl mx-auto">
-              Friheten är fantastisk. Men toalettfrågan? Den kan förstöra
+              Friheten är fantastisk. Men toan? Den kan förstöra
               vilken resa som helst.
             </p>
           </div>

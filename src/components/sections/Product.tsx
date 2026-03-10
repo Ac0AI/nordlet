@@ -6,10 +6,10 @@ import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 import { Check } from "lucide-react";
 
 const highlights = [
-  "Helt vattenlös. Ställ den var du vill",
-  "Batteridrift. Ingen elanslutning",
-  "Luktfri värmeförsegling efter varje användning",
-  "Biologiskt nedbrytbara påsar. Släng i vanliga soporna",
+  "Ingen kassettank att tömma. Någonsin.",
+  "Inga kemikalier eller toamedel",
+  "Ingen lukt. Inte ens i 30-gradersvärme.",
+  "Biologiskt nedbrytbara påsar. Släng i hushållssoporna.",
   "Kompakt design som passar alla husbilar och husvagnar",
 ];
 
@@ -36,7 +36,6 @@ export function Product() {
                 <ellipse cx="200" cy="195" rx="44" ry="23" fill="#F7F3ED" />
                 <circle cx="200" cy="105" r="11" fill="#B8860B" />
                 <circle cx="200" cy="105" r="5.5" fill="white" opacity="0.35" />
-                {/* Checkmark badge */}
                 <circle cx="280" cy="140" r="22" fill="#2E7D4F" opacity="0.1" />
                 <path d="M270 140 L277 147 L292 132" stroke="#2E7D4F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
@@ -52,13 +51,13 @@ export function Product() {
               className="text-3xl sm:text-4xl tracking-tight text-text leading-snug"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Möt NordLet Frihetstoan
+              Möt Frihetstoan. Slipp allt krångel med husbilstoan.
             </h2>
             <p className="mt-5 text-text-muted leading-relaxed text-lg">
-              Frihetstoan är ingen vanlig campingtoalett. Det är Nordens första
-              vattenlösa husbilstoalett som helt ersätter din gamla lösning.
-              Ingen installation. Ingen anslutning. Du packar upp den, ställer
-              den på plats, och börjar använda den direkt.
+              Frihetstoan ersätter din kassettoa helt. Ingen svartvattentank.
+              Inget toamedel. Ingen installation. Du packar upp den, ställer
+              den på plats och börjar använda den direkt. Precis som en
+              vanlig toa, fast utan allt det jobbiga.
             </p>
 
             <ul className="mt-8 space-y-4">

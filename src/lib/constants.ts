@@ -5,14 +5,15 @@ import {
   RotateCw,
   Hand,
   Leaf,
+  Thermometer,
 } from "lucide-react";
 
 export const SITE = {
   name: "NordLet",
   category: "Frihetstoan",
-  tagline: "Frihetstoan. För dig som vägrar planera efter tömningsstationer.",
+  tagline: "Frihetstoan. Slipp kassettanken, toamedlet och tömningsstationerna.",
   description:
-    "Nordens första vattenlösa husbilstoalett. Ingen anslutning. Inga kemikalier. Total frihet, oavsett var du parkerar.",
+    "Nordens första vattenlösa husbilstoa. Ingen kassettank att tömma. Inga kemikalier. Ingen lukt. Bara frihet.",
   email: "info@nordlet.se",
   phone: "+46 70 123 45 67",
 };
@@ -25,7 +26,6 @@ export const NAV_LINKS = [
   { label: "Beställ", href: "#bestall" },
 ];
 
-// --- SOCIAL PROOF (Cialdini #3) --- specifika siffror
 export const SOCIAL_PROOF_STATS = [
   { number: "2 300+", label: "har valt Frihetstoan" },
   { number: "4.8", label: "av 5 i snittbetyg" },
@@ -35,60 +35,60 @@ export const SOCIAL_PROOF_STATS = [
 export const PAIN_POINTS = [
   {
     emoji: "😤",
-    title: "Trött på att leta tömningsstationer?",
+    title: "Trött på att jaga tömningsstationer?",
     description:
-      "Ingen vill avbryta semestern för att hitta närmaste tömningsstation. Med NordLet slipper du det helt.",
+      "Planera rutten efter tömningsställen istället för dit du faktiskt vill åka? Med Frihetstoan slipper du kassettanken helt.",
   },
   {
     emoji: "🧪",
-    title: "Trött på kemikalier i husbilen?",
+    title: "Trött på toamedel och kemikalier?",
     description:
-      "Sanitetsvätskor luktar, är dyra och dåliga för miljön. NordLet använder inga kemikalier alls.",
+      "Sanitetsvätskor som luktar, kostar pengar och är dåliga för miljön. Frihetstoan använder noll kemikalier.",
   },
   {
-    emoji: "💧",
-    title: "Trött på att slösa dyrbart färskvatten?",
+    emoji: "🤢",
+    title: "Trött på lukten i toautrymmet?",
     description:
-      "Varje spolning tar av ditt begränsade vattenförråd. NordLet är helt vattenlös.",
+      "Alla husbilsägare känner igen den där doften av kemikalie blandat med... ja. Med Frihetstoan finns ingen lukt. Punkt.",
   },
 ];
 
 export const FEATURES = [
   {
     icon: Droplets,
-    title: "Helt vattenlös",
+    title: "Ingen kassettank",
     description:
-      "Ingen vattenanslutning eller avloppstank behövs. Du är helt fri.",
+      "Ingen svartvattentank att tömma. Ingen vattenanslutning. Ingen avloppskoppling. Bara frihet.",
+  },
+  {
+    icon: Thermometer,
+    title: "Luktfri. Även i 30-gradersvärme.",
+    description:
+      "Värmeförseglingen skapar en lufttät förslutning inom sekunder. Ingen lukt, inte ens mitt i sommaren.",
   },
   {
     icon: BatteryCharging,
     title: "Batteridrift",
     description:
-      "Inbyggt uppladdningsbart batteri. Räcker i flera dagar. Laddas via USB eller 12V.",
+      "Inbyggt uppladdningsbart batteri. Räcker i flera dagar. Laddas via USB eller 12V i husbilen.",
   },
   {
     icon: ShieldCheck,
-    title: "100% luktfri",
+    title: "Inga kemikalier. Noll.",
     description:
-      "Patenterad värmeförsegling skapar en lufttät förslutning direkt. Ingen lukt.",
+      "Slipp toamedel, sanitetsvätskor och allt som hör till. Bättre för dig och naturen.",
   },
   {
     icon: RotateCw,
     title: "Svängbar bas",
     description:
-      "180° rotation med snabbkoppling. Passar i trånga utrymmen.",
+      "180° rotation med snabbkoppling. Passar även i trånga toautrymmen.",
   },
   {
     icon: Hand,
     title: "Ett knapptryck",
     description:
-      "Tryck en knapp, klart. Ingen manuell hantering av avfall.",
-  },
-  {
-    icon: Leaf,
-    title: "Miljövänlig",
-    description:
-      "Biologiskt nedbrytbara påsar. Inga kemikalier. Bättre för naturen.",
+      "Tryck en knapp, klart. Ingen manuell hantering. Inget pysslande med kassetten.",
   },
 ];
 
@@ -108,76 +108,94 @@ export const STEPS = [
     number: "1",
     title: "Sätt dig",
     description:
-      "Använd den precis som en vanlig toalett. Bekväm sits i standardhöjd.",
+      "Använd den precis som din vanliga toa. Bekväm sits i standardhöjd.",
   },
   {
     number: "2",
     title: "Tryck på knappen",
     description:
-      "Välj läge och tryck. Värmeförseglingen aktiveras automatiskt.",
+      "Välj läge och tryck. Värmeförseglingen aktiveras automatiskt och förseglar lufttätt.",
   },
   {
     number: "3",
-    title: "Kasta i soporna",
+    title: "Släng i soporna",
     description:
-      "Den förseglade, biologiskt nedbrytbara påsen slängs i vanliga soporna. Klart.",
+      "Den förseglade påsen är biologiskt nedbrytbar och slängs i vanliga hushållssoporna. Klart.",
   },
 ];
 
-// --- AUTHORITY (Cialdini #4) ---
 export const AUTHORITY_BADGES = [
   { label: "Testad & godkänd av Husbil & Husvagn", type: "media" },
   { label: "CE-certifierad", type: "cert" },
   { label: "Rekommenderad av Sveriges Camping- och Stugföretagares Riksorganisation", type: "org" },
 ];
 
-// --- TESTIMONIALS med mer SOCIAL PROOF (#3) + UNITY (#7) ---
 export const TESTIMONIALS = [
   {
     name: "Margareta & Lars",
     location: "Göteborg",
     vehicle: "Hymer B-ML 780",
-    text: "Vi har rest med husbil i 15 år och det här är det bästa vi köpt. Att slippa tömningsstationerna är en dröm. Barnen skrattade åt oss, tills de provade själva på semestern. Nu vill de ha en till sin egen husvagn.",
+    text: "Vi har rest med husbil i 15 år och det här är det bästa vi köpt. Att slippa kassettanken och tömningsstationerna är en dröm. Vi hade SOG innan och tyckte det var bra, men det här är en helt annan nivå.",
     rating: 5,
   },
   {
     name: "Bengt",
     location: "Malmö",
     vehicle: "Knaus Van TI Plus",
-    text: "Jag var skeptisk först, min fru fick övertyga mig. Men efter två månader vill jag aldrig gå tillbaka. Helt luktfritt, otroligt enkelt. Ångrar bara att jag inte köpte den tidigare.",
+    text: "Jag var skeptisk först. Tänkte 'ännu en grej som luktar efter två veckor'. Men efter en hel sommar kan jag säga: det luktar inte. Inte ens i 30-gradersvärmen i juli. Min fru är lika förvånad som jag.",
     rating: 5,
   },
   {
     name: "Inger & Sven-Erik",
     location: "Uppsala",
     vehicle: "Carthago Liner",
-    text: "Vi ställer oss fritt i Norge varje sommar. Förut var det alltid stressen med tömning. Nu tänker vi inte ens på det. NordLet har verkligen förändrat vårt resande.",
+    text: "Vi ställer oss fritt i Norge varje sommar. Förut var det alltid stressen med att hitta tömning. Nu tänker vi inte ens på toan. Vi slänger påsen i soppåsen och kör vidare.",
     rating: 5,
   },
   {
     name: "Kerstin",
     location: "Lund",
     vehicle: "Bürstner Lyseo TD",
-    text: "Som ensamresande kvinna känner jag mig mycket tryggare med NordLet. Jag behöver inte längre planera hela rutten efter tömningsstationer. Total frihet!",
+    text: "Som ensamresande kvinna slipper jag nu pyssla med kassetten och leta tömningsstationer. Jag bestämmer vart jag vill, inte var närmaste tömningsställe finns. Total frihet.",
     rating: 5,
   },
 ];
 
 export const FAQS = [
   {
-    question: "Hur fungerar det egentligen?",
+    question: "Luktar det verkligen inte? Inte ens på sommaren?",
     answer:
-      "NordLet använder en patenterad värmeförseglingsteknik. Efter varje användning förseglas avfallet automatiskt i en biologiskt nedbrytbar påse. Helt utan vatten, kemikalier eller manuell hantering. Du trycker på en knapp. Resten sker automatiskt.",
+      "Vi vet att det låter för bra för att vara sant. Många har testat liknande lösningar och blivit besvikna. Men Frihetstoan använder värmeförsegling som skapar en 100% lufttät förslutning inom sekunder. Det gör den luktfri även i 30+ graders värme. Vi har över 2 300 kunder som bekräftar det. Och du har 30 dagars öppet köp om du vill testa själv.",
   },
   {
-    question: "Luktar det verkligen inte?",
+    question: "Hur funkar det egentligen?",
     answer:
-      "Nej. Värmeförseglingen skapar en helt lufttät förslutning inom sekunder efter användning. Vi har över 2 300 nöjda kunder som bekräftar att det är helt luktfritt.",
+      "Du använder toan precis som vanligt. När du trycker på knappen aktiveras en värmeförsegling som paketerar avfallet i en biologiskt nedbrytbar påse. Helt lufttätt. Inga kemikalier, inget vatten, ingen manuell hantering. Påsen slänger du i vanliga hushållssoporna.",
   },
   {
-    question: "Är det svårt att installera?",
+    question: "Är det inte som PACTO-toan som luktade?",
     answer:
-      "Nej, det kräver ingen installation alls. NordLet är fristående och batteridrift. Du ställer den bara på plats. Ingen vattenanslutning, inget avlopp, inga kablar. De flesta har den igång inom 5 minuter.",
+      "Nej. PACTO använde vanlig plastförslutning utan värme. Frihetstoan använder en patenterad värmeförseglingsteknik som smälter ihop påsen till en helt lufttät enhet. Det är som att vakuumförpacka, inte bara knyta ihop en påse. Skillnaden i luktfrihet är enorm.",
+  },
+  {
+    question: "Vad gör jag med påsarna? Kan man slänga dem i vanliga soporna?",
+    answer:
+      "Ja. Påsarna är biologiskt nedbrytbara och slängs i vanliga hushållssoporna, precis som blöjor. Varje rulle räcker till 30 användningar.",
+  },
+  {
+    question: "Jag har SOG idag. Är det här bättre?",
+    answer:
+      "SOG är en bra lösning för att minska kemikalieanvändningen. Men du behöver fortfarande kassettanken, fortfarande tömningsstationer, och fortfarande byta kolfilter. Med Frihetstoan slipper du allt det. Ingen kassettank. Ingen tömning. Inget filter. Bara en påse i soporna.",
+  },
+  {
+    question: "Behöver man speciellt toalettpapper?",
+    answer:
+      "Nej, använd det toalettpapper du vill. Inget behov av vattenlösligt eller speciellt poröst papper. Allt hamnar i påsen och förseglas.",
+  },
+  {
+    question: "Passar den i min husbil/husvagn?",
+    answer:
+      "Frihetstoan är fristående och kräver ingen anslutning. Den är kompakt (445 × 355 mm) och den svängbara basen med 180° rotation gör att den passar även i trånga toautrymmen. Ingen installation behövs, du ställer den bara på plats.",
   },
   {
     question: "Hur lång tid räcker batteriet?",
@@ -185,19 +203,9 @@ export const FAQS = [
       "Det inbyggda litium-jon batteriet räcker för flera dagars normal användning. Laddas enkelt via USB eller 12V-uttaget i husbilen medan du kör.",
   },
   {
-    question: "Passar den i min husbil/husvagn?",
-    answer:
-      "NordLet passar i alla husbilar och husvagnar. Den är fristående, kompakt (445 × 355 mm) och den svängbara basen med 180° rotation gör att den passar även i trånga toalettutrymmen.",
-  },
-  {
-    question: "Var köper jag påsar?",
-    answer:
-      "Påsar beställer du enkelt via oss. Varje rulle räcker till 30 användningar. Vi erbjuder också prenumeration så du aldrig står utan, och då får du 15% rabatt.",
-  },
-  {
     question: "Kan jag returnera om jag inte är nöjd?",
     answer:
-      "Absolut. Du har 30 dagars öppet köp med fri retur, inga frågor ställda. Vi tror så mycket på produkten att vi tar hela risken. Av alla kunder som provat NordLet har 96% valt att behålla den.",
+      "Absolut. Du har 30 dagars öppet köp med fri retur, inga frågor ställda. Vi tror så mycket på Frihetstoan att vi tar hela risken. Av alla som provat har 96% valt att behålla den.",
   },
 ];
 

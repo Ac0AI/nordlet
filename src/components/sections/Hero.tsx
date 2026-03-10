@@ -11,7 +11,7 @@ export function Hero() {
     <section className="relative overflow-hidden bg-gradient-to-b from-bg-warm to-bg pt-28 pb-20 sm:pt-36 sm:pb-28">
       <Container className="relative z-10">
         <div className="max-w-3xl mx-auto text-center">
-          {/* Social proof bar — Cialdini #3 */}
+          {/* Social proof bar */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -40,27 +40,25 @@ export function Hero() {
             className="text-4xl sm:text-5xl lg:text-6xl leading-[1.15] tracking-tight text-text"
             style={{ fontFamily: "var(--font-dm-serif)" }}
           >
-            Frihetstoan
-            <span className="text-accent italic">. För dig som</span>
+            Slipp kassettanken,
             <br />
-            vägrar planera efter
-            <br className="sm:hidden" />{" "}
-            tömningsstationer.
+            toamedlet och{" "}
+            <span className="text-accent italic">tömningsstationerna.</span>
           </motion.h1>
 
-          {/* Subheadline — Cialdini #7 Unity: "vi som älskar husbilslivet" */}
+          {/* Subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl mx-auto"
           >
-            NordLet Frihetstoan är Nordens första vattenlösa husbilstoalett.
-            Ingen vattenanslutning. Inga kemikalier. Inga tömningsstationer.
-            Bara total frihet. Oavsett var du parkerar.
+            Frihetstoan är Nordens första vattenlösa husbilstoa.
+            Ingen kassettank. Inga kemikalier. Ingen lukt, inte ens i
+            sommarhettan. Tryck på en knapp. Släng påsen i soporna. Kör vidare.
           </motion.p>
 
-          {/* CTA + Scarcity — Cialdini #6 */}
+          {/* CTA */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -79,11 +77,10 @@ export function Hero() {
                 Se hur det fungerar
               </Button>
             </div>
-            {/* Scarcity nudge */}
             <p className="mt-4 text-sm text-accent font-medium">
               Begränsat antal kvar i lager. Fri frakt vid beställning idag.
             </p>
-            {/* Phone — prominent for 50-70 demographic */}
+            {/* Phone */}
             <div className="mt-6 flex items-center justify-center gap-2">
               <Phone size={18} className="text-primary" />
               <a
@@ -146,22 +143,20 @@ export function Hero() {
               <rect x="355" y="272" width="22" height="10" rx="3" fill="#2E7D4F" opacity="0.5" />
               <rect x="358" y="274" width="6" height="6" rx="1" fill="#2E7D4F" opacity="0.7" />
               <rect x="366" y="274" width="6" height="6" rx="1" fill="#2E7D4F" opacity="0.4" />
-              <path d="M205 325 C185 308 185 290 205 275" stroke="#B8860B" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.5" />
-              <path d="M395 325 C415 308 415 290 395 275" stroke="#B8860B" strokeWidth="1.5" fill="none" strokeLinecap="round" opacity="0.5" />
               <line x1="395" y1="190" x2="480" y2="160" stroke="#B8860B" strokeWidth="1" strokeDasharray="3 3" opacity="0.6" />
-              <text x="485" y="157" fill="#B8860B" fontSize="11" fontWeight="600" fontFamily="system-ui">Luktfri</text>
-              <text x="485" y="172" fill="#5A5A5A" fontSize="10" fontFamily="system-ui">Värmeförsegling</text>
+              <text x="485" y="157" fill="#B8860B" fontSize="11" fontWeight="600" fontFamily="system-ui">Ingen lukt</text>
+              <text x="485" y="172" fill="#5A5A5A" fontSize="10" fontFamily="system-ui">Inte ens i 30°C</text>
               <line x1="390" y1="285" x2="470" y2="300" stroke="#1B3A4B" strokeWidth="1" strokeDasharray="3 3" opacity="0.4" />
               <text x="475" y="297" fill="#1B3A4B" fontSize="11" fontWeight="600" fontFamily="system-ui">Batteridrift</text>
-              <text x="475" y="312" fill="#5A5A5A" fontSize="10" fontFamily="system-ui">5 200 mAh</text>
+              <text x="475" y="312" fill="#5A5A5A" fontSize="10" fontFamily="system-ui">Inga kablar</text>
               <line x1="210" y1="285" x2="130" y2="300" stroke="#1B3A4B" strokeWidth="1" strokeDasharray="3 3" opacity="0.4" />
-              <text x="50" y="297" fill="#1B3A4B" fontSize="11" fontWeight="600" fontFamily="system-ui">Vattenlös</text>
-              <text x="50" y="312" fill="#5A5A5A" fontSize="10" fontFamily="system-ui">Ingen anslutning</text>
+              <text x="40" y="297" fill="#1B3A4B" fontSize="11" fontWeight="600" fontFamily="system-ui">Ingen kassettank</text>
+              <text x="40" y="312" fill="#5A5A5A" fontSize="10" fontFamily="system-ui">Ingen tömning</text>
             </svg>
           </div>
         </motion.div>
 
-        {/* Social proof stats — Cialdini #3 */}
+        {/* Social proof stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -4,10 +4,10 @@ import { Container } from "@/components/ui/Container";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 
 const costs = [
-  { label: "Kemikalier & sanitetsvätskor", perYear: "1 200 kr" },
-  { label: "Tömningsavgifter (15 tömningar/år)", perYear: "1 500 kr" },
-  { label: "Extra vatten till spolning", perYear: "400 kr" },
-  { label: "Tid & omvägar till stationer", perYear: "Ovärderligt" },
+  { label: "Toamedel & sanitetsvätskor", perYear: "1 200 kr" },
+  { label: "Tömningsavgifter (15 tömningar/säsong)", perYear: "1 500 kr" },
+  { label: "Speciellt toalettpapper", perYear: "500 kr" },
+  { label: "Tid & omvägar till tömningsstationer", perYear: "Ovärderligt" },
 ];
 
 export function SavingsCalculator() {
@@ -24,7 +24,7 @@ export function SavingsCalculator() {
                 className="text-2xl sm:text-3xl tracking-tight text-text"
                 style={{ fontFamily: "var(--font-dm-serif)" }}
               >
-                Vad kostar din nuvarande toalett egentligen?
+                Vad kostar din kassettoa egentligen?
               </h3>
             </div>
 
@@ -44,28 +44,28 @@ export function SavingsCalculator() {
 
             <div className="mt-6 pt-6 border-t-2 border-accent/30 flex justify-between items-center">
               <span className="text-text font-semibold text-lg">
-                Årlig kostnad idag
+                Årlig kostnad med kassettoa
               </span>
               <span
                 className="text-2xl font-bold text-accent"
                 style={{ fontFamily: "var(--font-dm-serif)" }}
               >
-                ~3 100 kr/år
+                ~3 200 kr/år
               </span>
             </div>
 
             <div className="mt-8 bg-green-light rounded-xl p-6 text-center">
               <p className="text-green font-semibold text-lg">
-                Med NordLet: bara påsar ~300 kr/år
+                Med Frihetstoan: bara påsar ~300 kr/år
               </p>
               <p
                 className="text-green text-2xl font-bold mt-1"
                 style={{ fontFamily: "var(--font-dm-serif)" }}
               >
-                Du sparar ~2 800 kr per år
+                Du sparar ~2 900 kr per år
               </p>
               <p className="text-green/70 text-sm mt-2">
-                NordLet betalar sig själv på under 2 säsonger
+                Plus all tid du slipper lägga på tömning
               </p>
             </div>
           </div>

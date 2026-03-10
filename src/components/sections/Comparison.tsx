@@ -5,12 +5,12 @@ import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 import { Check, X } from "lucide-react";
 
 const rows = [
-  { feature: "Kräver vatten", traditional: true, nordlet: false },
-  { feature: "Kräver kemikalier", traditional: true, nordlet: false },
+  { feature: "Kassettank att tömma", traditional: true, nordlet: false },
+  { feature: "Kräver kemikalier/toamedel", traditional: true, nordlet: false },
   { feature: "Tömningsstation behövs", traditional: true, nordlet: false },
-  { feature: "Elanslutning krävs", traditional: true, nordlet: false },
-  { feature: "Luktar", traditional: true, nordlet: false },
-  { feature: "Installation krävs", traditional: true, nordlet: false },
+  { feature: "Vattenanslutning krävs", traditional: true, nordlet: false },
+  { feature: "Lukt i toautrymmet", traditional: true, nordlet: false },
+  { feature: "Speciellt toalettpapper", traditional: true, nordlet: false },
   { feature: "Batteridrift", traditional: false, nordlet: true },
   { feature: "Biologiskt nedbrytbar", traditional: false, nordlet: true },
   { feature: "Fristående, flytta fritt", traditional: false, nordlet: true },
@@ -42,18 +42,17 @@ export function Comparison() {
               className="text-3xl sm:text-4xl tracking-tight text-text"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Frihetstoan vs. traditionell husbilstoalett
+              Frihetstoan vs. kassettoan
             </h2>
           </div>
         </AnimateOnScroll>
 
         <AnimateOnScroll delay={0.1}>
           <div className="max-w-2xl mx-auto overflow-hidden rounded-2xl border border-border bg-surface">
-            {/* Header */}
             <div className="grid grid-cols-[1fr_auto_auto] gap-0 bg-bg-alt px-6 py-4 border-b border-border">
               <div />
               <div className="w-28 sm:w-36 text-center text-sm font-medium text-text-muted">
-                Traditionell
+                Kassettoa
               </div>
               <div className="w-28 sm:w-36 text-center">
                 <span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">
@@ -62,20 +61,8 @@ export function Comparison() {
               </div>
             </div>
 
-            {/* Rows */}
             {rows.map((row, i) => {
-              // For "kräver/luktar/installation" rows: traditional=true is BAD, nordlet=false is GOOD
-              // For "batteridrift/nedbrytbar/fristående" rows: traditional=false is BAD, nordlet=true is GOOD
-              const traditionalGood = !row.traditional;
-              const nordletGood = row.nordlet
-                ? true // positive features: nordlet has them = good
-                : !row.traditional
-                  ? false // negative features inverted: if traditional doesn't need it, nordlet neither
-                  : true; // negative features: nordlet doesn't have them = good
-
-              // Simpler logic: for first 6 rows, "true" = bad. For last 4, "true" = good.
               const isNegativeFeature = i < 6;
-
               return (
                 <div
                   key={row.feature}
