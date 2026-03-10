@@ -150,6 +150,60 @@ export function Hero() {
             </div>
           ))}
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.75 }}
+          className="mt-12 max-w-5xl mx-auto grid gap-4 lg:grid-cols-[1.35fr_0.85fr]"
+        >
+          <div className="relative min-h-[320px] sm:min-h-[420px] overflow-hidden rounded-3xl border border-white/15 bg-white/95 shadow-2xl shadow-black/20">
+            <div className="absolute top-5 left-5 z-10 rounded-full bg-primary px-4 py-2 text-xs font-semibold tracking-wide text-white">
+              Produktbild
+            </div>
+            <Image
+              src={IMAGES.productFront}
+              alt="Frihetstoan framifrån"
+              fill
+              className="object-contain p-6 sm:p-8"
+              sizes="(max-width: 1024px) 100vw, 60vw"
+            />
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="relative min-h-[180px] overflow-hidden rounded-2xl border border-white/15 bg-white/95 shadow-xl shadow-black/10">
+              <Image
+                src={IMAGES.productDetail}
+                alt="Detaljbild av Frihetstoans ovandel"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 50vw, 30vw"
+              />
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
+              <div className="relative min-h-[180px] overflow-hidden rounded-2xl border border-white/15 bg-white/95 shadow-xl shadow-black/10">
+                <Image
+                  src={IMAGES.productSide}
+                  alt="Frihetstoan från sidan"
+                  fill
+                  className="object-contain p-4"
+                  sizes="(max-width: 1024px) 50vw, 15vw"
+                />
+              </div>
+
+              <div className="relative min-h-[180px] overflow-hidden rounded-2xl border border-white/15 bg-white/95 shadow-xl shadow-black/10">
+                <Image
+                  src={IMAGES.productDimensions}
+                  alt="Måttskiss för Frihetstoan"
+                  fill
+                  className="object-contain p-4"
+                  sizes="(max-width: 1024px) 50vw, 15vw"
+                />
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </Container>
     </section>
   );

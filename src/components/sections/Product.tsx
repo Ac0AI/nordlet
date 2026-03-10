@@ -22,18 +22,35 @@ export function Product() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image */}
           <AnimateOnScroll>
-            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl shadow-primary/10">
-              <Image
-                src={IMAGES.interior}
-                alt="Husbilsinteriör med modern inredning"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              {/* Product overlay */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 sm:p-8">
-                <p className="text-white font-semibold text-lg">NordLet Frihetstoan</p>
-                <p className="text-white/60 text-sm">Vattenlös. Kemikaliefri. Luktfri.</p>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="relative sm:col-span-2 min-h-[340px] overflow-hidden rounded-3xl border border-border bg-surface shadow-2xl shadow-primary/10">
+                <Image
+                  src={IMAGES.productFront}
+                  alt="Frihetstoan framifrån"
+                  fill
+                  className="object-contain p-6 sm:p-8"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+
+              <div className="relative min-h-[220px] overflow-hidden rounded-2xl border border-border bg-surface">
+                <Image
+                  src={IMAGES.productSide}
+                  alt="Frihetstoan från sidan"
+                  fill
+                  className="object-contain p-4"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                />
+              </div>
+
+              <div className="relative min-h-[220px] overflow-hidden rounded-2xl border border-border bg-surface">
+                <Image
+                  src={IMAGES.productDimensions}
+                  alt="Måttskiss för Frihetstoan"
+                  fill
+                  className="object-contain p-4"
+                  sizes="(max-width: 1024px) 50vw, 25vw"
+                />
               </div>
             </div>
           </AnimateOnScroll>

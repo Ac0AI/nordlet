@@ -10,4 +10,9 @@ export const IMAGES = {
   road: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1200&h=600&fit=crop&q=80",
   // Nature camping: Motorhome in nature
   nature: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&h=600&fit=crop&q=80",
+  // Product imagery sourced from the supplier page provided by the user
+  productFront: "/images/products/frihetstoan-front.png",
+  productDetail: "/images/products/frihetstoan-detail.png",
+  productSide: "/images/products/frihetstoan-side.png",
+  productDimensions: "/images/products/frihetstoan-dimensions.png",
 };
