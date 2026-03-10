@@ -6,6 +6,7 @@ import { Problem } from "@/components/sections/Problem";
 import { Product } from "@/components/sections/Product";
 import { Authority } from "@/components/sections/Authority";
 import { HowItWorks } from "@/components/sections/HowItWorks";
+import { LifestyleBanner } from "@/components/sections/LifestyleBanner";
 import { Comparison } from "@/components/sections/Comparison";
 import { Features } from "@/components/sections/Features";
 import { Testimonials } from "@/components/sections/Testimonials";
@@ -22,37 +23,23 @@ export default function Home() {
     <>
       <Header />
       <main>
-        {/* 1. Hook — emotionell headline + social proof + telefon */}
         <Hero />
-        {/* 2. "Som sett i" — authority logos */}
         <AsSeenIn />
-        {/* 3. Agitate — smärtpunkter ("vi husbilsägare") */}
         <Problem />
-        {/* 4. Solution — produkt-intro */}
         <Product />
-        {/* 5. Authority — certifieringar, media, svenskt företag */}
         <Authority />
-        {/* 6. How it works — enkelhet */}
         <HowItWorks />
-        {/* 7. Jämförelse — NordLet vs traditionell */}
+        <LifestyleBanner />
         <Comparison />
-        {/* 8. Features — djupare fördelar */}
         <Features />
-        {/* 9. Social proof — detaljerade omdömen */}
         <Testimonials />
-        {/* 10. Besparingskalkyl */}
         <SavingsCalculator />
-        {/* 11. Reciprocity — gratis guide */}
         <Reciprocity />
-        {/* 12. Specs — för den analytiska */}
         <Specifications />
-        {/* 13. FAQ — invändningshantering */}
         <FAQ />
-        {/* 14. Pricing — paket med pris + stort telefonnummer */}
         <Pricing />
       </main>
       <Footer />
-      {/* Sticky mobil-CTA + social proof toasts */}
       <StickyMobileCTA />
       <SocialProofToast />
     </>

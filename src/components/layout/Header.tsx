@@ -28,7 +28,10 @@ export function Header() {
       <Container className="flex items-center justify-between h-20">
         <a
           href="#"
-          className="font-[var(--font-dm-serif)] text-2xl font-normal tracking-tight text-primary"
+          className={cn(
+            "text-2xl font-normal tracking-tight transition-colors",
+            scrolled ? "text-primary" : "text-white"
+          )}
           style={{ fontFamily: "var(--font-dm-serif)" }}
         >
           {SITE.name}
@@ -40,7 +43,12 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-text-muted hover:text-primary transition-colors"
+              className={cn(
+                "text-sm font-medium transition-colors",
+                scrolled
+                  ? "text-text-muted hover:text-primary"
+                  : "text-white/70 hover:text-white"
+              )}
             >
               {link.label}
             </a>
@@ -56,7 +64,10 @@ export function Header() {
         {/* Mobile toggle */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="lg:hidden p-2 text-text-muted"
+          className={cn(
+            "lg:hidden p-2 transition-colors",
+            scrolled ? "text-text-muted" : "text-white"
+          )}
           aria-label="Meny"
         >
           {menuOpen ? <X size={24} /> : <Menu size={24} />}

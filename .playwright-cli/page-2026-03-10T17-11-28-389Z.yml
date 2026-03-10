@@ -1,0 +1,503 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "NordLet" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+      - button "Meny" [ref=e759]:
+        - img [ref=e760]
+  - main [ref=e12]:
+    - generic [ref=e14]:
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - generic [ref=e17]:
+            - img [ref=e18]
+            - img [ref=e20]
+            - img [ref=e22]
+            - img [ref=e24]
+            - img [ref=e26]
+          - generic [ref=e28]: 2 300+ husbilsägare har valt Frihetstoan
+        - heading "Slipp kassettanken, toamedlet och tömningsstationerna." [level=1] [ref=e29]:
+          - text: Slipp kassettanken,
+          - text: toamedlet och tömningsstationerna.
+        - paragraph [ref=e30]: Frihetstoan är Nordens första vattenlösa husbilstoa. Ingen kassettank. Inga kemikalier. Ingen lukt, inte ens i sommarhettan. Tryck på en knapp. Släng påsen i soporna. Kör vidare.
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - link "Beställ Frihetstoan nu" [ref=e33] [cursor=pointer]:
+              - /url: "#bestall"
+            - link "Se hur det fungerar" [ref=e34] [cursor=pointer]:
+              - /url: "#sa-fungerar-det"
+          - paragraph [ref=e35]: Begränsat antal kvar i lager. Fri frakt vid beställning idag.
+          - generic [ref=e36]:
+            - img [ref=e37]
+            - link "+46 70 123 45 67" [ref=e39] [cursor=pointer]:
+              - /url: tel:+46701234567
+            - generic [ref=e40]: ring oss direkt
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]: 🚚
+            - generic [ref=e44]: Fri frakt i hela Sverige
+          - generic [ref=e45]:
+            - generic [ref=e46]: ✅
+            - generic [ref=e47]: 30 dagars öppet köp
+          - generic [ref=e48]:
+            - generic [ref=e49]: 🇸🇪
+            - generic [ref=e50]: Svensk kundtjänst
+          - generic [ref=e51]:
+            - generic [ref=e52]: 🛡️
+            - generic [ref=e53]: 2 års garanti
+      - img [ref=e56]:
+        - generic [ref=e68]: Ingen lukt
+        - generic [ref=e69]: Inte ens i 30°C
+        - generic [ref=e71]: Batteridrift
+        - generic [ref=e72]: Inga kablar
+        - generic [ref=e74]: Ingen kassettank
+        - generic [ref=e75]: Ingen tömning
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - paragraph [ref=e78]: 2 300+
+          - paragraph [ref=e79]: har valt Frihetstoan
+        - generic [ref=e80]:
+          - paragraph [ref=e81]: "4.8"
+          - paragraph [ref=e82]: av 5 i snittbetyg
+        - generic [ref=e83]:
+          - paragraph [ref=e84]: 96%
+          - paragraph [ref=e85]: rekommenderar till andra
+    - generic [ref=e88]:
+      - paragraph [ref=e89]: Som uppmärksammat i
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - text: H&H
+          - generic [ref=e92]: Husbil & Husvagn
+        - generic [ref=e93]:
+          - text: AoHC
+          - generic [ref=e94]: Allt om Husvagn & Camping
+        - generic [ref=e95]:
+          - text: C.se
+          - generic [ref=e96]: Camping.se
+        - generic [ref=e97]:
+          - text: FF
+          - generic [ref=e98]: Fritidsforum
+    - generic [ref=e100]:
+      - generic [ref=e102]:
+        - heading "Vi husbilsägare vet..." [level=2] [ref=e103]
+        - paragraph [ref=e104]: Friheten är fantastisk. Men toan? Den kan förstöra vilken resa som helst.
+      - generic [ref=e105]:
+        - generic [ref=e107]:
+          - generic [ref=e108]: 😤
+          - heading "Trött på att jaga tömningsstationer?" [level=3] [ref=e109]
+          - paragraph [ref=e110]: Planera rutten efter tömningsställen istället för dit du faktiskt vill åka? Med Frihetstoan slipper du kassettanken helt.
+        - generic [ref=e112]:
+          - generic [ref=e113]: 🧪
+          - heading "Trött på toamedel och kemikalier?" [level=3] [ref=e114]
+          - paragraph [ref=e115]: Sanitetsvätskor som luktar, kostar pengar och är dåliga för miljön. Frihetstoan använder noll kemikalier.
+        - generic [ref=e117]:
+          - generic [ref=e118]: 🤢
+          - heading "Trött på lukten i toautrymmet?" [level=3] [ref=e119]
+          - paragraph [ref=e120]: Alla husbilsägare känner igen den där doften av kemikalie blandat med... ja. Med Frihetstoan finns ingen lukt. Punkt.
+      - paragraph [ref=e123]: Det finns en bättre lösning.
+    - generic [ref=e126]:
+      - img [ref=e129]
+      - generic [ref=e138]:
+        - paragraph [ref=e139]: Frihetstoan
+        - heading "Möt Frihetstoan. Slipp allt krångel med husbilstoan." [level=2] [ref=e140]
+        - paragraph [ref=e141]: Frihetstoan ersätter din kassettoa helt. Ingen svartvattentank. Inget toamedel. Ingen installation. Du packar upp den, ställer den på plats och börjar använda den direkt. Precis som en vanlig toa, fast utan allt det jobbiga.
+        - list [ref=e142]:
+          - listitem [ref=e143]:
+            - img [ref=e145]
+            - generic [ref=e147]: Ingen kassettank att tömma. Någonsin.
+          - listitem [ref=e148]:
+            - img [ref=e150]
+            - generic [ref=e152]: Inga kemikalier eller toamedel
+          - listitem [ref=e153]:
+            - img [ref=e155]
+            - generic [ref=e157]: Ingen lukt. Inte ens i 30-gradersvärme.
+          - listitem [ref=e158]:
+            - img [ref=e160]
+            - generic [ref=e162]: Biologiskt nedbrytbara påsar. Släng i hushållssoporna.
+          - listitem [ref=e163]:
+            - img [ref=e165]
+            - generic [ref=e167]: Kompakt design som passar alla husbilar och husvagnar
+        - link "Beställ Frihetstoan" [ref=e169] [cursor=pointer]:
+          - /url: "#bestall"
+    - generic [ref=e172]:
+      - generic [ref=e174]:
+        - img [ref=e176]
+        - generic [ref=e179]:
+          - paragraph [ref=e180]: Testad & rekommenderad
+          - paragraph [ref=e181]: Uppmärksammad i Husbil & Husvagn, Sveriges största husbilstidning
+      - generic [ref=e183]:
+        - img [ref=e185]
+        - generic [ref=e188]:
+          - paragraph [ref=e189]: CE-certifierad
+          - paragraph [ref=e190]: Uppfyller alla europeiska säkerhetskrav och standarder
+      - generic [ref=e192]:
+        - img [ref=e194]
+        - generic [ref=e198]:
+          - paragraph [ref=e199]: Svensk kundtjänst & garanti
+          - paragraph [ref=e200]: Svenskt företag med lager i Sverige. 2 års full garanti.
+    - generic [ref=e202]:
+      - generic [ref=e204]:
+        - paragraph [ref=e205]: Enkelt som 1-2-3
+        - heading "Så fungerar NordLet" [level=2] [ref=e206]
+      - generic [ref=e207]:
+        - generic [ref=e209]:
+          - generic [ref=e211]: "1"
+          - heading "Sätt dig" [level=3] [ref=e212]
+          - paragraph [ref=e213]: Använd den precis som din vanliga toa. Bekväm sits i standardhöjd.
+        - generic [ref=e215]:
+          - generic [ref=e217]: "2"
+          - heading "Tryck på knappen" [level=3] [ref=e218]
+          - paragraph [ref=e219]: Välj läge och tryck. Värmeförseglingen aktiveras automatiskt och förseglar lufttätt.
+        - generic [ref=e221]:
+          - generic [ref=e223]: "3"
+          - heading "Släng i soporna" [level=3] [ref=e224]
+          - paragraph [ref=e225]: Den förseglade påsen är biologiskt nedbrytbar och slängs i vanliga hushållssoporna. Klart.
+    - generic [ref=e227]:
+      - generic [ref=e229]:
+        - paragraph [ref=e230]: Jämförelse
+        - heading "Frihetstoan vs. kassettoan" [level=2] [ref=e231]
+      - generic [ref=e233]:
+        - generic [ref=e234]:
+          - generic [ref=e236]: Kassettoa
+          - generic [ref=e237]: Frihetstoan
+        - generic [ref=e238]:
+          - generic [ref=e239]: Kassettank att tömma
+          - img [ref=e242]
+          - img [ref=e247]
+        - generic [ref=e249]:
+          - generic [ref=e250]: Kräver kemikalier/toamedel
+          - img [ref=e253]
+          - img [ref=e258]
+        - generic [ref=e260]:
+          - generic [ref=e261]: Tömningsstation behövs
+          - img [ref=e264]
+          - img [ref=e269]
+        - generic [ref=e271]:
+          - generic [ref=e272]: Vattenanslutning krävs
+          - img [ref=e275]
+          - img [ref=e280]
+        - generic [ref=e282]:
+          - generic [ref=e283]: Lukt i toautrymmet
+          - img [ref=e286]
+          - img [ref=e291]
+        - generic [ref=e293]:
+          - generic [ref=e294]: Speciellt toalettpapper
+          - img [ref=e297]
+          - img [ref=e302]
+        - generic [ref=e304]:
+          - generic [ref=e305]: Batteridrift
+          - img [ref=e308]
+          - img [ref=e313]
+        - generic [ref=e315]:
+          - generic [ref=e316]: Biologiskt nedbrytbar
+          - img [ref=e319]
+          - img [ref=e324]
+        - generic [ref=e326]:
+          - generic [ref=e327]: Fristående, flytta fritt
+          - img [ref=e330]
+          - img [ref=e335]
+        - generic [ref=e337]:
+          - generic [ref=e338]: Släng i vanliga soporna
+          - img [ref=e341]
+          - img [ref=e346]
+    - generic [ref=e349]:
+      - generic [ref=e351]:
+        - paragraph [ref=e352]: Fördelar
+        - heading "Därför väljer allt fler Frihetstoan" [level=2] [ref=e353]
+      - generic [ref=e354]:
+        - generic [ref=e356]:
+          - img [ref=e358]
+          - heading "Ingen kassettank" [level=3] [ref=e361]
+          - paragraph [ref=e362]: Ingen svartvattentank att tömma. Ingen vattenanslutning. Ingen avloppskoppling. Bara frihet.
+        - generic [ref=e364]:
+          - img [ref=e366]
+          - heading "Luktfri. Även i 30-gradersvärme." [level=3] [ref=e368]
+          - paragraph [ref=e369]: Värmeförseglingen skapar en lufttät förslutning inom sekunder. Ingen lukt, inte ens mitt i sommaren.
+        - generic [ref=e371]:
+          - img [ref=e373]
+          - heading "Batteridrift" [level=3] [ref=e377]
+          - paragraph [ref=e378]: Inbyggt uppladdningsbart batteri. Räcker i flera dagar. Laddas via USB eller 12V i husbilen.
+        - generic [ref=e380]:
+          - img [ref=e382]
+          - heading "Inga kemikalier. Noll." [level=3] [ref=e385]
+          - paragraph [ref=e386]: Slipp toamedel, sanitetsvätskor och allt som hör till. Bättre för dig och naturen.
+        - generic [ref=e388]:
+          - img [ref=e390]
+          - heading "Svängbar bas" [level=3] [ref=e393]
+          - paragraph [ref=e394]: 180° rotation med snabbkoppling. Passar även i trånga toautrymmen.
+        - generic [ref=e396]:
+          - img [ref=e398]
+          - heading "Ett knapptryck" [level=3] [ref=e403]
+          - paragraph [ref=e404]: Tryck en knapp, klart. Ingen manuell hantering. Inget pysslande med kassetten.
+    - generic [ref=e406]:
+      - generic [ref=e408]:
+        - paragraph [ref=e409]: Omdömen
+        - heading "Vad andra Frihetstoa-ägare säger" [level=2] [ref=e410]
+        - paragraph [ref=e411]: 96% av våra kunder rekommenderar Frihetstoan till andra
+      - generic [ref=e412]:
+        - generic [ref=e414]:
+          - img [ref=e415]
+          - paragraph [ref=e418]: "\"Vi har rest med husbil i 15 år och det här är det bästa vi köpt. Att slippa kassettanken och tömningsstationerna är en dröm. Vi hade SOG innan och tyckte det var bra, men det här är en helt annan nivå.\""
+          - generic [ref=e419]:
+            - generic [ref=e420]:
+              - img [ref=e421]
+              - img [ref=e423]
+              - img [ref=e425]
+              - img [ref=e427]
+              - img [ref=e429]
+            - paragraph [ref=e431]: Margareta & Lars
+            - paragraph [ref=e432]: Göteborg, Hymer B-ML 780
+        - generic [ref=e434]:
+          - img [ref=e435]
+          - paragraph [ref=e438]: "\"Jag var skeptisk först. Tänkte 'ännu en grej som luktar efter två veckor'. Men efter en hel sommar kan jag säga: det luktar inte. Inte ens i 30-gradersvärmen i juli. Min fru är lika förvånad som jag.\""
+          - generic [ref=e439]:
+            - generic [ref=e440]:
+              - img [ref=e441]
+              - img [ref=e443]
+              - img [ref=e445]
+              - img [ref=e447]
+              - img [ref=e449]
+            - paragraph [ref=e451]: Bengt
+            - paragraph [ref=e452]: Malmö, Knaus Van TI Plus
+        - generic [ref=e454]:
+          - img [ref=e455]
+          - paragraph [ref=e458]: "\"Vi ställer oss fritt i Norge varje sommar. Förut var det alltid stressen med att hitta tömning. Nu tänker vi inte ens på toan. Vi slänger påsen i soppåsen och kör vidare.\""
+          - generic [ref=e459]:
+            - generic [ref=e460]:
+              - img [ref=e461]
+              - img [ref=e463]
+              - img [ref=e465]
+              - img [ref=e467]
+              - img [ref=e469]
+            - paragraph [ref=e471]: Inger & Sven-Erik
+            - paragraph [ref=e472]: Uppsala, Carthago Liner
+        - generic [ref=e474]:
+          - img [ref=e475]
+          - paragraph [ref=e478]: "\"Som ensamresande kvinna slipper jag nu pyssla med kassetten och leta tömningsstationer. Jag bestämmer vart jag vill, inte var närmaste tömningsställe finns. Total frihet.\""
+          - generic [ref=e479]:
+            - generic [ref=e480]:
+              - img [ref=e481]
+              - img [ref=e483]
+              - img [ref=e485]
+              - img [ref=e487]
+              - img [ref=e489]
+            - paragraph [ref=e491]: Kerstin
+            - paragraph [ref=e492]: Lund, Bürstner Lyseo TD
+    - generic [ref=e496]:
+      - generic [ref=e497]:
+        - paragraph [ref=e498]: Räkna själv
+        - heading "Vad kostar din kassettoa egentligen?" [level=3] [ref=e499]
+      - generic [ref=e500]:
+        - generic [ref=e501]:
+          - generic [ref=e502]: Toamedel & sanitetsvätskor
+          - generic [ref=e503]: 1 200 kr
+        - generic [ref=e504]:
+          - generic [ref=e505]: Tömningsavgifter (15 tömningar/säsong)
+          - generic [ref=e506]: 1 500 kr
+        - generic [ref=e507]:
+          - generic [ref=e508]: Speciellt toalettpapper
+          - generic [ref=e509]: 500 kr
+        - generic [ref=e510]:
+          - generic [ref=e511]: Tid & omvägar till tömningsstationer
+          - generic [ref=e512]: Ovärderligt
+      - generic [ref=e513]:
+        - generic [ref=e514]: Årlig kostnad med kassettoa
+        - generic [ref=e515]: ~3 200 kr/år
+      - generic [ref=e516]:
+        - paragraph [ref=e517]: "Med Frihetstoan: bara påsar ~300 kr/år"
+        - paragraph [ref=e518]: Du sparar ~2 900 kr per år
+        - paragraph [ref=e519]: Plus all tid du slipper lägga på tömning
+    - generic [ref=e526]:
+      - generic [ref=e527]:
+        - img [ref=e528]
+        - generic [ref=e531]: Gratis guide
+      - heading "\"7 misstag husbilsägare gör med toaletten (och hur du undviker dem)\"" [level=3] [ref=e532]
+      - paragraph [ref=e533]: Ladda ner vår kostnadsfria guide och lär dig hur erfarna husbilsägare löser toalettfrågan. Kort, praktisk och rakt på sak.
+      - link "Ladda ner gratis" [ref=e535] [cursor=pointer]:
+        - /url: "#bestall"
+        - img [ref=e536]
+        - text: Ladda ner gratis
+      - paragraph [ref=e539]: Ingen registrering krävs. Vi skickar aldrig spam.
+    - generic [ref=e542]:
+      - generic [ref=e544]:
+        - paragraph [ref=e545]: Teknisk data
+        - heading "Specifikationer" [level=2] [ref=e546]
+      - table [ref=e549]:
+        - rowgroup [ref=e550]:
+          - row "Mått 445 × 355 × 455 mm" [ref=e551]:
+            - cell "Mått" [ref=e552]
+            - cell "445 × 355 × 455 mm" [ref=e553]
+          - row "Strömförsörjning 12V, 70W" [ref=e554]:
+            - cell "Strömförsörjning" [ref=e555]
+            - cell "12V, 70W" [ref=e556]
+          - row "Batteri Litium-jon, 5 200 mAh" [ref=e557]:
+            - cell "Batteri" [ref=e558]
+            - cell "Litium-jon, 5 200 mAh" [ref=e559]
+          - row "Laddning USB eller 12V i husbilen" [ref=e560]:
+            - cell "Laddning" [ref=e561]
+            - cell "USB eller 12V i husbilen" [ref=e562]
+          - row "Lägen Dubbelt läge (fast & flytande)" [ref=e563]:
+            - cell "Lägen" [ref=e564]
+            - cell "Dubbelt läge (fast & flytande)" [ref=e565]
+          - row "Kapacitet 30 användningar per rulle" [ref=e566]:
+            - cell "Kapacitet" [ref=e567]
+            - cell "30 användningar per rulle" [ref=e568]
+          - row "Indikator LED visar när det är dags att byta" [ref=e569]:
+            - cell "Indikator" [ref=e570]
+            - cell "LED visar när det är dags att byta" [ref=e571]
+          - row "Färg Vit" [ref=e572]:
+            - cell "Färg" [ref=e573]
+            - cell "Vit" [ref=e574]
+    - generic [ref=e577]:
+      - generic [ref=e579]:
+        - paragraph [ref=e580]: Frågor & Svar
+        - heading "Vanliga frågor" [level=2] [ref=e581]
+      - generic [ref=e583]:
+        - generic [ref=e584]:
+          - button "Luktar det verkligen inte? Inte ens på sommaren?" [ref=e585] [cursor=pointer]:
+            - generic [ref=e586]: Luktar det verkligen inte? Inte ens på sommaren?
+            - img [ref=e587]
+          - paragraph [ref=e590]: Vi vet att det låter för bra för att vara sant. Många har testat liknande lösningar och blivit besvikna. Men Frihetstoan använder värmeförsegling som skapar en 100% lufttät förslutning inom sekunder. Det gör den luktfri även i 30+ graders värme. Vi har över 2 300 kunder som bekräftar det. Och du har 30 dagars öppet köp om du vill testa själv.
+        - generic [ref=e591]:
+          - button "Hur funkar det egentligen?" [ref=e592] [cursor=pointer]:
+            - generic [ref=e593]: Hur funkar det egentligen?
+            - img [ref=e594]
+          - paragraph [ref=e596]: Du använder toan precis som vanligt. När du trycker på knappen aktiveras en värmeförsegling som paketerar avfallet i en biologiskt nedbrytbar påse. Helt lufttätt. Inga kemikalier, inget vatten, ingen manuell hantering. Påsen slänger du i vanliga hushållssoporna.
+        - generic [ref=e597]:
+          - button "Är det inte som PACTO-toan som luktade?" [ref=e598] [cursor=pointer]:
+            - generic [ref=e599]: Är det inte som PACTO-toan som luktade?
+            - img [ref=e600]
+          - paragraph [ref=e602]: Nej. PACTO använde vanlig plastförslutning utan värme. Frihetstoan använder en patenterad värmeförseglingsteknik som smälter ihop påsen till en helt lufttät enhet. Det är som att vakuumförpacka, inte bara knyta ihop en påse. Skillnaden i luktfrihet är enorm.
+        - generic [ref=e603]:
+          - button "Vad gör jag med påsarna? Kan man slänga dem i vanliga soporna?" [ref=e604] [cursor=pointer]:
+            - generic [ref=e605]: Vad gör jag med påsarna? Kan man slänga dem i vanliga soporna?
+            - img [ref=e606]
+          - paragraph [ref=e608]: Ja. Påsarna är biologiskt nedbrytbara och slängs i vanliga hushållssoporna, precis som blöjor. Varje rulle räcker till 30 användningar.
+        - generic [ref=e609]:
+          - button "Jag har SOG idag. Är det här bättre?" [ref=e610] [cursor=pointer]:
+            - generic [ref=e611]: Jag har SOG idag. Är det här bättre?
+            - img [ref=e612]
+          - paragraph [ref=e614]: SOG är en bra lösning för att minska kemikalieanvändningen. Men du behöver fortfarande kassettanken, fortfarande tömningsstationer, och fortfarande byta kolfilter. Med Frihetstoan slipper du allt det. Ingen kassettank. Ingen tömning. Inget filter. Bara en påse i soporna.
+        - generic [ref=e615]:
+          - button "Behöver man speciellt toalettpapper?" [ref=e616] [cursor=pointer]:
+            - generic [ref=e617]: Behöver man speciellt toalettpapper?
+            - img [ref=e618]
+          - paragraph [ref=e620]: Nej, använd det toalettpapper du vill. Inget behov av vattenlösligt eller speciellt poröst papper. Allt hamnar i påsen och förseglas.
+        - generic [ref=e621]:
+          - button "Passar den i min husbil/husvagn?" [ref=e622] [cursor=pointer]:
+            - generic [ref=e623]: Passar den i min husbil/husvagn?
+            - img [ref=e624]
+          - paragraph [ref=e626]: Frihetstoan är fristående och kräver ingen anslutning. Den är kompakt (445 × 355 mm) och den svängbara basen med 180° rotation gör att den passar även i trånga toautrymmen. Ingen installation behövs, du ställer den bara på plats.
+        - generic [ref=e627]:
+          - button "Hur lång tid räcker batteriet?" [ref=e628] [cursor=pointer]:
+            - generic [ref=e629]: Hur lång tid räcker batteriet?
+            - img [ref=e630]
+          - paragraph [ref=e632]: Det inbyggda litium-jon batteriet räcker för flera dagars normal användning. Laddas enkelt via USB eller 12V-uttaget i husbilen medan du kör.
+        - generic [ref=e633]:
+          - button "Kan jag returnera om jag inte är nöjd?" [ref=e634] [cursor=pointer]:
+            - generic [ref=e635]: Kan jag returnera om jag inte är nöjd?
+            - img [ref=e636]
+          - paragraph [ref=e638]: Absolut. Du har 30 dagars öppet köp med fri retur, inga frågor ställda. Vi tror så mycket på Frihetstoan att vi tar hela risken. Av alla som provat har 96% valt att behålla den.
+    - generic [ref=e640]:
+      - generic [ref=e642]:
+        - paragraph [ref=e643]: Beställ
+        - heading "Välj ditt paket" [level=2] [ref=e644]
+        - paragraph [ref=e645]: Fri frakt i hela Sverige. 30 dagars öppet köp. Inga dolda avgifter.
+      - generic [ref=e646]:
+        - generic [ref=e648]:
+          - heading "Frihetstoan" [level=3] [ref=e649]
+          - paragraph [ref=e650]: Allt du behöver för att komma igång.
+          - generic [ref=e651]:
+            - generic [ref=e652]: 14 900
+            - generic [ref=e653]: kr
+          - paragraph [ref=e654]: Betalar sig själv på under 5 säsonger
+          - list [ref=e655]:
+            - listitem [ref=e656]:
+              - img [ref=e658]
+              - generic [ref=e660]: NordLet Frihetstoan
+            - listitem [ref=e661]:
+              - img [ref=e663]
+              - generic [ref=e665]: 1 rulle påsar (30 användningar)
+            - listitem [ref=e666]:
+              - img [ref=e668]
+              - generic [ref=e670]: USB-laddkabel
+            - listitem [ref=e671]:
+              - img [ref=e673]
+              - generic [ref=e675]: Svensk bruksanvisning
+            - listitem [ref=e676]:
+              - img [ref=e678]
+              - generic [ref=e680]: 2 års garanti
+          - generic [ref=e681]:
+            - link "Beställ frihetstoan" [ref=e682] [cursor=pointer]:
+              - /url: "mailto:info@nordlet.se?subject=Beställning: Frihetstoan"
+            - paragraph [ref=e683]: Fri frakt. 30 dagars pengarna tillbaka. Ingen bindning.
+        - generic [ref=e685]:
+          - generic [ref=e687]:
+            - img [ref=e688]
+            - text: Mest populärt
+          - heading "Startpaketet" [level=3] [ref=e690]
+          - paragraph [ref=e691]: Vårt mest populära val. Allt för en hel säsong.
+          - generic [ref=e692]:
+            - generic [ref=e693]: 16 900
+            - generic [ref=e694]: kr
+            - generic [ref=e695]: 18 380 kr
+          - paragraph [ref=e696]: Spara 1 480 kr jämfört med separat köp
+          - list [ref=e697]:
+            - listitem [ref=e698]:
+              - img [ref=e700]
+              - generic [ref=e702]: NordLet Frihetstoan
+            - listitem [ref=e703]:
+              - img [ref=e705]
+              - generic [ref=e707]: 5 rullar påsar (150 användningar)
+            - listitem [ref=e708]:
+              - img [ref=e710]
+              - generic [ref=e712]: USB-laddkabel + 12V-adapter
+            - listitem [ref=e713]:
+              - img [ref=e715]
+              - generic [ref=e717]: Bärväska för förvaring
+            - listitem [ref=e718]:
+              - img [ref=e720]
+              - generic [ref=e722]: Svensk bruksanvisning
+            - listitem [ref=e723]:
+              - img [ref=e725]
+              - generic [ref=e727]: 2 års garanti
+            - listitem [ref=e728]:
+              - img [ref=e730]
+              - generic [ref=e732]: Prioriterad kundtjänst
+          - generic [ref=e733]:
+            - link "Beställ startpaketet" [ref=e734] [cursor=pointer]:
+              - /url: "mailto:info@nordlet.se?subject=Beställning: Startpaketet"
+            - paragraph [ref=e735]: Fri frakt. 30 dagars pengarna tillbaka. Ingen bindning.
+      - generic [ref=e737]:
+        - paragraph [ref=e738]: Föredrar du att prata med en riktig människa?
+        - link "📞 +46 70 123 45 67" [ref=e739] [cursor=pointer]:
+          - /url: tel:+46701234567
+        - paragraph [ref=e740]: Vardagar 9–17. Vi svarar oftast direkt.
+  - contentinfo [ref=e741]:
+    - generic [ref=e743]:
+      - generic [ref=e744]:
+        - generic [ref=e745]: NordLet
+        - generic [ref=e746]: "|"
+        - generic [ref=e747]: © 2026 Alla rättigheter förbehållna
+      - generic [ref=e748]:
+        - link "Integritetspolicy" [ref=e749] [cursor=pointer]:
+          - /url: "#"
+        - link "Villkor" [ref=e750] [cursor=pointer]:
+          - /url: "#"
+        - link "Kontakt" [ref=e751] [cursor=pointer]:
+          - /url: mailto:info@nordlet.se
+  - generic [ref=e761]:
+    - generic [ref=e762]:
+      - link "Beställ Frihetstoan" [ref=e763] [cursor=pointer]:
+        - /url: "#bestall"
+      - link "Ring oss" [ref=e764] [cursor=pointer]:
+        - /url: tel:+46701234567
+        - img [ref=e765]
+    - paragraph [ref=e767]: 30 dagars öppet köp. Ingen bindning.
+  - generic:
+    - generic:
+      - generic: 🛒
+      - generic:
+        - paragraph: Eva i Karlstad
+        - paragraph: beställde Frihetstoan, igår
+  - alert [ref=e752]

@@ -1,8 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
+import { IMAGES } from "@/lib/images";
 import { Check } from "lucide-react";
 
 const highlights = [
@@ -20,25 +22,19 @@ export function Product() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image */}
           <AnimateOnScroll>
-            <div className="relative aspect-square rounded-3xl bg-gradient-to-br from-surface to-bg-warm flex items-center justify-center border border-border overflow-hidden">
-              <svg
-                viewBox="0 0 400 400"
-                className="w-full h-full p-12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <ellipse cx="200" cy="330" rx="130" ry="22" fill="#1B3A4B" opacity="0.04" />
-                <path
-                  d="M140 195 C140 135 165 92 200 92 C235 92 260 135 260 195 L260 275 C260 296 242 308 200 308 C158 308 140 296 140 275 Z"
-                  fill="white" stroke="#E8E2D8" strokeWidth="2"
-                />
-                <ellipse cx="200" cy="195" rx="60" ry="32" fill="#FFFDF9" stroke="#1B3A4B" strokeWidth="2" />
-                <ellipse cx="200" cy="195" rx="44" ry="23" fill="#F7F3ED" />
-                <circle cx="200" cy="105" r="11" fill="#B8860B" />
-                <circle cx="200" cy="105" r="5.5" fill="white" opacity="0.35" />
-                <circle cx="280" cy="140" r="22" fill="#2E7D4F" opacity="0.1" />
-                <path d="M270 140 L277 147 L292 132" stroke="#2E7D4F" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+            <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl shadow-primary/10">
+              <Image
+                src={IMAGES.interior}
+                alt="Husbilsinteriör med modern inredning"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              {/* Product overlay */}
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 sm:p-8">
+                <p className="text-white font-semibold text-lg">NordLet Frihetstoan</p>
+                <p className="text-white/60 text-sm">Vattenlös. Kemikaliefri. Luktfri.</p>
+              </div>
             </div>
           </AnimateOnScroll>
 
@@ -51,7 +47,7 @@ export function Product() {
               className="text-3xl sm:text-4xl tracking-tight text-text leading-snug"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Möt Frihetstoan. Slipp allt krångel med husbilstoan.
+              Slipp allt krångel med husbilstoan.
             </h2>
             <p className="mt-5 text-text-muted leading-relaxed text-lg">
               Frihetstoan ersätter din kassettoa helt. Ingen svartvattentank.
