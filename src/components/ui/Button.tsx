@@ -19,17 +19,17 @@ export function Button({
     "inline-flex items-center justify-center font-semibold transition-all duration-300 cursor-pointer tracking-wide";
 
   const sizes = {
-    default: "rounded-lg px-8 py-4 text-base",
-    large: "rounded-xl px-10 py-5 text-lg",
+    default: "rounded-full px-8 py-4 text-base",
+    large: "rounded-full px-10 py-5 text-lg",
   };
 
   const variants = {
     primary:
-      "bg-accent text-white hover:bg-accent-light shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 hover:-translate-y-0.5",
+      "border border-white/10 bg-accent text-white hover:bg-accent-light shadow-[0_18px_40px_-18px_rgba(0,0,0,0.45)] hover:-translate-y-0.5",
     secondary:
-      "bg-primary text-white hover:bg-primary-light shadow-lg",
+      "bg-primary text-white hover:bg-primary-light shadow-[0_18px_40px_-18px_rgba(0,0,0,0.35)]",
     outline:
-      "border-2 border-primary/20 text-primary hover:bg-primary hover:text-white",
+      "border border-primary/20 bg-transparent text-primary hover:bg-primary hover:text-white",
   };
 
   const classes = cn(base, sizes[size], variants[variant], className);

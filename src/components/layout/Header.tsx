@@ -47,7 +47,7 @@ export function Header() {
                 "text-sm font-medium transition-colors",
                 scrolled
                   ? "text-text-muted hover:text-primary"
-                  : "text-white/70 hover:text-white"
+                  : "text-white/75 hover:text-white"
               )}
             >
               {link.label}
@@ -55,7 +55,7 @@ export function Header() {
           ))}
           <a
             href="#bestall"
-            className="ml-2 bg-accent text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-accent-light transition-all shadow-sm"
+            className="ml-2 rounded-full border border-white/10 bg-accent px-6 py-2.5 text-sm font-semibold tracking-wide text-white shadow-lg shadow-black/15 transition-all hover:bg-accent-light"
           >
             Beställ nu
           </a>
@@ -91,7 +91,7 @@ export function Header() {
             <a
               href="#bestall"
               onClick={() => setMenuOpen(false)}
-              className="mt-2 bg-accent text-white px-6 py-3 rounded-lg text-base font-semibold text-center"
+              className="mt-2 rounded-full bg-accent px-6 py-3 text-center text-base font-semibold tracking-wide text-white"
             >
               Beställ nu
             </a>
