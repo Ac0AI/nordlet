@@ -11,7 +11,7 @@ export function LifestyleBanner() {
       <section className="relative h-[50vh] sm:h-[60vh] overflow-hidden">
         <Image
           src={IMAGES.road}
-          alt="Husbil på väg genom nordisk natur"
+          alt="Par som dricker kaffe utanför husbil vid sjö i nordisk morgondimma"
           fill
           className="object-cover"
           sizes="100vw"
