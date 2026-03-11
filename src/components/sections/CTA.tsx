@@ -16,24 +16,23 @@ export function CTA() {
               className="text-3xl sm:text-5xl tracking-tight text-text leading-snug"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Redo att slippa kassettanken?
+              Redo för en mer genomtänkt toalettlösning?
             </h2>
             <p className="mt-5 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl mx-auto">
-              Anslut dig till 2 300+ husbilsägare som redan slängt toamedlet.
-              Du har 30 dagars öppet köp. Inte nöjd? Pengarna tillbaka.
-              Inga frågor.
+              Välj Frihetstoa om du vill ha en vattenlös lösning med fri retur,
+              svensk rådgivning och en vardag på vägen som kräver mindre av dig.
             </p>
 
             <div className="mt-8 inline-flex items-center gap-2 bg-green-light rounded-full px-5 py-2.5">
               <ShieldCheck size={18} className="text-green" />
               <span className="text-sm font-semibold text-green">
-                Riskfritt köp. 30 dagars pengarna-tillbaka-garanti.
+                30 dagars öppet köp och fri retur.
               </span>
             </div>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button
-                href={`mailto:${SITE.email}?subject=Beställning Frihetstoan`}
+                href={`mailto:${SITE.email}?subject=Beställning Frihetstoa`}
                 size="large"
               >
                 <Mail size={18} className="mr-2.5" />
@@ -50,7 +49,7 @@ export function CTA() {
             </div>
 
             <p className="mt-4 text-sm text-accent font-medium">
-              Begränsat antal i lager. Vi skickar inom 1–2 arbetsdagar.
+              Begränsat antal i lager. Leverans inom 1-2 arbetsdagar från Sverige.
             </p>
 
             <div className="mt-6 text-text-muted text-base">

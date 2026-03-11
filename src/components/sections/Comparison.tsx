@@ -42,7 +42,7 @@ export function Comparison() {
               className="text-3xl sm:text-4xl tracking-tight text-text"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Frihetstoan vs. kassettoan
+              Frihetstoa vs. kassettoaletten
             </h2>
           </div>
         </AnimateOnScroll>
@@ -52,11 +52,11 @@ export function Comparison() {
             <div className="grid grid-cols-[1fr_auto_auto] gap-0 bg-bg-alt px-6 py-4 border-b border-border">
               <div />
               <div className="w-28 sm:w-36 text-center text-sm font-medium text-text-muted">
-                Kassettoa
+                Kassettoalett
               </div>
               <div className="w-28 sm:w-36 text-center">
                 <span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">
-                  Frihetstoan
+                  Frihetstoa
                 </span>
               </div>
             </div>

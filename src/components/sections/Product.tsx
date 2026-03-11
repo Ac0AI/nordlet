@@ -8,11 +8,11 @@ import { IMAGES } from "@/lib/images";
 import { Check } from "lucide-react";
 
 const highlights = [
-  "Ingen kassettank att tömma. Någonsin.",
-  "Inga kemikalier eller toamedel",
-  "Ingen lukt. Inte ens i 30-gradersvärme.",
-  "Biologiskt nedbrytbara påsar. Släng i hushållssoporna.",
-  "Kompakt design som passar alla husbilar och husvagnar",
+  "Ingen kassettank att tömma",
+  "Utan kemikalier eller toamedel",
+  "Lufttät försegling även under varma dagar",
+  "Biologiskt nedbrytbara påsar för hushållssopor",
+  "Kompakt format för husbilar och husvagnar",
 ];
 
 export function Product() {
@@ -26,7 +26,7 @@ export function Product() {
               <div className="relative sm:col-span-2 min-h-[340px] overflow-hidden rounded-3xl border border-border bg-surface shadow-2xl shadow-primary/10">
                 <Image
                   src={IMAGES.productFront}
-                  alt="Frihetstoan framifrån"
+                  alt="Frihetstoa framifrån"
                   fill
                   className="object-contain p-6 sm:p-8"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -36,7 +36,7 @@ export function Product() {
               <div className="relative min-h-[220px] overflow-hidden rounded-2xl border border-border bg-surface">
                 <Image
                   src={IMAGES.productSide}
-                  alt="Frihetstoan från sidan"
+                  alt="Frihetstoa från sidan"
                   fill
                   className="object-contain p-4"
                   sizes="(max-width: 1024px) 50vw, 25vw"
@@ -46,7 +46,7 @@ export function Product() {
               <div className="relative min-h-[220px] overflow-hidden rounded-2xl border border-border bg-surface">
                 <Image
                   src={IMAGES.productDimensions}
-                  alt="Måttskiss för Frihetstoan"
+                  alt="Måttskiss för Frihetstoa"
                   fill
                   className="object-contain p-4"
                   sizes="(max-width: 1024px) 50vw, 25vw"
@@ -58,19 +58,19 @@ export function Product() {
           {/* Text */}
           <AnimateOnScroll delay={0.15}>
             <p className="text-accent font-semibold text-sm tracking-widest uppercase mb-4">
-              Frihetstoan
+              Frihetstoa
             </p>
             <h2
               className="text-3xl sm:text-4xl tracking-tight text-text leading-snug"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Slipp allt krångel med husbilstoan.
+              Ett mer genomtänkt toalettval för husbilen.
             </h2>
             <p className="mt-5 text-text-muted leading-relaxed text-lg">
-              Frihetstoan ersätter din kassettoa helt. Ingen svartvattentank.
-              Inget toamedel. Ingen installation. Du packar upp den, ställer
-              den på plats och börjar använda den direkt. Precis som en
-              vanlig toa, fast utan allt det jobbiga.
+              Frihetstoa ersätter den traditionella kassettoaletten med en
+              vattenlös, fristående lösning. Ingen svartvattentank, inget
+              toamedel och ingen fast installation. Placera den på plats och
+              börja använda den direkt.
             </p>
 
             <ul className="mt-8 space-y-4">
@@ -85,7 +85,7 @@ export function Product() {
             </ul>
 
             <div className="mt-10">
-              <Button href="#bestall">Beställ Frihetstoan</Button>
+              <Button href="#bestall">Beställ Frihetstoa</Button>
             </div>
           </AnimateOnScroll>
         </div>

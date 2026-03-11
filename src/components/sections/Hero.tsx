@@ -55,7 +55,7 @@ export function Hero() {
               ))}
             </div>
             <span className="text-sm text-white/80 font-medium">
-              2 300+ husbilsägare har valt Frihetstoan
+              2 300+ husbilsägare har valt Frihetstoa
             </span>
           </motion.div>
 
@@ -69,7 +69,7 @@ export function Hero() {
           >
             Byggd för vägarna norrut.
             <br />
-            Slipp kassettanken mellan{" "}
+            Res vidare utan kassettank mellan{" "}
             <span className="text-accent-light italic">fjord, fjäll och frihet.</span>
           </motion.h1>
 
@@ -80,9 +80,9 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/72 sm:text-xl"
           >
-            Frihetstoan är den vattenlösa toaletten för dig som vill parkera
-            vid vattnet, vakna i kall skandinavisk luft och köra vidare utan
-            kemikalier, lukt eller jakt på tömningsstationer.
+            Frihetstoa är den vattenlösa toaletten för dig som vill stå friare,
+            resa längre och slippa kemikalier, lukt och omvägar till
+            tömningsstationer.
           </motion.p>
 
           <motion.p
@@ -91,7 +91,7 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.24 }}
             className="mx-auto mt-5 max-w-xl text-sm font-medium uppercase tracking-[0.18em] text-white/60"
           >
-            Skandinavisk design. Svensk support. Byggd för ett friare campingliv.
+            Skandinavisk design. Svensk support. Utvecklad för ett friare husbilsliv.
           </motion.p>
 
           {/* CTA */}
@@ -103,7 +103,7 @@ export function Hero() {
           >
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button href="#bestall" size="large">
-                Beställ Frihetstoan nu
+                Beställ Frihetstoa
               </Button>
               <Button
                 href="#sa-fungerar-det"
@@ -115,7 +115,7 @@ export function Hero() {
               </Button>
             </div>
             <p className="mt-4 text-sm font-medium text-accent-light">
-              Fri frakt i Sverige. Begränsat antal kvar i första leveransen.
+              Fri leverans i Sverige. Begränsat antal i aktuell leverans.
             </p>
             {/* Phone */}
             <div className="mt-6 flex items-center justify-center gap-2">
@@ -127,7 +127,7 @@ export function Hero() {
               >
                 {SITE.phone}
               </a>
-              <span className="text-sm text-white/40 ml-1">ring oss direkt</span>
+              <span className="text-sm text-white/40 ml-1">prata med oss direkt</span>
             </div>
           </motion.div>
 

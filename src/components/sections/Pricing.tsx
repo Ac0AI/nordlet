@@ -8,11 +8,11 @@ import { SITE } from "@/lib/constants";
 
 const packages = [
   {
-    name: "Frihetstoan",
+    name: "Frihetstoa",
     price: "14 900",
-    description: "Allt du behöver för att komma igång.",
+    description: "För dig som vill komma igång i egen takt.",
     features: [
-      "NordLet Frihetstoan",
+      "NordLet Frihetstoa",
       "1 rulle påsar (30 användningar)",
       "USB-laddkabel",
       "Svensk bruksanvisning",
@@ -21,18 +21,18 @@ const packages = [
     popular: false,
   },
   {
-    name: "Startpaketet",
+    name: "Säsongspaketet",
     price: "16 900",
     originalPrice: "18 380",
-    description: "Vårt mest populära val. Allt för en hel säsong.",
+    description: "Vårt mest uppskattade val för en hel säsong.",
     features: [
-      "NordLet Frihetstoan",
+      "NordLet Frihetstoa",
       "5 rullar påsar (150 användningar)",
       "USB-laddkabel + 12V-adapter",
       "Bärväska för förvaring",
       "Svensk bruksanvisning",
       "2 års garanti",
-      "Prioriterad kundtjänst",
+      "Prioriterad support",
     ],
     popular: true,
   },
@@ -54,7 +54,7 @@ export function Pricing() {
               Välj ditt paket
             </h2>
             <p className="mt-3 text-text-muted text-lg max-w-lg mx-auto">
-              Fri frakt i hela Sverige. 30 dagars öppet köp. Inga dolda avgifter.
+              Fri leverans i hela Sverige, 30 dagars öppet köp och tydliga villkor.
             </p>
           </div>
         </AnimateOnScroll>
@@ -73,7 +73,7 @@ export function Pricing() {
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">
                     <span className="inline-flex items-center gap-1.5 bg-accent text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider">
                       <Star size={12} className="fill-white" />
-                      Mest populärt
+                      Mest uppskattat
                     </span>
                   </div>
                 )}
@@ -99,8 +99,8 @@ export function Pricing() {
                 {/* Cost comparison anchor */}
                 <p className="mt-2 text-sm text-accent font-medium">
                   {pkg.popular
-                    ? "Spara 1 480 kr jämfört med separat köp"
-                    : "Betalar sig själv på under 5 säsonger"}
+                    ? "Samlad lösning för en längre säsong"
+                    : "Ett långsiktigt val för ett friare reseliv"}
                 </p>
 
                 <ul className="mt-8 space-y-3 flex-grow">
@@ -124,7 +124,7 @@ export function Pricing() {
                   </Button>
                   {/* Micro-copy under CTA */}
                   <p className="text-center text-xs text-text-light mt-3">
-                    Fri frakt. 30 dagars pengarna tillbaka. Ingen bindning.
+                    Fri leverans, 30 dagars öppet köp och svensk support.
                   </p>
                 </div>
               </div>
@@ -136,7 +136,7 @@ export function Pricing() {
         <AnimateOnScroll delay={0.2}>
           <div className="mt-12 text-center">
             <p className="text-text-muted text-base mb-2">
-              Föredrar du att prata med en riktig människa?
+              Vill du hellre beställa med personlig rådgivning?
             </p>
             <a
               href={`tel:${SITE.phone.replace(/\s/g, "")}`}
@@ -146,7 +146,7 @@ export function Pricing() {
               📞 {SITE.phone}
             </a>
             <p className="text-sm text-text-light mt-1">
-              Vardagar 9–17. Vi svarar oftast direkt.
+              Vardagar 9-17. Lugnt, personligt och utan köstress.
             </p>
           </div>
         </AnimateOnScroll>

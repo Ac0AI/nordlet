@@ -28,7 +28,7 @@ export function StickyMobileCTA() {
           href="#bestall"
           className="flex-1 bg-accent text-white font-semibold py-3.5 rounded-xl text-center text-base hover:bg-accent-light transition-all shadow-lg shadow-accent/20"
         >
-          Beställ Frihetstoan
+          Beställ Frihetstoa
         </a>
         <a
           href={`tel:${SITE.phone.replace(/\s/g, "")}`}
@@ -39,7 +39,7 @@ export function StickyMobileCTA() {
         </a>
       </div>
       <p className="bg-surface/95 text-center text-xs text-text-light pb-2 px-4">
-        30 dagars öppet köp. Ingen bindning.
+        Fri retur och svensk rådgivning.
       </p>
     </div>
   );

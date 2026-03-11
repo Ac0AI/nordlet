@@ -15,9 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NordLet Frihetstoan | Vattenlös husbilstoalett | Slipp kemikalier & tömningsstationer",
+  title: "NordLet Frihetstoa | Vattenlös toalett för husbil och husvagn",
   description:
-    "NordLet är den prisbelönta vattenlösa toaletten för husbilar och husvagnar. Batteridrift, värmeförsegling och biologiskt nedbrytbara påsar. Fri frakt. 30 dagars öppet köp.",
+    "NordLet Frihetstoa är den vattenlösa toaletten för husbilar och husvagnar. Värmeförsegling, batteridrift och biologiskt nedbrytbara påsar för ett friare reseliv.",
   keywords: [
     "husbilstoalett",
     "vattenlös toalett",
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     "camping toalett",
   ],
   openGraph: {
-    title: "NordLet Frihetstoan | Slipp kemikalier & tömningsstationer för gott",
+    title: "NordLet Frihetstoa | Vattenlös toalett för friare husbilsliv",
     description:
-      "Upptäck Frihetstoan. Den vattenlösa toaletten som ger dig total frihet i husbilen. Batteridrift. Luktfri. 30 dagars öppet köp.",
+      "Upptäck Frihetstoa. En vattenlös toalett med värmeförsegling, batteridrift och en mer genomtänkt vardag på vägen.",
     locale: "sv_SE",
     type: "website",
   },

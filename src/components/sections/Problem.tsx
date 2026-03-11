@@ -14,11 +14,11 @@ export function Problem() {
               className="text-3xl sm:text-4xl tracking-tight text-text"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Vi husbilsägare vet...
+              Friheten med husbil är svårslagen.
             </h2>
             <p className="mt-3 text-text-muted text-lg max-w-xl mx-auto">
-              Friheten är fantastisk. Men toan? Den kan förstöra
-              vilken resa som helst.
+              Toalettlösningen är det inte alltid. Därför väljer allt fler ett
+              mer genomtänkt alternativ.
             </p>
           </div>
         </AnimateOnScroll>
@@ -45,7 +45,7 @@ export function Problem() {
               className="text-xl sm:text-2xl text-text"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Det finns en bättre lösning.
+              Det finns ett mer genomtänkt sätt att resa.
             </p>
           </div>
         </AnimateOnScroll>

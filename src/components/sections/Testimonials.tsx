@@ -12,16 +12,16 @@ export function Testimonials() {
         <AnimateOnScroll>
           <div className="text-center mb-16">
             <p className="text-accent font-semibold text-sm tracking-widest uppercase mb-4">
-              Omdömen
+              Erfarenheter
             </p>
             <h2
               className="text-3xl sm:text-4xl tracking-tight text-text"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Vad andra Frihetstoa-ägare säger
+              Röster från vägen
             </h2>
             <p className="mt-3 text-text-muted text-lg">
-              96% av våra kunder rekommenderar Frihetstoan till andra
+              96% av våra kunder säger att de gärna rekommenderar Frihetstoa vidare
             </p>
           </div>
         </AnimateOnScroll>

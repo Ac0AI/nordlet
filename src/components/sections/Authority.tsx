@@ -17,7 +17,7 @@ const authorityItems = [
   },
   {
     icon: Building2,
-    label: "Svensk kundtjänst & garanti",
+    label: "Svensk rådgivning & garanti",
     detail: "Svenskt företag med lager i Sverige. 2 års full garanti.",
   },
 ];

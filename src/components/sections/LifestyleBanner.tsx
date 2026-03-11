@@ -23,12 +23,12 @@ export function LifestyleBanner() {
               className="text-3xl sm:text-4xl text-white tracking-tight leading-snug"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Stanna var du vill.
+              Stå friare.
               <br />
-              Så länge du vill.
+              Res längre.
             </p>
             <p className="mt-3 text-white/60 text-lg">
-              Utan att tänka på tömningsstationer.
+              Utan att planera resan efter tömningsstationer.
             </p>
           </div>
         </Container>

@@ -24,7 +24,7 @@ export function SavingsCalculator() {
                 className="text-2xl sm:text-3xl tracking-tight text-text"
                 style={{ fontFamily: "var(--font-dm-serif)" }}
               >
-                Vad kostar din kassettoa egentligen?
+                Vad kostar kassettoaletten över tid?
               </h3>
             </div>
 
@@ -44,7 +44,7 @@ export function SavingsCalculator() {
 
             <div className="mt-6 pt-6 border-t-2 border-accent/30 flex justify-between items-center">
               <span className="text-text font-semibold text-lg">
-                Årlig kostnad med kassettoa
+                Årlig kostnad med kassettoalett
               </span>
               <span
                 className="text-2xl font-bold text-accent"
@@ -56,7 +56,7 @@ export function SavingsCalculator() {
 
             <div className="mt-8 bg-green-light rounded-xl p-6 text-center">
               <p className="text-green font-semibold text-lg">
-                Med Frihetstoan: bara påsar ~300 kr/år
+                Med Frihetstoa: förbrukning från ca 300 kr/år
               </p>
               <p
                 className="text-green text-2xl font-bold mt-1"
@@ -65,7 +65,7 @@ export function SavingsCalculator() {
                 Du sparar ~2 900 kr per år
               </p>
               <p className="text-green/70 text-sm mt-2">
-                Plus all tid du slipper lägga på tömning
+                Plus tiden du slipper lägga på tömning och omvägar
               </p>
             </div>
           </div>
