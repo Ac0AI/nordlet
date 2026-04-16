@@ -11,7 +11,6 @@ import { Comparison } from "@/components/sections/Comparison";
 import { Features } from "@/components/sections/Features";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { SavingsCalculator } from "@/components/sections/SavingsCalculator";
-import { Reciprocity } from "@/components/sections/Reciprocity";
 import { Specifications } from "@/components/sections/Specifications";
 import { FAQ } from "@/components/sections/FAQ";
 import { Pricing } from "@/components/sections/Pricing";
@@ -34,7 +33,6 @@ export default function Home() {
         <Features />
         <Testimonials />
         <SavingsCalculator />
-        <Reciprocity />
         <Specifications />
         <FAQ />
         <Pricing />
