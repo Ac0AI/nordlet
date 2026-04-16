@@ -6,19 +6,19 @@ import { Award, Newspaper, Building2 } from "lucide-react";
 
 const authorityItems = [
   {
-    icon: Newspaper,
-    label: "Testad & rekommenderad",
-    detail: "Uppmärksammad i Husbil & Husvagn, Sveriges största husbilstidning",
-  },
-  {
     icon: Award,
-    label: "CE-certifierad",
-    detail: "Uppfyller alla europeiska säkerhetskrav och standarder",
+    label: "CE-märkt",
+    detail: "Uppfyller europeiska säkerhetskrav och standarder.",
   },
   {
     icon: Building2,
-    label: "Svensk rådgivning & garanti",
-    detail: "Svenskt företag med lager i Sverige. 2 års full garanti.",
+    label: "Svensk support & garanti",
+    detail: "Svenskt företag med lager i Sverige. 2 års garanti.",
+  },
+  {
+    icon: Newspaper,
+    label: "14 dagars full ångerrätt",
+    detail: "Enligt Distansavtalslagen. Utöver det: 30 dagars öppet köp.",
   },
 ];
 

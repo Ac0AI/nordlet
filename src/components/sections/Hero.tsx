@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { TRUST_BADGES, SOCIAL_PROOF_STATS, SITE } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
-import { Star, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 
 export function Hero() {
   return (
@@ -37,27 +37,6 @@ export function Hero() {
             <span className="hidden text-white/35 sm:inline">|</span>
             <span className="hidden text-white/60 sm:inline">För fjord, fjäll och stjärnhimmel</span>
           </motion.p>
-
-          {/* Social proof bar */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-5 py-2.5 backdrop-blur-md"
-          >
-            <div className="flex">
-              {[...Array(5)].map((_, i) => (
-                <Star
-                  key={i}
-                  size={16}
-                  className="text-accent fill-accent"
-                />
-              ))}
-            </div>
-            <span className="text-sm text-white/80 font-medium">
-              2 300+ husbilsägare har valt Frihetstoa
-            </span>
-          </motion.div>
 
           {/* Headline */}
           <motion.h1
@@ -117,18 +96,20 @@ export function Hero() {
             <p className="mt-4 text-sm font-medium text-accent-light">
               Fri leverans i Sverige. Begränsat antal i aktuell leverans.
             </p>
-            {/* Phone */}
-            <div className="mt-6 flex items-center justify-center gap-2">
-              <Phone size={18} className="text-white/60" />
-              <a
-                href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-                className="text-lg sm:text-xl font-bold text-white hover:text-accent-light transition-colors"
-                style={{ fontFamily: "var(--font-dm-serif)" }}
-              >
-                {SITE.phone}
-              </a>
-              <span className="text-sm text-white/40 ml-1">prata med oss direkt</span>
-            </div>
+            {/* Phone - only rendered when configured via env */}
+            {SITE.phone && (
+              <div className="mt-6 flex items-center justify-center gap-2">
+                <Phone size={18} className="text-white/60" />
+                <a
+                  href={`tel:${SITE.phone.replace(/\s/g, "")}`}
+                  className="text-lg sm:text-xl font-bold text-white hover:text-accent-light transition-colors py-2"
+                  style={{ fontFamily: "var(--font-dm-serif)" }}
+                >
+                  {SITE.phone}
+                </a>
+                <span className="text-sm text-white/40 ml-1">prata med oss direkt</span>
+              </div>
+            )}
           </motion.div>
 
           {/* Trust badges */}
@@ -138,15 +119,18 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.5 }}
             className="mt-12 flex flex-wrap justify-center gap-6 sm:gap-8"
           >
-            {TRUST_BADGES.map((badge) => (
-              <div
-                key={badge.text}
-                className="flex items-center gap-2 text-sm text-white/60"
-              >
-                <span className="text-lg">{badge.icon}</span>
-                <span className="font-medium">{badge.text}</span>
-              </div>
-            ))}
+            {TRUST_BADGES.map((badge) => {
+              const Icon = badge.icon;
+              return (
+                <div
+                  key={badge.text}
+                  className="flex items-center gap-2 text-sm text-white/60"
+                >
+                  <Icon size={16} className="text-white/50" />
+                  <span className="font-medium">{badge.text}</span>
+                </div>
+              );
+            })}
           </motion.div>
         </div>
 

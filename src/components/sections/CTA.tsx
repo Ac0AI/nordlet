@@ -69,15 +69,18 @@ export function CTA() {
             </div>
 
             <div className="mt-12 flex flex-wrap justify-center gap-6 sm:gap-10">
-              {TRUST_BADGES.map((badge) => (
-                <div
-                  key={badge.text}
-                  className="flex items-center gap-2 text-sm text-text-muted"
-                >
-                  <span className="text-lg">{badge.icon}</span>
-                  <span className="font-medium">{badge.text}</span>
-                </div>
-              ))}
+              {TRUST_BADGES.map((badge) => {
+                const Icon = badge.icon;
+                return (
+                  <div
+                    key={badge.text}
+                    className="flex items-center gap-2 text-sm text-text-muted"
+                  >
+                    <Icon size={16} className="text-text-light" />
+                    <span className="font-medium">{badge.text}</span>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </AnimateOnScroll>

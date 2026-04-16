@@ -5,6 +5,10 @@ import {
   RotateCw,
   Hand,
   Thermometer,
+  Truck,
+  RotateCcw,
+  Flag,
+  Shield,
 } from "lucide-react";
 
 export const SITE = {
@@ -14,21 +18,30 @@ export const SITE = {
   description:
     "Nordens vattenlösa toalett för husbilar och husvagnar. Värmeförsegling, batteridrift och en renare resa utan kassettank eller kemikalier.",
   email: "info@nordlet.se",
-  phone: "+46 70 123 45 67",
+  phone: process.env.NEXT_PUBLIC_PHONE ?? "",
+  company: {
+    name: process.env.NEXT_PUBLIC_COMPANY_NAME ?? "NordLet",
+    orgNr: process.env.NEXT_PUBLIC_ORG_NR ?? "",
+    address: process.env.NEXT_PUBLIC_COMPANY_ADDRESS ?? "",
+  },
+  checkoutUrls: {
+    frihetstoa: process.env.NEXT_PUBLIC_CHECKOUT_URL_FRIHETSTOA ?? "",
+    sasongspaket: process.env.NEXT_PUBLIC_CHECKOUT_URL_SASONGSPAKET ?? "",
+  },
 };
 
 export const NAV_LINKS = [
   { label: "Så fungerar det", href: "#sa-fungerar-det" },
   { label: "Fördelar", href: "#fordelar" },
-  { label: "Omdömen", href: "#omdomen" },
   { label: "Vanliga frågor", href: "#faq" },
   { label: "Beställ", href: "#bestall" },
 ];
 
+// Honest product-fact "stats" replacing fabricated popularity numbers.
 export const SOCIAL_PROOF_STATS = [
-  { number: "2 300+", label: "har valt Frihetstoa" },
-  { number: "4.8", label: "av 5 i snittbetyg" },
-  { number: "96%", label: "rekommenderar till andra" },
+  { number: "0%", label: "Kemikalier" },
+  { number: "14 d", label: "Full ångerrätt" },
+  { number: "CE", label: "Europeisk säkerhet" },
 ];
 
 export const PAIN_POINTS = [
@@ -163,48 +176,19 @@ export const CHAPTERS = [
 
 export type Chapter = (typeof CHAPTERS)[number];
 
+// Only verifiable claims. Add more once you have documented evidence (CE-certifikat
+// från leverantör, press-omnämnanden, samarbetsavtal).
 export const AUTHORITY_BADGES = [
-  { label: "Testad & godkänd av Husbil & Husvagn", type: "media" },
-  { label: "CE-certifierad", type: "cert" },
-  { label: "Rekommenderad av Sveriges Camping- och Stugföretagares Riksorganisation", type: "org" },
-];
-
-export const TESTIMONIALS = [
-  {
-    name: "Margareta & Lars",
-    location: "Göteborg",
-    vehicle: "Hymer B-ML 780",
-    text: "Efter femton år med husbil är det här ett av våra mest uppskattade köp. Att slippa kassettanken och tömningsstationerna har gjort resandet märkbart enklare. Vi hade SOG tidigare, men Frihetstoa känns som en betydligt mer genomtänkt lösning.",
-    rating: 5,
-  },
-  {
-    name: "Bengt",
-    location: "Malmö",
-    vehicle: "Knaus Van TI Plus",
-    text: "Jag var skeptisk i början, men efter en hel sommar är jag övertygad. Förseglingen håller tätt även under varma veckor i juli, och hela lösningen känns mer genomarbetad än de alternativ vi tittade på tidigare.",
-    rating: 5,
-  },
-  {
-    name: "Inger & Sven-Erik",
-    location: "Uppsala",
-    vehicle: "Carthago Liner",
-    text: "Vi står ofta fritt i Norge under sommaren och brukade alltid ha nästa tömning i bakhuvudet. Med Frihetstoa har den detaljen försvunnit helt. Resandet känns lugnare, friare och betydligt mer bekvämt.",
-    rating: 5,
-  },
-  {
-    name: "Kerstin",
-    location: "Lund",
-    vehicle: "Bürstner Lyseo TD",
-    text: "Som ensamresenär uppskattar jag framför allt enkelheten. Jag slipper hantera kassett och leta tömningsstationer, och kan planera dagarna helt efter vart jag vill åka. Det gör stor skillnad i praktiken.",
-    rating: 5,
-  },
+  { label: "CE-märkt", type: "cert" },
+  { label: "Svensk support", type: "org" },
+  { label: "14 dagars full ångerrätt enligt Distansavtalslagen", type: "legal" },
 ];
 
 export const FAQS = [
   {
     question: "Luktar det verkligen inte? Inte ens på sommaren?",
     answer:
-      "Många är skeptiska första gången de hör om konceptet. Skillnaden är att Frihetstoa använder värmeförsegling som skapar en helt lufttät förslutning inom sekunder. Det gör systemet luktfritt även under varma sommardagar. Över 2 300 kunder har redan valt Frihetstoa, och du har 30 dagars öppet köp om du vill prova själv.",
+      "Värmeförseglingen skapar en helt lufttät förslutning inom sekunder, vilket gör systemet luktfritt även under varma sommardagar. Du har 30 dagars öppet köp om du vill prova själv.",
   },
   {
     question: "Hur funkar det egentligen?",
@@ -214,7 +198,7 @@ export const FAQS = [
   {
     question: "Är det inte som PACTO-toan som luktade?",
     answer:
-      "Nej. PACTO använde vanlig plastförslutning utan värme. Frihetstoa använder en patenterad värmeförseglingsteknik som smälter ihop påsen till en helt lufttät enhet. Skillnaden märks framför allt i luktkontrollen.",
+      "Nej. PACTO använde vanlig plastförslutning utan värme. Frihetstoa använder värmeförseglingsteknik som smälter ihop påsen till en helt lufttät enhet. Skillnaden märks framför allt i luktkontrollen.",
   },
   {
     question: "Vad gör jag med påsarna? Kan man slänga dem i vanliga soporna?",
@@ -239,18 +223,18 @@ export const FAQS = [
   {
     question: "Hur lång tid räcker batteriet?",
     answer:
-      "Det inbyggda litium-jon batteriet räcker för flera dagars normal användning. Laddas enkelt via USB eller 12V-uttaget i husbilen medan du kör.",
+      "Det inbyggda litium-jon-batteriet räcker för flera dagars normal användning. Laddas enkelt via USB eller 12V-uttaget i husbilen medan du kör.",
   },
   {
     question: "Kan jag returnera om jag inte är nöjd?",
     answer:
-      "Absolut. Du har 30 dagars öppet köp med fri retur. Vi vill att du ska kunna prova Frihetstoa i lugn och ro, och 96% av dem som testar väljer att behålla den.",
+      "Ja. Du har full ångerrätt enligt Distansavtalslagen i 14 dagar, och utöver det erbjuder vi 30 dagars öppet köp med fri retur.",
   },
 ];
 
 export const TRUST_BADGES = [
-  { text: "Fri leverans i hela Sverige", icon: "🚚" },
-  { text: "30 dagars öppet köp", icon: "✅" },
-  { text: "Svensk rådgivning", icon: "🇸🇪" },
-  { text: "2 års garanti", icon: "🛡️" },
+  { text: "Fri leverans i hela Sverige", icon: Truck },
+  { text: "30 dagars öppet köp", icon: RotateCcw },
+  { text: "Svensk rådgivning", icon: Flag },
+  { text: "2 års garanti", icon: Shield },
 ];
