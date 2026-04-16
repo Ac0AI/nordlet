@@ -18,16 +18,16 @@ export function Footer() {
             <span className="text-white/30">|</span>
             <span>&copy; {new Date().getFullYear()} Alla rättigheter förbehållna</span>
           </div>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">
+          <div className="flex gap-2 -my-3 flex-wrap">
+            <a href="#" className="px-2 py-3 hover:text-white transition-colors">
               Integritetspolicy
             </a>
-            <a href="#" className="hover:text-white transition-colors">
+            <a href="#" className="px-2 py-3 hover:text-white transition-colors">
               Villkor
             </a>
             <a
               href={`mailto:${SITE.email}`}
-              className="hover:text-white transition-colors"
+              className="px-2 py-3 hover:text-white transition-colors"
             >
               Kontakt
             </a>

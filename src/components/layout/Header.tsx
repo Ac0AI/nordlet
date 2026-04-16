@@ -44,7 +44,7 @@ export function Header() {
               key={link.href}
               href={link.href}
               className={cn(
-                "text-sm font-medium transition-colors",
+                "text-sm font-medium transition-colors py-3 -my-3",
                 scrolled
                   ? "text-text-muted hover:text-primary"
                   : "text-white/75 hover:text-white"
@@ -55,7 +55,7 @@ export function Header() {
           ))}
           <a
             href="#bestall"
-            className="ml-2 rounded-full border border-white/10 bg-accent px-6 py-2.5 text-sm font-semibold tracking-wide text-white shadow-lg shadow-black/15 transition-all hover:bg-accent-light"
+            className="ml-2 rounded-full border border-white/10 bg-accent px-6 py-3 text-sm font-semibold tracking-wide text-white shadow-lg shadow-black/15 transition-all hover:bg-accent-light"
           >
             Beställ nu
           </a>
@@ -65,7 +65,7 @@ export function Header() {
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className={cn(
-            "lg:hidden p-2 transition-colors",
+            "lg:hidden p-3 -mr-3 transition-colors",
             scrolled ? "text-text-muted" : "text-white"
           )}
           aria-label="Meny"
