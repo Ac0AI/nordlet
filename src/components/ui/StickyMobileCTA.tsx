@@ -30,13 +30,15 @@ export function StickyMobileCTA() {
         >
           Beställ Frihetstoa
         </a>
-        <a
-          href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-          className="flex-shrink-0 w-13 h-13 bg-primary text-white rounded-xl flex items-center justify-center hover:bg-primary-light transition-all"
-          aria-label="Ring oss"
-        >
-          <Phone size={20} />
-        </a>
+        {SITE.phone && (
+          <a
+            href={`tel:${SITE.phone.replace(/\s/g, "")}`}
+            className="flex-shrink-0 w-13 h-13 bg-primary text-white rounded-xl flex items-center justify-center hover:bg-primary-light transition-all"
+            aria-label="Ring oss"
+          >
+            <Phone size={20} />
+          </a>
+        )}
       </div>
       <p className="bg-surface/95 text-center text-xs text-text-light pb-2 px-4">
         Fri retur och svensk rådgivning.

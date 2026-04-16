@@ -3,12 +3,13 @@
 import { Container } from "@/components/ui/Container";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 import { Button } from "@/components/ui/Button";
-import { Check, Star } from "lucide-react";
+import { Check, Star, Phone } from "lucide-react";
 import { SITE } from "@/lib/constants";
 
 const packages = [
   {
     name: "Frihetstoa",
+    checkoutKey: "frihetstoa" as const,
     price: "14 900",
     description: "För dig som vill komma igång i egen takt.",
     features: [
@@ -22,6 +23,7 @@ const packages = [
   },
   {
     name: "Säsongspaketet",
+    checkoutKey: "sasongspaket" as const,
     price: "16 900",
     originalPrice: "18 380",
     description: "Vårt mest uppskattade val för en hel säsong.",
@@ -116,7 +118,10 @@ export function Pricing() {
 
                 <div className="mt-8">
                   <Button
-                    href={`mailto:${SITE.email}?subject=Beställning: ${pkg.name}`}
+                    href={
+                      SITE.checkoutUrls[pkg.checkoutKey] ||
+                      `mailto:${SITE.email}?subject=Beställning: ${pkg.name}`
+                    }
                     variant={pkg.popular ? "primary" : "outline"}
                     className="w-full justify-center"
                   >
@@ -132,24 +137,27 @@ export function Pricing() {
           ))}
         </div>
 
-        {/* Phone CTA — prominent for older demographic */}
-        <AnimateOnScroll delay={0.2}>
-          <div className="mt-12 text-center">
-            <p className="text-text-muted text-base mb-2">
-              Vill du hellre beställa med personlig rådgivning?
-            </p>
-            <a
-              href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-              className="inline-flex items-center gap-2 text-2xl font-bold text-primary hover:text-accent transition-colors"
-              style={{ fontFamily: "var(--font-dm-serif)" }}
-            >
-              📞 {SITE.phone}
-            </a>
-            <p className="text-sm text-text-light mt-1">
-              Vardagar 9-17. Lugnt, personligt och utan köstress.
-            </p>
-          </div>
-        </AnimateOnScroll>
+        {/* Phone CTA — only when SITE.phone is configured via env */}
+        {SITE.phone && (
+          <AnimateOnScroll delay={0.2}>
+            <div className="mt-12 text-center">
+              <p className="text-text-muted text-base mb-2">
+                Vill du hellre beställa med personlig rådgivning?
+              </p>
+              <a
+                href={`tel:${SITE.phone.replace(/\s/g, "")}`}
+                className="inline-flex items-center gap-2 text-2xl font-bold text-primary hover:text-accent transition-colors py-3"
+                style={{ fontFamily: "var(--font-dm-serif)" }}
+              >
+                <Phone size={22} />
+                {SITE.phone}
+              </a>
+              <p className="text-sm text-text-light mt-1">
+                Vardagar 9-17. Lugnt, personligt och utan köstress.
+              </p>
+            </div>
+          </AnimateOnScroll>
+        )}
       </Container>
     </section>
   );
