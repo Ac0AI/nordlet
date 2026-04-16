@@ -102,26 +102,66 @@ export const SPECS = [
   { label: "Färg", value: "Vit" },
 ];
 
-export const STEPS = [
+export const CHAPTERS = [
   {
-    number: "1",
-    title: "Sätt dig",
-    description:
-      "Använd den precis som din vanliga toalett. Bekväm sits i standardhöjd.",
+    number: "01",
+    slug: "installation",
+    title: "Klar att använda på fem minuter",
+    lead: "Ingen fast installation. Ingen slang. Ingen tömningsstation att ansluta till.",
+    body: "Lyft av överdelen, sätt folierullen på plats i toalettens bas och sätt tillbaka locket. Tryck på Reset. Frihetstoa kalibrerar sig själv och är redo. Första gången tar det runt fem minuter. Efter det byter du rullen ungefär en gång i veckan när LED-lampan visar att det är dags.",
+    stat: "30 användningar per rulle - ungefär en resevecka för två personer.",
+    images: {
+      primary: "/images/how-it-works/01-installation-rulle.png",
+      secondary: "/images/how-it-works/02-installation-reset.png",
+      primaryAlt: "Folierulle sätts på plats i Frihetstoa",
+      secondaryAlt: "Hand trycker Reset-knappen på kontrollpanelen",
+    },
   },
   {
-    number: "2",
-    title: "Tryck på knappen",
-    description:
-      "Välj läge och tryck. Värmeförseglingen aktiveras automatiskt och försluter varje påse lufttätt.",
+    number: "02",
+    slug: "anvandning",
+    title: "Precis som hemma. Bara utan vatten.",
+    lead: "Sätt dig, gör ditt, stäng locket, tryck på knappen.",
+    body: "Sitsen är i standardhöjd och känns som en vanlig toalett. När du är klar stänger du locket och väljer litet eller stort program på kontrollpanelen. Du behöver inte hälla i något toamedel, inte mäta ut någon vätska och inte spola. Frihetstoa sköter resten själv.",
+    stat: "Dubbelt läge för flytande och fast. Noll kemikalier.",
+    images: {
+      primary: "/images/how-it-works/03-anvandning-miljo.png",
+      secondary: "/images/how-it-works/04-anvandning-panel.png",
+      primaryAlt: "Frihetstoa installerad i husbilsinteriör med varmt morgonljus",
+      secondaryAlt: "Närbild av kontrollpanelens lägesknappar",
+    },
   },
   {
-    number: "3",
-    title: "Lägg i hushållssoporna",
-    description:
-      "Den förseglade, biologiskt nedbrytbara påsen kastas i vanliga hushållssoporna. Enkelt och hygieniskt.",
+    number: "03",
+    slug: "forseglingen",
+    title: "Det tysta jobbet under locket",
+    lead: "Det här är den del som gör att du aldrig behöver tömma en kassettank igen.",
+    body: "När du tryckt på knappen drar Frihetstoa ihop folien runt innehållet och värmeförseglar den till en lufttät påse. Varje besök får sin egen förslutning. När påsen är förseglad matas ny, ren folie automatiskt fram och skålen är klar för nästa gång. Ingen kemikalie, ingen doft som väntar på dig i skåpet, ingen mekanik som du själv behöver hantera.",
+    stat: "Lufttät försegling - även sommartid när värmen står still ovanför husbilen.",
+    images: {
+      primary: "/images/how-it-works/05-forsegling-svets.png",
+      secondary: "/images/how-it-works/06-forsegling-matning.png",
+      primaryAlt: "Genomskärning av värmeförseglingen inuti Frihetstoa",
+      secondaryAlt: "Genomskärning som visar ny folie som matas fram",
+    },
   },
-];
+  {
+    number: "04",
+    slug: "tomning",
+    title: "Från husbilen till hushållssoporna",
+    lead: "Inga tömningsstationer. Inga söndagsköer. Inga sanitetsvätskor.",
+    body: "När uppsamlingslådan är full tänds LED-indikatorn på kontrollpanelen. Dra ut lådan i nederdelen. Eftersom varje påse är förseglad för sig finns ingen lukt och ingen risk för spill. Du lägger dem i vanliga hushållssoporna - vid nästa rastplats, på campingen eller hemma i köket när resan är slut.",
+    stat: "Påsarna är biologiskt nedbrytbara och går i det vanliga restavfallet.",
+    images: {
+      primary: "/images/how-it-works/07-tomning-lada.png",
+      secondary: "/images/how-it-works/08-tomning-sopor.png",
+      primaryAlt: "Uppsamlingslådan utdragen med synliga förseglade påsar",
+      secondaryAlt: "Hand släpper en förseglad påse i en vanlig soptunna",
+    },
+  },
+] as const;
+
+export type Chapter = (typeof CHAPTERS)[number];
 
 export const AUTHORITY_BADGES = [
   { label: "Testad & godkänd av Husbil & Husvagn", type: "media" },

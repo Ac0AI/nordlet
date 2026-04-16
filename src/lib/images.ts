@@ -15,4 +15,15 @@ export const IMAGES = {
   productDetail: "/images/products/frihetstoan-detail.png",
   productSide: "/images/products/frihetstoan-side.png",
   productDimensions: "/images/products/frihetstoan-dimensions.png",
+  // Operativprincip / how it works page
+  howItWorks: {
+    ch01primary: "/images/how-it-works/01-installation-rulle.png",
+    ch01secondary: "/images/how-it-works/02-installation-reset.png",
+    ch02primary: "/images/how-it-works/03-anvandning-miljo.png",
+    ch02secondary: "/images/how-it-works/04-anvandning-panel.png",
+    ch03primary: "/images/how-it-works/05-forsegling-svets.png",
+    ch03secondary: "/images/how-it-works/06-forsegling-matning.png",
+    ch04primary: "/images/how-it-works/07-tomning-lada.png",
+    ch04secondary: "/images/how-it-works/08-tomning-sopor.png",
+  },
 };
