@@ -119,10 +119,10 @@ export const CHAPTERS = [
   {
     number: "01",
     slug: "installation",
-    title: "Klar att använda på fem minuter",
-    lead: "Ingen fast installation. Ingen slang. Ingen tömningsstation att ansluta till.",
-    body: "Lyft av överdelen, sätt folierullen på plats i toalettens bas och sätt tillbaka locket. Tryck på Reset. Frihetstoa kalibrerar sig själv och är redo. Första gången tar det runt fem minuter. Efter det byter du rullen ungefär en gång i veckan när LED-lampan visar att det är dags.",
-    stat: "30 användningar per rulle - ungefär en resevecka för två personer.",
+    title: "Klart på en minut",
+    lead: "Frihetstoan är fristående. Inget behöver anslutas, dras eller borras.",
+    body: "När du packar upp första gången lägger du i folierullen, sätter tillbaka locket och trycker Reset. Det tar en minut. Sen är den redo hela din resa. När LED-lampan säger till byter du rullen på samma sätt. Det är hela installationen.",
+    stat: "30 användningar per rulle. Ungefär en resevecka för två.",
     images: {
       primary: "/images/how-it-works/01-installation-rulle.png",
       secondary: "/images/how-it-works/02-installation-reset.png",
