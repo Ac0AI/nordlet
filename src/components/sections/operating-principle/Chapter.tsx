@@ -24,7 +24,7 @@ export function Chapter({ chapter, index }: Props) {
             className={`lg:col-span-5 ${reverse ? "lg:col-start-8" : ""}`}
           >
             <p className="text-accent font-semibold text-sm tracking-widest uppercase mb-4">
-              Kapitel {chapter.number}
+              Steg {chapter.number}
             </p>
             <h2
               className="text-3xl sm:text-4xl lg:text-5xl tracking-tight text-text leading-tight"

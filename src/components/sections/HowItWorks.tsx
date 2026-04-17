@@ -23,8 +23,7 @@ export function HowItWorks() {
               Så fungerar Frihetstoa
             </h2>
             <p className="mt-4 text-text-muted text-lg">
-              Från rullen i kartongen till påsen i hushållssoporna. Fyra
-              kapitel.
+              Från rullen i kartongen till påsen i hushållssoporna. Fyra steg.
             </p>
           </div>
         </AnimateOnScroll>
@@ -47,7 +46,7 @@ export function HowItWorks() {
                 </div>
                 <div className="p-6">
                   <p className="text-xs font-semibold uppercase tracking-widest text-accent">
-                    Kapitel {chapter.number}
+                    Steg {chapter.number}
                   </p>
                   <h3 className="mt-2 text-xl text-text leading-snug">
                     {chapter.title}
@@ -67,7 +66,7 @@ export function HowItWorks() {
               href="/sa-fungerar-det"
               className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-surface px-6 py-3 text-sm font-semibold text-text transition-colors hover:border-accent hover:bg-accent/5"
             >
-              Läs hela historien
+              Så fungerar det i detalj
               <ArrowRight size={16} />
             </Link>
           </div>
