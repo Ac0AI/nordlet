@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { NAV_LINKS, SITE } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
@@ -26,8 +27,9 @@ export function Header() {
       )}
     >
       <Container className="flex items-center justify-between h-20">
-        <a
-          href="#"
+        <Link
+          href="/"
+          aria-label="Till startsidan"
           className={cn(
             "text-2xl font-normal tracking-tight transition-colors",
             scrolled ? "text-primary" : "text-white"
@@ -35,12 +37,12 @@ export function Header() {
           style={{ fontFamily: "var(--font-dm-serif)" }}
         >
           {SITE.name}
-        </a>
+        </Link>
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-8">
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className={cn(
@@ -51,14 +53,14 @@ export function Header() {
               )}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#bestall"
+          <Link
+            href="/#bestall"
             className="ml-2 rounded-full border border-white/10 bg-accent px-6 py-3 text-sm font-semibold tracking-wide text-white shadow-lg shadow-black/15 transition-all hover:bg-accent-light"
           >
             Beställ nu
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile toggle */}
@@ -79,22 +81,22 @@ export function Header() {
         <div className="lg:hidden bg-surface/98 backdrop-blur-md border-t border-border">
           <Container className="py-6 flex flex-col gap-4">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
                 className="text-lg font-medium text-text-muted hover:text-primary transition-colors py-1"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="#bestall"
+            <Link
+              href="/#bestall"
               onClick={() => setMenuOpen(false)}
               className="mt-2 rounded-full bg-accent px-6 py-3 text-center text-base font-semibold tracking-wide text-white"
             >
               Beställ nu
-            </a>
+            </Link>
           </Container>
         </div>
       )}
