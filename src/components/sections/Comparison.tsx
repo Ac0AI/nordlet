@@ -11,17 +11,17 @@ type Row = {
   negative?: boolean; // true = egenskapen är en nackdel (att ha den är dåligt)
 };
 
-// Frihetstoa vs traditionell kassettoalett
+// Frihetstoa vs traditionell kassettoalett.
+// Alla rader formuleras som fördelar -> grön bock betyder alltid "bra/ja".
 const cassetteRows: Row[] = [
-  { feature: "Kassettank att tömma", other: true, nordlet: false, negative: true },
-  { feature: "Kräver kemikalier/toamedel", other: true, nordlet: false, negative: true },
-  { feature: "Tömningsstation behövs", other: true, nordlet: false, negative: true },
-  { feature: "Vattenanslutning krävs", other: true, nordlet: false, negative: true },
-  { feature: "Lukt i toautrymmet", other: true, nordlet: false, negative: true },
-  { feature: "Speciellt toalettpapper", other: true, nordlet: false, negative: true },
+  { feature: "Slipper kassettank", other: false, nordlet: true },
+  { feature: "Utan kemikalier/toamedel", other: false, nordlet: true },
+  { feature: "Ingen tömningsstation", other: false, nordlet: true },
+  { feature: "Helt vattenlös", other: false, nordlet: true },
+  { feature: "Luktfri försegling", other: false, nordlet: true },
+  { feature: "Funkar med vanligt toalettpapper", other: false, nordlet: true },
   { feature: "Batteridrift", other: false, nordlet: true },
-  { feature: "Biologiskt nedbrytbara påsar", other: false, nordlet: true },
-  { feature: "Fristående, flytta fritt", other: false, nordlet: true },
+  { feature: "Ingen fast installation", other: false, nordlet: true },
   { feature: "Släng i vanliga soporna", other: false, nordlet: true },
 ];
 
