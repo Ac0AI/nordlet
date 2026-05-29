@@ -10,20 +10,15 @@ export const IMAGES = {
   road: "/images/photo_2026-03-10_20-39-08.jpg",
   // Nature camping: Motorhome in nature
   nature: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&h=600&fit=crop&q=80",
-  // Product imagery sourced from the supplier page provided by the user
-  productFront: "/images/products/frihetstoan-front.png",
-  productDetail: "/images/products/frihetstoan-detail.png",
-  productSide: "/images/products/frihetstoan-side.png",
-  productDimensions: "/images/products/frihetstoan-dimensions.png",
-  // Operativprincip / how it works page
-  howItWorks: {
-    ch01primary: "/images/how-it-works/01-installation-rulle.png",
-    ch01secondary: "/images/how-it-works/02-installation-reset.png",
-    ch02primary: "/images/how-it-works/03-anvandning-miljo.png",
-    ch02secondary: "/images/how-it-works/04-anvandning-panel.png",
-    ch03primary: "/images/how-it-works/05-forsegling-svets.png",
-    ch03secondary: "/images/how-it-works/06-forsegling-matning.png",
-    ch04primary: "/images/how-it-works/07-tomning-lada.png",
-    ch04secondary: "/images/how-it-works/08-tomning-sopor.png",
-  },
+  // Hero-banner (tvådelad): genererad nordisk skog + riktig produkt på mörk bakgrund
+  heroForest: "/images/hero-forest.png",
+  heroProduct: "/images/hero-product.png",
+  // Riktiga produktfoton från leverantören (ersätter de tidigare mockuparna)
+  productFront: "/images/products/a73eb482e69db1413051eec47614edf2.png", // 3/4-vy, lock stängt (hero)
+  productSide: "/images/products/06403af0d7a8673f549f5d4aa192c629.png", // ren sidoprofil
+  productDimensions: "/images/products/4d146aeeb7bd2624355dcf7d371c42f6.png", // utdragen uppsamlingslåda
+  productDetail: "/images/products/7188ca89abd25eb1c85082ebab82a95d.png", // öppet lock med refill-/påsring
+  productStraight: "/images/products/f691e46906b066405a4e15d5b0605a70.png", // rakt framifrån
+  productStand: "/images/products/7788c102fd9a82094723b35bb786ed39.png", // justerbart stativ (tillbehör)
+  // Obs: bilderna för "Så fungerar det" (steg 1-4) definieras i CHAPTERS i constants.ts.
 };

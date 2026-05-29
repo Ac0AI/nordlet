@@ -105,7 +105,7 @@ export const FEATURES = [
 ];
 
 export const SPECS = [
-  { label: "Mått", value: "445 × 355 × 455 mm" },
+  { label: "Mått", value: "355 × 488 × 515 mm (b × d × h)" },
   { label: "Strömförsörjning", value: "12V, 70W" },
   { label: "Batteri", value: "Litium-jon, 5 200 mAh" },
   { label: "Laddning", value: "USB eller 12V i husbilen" },
@@ -124,10 +124,10 @@ export const CHAPTERS = [
     body: "När du packar upp första gången lägger du i folierullen, sätter tillbaka locket och trycker Reset. Det tar en minut. Sen är den redo hela din resa. När LED-lampan säger till byter du rullen på samma sätt. Det är hela installationen.",
     stat: "30 användningar per rulle. Ungefär en resevecka för två.",
     images: {
-      primary: "/images/how-it-works/01-installation-rulle.png",
-      secondary: "/images/how-it-works/02-installation-reset.png",
-      primaryAlt: "Folierulle sätts på plats i Frihetstoa",
-      secondaryAlt: "Hand trycker Reset-knappen på kontrollpanelen",
+      primary: "/images/how-it-works/steg1-primary.png",
+      secondary: "/images/how-it-works/steg1-secondary.png",
+      primaryAlt: "Hand som lyfter locket på Frihetstoa",
+      secondaryAlt: "Finger som trycker på Frihetstoas kontrollpanel",
     },
   },
   {
@@ -138,10 +138,10 @@ export const CHAPTERS = [
     body: "Sitsen är i standardhöjd och känns som en vanlig toalett. När du är klar stänger du locket och väljer litet eller stort program på kontrollpanelen. Du behöver inte hälla i något toamedel, inte mäta ut någon vätska och inte spola. Frihetstoa sköter resten själv.",
     stat: "Dubbelt läge för flytande och fast. Noll kemikalier.",
     images: {
-      primary: "/images/how-it-works/03-anvandning-miljo.png",
-      secondary: "/images/how-it-works/04-anvandning-panel.png",
-      primaryAlt: "Frihetstoa installerad i husbilsinteriör med varmt morgonljus",
-      secondaryAlt: "Närbild av kontrollpanelens lägesknappar",
+      primary: "/images/how-it-works/steg2-primary.png",
+      secondary: "/images/how-it-works/steg2-secondary.png",
+      primaryAlt: "Frihetstoa i ett husbilsbadrum med varmt dagsljus",
+      secondaryAlt: "Närbild av Frihetstoas kontrollpanel och lägesknappar",
     },
   },
   {
@@ -152,8 +152,8 @@ export const CHAPTERS = [
     body: "När du tryckt på knappen drar Frihetstoa ihop folien runt innehållet och värmeförseglar den till en lufttät påse. Varje besök får sin egen förslutning. När påsen är förseglad matas ny, ren folie automatiskt fram och skålen är klar för nästa gång. Ingen kemikalie, ingen doft som väntar på dig i skåpet, ingen mekanik som du själv behöver hantera.",
     stat: "Lufttät försegling - även sommartid när värmen står still ovanför husbilen.",
     images: {
-      primary: "/images/how-it-works/05-forsegling-svets.png",
-      secondary: "/images/how-it-works/06-forsegling-matning.png",
+      primary: "/images/how-it-works/steg3-primary.png",
+      secondary: "/images/how-it-works/steg3-secondary.png",
       primaryAlt: "Genomskärning av värmeförseglingen inuti Frihetstoa",
       secondaryAlt: "Genomskärning som visar ny folie som matas fram",
     },
@@ -166,8 +166,8 @@ export const CHAPTERS = [
     body: "När uppsamlingslådan är full tänds LED-indikatorn på kontrollpanelen. Dra ut lådan i nederdelen. Eftersom varje påse är förseglad för sig finns ingen lukt och ingen risk för spill. Du lägger dem i vanliga hushållssoporna - vid nästa rastplats, på campingen eller hemma i köket när resan är slut.",
     stat: "Påsarna är biologiskt nedbrytbara och går i det vanliga restavfallet.",
     images: {
-      primary: "/images/how-it-works/07-tomning-lada.png",
-      secondary: "/images/how-it-works/08-tomning-sopor.png",
+      primary: "/images/how-it-works/steg4-primary.png",
+      secondary: "/images/how-it-works/steg4-secondary.png",
       primaryAlt: "Uppsamlingslådan utdragen med synliga förseglade påsar",
       secondaryAlt: "Hand släpper en förseglad påse i en vanlig soptunna",
     },
@@ -218,7 +218,7 @@ export const FAQS = [
   {
     question: "Passar den i min husbil/husvagn?",
     answer:
-      "Frihetstoa är fristående och kräver ingen anslutning. Den är kompakt (445 × 355 mm) och den svängbara basen med 180° rotation gör att den passar även i trånga toautrymmen. Ingen installation behövs, du ställer den bara på plats.",
+      "Frihetstoa är fristående och kräver ingen anslutning. Den är kompakt (355 mm bred, 488 mm djup) och den svängbara basen gör att den passar även i trånga toautrymmen. Ingen installation behövs, du ställer den bara på plats.",
   },
   {
     question: "Hur lång tid räcker batteriet?",

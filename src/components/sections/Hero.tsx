@@ -2,85 +2,69 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { TRUST_BADGES, SOCIAL_PROOF_STATS, SITE } from "@/lib/constants";
+import { SOCIAL_PROOF_STATS, SITE } from "@/lib/constants";
 import { IMAGES } from "@/lib/images";
-import { Phone } from "lucide-react";
+import { Phone, ShieldCheck } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden">
-      {/* Hero image background */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src={IMAGES.hero}
-          alt="Husbil parkerad vid sjö i skandinavisk natur"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(142,184,201,0.22),transparent_28%),linear-gradient(180deg,rgba(6,27,36,0.45)_0%,rgba(8,30,40,0.62)_30%,rgba(8,23,31,0.82)_100%)]" />
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-primary-dark/70 to-transparent" />
-      </div>
+    <section className="relative grid min-h-[90vh] grid-cols-1 overflow-hidden lg:grid-cols-2">
+      {/* Vänster: skog + slogan */}
+      <div className="relative flex items-center">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={IMAGES.heroForest}
+            alt="Stämningsfull nordisk skog i dis"
+            fill
+            className="object-cover"
+            priority
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
+          {/* Mörk gradient för läsbar text */}
+          <div className="absolute inset-0 bg-[linear-gradient(105deg,rgba(8,23,31,0.86)_0%,rgba(8,23,31,0.66)_45%,rgba(8,23,31,0.34)_100%)]" />
+        </div>
 
-      <Container className="relative z-10 pt-32 pb-20 sm:pt-40 sm:pb-28">
-        <div className="max-w-3xl mx-auto text-center">
-          <motion.p
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55 }}
-            className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/8 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/75 backdrop-blur-md sm:text-xs"
-          >
-            Scandinavian RV Living
-            <span className="hidden text-white/35 sm:inline">|</span>
-            <span className="hidden text-white/60 sm:inline">För fjord, fjäll och stjärnhimmel</span>
-          </motion.p>
+        <div className="relative z-10 w-full px-6 pb-16 pt-32 sm:px-10 lg:px-14 lg:py-28 xl:px-20">
+          <div className="max-w-xl">
+            <motion.p
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55 }}
+              className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80 backdrop-blur-md sm:text-xs"
+            >
+              Vattenlös frihet för husbilen
+            </motion.p>
 
-          {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
-            className="mt-8 text-4xl leading-[1.06] tracking-tight text-white sm:text-5xl lg:text-6xl"
-            style={{ fontFamily: "var(--font-dm-serif)" }}
-          >
-            Byggd för vägarna norrut.
-            <br />
-            Res vidare utan kassettank mellan{" "}
-            <span className="text-accent-light italic">fjord, fjäll och frihet.</span>
-          </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 28 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="text-5xl leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl"
+              style={{ fontFamily: "var(--font-dm-serif)" }}
+            >
+              Svara naturen.
+              <br />
+              <span className="text-accent-light italic">Var som helst.</span>
+            </motion.h1>
 
-          {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/72 sm:text-xl"
-          >
-            Frihetstoa är den vattenlösa toaletten för dig som vill stå friare,
-            resa längre och slippa kemikalier, lukt och omvägar till
-            tömningsstationer.
-          </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="mt-7 max-w-md text-lg leading-relaxed text-white/75 sm:text-xl"
+            >
+              Frihetstoa &ndash; den vattenlösa toaletten som förseglar varje
+              besök lufttätt. Ingen kassettank, inga kemikalier, inga omvägar
+              till tömningsstationen.
+            </motion.p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.24 }}
-            className="mx-auto mt-5 max-w-xl text-sm font-medium uppercase tracking-[0.18em] text-white/60"
-          >
-            Skandinavisk design. Svensk support. Utvecklad för ett friare husbilsliv.
-          </motion.p>
-
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-10"
-          >
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center"
+            >
               <Button href="#bestall" size="large">
                 Beställ Frihetstoa
               </Button>
@@ -88,75 +72,80 @@ export function Hero() {
                 href="#sa-fungerar-det"
                 variant="outline"
                 size="default"
-                className="border-white/30 bg-white/5 text-white hover:bg-white/12 hover:text-white"
+                className="border-white/30 bg-white/5 text-white hover:bg-white/15 hover:text-white"
               >
                 Se hur det fungerar
               </Button>
-            </div>
+            </motion.div>
+
             <p className="mt-4 text-sm font-medium text-accent-light">
-              Fri leverans i Sverige. Begränsat antal i aktuell leverans.
+              Fri leverans i Sverige &middot; 30 dagars öppet köp
             </p>
-            {/* Phone - only rendered when configured via env */}
+
             {SITE.phone && (
-              <div className="mt-6 flex items-center justify-center gap-2">
+              <div className="mt-6 flex items-center gap-2">
                 <Phone size={18} className="text-white/60" />
                 <a
                   href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-                  className="text-lg sm:text-xl font-bold text-white hover:text-accent-light transition-colors py-2"
+                  className="text-lg font-bold text-white transition-colors hover:text-accent-light"
                   style={{ fontFamily: "var(--font-dm-serif)" }}
                 >
                   {SITE.phone}
                 </a>
-                <span className="text-sm text-white/40 ml-1">prata med oss direkt</span>
               </div>
             )}
-          </motion.div>
 
-          {/* Trust badges */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-            className="mt-12 flex flex-wrap justify-center gap-6 sm:gap-8"
-          >
-            {TRUST_BADGES.map((badge) => {
-              const Icon = badge.icon;
-              return (
-                <div
-                  key={badge.text}
-                  className="flex items-center gap-2 text-sm text-white/60"
-                >
-                  <Icon size={16} className="text-white/50" />
-                  <span className="font-medium">{badge.text}</span>
+            {/* Kompakta nyckeltal */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.5 }}
+              className="mt-10 flex max-w-md gap-8 border-t border-white/15 pt-6"
+            >
+              {SOCIAL_PROOF_STATS.map((stat) => (
+                <div key={stat.label}>
+                  <p
+                    className="text-2xl font-bold text-white sm:text-3xl"
+                    style={{ fontFamily: "var(--font-dm-serif)" }}
+                  >
+                    {stat.number}
+                  </p>
+                  <p className="mt-1 text-xs text-white/55">{stat.label}</p>
                 </div>
-              );
-            })}
-          </motion.div>
+              ))}
+            </motion.div>
+          </div>
         </div>
+      </div>
 
-        {/* Social proof stats */}
+      {/* Accentlinje mellan panelerna (som Clesana) */}
+      <div className="absolute inset-y-0 left-1/2 z-20 hidden w-px -translate-x-1/2 bg-accent/60 lg:block" />
+
+      {/* Höger: produkt på mörk bakgrund */}
+      <div className="relative flex min-h-[60vh] items-center justify-center bg-primary-dark lg:min-h-0">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(46,98,119,0.28),transparent_62%)]" />
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.6 }}
-          className="mt-16 grid grid-cols-3 gap-4 max-w-xl mx-auto"
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.25 }}
+          className="relative z-10 h-[70%] w-[78%] max-w-md"
         >
-          {SOCIAL_PROOF_STATS.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <p
-                className="text-2xl sm:text-3xl font-bold text-white"
-                style={{ fontFamily: "var(--font-dm-serif)" }}
-              >
-                {stat.number}
-              </p>
-              <p className="text-xs sm:text-sm text-white/50 mt-1">
-                {stat.label}
-              </p>
-            </div>
-          ))}
+          <Image
+            src={IMAGES.heroProduct}
+            alt="Frihetstoa, vattenlös toalett för husbil"
+            fill
+            className="object-contain drop-shadow-2xl"
+            priority
+            sizes="(max-width: 1024px) 80vw, 40vw"
+          />
         </motion.div>
 
-      </Container>
+        {/* Äkta märkning (ingen falsk 'Made in')-bricka */}
+        <div className="absolute bottom-6 right-6 z-10 flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/80 backdrop-blur-md">
+          <ShieldCheck size={14} className="text-accent-light" />
+          CE-märkt &middot; Svensk support
+        </div>
+      </div>
     </section>
   );
 }

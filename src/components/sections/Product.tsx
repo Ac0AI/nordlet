@@ -46,7 +46,7 @@ export function Product() {
               <div className="relative min-h-[220px] overflow-hidden rounded-2xl border border-border bg-surface">
                 <Image
                   src={IMAGES.productDimensions}
-                  alt="Måttskiss för Frihetstoa"
+                  alt="Frihetstoa med utdragen uppsamlingslåda"
                   fill
                   className="object-contain p-4"
                   sizes="(max-width: 1024px) 50vw, 25vw"
