@@ -12,9 +12,12 @@ const rows = [
   { feature: "Lukt i toautrymmet", traditional: true, nordlet: false },
   { feature: "Speciellt toalettpapper", traditional: true, nordlet: false },
   { feature: "Batteridrift", traditional: false, nordlet: true },
+  { feature: "Laddas via USB eller 12V", traditional: false, nordlet: true },
   { feature: "Biologiskt nedbrytbar", traditional: false, nordlet: true },
   { feature: "Fristående, flytta fritt", traditional: false, nordlet: true },
   { feature: "Släng i vanliga soporna", traditional: false, nordlet: true },
+  { feature: "Mjukstängande lock och sits", traditional: false, nordlet: true },
+  { feature: "Enkelt, intuitivt gränssnitt", traditional: false, nordlet: true },
 ];
 
 function CellIcon({ good }: { good: boolean }) {
