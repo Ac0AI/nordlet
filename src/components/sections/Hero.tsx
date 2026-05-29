@@ -121,24 +121,25 @@ export function Hero() {
       {/* Accentlinje mellan panelerna (som Clesana) */}
       <div className="absolute inset-y-0 left-1/2 z-20 hidden w-px -translate-x-1/2 bg-accent/60 lg:block" />
 
-      {/* Höger: produkt på mörk bakgrund */}
-      <div className="relative flex min-h-[60vh] items-center justify-center bg-primary-dark lg:min-h-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,rgba(46,98,119,0.28),transparent_62%)]" />
+      {/* Höger: produkt på mörk bakgrund – bilden fyller hela panelen kant-till-kant */}
+      <div className="relative min-h-[58vh] overflow-hidden bg-primary-dark lg:min-h-0">
         <motion.div
-          initial={{ opacity: 0, scale: 0.96 }}
+          initial={{ opacity: 0, scale: 1.04 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.25 }}
-          className="relative z-10 h-[70%] w-[78%] max-w-md"
+          transition={{ duration: 0.9, delay: 0.2 }}
+          className="absolute inset-0"
         >
           <Image
             src={IMAGES.heroProduct}
             alt="Frihetstoa, vattenlös toalett för husbil"
             fill
-            className="object-contain drop-shadow-2xl"
+            className="object-cover"
             priority
-            sizes="(max-width: 1024px) 80vw, 40vw"
+            sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </motion.div>
+        {/* Mjuk vinjett för djup och kontrast mot brickan */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,transparent_45%,rgba(8,23,31,0.55)_100%)]" />
 
         {/* Äkta märkning (ingen falsk 'Made in')-bricka */}
         <div className="absolute bottom-6 right-6 z-10 flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/80 backdrop-blur-md">
