@@ -40,8 +40,8 @@ function CellIcon({ good }: { good: boolean }) {
       <Check size={15} className="text-green" />
     </span>
   ) : (
-    <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-red-50">
-      <X size={15} className="text-red-400" />
+    <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-bg-alt">
+      <X size={15} className="text-text-light" />
     </span>
   );
 }
