@@ -9,6 +9,9 @@ import {
   RotateCcw,
   Flag,
   Shield,
+  Route,
+  FlaskConical,
+  Wind,
 } from "lucide-react";
 
 export const SITE = {
@@ -46,19 +49,19 @@ export const SOCIAL_PROOF_STATS = [
 
 export const PAIN_POINTS = [
   {
-    emoji: "😤",
+    icon: Route,
     title: "Trött på att planera efter tömningsstationer?",
     description:
       "När rutten styrs av tömningsplatser försvinner en del av friheten. Med Frihetstoa slipper du kassettanken helt.",
   },
   {
-    emoji: "🧪",
+    icon: FlaskConical,
     title: "Trött på toamedel och kemikalier?",
     description:
       "Sanitetsvätskor kostar, luktar och följer med i varje resa. Frihetstoa fungerar helt utan kemikalier.",
   },
   {
-    emoji: "🤢",
+    icon: Wind,
     title: "Trött på lukten i toautrymmet?",
     description:
       "Den typiska lukten från traditionella lösningar är svår att missa. Med Frihetstoa förseglas avfallet lufttätt inom sekunder.",

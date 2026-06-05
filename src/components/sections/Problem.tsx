@@ -24,19 +24,24 @@ export function Problem() {
         </AnimateOnScroll>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {PAIN_POINTS.map((point, i) => (
-            <AnimateOnScroll key={point.title} delay={i * 0.1}>
-              <div className="text-center p-8 rounded-2xl bg-surface border border-border">
-                <span className="text-4xl mb-5 block">{point.emoji}</span>
-                <h3 className="text-xl font-semibold text-text mb-3 leading-snug">
-                  {point.title}
-                </h3>
-                <p className="text-text-muted leading-relaxed text-base">
-                  {point.description}
-                </p>
-              </div>
-            </AnimateOnScroll>
-          ))}
+          {PAIN_POINTS.map((point, i) => {
+            const Icon = point.icon;
+            return (
+              <AnimateOnScroll key={point.title} delay={i * 0.1}>
+                <div className="text-center p-8 rounded-2xl bg-surface border border-border">
+                  <div className="mx-auto mb-5 w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
+                    <Icon className="text-accent" size={22} />
+                  </div>
+                  <h3 className="text-xl font-semibold text-text mb-3 leading-snug">
+                    {point.title}
+                  </h3>
+                  <p className="text-text-muted leading-relaxed text-base">
+                    {point.description}
+                  </p>
+                </div>
+              </AnimateOnScroll>
+            );
+          })}
         </div>
 
         <AnimateOnScroll delay={0.3}>
