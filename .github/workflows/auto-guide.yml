@@ -1,0 +1,38 @@
+name: Auto-guide (Ludvig)
+
+# Skriver en ny säsongsanpassad guide varannan vecka (1:a och 15:e, 08:00 UTC)
+# via Claude API (Sonnet) och committar den. Vercel auto-deployar på push.
+on:
+  schedule:
+    - cron: "0 8 1,15 * *"
+  workflow_dispatch: {} # tillåt manuell körning
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate guide
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/generate-guide.mjs
+
+      - name: Commit new guide if created
+        run: |
+          if [ -n "$(git status --porcelain content/guider)" ]; then
+            git config user.name "nordlet-bot"
+            git config user.email "bot@nordlet.se"
+            git add content/guider
+            git commit -m "content: ny guide (auto, Ludvig Eriksson)"
+            git push
+          else
+            echo "Inga nya guider att committa."
+          fi
