@@ -3,17 +3,26 @@
 import { Container } from "@/components/ui/Container";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 import { Button } from "@/components/ui/Button";
-import { Check, Star, Phone, CreditCard, Lock } from "lucide-react";
+import {
+  Check,
+  Star,
+  Phone,
+  CreditCard,
+  Lock,
+  ShieldCheck,
+  Truck,
+  CalendarCheck,
+} from "lucide-react";
 import { SITE } from "@/lib/constants";
 
 const packages = [
   {
-    name: "Frihetstoa",
+    name: "NordLet Pro",
     checkoutKey: "frihetstoa" as const,
     price: "14 900",
     description: "För dig som vill komma igång i egen takt.",
     features: [
-      "NordLet Frihetstoa",
+      "NordLet Pro",
       "1 rulle påsar (30 användningar)",
       "USB-laddkabel",
       "Svensk bruksanvisning",
@@ -28,7 +37,7 @@ const packages = [
     originalPrice: "18 380",
     description: "Vårt mest uppskattade val för en hel säsong.",
     features: [
-      "NordLet Frihetstoa",
+      "NordLet Pro",
       "5 rullar påsar (150 användningar)",
       "USB-laddkabel + 12V-adapter",
       "Bärväska för förvaring",
@@ -58,6 +67,69 @@ export function Pricing() {
             <p className="mt-3 text-text-muted text-lg max-w-lg mx-auto">
               Fri leverans i hela Sverige, 30 dagars öppet köp och tydliga villkor.
             </p>
+          </div>
+        </AnimateOnScroll>
+
+        {/* Prova-innan-du-betalar / Nöjd-Kundgaranti */}
+        <AnimateOnScroll>
+          <div className="max-w-4xl mx-auto mb-12">
+            <div className="rounded-2xl border border-accent/30 bg-surface p-7 sm:p-9 shadow-lg shadow-accent/5">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+                <div className="flex items-center gap-4 sm:border-r sm:border-border sm:pr-8 flex-shrink-0">
+                  <span className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
+                    <ShieldCheck size={26} />
+                  </span>
+                  <p
+                    className="text-xl text-text leading-tight"
+                    style={{ fontFamily: "var(--font-dm-serif)" }}
+                  >
+                    Nöjd-Kundgaranti
+                  </p>
+                </div>
+                <div className="grid sm:grid-cols-3 gap-5 flex-1">
+                  <div className="flex items-start gap-2.5">
+                    <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-light text-green">
+                      <Truck size={13} />
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-text">
+                        Få hem den fraktfritt
+                      </p>
+                      <p className="text-xs text-text-muted mt-0.5 leading-relaxed">
+                        Levereras i hela Sverige utan fraktkostnad.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-light text-green">
+                      <CalendarCheck size={13} />
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-text">
+                        Prova i 30 dagar
+                      </p>
+                      <p className="text-xs text-text-muted mt-0.5 leading-relaxed">
+                        Inte nöjd? Skicka tillbaka, inga frågor.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-2.5">
+                    <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-light text-green">
+                      <CreditCard size={13} />
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-text">
+                        Betala med Klarna
+                      </p>
+                      <p className="text-xs text-text-muted mt-0.5 leading-relaxed">
+                        Betala om 30 dagar eller dela upp – först om du behåller
+                        den.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </AnimateOnScroll>
 
@@ -140,7 +212,7 @@ export function Pricing() {
                     variant={pkg.popular ? "primary" : "outline"}
                     className="w-full justify-center"
                   >
-                    Beställ {pkg.name.toLowerCase()}
+                    Beställ {pkg.name}
                   </Button>
                   {/* Micro-copy under CTA */}
                   <p className="text-center text-xs text-text-light mt-3">

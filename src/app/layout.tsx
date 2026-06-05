@@ -17,9 +17,9 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://nordlet.se"),
-  title: "NordLet Frihetstoa | Vattenlös toalett för husbil och husvagn",
+  title: "NordLet Pro | Vattenlös toalett för husbil och husvagn",
   description:
-    "NordLet Frihetstoa är den vattenlösa toaletten för husbilar och husvagnar. Värmeförsegling, batteridrift och lufttätt förseglade påsar för ett friare reseliv.",
+    "NordLet Pro är den vattenlösa toaletten för husbilar och husvagnar. Värmeförsegling, batteridrift och lufttätt förseglade påsar för ett friare reseliv.",
   keywords: [
     "husbilstoalett",
     "vattenlös toalett",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     "camping toalett",
   ],
   openGraph: {
-    title: "NordLet Frihetstoa | Vattenlös toalett för friare husbilsliv",
+    title: "NordLet Pro | Vattenlös toalett för friare husbilsliv",
     description:
-      "Upptäck Frihetstoa. En vattenlös toalett med värmeförsegling, batteridrift och en mer genomtänkt vardag på vägen.",
+      "Upptäck NordLet Pro. En vattenlös toalett med värmeförsegling, batteridrift och en mer genomtänkt vardag på vägen.",
     locale: "sv_SE",
     type: "website",
   },

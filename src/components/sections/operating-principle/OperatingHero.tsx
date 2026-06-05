@@ -37,7 +37,7 @@ export function OperatingHero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 max-w-2xl text-lg leading-relaxed text-white/72 sm:text-xl"
           >
-            Frihetstoa ersätter kassettanken med en vattenlös lösning som sköter
+            NordLet Pro ersätter kassettanken med en vattenlös lösning som sköter
             sig själv. Här är fyra steg som förklarar exakt vad som händer
             från det att du packar upp kartongen till det att du slänger den
             sista påsen hemma i köket.

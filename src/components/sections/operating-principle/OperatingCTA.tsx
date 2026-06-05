@@ -31,7 +31,7 @@ export function OperatingCTA() {
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button href="/#bestall" size="large">
-                Beställ Frihetstoa
+                Beställ NordLet Pro
               </Button>
               <a
                 href={`tel:${SITE.phone.replace(/\s/g, "")}`}

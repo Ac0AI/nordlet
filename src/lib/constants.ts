@@ -2,7 +2,6 @@ import {
   Droplets,
   BatteryCharging,
   ShieldCheck,
-  RotateCw,
   Hand,
   Thermometer,
   Truck,
@@ -16,8 +15,8 @@ import {
 
 export const SITE = {
   name: "NordLet",
-  category: "Frihetstoa",
-  tagline: "Frihetstoa. Vattenlös enkelhet för ett friare husbilsliv.",
+  category: "NordLet Pro",
+  tagline: "NordLet Pro. Vattenlös enkelhet för ett friare husbilsliv.",
   description:
     "Nordens vattenlösa toalett för husbilar och husvagnar. Värmeförsegling, batteridrift och en renare resa utan kassettank eller kemikalier.",
   email: "info@nordlet.se",
@@ -43,7 +42,7 @@ export const NAV_LINKS = [
 // Honest product-fact "stats" replacing fabricated popularity numbers.
 export const SOCIAL_PROOF_STATS = [
   { number: "0%", label: "Kemikalier" },
-  { number: "14 d", label: "Full ångerrätt" },
+  { number: "30 d", label: "Öppet köp" },
   { number: "CE", label: "Europeisk säkerhet" },
 ];
 
@@ -52,19 +51,19 @@ export const PAIN_POINTS = [
     icon: Route,
     title: "Trött på att planera efter tömningsstationer?",
     description:
-      "När rutten styrs av tömningsplatser försvinner en del av friheten. Med Frihetstoa slipper du kassettanken helt.",
+      "När rutten styrs av tömningsplatser försvinner en del av friheten. Med NordLet Pro slipper du kassettanken helt.",
   },
   {
     icon: FlaskConical,
     title: "Trött på toamedel och kemikalier?",
     description:
-      "Sanitetsvätskor kostar, luktar och följer med i varje resa. Frihetstoa fungerar helt utan kemikalier.",
+      "Sanitetsvätskor kostar, luktar och följer med i varje resa. NordLet Pro fungerar helt utan kemikalier.",
   },
   {
     icon: Wind,
     title: "Trött på lukten i toautrymmet?",
     description:
-      "Den typiska lukten från traditionella lösningar är svår att missa. Med Frihetstoa förseglas avfallet lufttätt inom sekunder.",
+      "Den typiska lukten från traditionella lösningar är svår att missa. Med NordLet Pro förseglas avfallet lufttätt inom sekunder.",
   },
 ];
 
@@ -94,12 +93,6 @@ export const FEATURES = [
       "Ingen sanitetsvätska, inga tillsatser och inget extra att bära med sig. Renare för dig och skonsammare för miljön.",
   },
   {
-    icon: RotateCw,
-    title: "Svängbar bas",
-    description:
-      "180° rotation med snabbkoppling. Passar även i trånga toautrymmen.",
-  },
-  {
     icon: Hand,
     title: "Ett knapptryck räcker",
     description:
@@ -123,14 +116,14 @@ export const CHAPTERS = [
     number: "01",
     slug: "installation",
     title: "Klart på en minut",
-    lead: "Frihetstoan är fristående. Inget behöver anslutas, dras eller borras.",
+    lead: "NordLet Pro är fristående. Inget behöver anslutas, dras eller borras.",
     body: "När du packar upp första gången lägger du i folierullen, sätter tillbaka locket och trycker Reset. Det tar en minut. Sen är den redo hela din resa. När LED-lampan säger till byter du rullen på samma sätt. Det är hela installationen.",
     stat: "30 användningar per rulle. Ungefär en resevecka för två.",
     images: {
       primary: "/images/how-it-works/steg1-primary.png",
       secondary: "/images/how-it-works/steg1-secondary.png",
-      primaryAlt: "Hand som lyfter locket på Frihetstoa",
-      secondaryAlt: "Finger som trycker på Frihetstoas kontrollpanel",
+      primaryAlt: "Hand som lyfter locket på NordLet Pro",
+      secondaryAlt: "Finger som trycker på NordLet Pros kontrollpanel",
     },
   },
   {
@@ -138,13 +131,13 @@ export const CHAPTERS = [
     slug: "anvandning",
     title: "Precis som hemma. Bara utan vatten.",
     lead: "Sätt dig, gör ditt, stäng locket, tryck på knappen.",
-    body: "Sitsen är i standardhöjd och känns som en vanlig toalett. När du är klar stänger du locket och väljer litet eller stort program på kontrollpanelen. Du behöver inte hälla i något toamedel, inte mäta ut någon vätska och inte spola. Frihetstoa sköter resten själv.",
+    body: "Sitsen är i standardhöjd och känns som en vanlig toalett. När du är klar stänger du locket och väljer litet eller stort program på kontrollpanelen. Du behöver inte hälla i något toamedel, inte mäta ut någon vätska och inte spola. NordLet Pro sköter resten själv.",
     stat: "Dubbelt läge för flytande och fast. Noll kemikalier.",
     images: {
       primary: "/images/how-it-works/steg2-primary.png",
       secondary: "/images/how-it-works/steg2-secondary.png",
-      primaryAlt: "Frihetstoa i ett husbilsbadrum med varmt dagsljus",
-      secondaryAlt: "Närbild av Frihetstoas kontrollpanel och lägesknappar",
+      primaryAlt: "NordLet Pro i ett husbilsbadrum med varmt dagsljus",
+      secondaryAlt: "Närbild av NordLet Pros kontrollpanel och lägesknappar",
     },
   },
   {
@@ -152,12 +145,12 @@ export const CHAPTERS = [
     slug: "forseglingen",
     title: "Det tysta jobbet under locket",
     lead: "Det här är den del som gör att du aldrig behöver tömma en kassettank igen.",
-    body: "När du tryckt på knappen drar Frihetstoa ihop folien runt innehållet och värmeförseglar den till en lufttät påse. Varje besök får sin egen förslutning. När påsen är förseglad matas ny, ren folie automatiskt fram och skålen är klar för nästa gång. Ingen kemikalie, ingen doft som väntar på dig i skåpet, ingen mekanik som du själv behöver hantera.",
+    body: "När du tryckt på knappen drar NordLet Pro ihop folien runt innehållet och värmeförseglar den till en lufttät påse. Varje besök får sin egen förslutning. När påsen är förseglad matas ny, ren folie automatiskt fram och skålen är klar för nästa gång. Ingen kemikalie, ingen doft som väntar på dig i skåpet, ingen mekanik som du själv behöver hantera.",
     stat: "Lufttät försegling - även sommartid när värmen står still ovanför husbilen.",
     images: {
       primary: "/images/how-it-works/steg3-primary.png",
       secondary: "/images/how-it-works/steg3-secondary.png",
-      primaryAlt: "Genomskärning av värmeförseglingen inuti Frihetstoa",
+      primaryAlt: "Genomskärning av värmeförseglingen inuti NordLet Pro",
       secondaryAlt: "Genomskärning som visar ny folie som matas fram",
     },
   },
@@ -201,7 +194,7 @@ export const FAQS = [
   {
     question: "Är det inte som PACTO-toan som luktade?",
     answer:
-      "Nej. PACTO använde vanlig plastförslutning utan värme. Frihetstoa använder värmeförseglingsteknik som smälter ihop påsen till en helt lufttät enhet. Skillnaden märks framför allt i luktkontrollen.",
+      "Nej. PACTO använde vanlig plastförslutning utan värme. NordLet Pro använder värmeförseglingsteknik som smälter ihop påsen till en helt lufttät enhet. Skillnaden märks framför allt i luktkontrollen.",
   },
   {
     question: "Vad gör jag med påsarna? Kan man slänga dem i vanliga soporna?",
@@ -211,7 +204,7 @@ export const FAQS = [
   {
     question: "Jag har SOG idag. Är det här bättre?",
     answer:
-      "SOG är en bra lösning om du vill minska användningen av kemikalier. Men kassettanken, tömningsstationerna och filterbytena finns fortfarande kvar. Med Frihetstoa försvinner hela den delen av vardagen.",
+      "SOG är en bra lösning om du vill minska användningen av kemikalier. Men kassettanken, tömningsstationerna och filterbytena finns fortfarande kvar. Med NordLet Pro försvinner hela den delen av vardagen.",
   },
   {
     question: "Behöver man speciellt toalettpapper?",
@@ -221,7 +214,7 @@ export const FAQS = [
   {
     question: "Passar den i min husbil/husvagn?",
     answer:
-      "Frihetstoa är fristående och kräver ingen anslutning. Den är kompakt (355 mm bred, 488 mm djup) och den svängbara basen gör att den passar även i trånga toautrymmen. Ingen installation behövs, du ställer den bara på plats.",
+      "NordLet Pro är fristående och kräver ingen anslutning. Den är kompakt (355 mm bred, 488 mm djup) och den svängbara basen gör att den passar även i trånga toautrymmen. Ingen installation behövs, du ställer den bara på plats.",
   },
   {
     question: "Hur lång tid räcker batteriet?",

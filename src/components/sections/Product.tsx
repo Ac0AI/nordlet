@@ -26,7 +26,7 @@ export function Product() {
               <div className="relative sm:col-span-2 min-h-[340px] overflow-hidden rounded-3xl border border-border bg-surface shadow-2xl shadow-primary/10">
                 <Image
                   src={IMAGES.productFront}
-                  alt="Frihetstoa framifrån"
+                  alt="NordLet Pro framifrån"
                   fill
                   className="object-contain p-6 sm:p-8"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -36,7 +36,7 @@ export function Product() {
               <div className="relative min-h-[220px] overflow-hidden rounded-2xl border border-border bg-surface">
                 <Image
                   src={IMAGES.productSide}
-                  alt="Frihetstoa från sidan"
+                  alt="NordLet Pro från sidan"
                   fill
                   className="object-contain p-4"
                   sizes="(max-width: 1024px) 50vw, 25vw"
@@ -46,7 +46,7 @@ export function Product() {
               <div className="relative min-h-[220px] overflow-hidden rounded-2xl border border-border bg-surface">
                 <Image
                   src={IMAGES.productDimensions}
-                  alt="Frihetstoa med utdragen uppsamlingslåda"
+                  alt="NordLet Pro med utdragen uppsamlingslåda"
                   fill
                   className="object-contain p-4"
                   sizes="(max-width: 1024px) 50vw, 25vw"
@@ -58,7 +58,7 @@ export function Product() {
           {/* Text */}
           <AnimateOnScroll delay={0.15}>
             <p className="text-accent font-semibold text-sm tracking-widest uppercase mb-4">
-              Frihetstoa
+              NordLet Pro
             </p>
             <h2
               className="text-3xl sm:text-4xl tracking-tight text-text leading-snug"
@@ -67,7 +67,7 @@ export function Product() {
               Ett mer genomtänkt toalettval för husbilen.
             </h2>
             <p className="mt-5 text-text-muted leading-relaxed text-lg">
-              Frihetstoa ersätter den traditionella kassettoaletten med en
+              NordLet Pro ersätter den traditionella kassettoaletten med en
               vattenlös, fristående lösning. Ingen svartvattentank, inget
               toamedel och ingen fast installation. Placera den på plats och
               börja använda den direkt.
@@ -85,7 +85,7 @@ export function Product() {
             </ul>
 
             <div className="mt-10">
-              <Button href="#bestall">Beställ Frihetstoa</Button>
+              <Button href="#bestall">Beställ NordLet Pro</Button>
             </div>
           </AnimateOnScroll>
         </div>

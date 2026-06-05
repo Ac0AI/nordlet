@@ -7,11 +7,11 @@ import { Check, X } from "lucide-react";
 type Row = {
   feature: string;
   other: boolean; // har "den andra lösningen" egenskapen?
-  nordlet: boolean; // har Frihetstoa egenskapen?
+  nordlet: boolean; // har NordLet Pro egenskapen?
   negative?: boolean; // true = egenskapen är en nackdel (att ha den är dåligt)
 };
 
-// Frihetstoa vs traditionell kassettoalett.
+// NordLet Pro vs traditionell kassettoalett.
 // Alla rader formuleras som fördelar -> grön bock betyder alltid "bra/ja".
 const cassetteRows: Row[] = [
   { feature: "Slipper kassettank", other: false, nordlet: true },
@@ -25,7 +25,7 @@ const cassetteRows: Row[] = [
   { feature: "Släng i vanliga soporna", other: false, nordlet: true },
 ];
 
-// Frihetstoa vs andra (typiskt manuella) förseglande toaletter
+// NordLet Pro vs andra (typiskt manuella) förseglande toaletter
 const sealingRows: Row[] = [
   { feature: "Batteridrift", other: false, nordlet: true },
   { feature: "Laddas via USB eller 12V", other: false, nordlet: true },
@@ -62,7 +62,7 @@ function ComparisonTable({
         </div>
         <div className="w-28 sm:w-36 text-center">
           <span className="text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">
-            Frihetstoa
+            NordLet Pro
           </span>
         </div>
       </div>
@@ -100,7 +100,7 @@ export function Comparison() {
               className="text-3xl sm:text-4xl tracking-tight text-text"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Frihetstoa vs. kassettoaletten
+              NordLet Pro vs. kassettoaletten
             </h2>
           </div>
         </AnimateOnScroll>
@@ -118,7 +118,7 @@ export function Comparison() {
               className="text-3xl sm:text-4xl tracking-tight text-text"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Frihetstoa vs. andra förseglande toaletter
+              NordLet Pro vs. andra förseglande toaletter
             </h2>
           </div>
         </AnimateOnScroll>

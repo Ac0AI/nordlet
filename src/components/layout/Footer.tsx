@@ -18,7 +18,7 @@ export function Footer() {
               {SITE.name}
             </span>
             <p className="text-white/55 leading-relaxed max-w-sm">
-              Frihetstoa. Vattenlös toalett för husbilar och husvagnar.
+              NordLet Pro. Vattenlös toalett för husbilar och husvagnar.
               Utvecklad för skandinaviska förhållanden, levererad från
               svenskt lager.
             </p>

@@ -19,7 +19,7 @@ export function CTA() {
               Redo för en mer genomtänkt toalettlösning?
             </h2>
             <p className="mt-5 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl mx-auto">
-              Välj Frihetstoa om du vill ha en vattenlös lösning med fri retur,
+              Välj NordLet Pro om du vill ha en vattenlös lösning med fri retur,
               svensk rådgivning och en vardag på vägen som kräver mindre av dig.
             </p>
 
@@ -32,7 +32,7 @@ export function CTA() {
 
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button
-                href={`mailto:${SITE.email}?subject=Beställning Frihetstoa`}
+                href={`mailto:${SITE.email}?subject=Beställning NordLet Pro`}
                 size="large"
               >
                 <Mail size={18} className="mr-2.5" />

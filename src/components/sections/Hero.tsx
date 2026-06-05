@@ -54,7 +54,7 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="mt-7 max-w-md text-lg leading-relaxed text-white/75 sm:text-xl"
             >
-              Frihetstoa &ndash; den vattenlösa toaletten som förseglar varje
+              NordLet Pro &ndash; den vattenlösa toaletten som förseglar varje
               besök lufttätt. Ingen kassettank, inga kemikalier, inga omvägar
               till tömningsstationen.
             </motion.p>
@@ -66,7 +66,7 @@ export function Hero() {
               className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center"
             >
               <Button href="#bestall" size="large">
-                Beställ Frihetstoa
+                Beställ NordLet Pro
               </Button>
               <Button
                 href="#sa-fungerar-det"
@@ -78,9 +78,25 @@ export function Hero() {
               </Button>
             </motion.div>
 
-            <p className="mt-4 text-sm font-medium text-accent-light">
-              Fri leverans i Sverige &middot; 30 dagars öppet köp
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 18 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+              className="mt-7 flex max-w-md items-start gap-3 rounded-2xl border border-accent-light/30 bg-white/[0.07] px-5 py-4 backdrop-blur-md"
+            >
+              <span className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-accent-light/15 text-accent-light">
+                <ShieldCheck size={18} />
+              </span>
+              <div>
+                <p className="text-[15px] font-semibold text-white">
+                  30 dagars öppet köp
+                </p>
+                <p className="mt-0.5 text-[13px] leading-relaxed text-white/65">
+                  Ångra utan kostnad. Dela upp eller betala om 30 dagar med
+                  Klarna.
+                </p>
+              </div>
+            </motion.div>
 
             {SITE.phone && (
               <div className="mt-6 flex items-center gap-2">
@@ -131,7 +147,7 @@ export function Hero() {
         >
           <Image
             src={IMAGES.heroProduct}
-            alt="Frihetstoa, vattenlös toalett för husbil"
+            alt="NordLet Pro, vattenlös toalett för husbil"
             fill
             className="object-cover"
             priority

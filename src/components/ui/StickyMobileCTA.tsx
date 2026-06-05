@@ -28,7 +28,7 @@ export function StickyMobileCTA() {
           href="#bestall"
           className="flex-1 bg-accent text-white font-semibold py-3.5 rounded-xl text-center text-base hover:bg-accent-light transition-all shadow-lg shadow-accent/20"
         >
-          Beställ Frihetstoa
+          Beställ NordLet Pro
         </a>
         {SITE.phone && (
           <a
@@ -41,7 +41,7 @@ export function StickyMobileCTA() {
         )}
       </div>
       <p className="bg-surface/95 text-center text-xs text-text-light pb-2 px-4">
-        Fri retur och svensk rådgivning.
+        30 dagars öppet köp. Fri retur.
       </p>
     </div>
   );

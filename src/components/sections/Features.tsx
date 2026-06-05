@@ -17,7 +17,7 @@ export function Features() {
               className="text-3xl sm:text-4xl tracking-tight text-white"
               style={{ fontFamily: "var(--font-dm-serif)" }}
             >
-              Därför väljer allt fler Frihetstoa framför kassettoaletten
+              Därför väljer allt fler NordLet Pro framför kassettoaletten
             </h2>
           </div>
         </AnimateOnScroll>

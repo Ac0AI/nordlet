@@ -56,7 +56,7 @@ export function SavingsCalculator() {
 
             <div className="mt-8 bg-green-light rounded-xl p-6 text-center">
               <p className="text-green font-semibold text-lg">
-                Med Frihetstoa: förbrukning från ca 300 kr/år
+                Med NordLet Pro: förbrukning från ca 300 kr/år
               </p>
               <p
                 className="text-green text-2xl font-bold mt-1"

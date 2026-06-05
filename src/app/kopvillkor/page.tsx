@@ -7,7 +7,7 @@ import { SITE } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Köpvillkor | NordLet",
   description:
-    "Köpvillkor för NordLet Frihetstoa. Ångerrätt, leverans, betalning, reklamation och kontakt.",
+    "Köpvillkor för NordLet Pro. Ångerrätt, leverans, betalning, reklamation och kontakt.",
 };
 
 export default function KopvillkorPage() {
