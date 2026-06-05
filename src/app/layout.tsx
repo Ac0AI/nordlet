@@ -16,6 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://nordlet.se"),
   title: "NordLet Frihetstoa | Vattenlös toalett för husbil och husvagn",
   description:
     "NordLet Frihetstoa är den vattenlösa toaletten för husbilar och husvagnar. Värmeförsegling, batteridrift och lufttätt förseglade påsar för ett friare reseliv.",
