@@ -164,7 +164,7 @@ export const CHAPTERS = [
     title: "Från husbilen till hushållssoporna",
     lead: "Inga tömningsstationer. Inga söndagsköer. Inga sanitetsvätskor.",
     body: "När uppsamlingslådan är full tänds LED-indikatorn på kontrollpanelen. Dra ut lådan i nederdelen. Eftersom varje påse är förseglad för sig finns ingen lukt och ingen risk för spill. Du lägger dem i vanliga hushållssoporna - vid nästa rastplats, på campingen eller hemma i köket när resan är slut.",
-    stat: "Påsarna är biologiskt nedbrytbara och går i det vanliga restavfallet.",
+    stat: "Varje påse förseglas för sig och går i det vanliga restavfallet.",
     images: {
       primary: "/images/how-it-works/steg4-primary.png",
       secondary: "/images/how-it-works/steg4-secondary.png",
@@ -193,7 +193,7 @@ export const FAQS = [
   {
     question: "Hur funkar det egentligen?",
     answer:
-      "Du använder toaletten som vanligt. När du trycker på knappen aktiveras en värmeförsegling som paketerar avfallet i en biologiskt nedbrytbar påse och försluter den lufttätt. Inget vatten, inga kemikalier och ingen manuell hantering.",
+      "Du använder toaletten som vanligt. När du aktiverar förseglingen paketeras avfallet i en påse som försluts lufttätt. Inget vatten, inga kemikalier och ingen manuell hantering.",
   },
   {
     question: "Är det inte som PACTO-toan som luktade?",
@@ -203,7 +203,7 @@ export const FAQS = [
   {
     question: "Vad gör jag med påsarna? Kan man slänga dem i vanliga soporna?",
     answer:
-      "Ja. Påsarna är biologiskt nedbrytbara och slängs i vanliga hushållssoporna, precis som blöjor. Varje rulle räcker till 30 användningar.",
+      "Ja. Påsarna slängs i vanliga hushållssoporna, precis som blöjor. Varje rulle räcker till 30 användningar.",
   },
   {
     question: "Jag har SOG idag. Är det här bättre?",

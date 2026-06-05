@@ -3,7 +3,7 @@
 import { Container } from "@/components/ui/Container";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 import { Button } from "@/components/ui/Button";
-import { Check, Star, Phone } from "lucide-react";
+import { Check, Star, Phone, CreditCard, Lock } from "lucide-react";
 import { SITE } from "@/lib/constants";
 
 const packages = [
@@ -62,7 +62,10 @@ export function Pricing() {
         </AnimateOnScroll>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {packages.map((pkg, i) => (
+          {packages.map((pkg, i) => {
+            const monthly =
+              Math.ceil(Number(pkg.price.replace(/\s/g, "")) / 36 / 10) * 10;
+            return (
             <AnimateOnScroll key={pkg.name} delay={i * 0.1}>
               <div
                 className={`relative rounded-2xl p-8 sm:p-10 h-full flex flex-col ${
@@ -105,6 +108,18 @@ export function Pricing() {
                     : "Ett långsiktigt val för ett friare reseliv"}
                 </p>
 
+                {/* Klarna betalalternativ */}
+                <div className="mt-4 rounded-xl bg-bg-warm border border-border px-4 py-3">
+                  <p className="flex items-center gap-2 text-sm font-medium text-text">
+                    <CreditCard size={15} className="text-accent flex-shrink-0" />
+                    Dela upp med Klarna – från ca {monthly} kr/mån
+                  </p>
+                  <p className="text-text-light text-xs mt-1">
+                    Eller betala om 30 dagar. Exakt belopp och ränta visas i
+                    Klarnas kassa.
+                  </p>
+                </div>
+
                 <ul className="mt-8 space-y-3 flex-grow">
                   {pkg.features.map((f) => (
                     <li key={f} className="flex items-start gap-3">
@@ -134,8 +149,40 @@ export function Pricing() {
                 </div>
               </div>
             </AnimateOnScroll>
-          ))}
+            );
+          })}
         </div>
+
+        {/* Betalmetoder */}
+        <AnimateOnScroll delay={0.15}>
+          <div className="mt-10 flex flex-col items-center gap-3">
+            <div className="flex flex-wrap items-center justify-center gap-2.5">
+              {[
+                { src: "/images/payment/klarna.svg", alt: "Klarna" },
+                { src: "/images/payment/swish.svg", alt: "Swish" },
+                { src: "/images/payment/visa.svg", alt: "Visa" },
+                { src: "/images/payment/master.svg", alt: "Mastercard" },
+                { src: "/images/payment/apple_pay.svg", alt: "Apple Pay" },
+              ].map((m) => (
+                <span
+                  key={m.alt}
+                  className="inline-flex items-center justify-center h-10 px-3.5 rounded-lg bg-white border border-border"
+                >
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={m.src}
+                    alt={`Betala med ${m.alt}`}
+                    className="h-5 w-auto"
+                  />
+                </span>
+              ))}
+            </div>
+            <p className="flex items-center gap-1.5 text-xs text-text-light">
+              <Lock size={12} className="flex-shrink-0" />
+              Trygg betalning. Faktura och delbetalning via Klarna.
+            </p>
+          </div>
+        </AnimateOnScroll>
 
         {/* Phone CTA — only when SITE.phone is configured via env */}
         {SITE.phone && (

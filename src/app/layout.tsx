@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Serif_Display, Inter } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const dmSerif = DM_Serif_Display({
@@ -17,7 +18,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "NordLet Frihetstoa | Vattenlös toalett för husbil och husvagn",
   description:
-    "NordLet Frihetstoa är den vattenlösa toaletten för husbilar och husvagnar. Värmeförsegling, batteridrift och biologiskt nedbrytbara påsar för ett friare reseliv.",
+    "NordLet Frihetstoa är den vattenlösa toaletten för husbilar och husvagnar. Värmeförsegling, batteridrift och lufttätt förseglade påsar för ett friare reseliv.",
   keywords: [
     "husbilstoalett",
     "vattenlös toalett",
@@ -44,6 +45,7 @@ export default function RootLayout({
     <html lang="sv">
       <body className={`${dmSerif.variable} ${inter.variable} antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );

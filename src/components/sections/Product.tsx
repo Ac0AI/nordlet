@@ -11,7 +11,7 @@ const highlights = [
   "Ingen kassettank att tömma",
   "Utan kemikalier eller toamedel",
   "Lufttät försegling även under varma dagar",
-  "Biologiskt nedbrytbara påsar för hushållssopor",
+  "Förseglade påsar som går i hushållssoporna",
   "Kompakt format för husbilar och husvagnar",
 ];
 
