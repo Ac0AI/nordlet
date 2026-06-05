@@ -36,6 +36,7 @@ export const NAV_LINKS = [
   { label: "Så fungerar det", href: "/#sa-fungerar-det" },
   { label: "Fördelar", href: "/#fordelar" },
   { label: "Vanliga frågor", href: "/#faq" },
+  { label: "Guider", href: "/guider" },
   { label: "Beställ", href: "/#bestall" },
 ];
 

@@ -44,3 +44,4 @@ next-env.d.ts
 
 # Local image backups (not deployed)
 .image-backups/
+.gstack/

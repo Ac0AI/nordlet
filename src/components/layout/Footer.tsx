@@ -67,6 +67,11 @@ export function Footer() {
                   Vanliga frågor
                 </Link>
               </li>
+              <li>
+                <Link href="/guider" className="hover:text-white transition-colors">
+                  Guider
+                </Link>
+              </li>
             </ul>
           </div>
 
