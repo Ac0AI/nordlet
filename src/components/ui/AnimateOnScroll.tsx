@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export function AnimateOnScroll({
@@ -12,6 +12,13 @@ export function AnimateOnScroll({
   className?: string;
   delay?: number;
 }) {
+  const reduce = useReducedMotion();
+
+  // Respect prefers-reduced-motion: render content in place, no entrance motion.
+  if (reduce) {
+    return <div className={cn(className)}>{children}</div>;
+  }
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
