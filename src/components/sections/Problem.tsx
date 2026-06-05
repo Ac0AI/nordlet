@@ -9,33 +9,33 @@ export function Problem() {
     <section className="py-20 sm:py-28">
       <Container>
         <AnimateOnScroll>
-          <div className="text-center mb-14">
-            <h2
-              className="text-3xl sm:text-4xl tracking-tight text-text"
-              style={{ fontFamily: "var(--font-dm-serif)" }}
-            >
+          <div className="max-w-xl mb-14">
+            <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-text">
               Friheten med husbil är svårslagen.
             </h2>
-            <p className="mt-3 text-text-muted text-lg max-w-xl mx-auto">
+            <p className="mt-3 text-text-muted text-lg">
               Toalettlösningen är det inte alltid. Därför väljer allt fler ett
               mer genomtänkt alternativ.
             </p>
           </div>
         </AnimateOnScroll>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-x-10 gap-y-12 max-w-5xl">
           {PAIN_POINTS.map((point, i) => {
             const Icon = point.icon;
             return (
               <AnimateOnScroll key={point.title} delay={i * 0.1}>
-                <div className="text-center p-8 rounded-2xl bg-surface border border-border">
-                  <div className="mx-auto mb-5 w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-                    <Icon className="text-accent" size={22} />
+                <div className="border-t border-border pt-6">
+                  <div className="mb-4 flex items-center gap-3">
+                    <Icon className="text-accent" size={22} strokeWidth={1.75} />
+                    <span className="font-display text-lg text-text-light">
+                      0{i + 1}
+                    </span>
                   </div>
-                  <h3 className="text-xl font-semibold text-text mb-3 leading-snug">
+                  <h3 className="mb-3 text-xl font-semibold text-text leading-snug">
                     {point.title}
                   </h3>
-                  <p className="text-text-muted leading-relaxed text-base">
+                  <p className="text-text-muted leading-relaxed">
                     {point.description}
                   </p>
                 </div>
@@ -45,14 +45,9 @@ export function Problem() {
         </div>
 
         <AnimateOnScroll delay={0.3}>
-          <div className="mt-14 text-center">
-            <p
-              className="text-xl sm:text-2xl text-text"
-              style={{ fontFamily: "var(--font-dm-serif)" }}
-            >
-              Det finns ett mer genomtänkt sätt att resa.
-            </p>
-          </div>
+          <p className="font-display mt-16 max-w-2xl text-2xl sm:text-3xl text-text leading-snug">
+            Det finns ett mer genomtänkt sätt att resa.
+          </p>
         </AnimateOnScroll>
       </Container>
     </section>
