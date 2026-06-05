@@ -41,8 +41,7 @@ export async function generateMetadata({
 const md = {
   h2: (p: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
-      className="mt-12 mb-4 text-2xl sm:text-3xl text-text leading-snug"
-      style={{ fontFamily: "var(--font-dm-serif)" }}
+      className="mt-12 mb-4 text-2xl sm:text-3xl text-text leading-snug font-display"
       {...p}
     />
   ),
@@ -114,8 +113,7 @@ export default async function GuidePage({
             </Link>
 
             <h1
-              className="mt-6 text-4xl sm:text-5xl tracking-tight text-text leading-tight"
-              style={{ fontFamily: "var(--font-dm-serif)" }}
+              className="mt-6 text-4xl sm:text-5xl tracking-tight text-text leading-tight font-display"
             >
               {guide.title}
             </h1>
@@ -149,8 +147,7 @@ export default async function GuidePage({
 
             <div className="mt-14 rounded-2xl border border-accent/30 bg-bg-warm p-8 text-center">
               <p
-                className="text-2xl text-text"
-                style={{ fontFamily: "var(--font-dm-serif)" }}
+                className="text-2xl text-text font-display"
               >
                 Redo att resa friare?
               </p>

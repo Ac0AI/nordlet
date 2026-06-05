@@ -12,8 +12,7 @@ export function Footer() {
           {/* Brand + Org info */}
           <div className="lg:col-span-2">
             <span
-              className="text-xl text-white font-normal block mb-3"
-              style={{ fontFamily: "var(--font-dm-serif)" }}
+              className="text-xl text-white font-normal block mb-3 font-display"
             >
               {SITE.name}
             </span>

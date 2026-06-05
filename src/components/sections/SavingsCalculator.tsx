@@ -21,8 +21,7 @@ export function SavingsCalculator() {
                 Räkna själv
               </p>
               <h3
-                className="text-2xl sm:text-3xl tracking-tight text-text"
-                style={{ fontFamily: "var(--font-dm-serif)" }}
+                className="text-2xl sm:text-3xl tracking-tight text-text font-display"
               >
                 Vad kostar kassettoaletten över tid?
               </h3>
@@ -47,8 +46,7 @@ export function SavingsCalculator() {
                 Årlig kostnad med kassettoalett
               </span>
               <span
-                className="text-2xl font-bold text-accent"
-                style={{ fontFamily: "var(--font-dm-serif)" }}
+                className="text-2xl font-bold text-accent font-display"
               >
                 ~3 200 kr/år
               </span>
@@ -59,8 +57,7 @@ export function SavingsCalculator() {
                 Med NordLet Pro: förbrukning från ca 300 kr/år
               </p>
               <p
-                className="text-green text-2xl font-bold mt-1"
-                style={{ fontFamily: "var(--font-dm-serif)" }}
+                className="text-green text-2xl font-bold mt-1 font-display"
               >
                 Du sparar ~2 900 kr per år
               </p>

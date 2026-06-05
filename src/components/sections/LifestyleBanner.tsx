@@ -20,8 +20,7 @@ export function LifestyleBanner() {
         <Container className="relative z-10 h-full flex items-end pb-12">
           <div className="max-w-lg">
             <p
-              className="text-3xl sm:text-4xl text-white tracking-tight leading-snug"
-              style={{ fontFamily: "var(--font-dm-serif)" }}
+              className="text-3xl sm:text-4xl text-white tracking-tight leading-snug font-display"
             >
               Stå friare.
               <br />

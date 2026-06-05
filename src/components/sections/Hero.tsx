@@ -40,8 +40,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1 }}
-              className="text-5xl leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl"
-              style={{ fontFamily: "var(--font-dm-serif)" }}
+              className="text-5xl leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl font-display"
             >
               Svara naturen.
               <br />
@@ -103,8 +102,7 @@ export function Hero() {
                 <Phone size={18} className="text-white/60" />
                 <a
                   href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-                  className="text-lg font-bold text-white transition-colors hover:text-accent-light"
-                  style={{ fontFamily: "var(--font-dm-serif)" }}
+                  className="text-lg font-bold text-white transition-colors hover:text-accent-light font-display"
                 >
                   {SITE.phone}
                 </a>
@@ -121,8 +119,7 @@ export function Hero() {
               {SOCIAL_PROOF_STATS.map((stat) => (
                 <div key={stat.label}>
                   <p
-                    className="text-2xl font-bold text-white sm:text-3xl"
-                    style={{ fontFamily: "var(--font-dm-serif)" }}
+                    className="text-2xl font-bold text-white sm:text-3xl font-display"
                   >
                     {stat.number}
                   </p>

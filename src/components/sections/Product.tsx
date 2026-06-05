@@ -61,8 +61,7 @@ export function Product() {
               NordLet Pro
             </p>
             <h2
-              className="text-3xl sm:text-4xl tracking-tight text-text leading-snug"
-              style={{ fontFamily: "var(--font-dm-serif)" }}
+              className="text-3xl sm:text-4xl tracking-tight text-text leading-snug font-display"
             >
               Ett mer genomtänkt toalettval för husbilen.
             </h2>

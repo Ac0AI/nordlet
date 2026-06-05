@@ -55,7 +55,7 @@ function ComparisonTable({
 }) {
   return (
     <div className="max-w-2xl mx-auto overflow-hidden rounded-2xl border border-border bg-surface">
-      <div className="grid grid-cols-[1fr_auto_auto] gap-0 bg-bg-alt px-6 py-4 border-b border-border">
+      <div className="grid grid-cols-[minmax(0,1fr)_auto_auto] gap-0 bg-bg-alt px-6 py-4 border-b border-border">
         <div />
         <div className="w-28 sm:w-36 text-center text-sm font-medium text-text-muted">
           {otherLabel}
@@ -70,7 +70,7 @@ function ComparisonTable({
       {rows.map((row, i) => (
         <div
           key={row.feature}
-          className={`grid grid-cols-[1fr_auto_auto] gap-0 px-6 py-3.5 items-center ${
+          className={`grid grid-cols-[minmax(0,1fr)_auto_auto] gap-0 px-6 py-3.5 items-center ${
             i % 2 === 0 ? "bg-surface" : "bg-bg-alt/30"
           }`}
         >
@@ -97,8 +97,7 @@ export function Comparison() {
               Jämförelse
             </p>
             <h2
-              className="text-3xl sm:text-4xl tracking-tight text-text"
-              style={{ fontFamily: "var(--font-dm-serif)" }}
+              className="text-3xl sm:text-4xl tracking-tight text-text font-display"
             >
               NordLet Pro vs. kassettoaletten
             </h2>
@@ -115,8 +114,7 @@ export function Comparison() {
               Jämförelse
             </p>
             <h2
-              className="text-3xl sm:text-4xl tracking-tight text-text"
-              style={{ fontFamily: "var(--font-dm-serif)" }}
+              className="text-3xl sm:text-4xl tracking-tight text-text font-display"
             >
               NordLet Pro vs. andra förseglande toaletter
             </h2>

@@ -71,8 +71,7 @@ export function FAQ() {
                 Frågor & Svar
               </p>
               <h2
-                className="text-3xl sm:text-4xl tracking-tight text-text"
-                style={{ fontFamily: "var(--font-dm-serif)" }}
+                className="text-3xl sm:text-4xl tracking-tight text-text font-display"
               >
                 Vanliga frågor
               </h2>

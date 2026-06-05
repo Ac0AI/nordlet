@@ -31,18 +31,18 @@ export function Authority() {
             const Icon = item.icon;
             return (
               <AnimateOnScroll key={item.label} delay={i * 0.1}>
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center">
-                    <Icon className="text-primary" size={22} />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-text text-base">
-                      {item.label}
-                    </p>
-                    <p className="text-text-muted text-sm mt-1 leading-relaxed">
-                      {item.detail}
-                    </p>
-                  </div>
+                <div className="border-t border-border pt-6">
+                  <Icon
+                    className="text-primary mb-3"
+                    size={22}
+                    strokeWidth={1.75}
+                  />
+                  <p className="font-semibold text-text text-base">
+                    {item.label}
+                  </p>
+                  <p className="text-text-muted text-sm mt-1 leading-relaxed">
+                    {item.detail}
+                  </p>
                 </div>
               </AnimateOnScroll>
             );

@@ -31,10 +31,9 @@ export function Header() {
           href="/"
           aria-label="Till startsidan"
           className={cn(
-            "text-2xl font-normal tracking-tight transition-colors",
+            "font-display text-2xl font-normal tracking-tight transition-colors",
             scrolled ? "text-primary" : "text-white"
           )}
-          style={{ fontFamily: "var(--font-dm-serif)" }}
         >
           {SITE.name}
         </Link>

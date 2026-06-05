@@ -21,8 +21,7 @@ export function OperatingCTA() {
               knapptryck.
             </p>
             <h2
-              className="text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight"
-              style={{ fontFamily: "var(--font-dm-serif)" }}
+              className="text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight font-display"
             >
               Redo att resa friare?
             </h2>
@@ -35,8 +34,7 @@ export function OperatingCTA() {
               </Button>
               <a
                 href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-                className="inline-flex items-center gap-2 text-lg font-semibold text-white hover:text-accent-light transition-colors py-3"
-                style={{ fontFamily: "var(--font-dm-serif)" }}
+                className="inline-flex items-center gap-2 text-lg font-semibold text-white hover:text-accent-light transition-colors py-3 font-display"
               >
                 <Phone size={18} />
                 {SITE.phone}

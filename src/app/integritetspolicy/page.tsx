@@ -22,8 +22,7 @@ export default function IntegritetspolicyPage() {
               Juridiskt
             </p>
             <h1
-              className="text-3xl sm:text-4xl lg:text-5xl tracking-tight text-text leading-tight mb-6"
-              style={{ fontFamily: "var(--font-dm-serif)" }}
+              className="text-3xl sm:text-4xl lg:text-5xl tracking-tight text-text leading-tight mb-6 font-display"
             >
               Integritetspolicy
             </h1>
@@ -220,8 +219,7 @@ function Section({
   return (
     <section className="mb-10">
       <h2
-        className="text-xl sm:text-2xl tracking-tight text-text mb-4"
-        style={{ fontFamily: "var(--font-dm-serif)" }}
+        className="text-xl sm:text-2xl tracking-tight text-text mb-4 font-display"
       >
         {title}
       </h2>

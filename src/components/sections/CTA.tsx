@@ -13,8 +13,7 @@ export function CTA() {
         <AnimateOnScroll>
           <div className="max-w-3xl mx-auto text-center">
             <h2
-              className="text-3xl sm:text-5xl tracking-tight text-text leading-snug"
-              style={{ fontFamily: "var(--font-dm-serif)" }}
+              className="text-3xl sm:text-5xl tracking-tight text-text leading-snug font-display"
             >
               Redo för en mer genomtänkt toalettlösning?
             </h2>

@@ -59,8 +59,7 @@ export function Pricing() {
               Beställ
             </p>
             <h2
-              className="text-3xl sm:text-4xl tracking-tight text-text"
-              style={{ fontFamily: "var(--font-dm-serif)" }}
+              className="text-3xl sm:text-4xl tracking-tight text-text font-display"
             >
               Välj ditt paket
             </h2>
@@ -80,8 +79,7 @@ export function Pricing() {
                     <ShieldCheck size={26} />
                   </span>
                   <p
-                    className="text-xl text-text leading-tight"
-                    style={{ fontFamily: "var(--font-dm-serif)" }}
+                    className="text-xl text-text leading-tight font-display"
                   >
                     Nöjd-Kundgaranti
                   </p>
@@ -160,8 +158,7 @@ export function Pricing() {
 
                 <div className="mt-6 flex items-baseline gap-2">
                   <span
-                    className="text-4xl sm:text-5xl font-bold text-text"
-                    style={{ fontFamily: "var(--font-dm-serif)" }}
+                    className="text-4xl sm:text-5xl font-bold text-text font-display"
                   >
                     {pkg.price}
                   </span>
@@ -265,8 +262,7 @@ export function Pricing() {
               </p>
               <a
                 href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-                className="inline-flex items-center gap-2 text-2xl font-bold text-primary hover:text-accent transition-colors py-3"
-                style={{ fontFamily: "var(--font-dm-serif)" }}
+                className="inline-flex items-center gap-2 text-2xl font-bold text-primary hover:text-accent transition-colors py-3 font-display"
               >
                 <Phone size={22} />
                 {SITE.phone}

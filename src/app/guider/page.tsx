@@ -25,8 +25,7 @@ export default function GuiderPage() {
               Guider
             </p>
             <h1
-              className="text-4xl sm:text-5xl tracking-tight text-text leading-tight"
-              style={{ fontFamily: "var(--font-dm-serif)" }}
+              className="text-4xl sm:text-5xl tracking-tight text-text leading-tight font-display"
             >
               Livet på vägen, utan kassettank
             </h1>
@@ -52,8 +51,7 @@ export default function GuiderPage() {
                   · {g.readingMinutes} min
                 </p>
                 <h2
-                  className="mt-3 text-2xl text-text leading-snug"
-                  style={{ fontFamily: "var(--font-dm-serif)" }}
+                  className="mt-3 text-2xl text-text leading-snug font-display"
                 >
                   {g.title}
                 </h2>

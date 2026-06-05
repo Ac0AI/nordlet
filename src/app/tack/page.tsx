@@ -24,8 +24,7 @@ export default function TackPage() {
               Betalning bekräftad
             </p>
             <h1
-              className="text-3xl sm:text-4xl lg:text-5xl tracking-tight text-text leading-tight"
-              style={{ fontFamily: "var(--font-dm-serif)" }}
+              className="text-3xl sm:text-4xl lg:text-5xl tracking-tight text-text leading-tight font-display"
             >
               Tack för din beställning.
             </h1>
