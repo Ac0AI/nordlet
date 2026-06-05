@@ -8,6 +8,7 @@ import { HowItWorks } from "@/components/sections/HowItWorks";
 import { LifestyleBanner } from "@/components/sections/LifestyleBanner";
 import { Comparison } from "@/components/sections/Comparison";
 import { Features } from "@/components/sections/Features";
+import { Reviews } from "@/components/sections/Reviews";
 import { SavingsCalculator } from "@/components/sections/SavingsCalculator";
 import { Specifications } from "@/components/sections/Specifications";
 import { FAQ } from "@/components/sections/FAQ";
@@ -27,6 +28,7 @@ export default function Home() {
         <LifestyleBanner />
         <Comparison />
         <Features />
+        <Reviews />
         <SavingsCalculator />
         <Specifications />
         <FAQ />

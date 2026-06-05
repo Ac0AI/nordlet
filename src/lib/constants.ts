@@ -172,6 +172,32 @@ export const CHAPTERS = [
 
 export type Chapter = (typeof CHAPTERS)[number];
 
+// Riktiga omdömen från de första testkunderna (juni 2026). Äkta personer,
+// äkta citat – inga påhittade siffror. Samtliga gav 5/5.
+export const REVIEWS = [
+  {
+    name: "Björn Ljung",
+    context: "Husvagnsägare",
+    rating: 5,
+    quote:
+      "Jag använder mycket hellre den här än den inbyggda toaletten i husvagnen. Det ger en helt annan frihet – jag slipper oroa mig för tanken och det känns mycket fräschare. Inne i husvagnen när jag behöver, annars går jag bara till en lämplig plats i närheten.",
+  },
+  {
+    name: "Robert Eriksson",
+    context: "Husbilsägare sedan flera år",
+    rating: 5,
+    quote:
+      "Kanske inte livsförändrande – men i allra högsta grad semesterförändrande. Och snart pensionsförändrande.",
+  },
+  {
+    name: "Inge-Gerd Karlsson",
+    context: "Landställe utan avlopp",
+    rating: 5,
+    quote:
+      "Utedasset luktade och var svårt att hålla rent. Nu använder jag den här i stället – inomhus eller utomhus beroende på vind och behov. En ren lycka för mig som bor avskilt.",
+  },
+];
+
 // Only verifiable claims. Add more once you have documented evidence (CE-certifikat
 // från leverantör, press-omnämnanden, samarbetsavtal).
 export const AUTHORITY_BADGES = [
