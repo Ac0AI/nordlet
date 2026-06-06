@@ -1,7 +1,7 @@
 name: Auto-guide (Ludvig)
 
 # Skriver en ny säsongsanpassad guide varannan vecka (1:a och 15:e, 08:00 UTC)
-# via Claude API (Sonnet) och committar den. Vercel auto-deployar på push.
+# via Claude API (Sonnet), committar den och deployar till Vercel.
 on:
   schedule:
     - cron: "0 8 1,15 * *"
@@ -26,8 +26,7 @@ jobs:
         run: node scripts/generate-guide.mjs
 
       - name: Commit new guide if created
-        env:
-          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        id: commit
         run: |
           if [ -n "$(git status --porcelain content/guider)" ]; then
             git config user.name "nordlet-bot"
@@ -35,12 +34,16 @@ jobs:
             git add content/guider
             git commit -m "content: ny guide (auto, Ludvig Eriksson)"
             git push
-            # Trigga Vercel-deploy explicit (auto-deploy pa push ar inte garanterad).
-            if [ -n "$VERCEL_DEPLOY_HOOK" ]; then
-              curl -fsS -X POST "$VERCEL_DEPLOY_HOOK" > /dev/null && echo "Vercel-deploy triggad."
-            else
-              echo "VERCEL_DEPLOY_HOOK saknas - forlitar pa Vercels git-auto-deploy."
-            fi
+            echo "committed=true" >> "$GITHUB_OUTPUT"
           else
             echo "Inga nya guider att committa."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
           fi
+
+      - name: Deploy to Vercel
+        if: steps.commit.outputs.committed == 'true'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID }}
+        run: npx --yes vercel@latest deploy --prod --token="$VERCEL_TOKEN" --yes
