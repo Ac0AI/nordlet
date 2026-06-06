@@ -28,9 +28,10 @@ export default function OmOssPage() {
 
             <div className="mt-8 space-y-5 text-lg leading-relaxed text-text-muted">
               <p>
-                Erik och Ludvig hade jobbat länge med omsorgsprodukter – saker
-                som gör vardagen enklare, renare och lite mer värdig för
-                människor som behöver det.
+                Erik och Ludvig hade ägnat åren åt omsorgsprodukter – sånt som
+                gör vardagen enklare, renare och lite varmare för dem som
+                behöver det mest. De älskade jobbet. Men en fråga låg och
+                pirrade i bakhuvudet.
               </p>
 
               <figure className="border-l-2 border-accent pl-5 my-8">
@@ -39,26 +40,34 @@ export default function OmOssPage() {
                   hygien på vägarna?&rdquo;
                 </blockquote>
                 <figcaption className="mt-3 text-sm text-text-light">
-                  – frågan från deras föräldrar som inte släppte taget
+                  – frågan från deras föräldrar, som liksom aldrig släppte taget
                 </figcaption>
               </figure>
 
               <p>
-                De visste, efter åren med omsorgsprodukter, att det gick att
-                lösa renare och mer genomtänkt än kassettank, kemikalier och
-                ständiga omvägar till tömningsstationen. Så de tog hem
-                värmeförseglingstekniken till Sverige, gav den svensk support
-                och 30 dagars öppet köp, och kallade den{" "}
-                <strong className="font-semibold text-text">
-                  NordLet Pro
-                </strong>
-                .
+                Ju mer de tänkte på det, desto tydligare blev det: friheten på
+                vägen är fantastisk. Men kassettanken, kemikalierna och
+                söndagsköerna vid tömningsstationen knaprar på den, varje gång.
+                Och det gick att göra så mycket bättre.
               </p>
 
               <p>
-                NordLet är fortfarande ett litet, nystartat svenskt företag. Vi
-                lagerhåller och levererar från Sverige, vi står bakom varje
-                produkt vi säljer, och vi svarar personligen på dina frågor.
+                Så de kavlade upp ärmarna. Tog hem värmeförseglingstekniken
+                till Sverige, gav den ordentlig svensk support och 30 dagars
+                öppet köp, och döpte den till{" "}
+                <strong className="font-semibold text-text">
+                  NordLet Pro
+                </strong>
+                . Renare, smartare och mer värdigt – precis så som de gjort i
+                åratal, fast nu för livet på vägen.
+              </p>
+
+              <p>
+                Vi är fortfarande små, svenska och rätt nystartade – och ärligt
+                talat rätt stolta över det. Vi packar och skickar från Sverige,
+                vi står bakom varenda toa vi säljer, och svarar gärna
+                personligen när du hör av dig. Häng med, så gör vi livet på
+                vägen lite friare.
               </p>
             </div>
 
@@ -67,7 +76,8 @@ export default function OmOssPage() {
               <div className="border-t border-border pt-5">
                 <p className="font-semibold text-text">Erik</p>
                 <p className="text-text-muted text-sm mt-1">
-                  Medgrundare. Bakgrund inom omsorgsprodukter.
+                  Medgrundare. Åren inom omsorgsprodukter sitter i ryggraden –
+                  vet hur man gör vardagen värdigare.
                 </p>
               </div>
               <div className="border-t border-border pt-5">
@@ -82,7 +92,8 @@ export default function OmOssPage() {
                   </a>
                 </p>
                 <p className="text-text-muted text-sm mt-1">
-                  Medgrundare. Skriver också guiderna här på sajten.
+                  Medgrundare. Skriver guiderna här – gärna med en kaffe i
+                  husbilsdörren.
                 </p>
               </div>
             </div>
