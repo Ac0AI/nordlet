@@ -71,6 +71,11 @@ export function Footer() {
                   Guider
                 </Link>
               </li>
+              <li>
+                <Link href="/om-oss" className="hover:text-white transition-colors">
+                  Om oss
+                </Link>
+              </li>
             </ul>
           </div>
 
