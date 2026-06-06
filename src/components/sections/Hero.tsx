@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import { useRef } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { SOCIAL_PROOF_STATS, SITE } from "@/lib/constants";
@@ -8,8 +9,20 @@ import { IMAGES } from "@/lib/images";
 import { Phone, ShieldCheck } from "lucide-react";
 
 export function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const reduce = useReducedMotion();
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+  // Subtil parallax: produkten dröjer kvar och glider långsammare än sidan.
+  const productY = useTransform(scrollYProgress, [0, 1], ["-5%", "6%"]);
+
   return (
-    <section className="relative grid min-h-[90vh] grid-cols-1 overflow-hidden lg:grid-cols-2">
+    <section
+      ref={sectionRef}
+      className="relative grid min-h-[90vh] grid-cols-1 overflow-hidden lg:grid-cols-2"
+    >
       {/* Vänster: skog + slogan */}
       <div className="relative flex items-center">
         <div className="absolute inset-0 z-0">
@@ -136,20 +149,26 @@ export function Hero() {
 
       {/* Höger: produkt på mörk bakgrund – bilden fyller hela panelen kant-till-kant */}
       <div className="relative min-h-[58vh] overflow-hidden bg-primary-dark lg:min-h-0">
+        {/* Parallax-lager: överscannad så translaten aldrig avslöjar kanter */}
         <motion.div
-          initial={{ opacity: 0, scale: 1.04 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, delay: 0.2 }}
-          className="absolute inset-0"
+          style={reduce ? undefined : { y: productY }}
+          className="absolute -inset-[8%]"
         >
-          <Image
-            src={IMAGES.heroProduct}
-            alt="NordLet Pro, vattenlös toalett för husbil"
-            fill
-            className="object-cover"
-            priority
-            sizes="(max-width: 1024px) 100vw, 50vw"
-          />
+          <motion.div
+            initial={{ opacity: 0, scale: 1.04 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.9, delay: 0.2 }}
+            className="relative h-full w-full"
+          >
+            <Image
+              src={IMAGES.heroProduct}
+              alt="NordLet Pro, vattenlös toalett för husbil"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </motion.div>
         </motion.div>
         {/* Mjuk vinjett för djup och kontrast mot brickan */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,transparent_45%,rgba(8,23,31,0.55)_100%)]" />
