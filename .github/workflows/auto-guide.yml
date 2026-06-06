@@ -26,6 +26,8 @@ jobs:
         run: node scripts/generate-guide.mjs
 
       - name: Commit new guide if created
+        env:
+          VERCEL_DEPLOY_HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
         run: |
           if [ -n "$(git status --porcelain content/guider)" ]; then
             git config user.name "nordlet-bot"
@@ -33,6 +35,12 @@ jobs:
             git add content/guider
             git commit -m "content: ny guide (auto, Ludvig Eriksson)"
             git push
+            # Trigga Vercel-deploy explicit (auto-deploy pa push ar inte garanterad).
+            if [ -n "$VERCEL_DEPLOY_HOOK" ]; then
+              curl -fsS -X POST "$VERCEL_DEPLOY_HOOK" > /dev/null && echo "Vercel-deploy triggad."
+            else
+              echo "VERCEL_DEPLOY_HOOK saknas - forlitar pa Vercels git-auto-deploy."
+            fi
           else
             echo "Inga nya guider att committa."
           fi
