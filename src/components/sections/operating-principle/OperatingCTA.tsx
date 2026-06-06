@@ -13,7 +13,7 @@ export function OperatingCTA() {
         <AnimateOnScroll>
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-accent-light font-semibold text-sm tracking-widest uppercase mb-4">
-              Hela operativprincipen
+              Så fungerar det
             </p>
             <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-10">
               Fyra steg som tillsammans ersätter kassettank, tömningsstation,

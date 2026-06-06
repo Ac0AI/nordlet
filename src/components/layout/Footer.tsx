@@ -47,13 +47,8 @@ export function Footer() {
             </p>
             <ul className="space-y-1 [&_a]:block [&_a]:py-3">
               <li>
-                <Link href="/#sa-fungerar-det" className="hover:text-white transition-colors">
-                  Så fungerar det
-                </Link>
-              </li>
-              <li>
                 <Link href="/sa-fungerar-det" className="hover:text-white transition-colors">
-                  Operativprincipen
+                  Så fungerar det
                 </Link>
               </li>
               <li>
