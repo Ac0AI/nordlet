@@ -45,7 +45,7 @@ export function Footer() {
             <p className="text-white font-semibold uppercase tracking-widest text-xs mb-4">
               Utforska
             </p>
-            <ul className="space-y-1 [&_a]:py-2.5 [&_a]:block">
+            <ul className="space-y-1 [&_a]:block [&_a]:py-3">
               <li>
                 <Link href="/#sa-fungerar-det" className="hover:text-white transition-colors">
                   Så fungerar det
@@ -79,7 +79,7 @@ export function Footer() {
             <p className="text-white font-semibold uppercase tracking-widest text-xs mb-4">
               Juridiskt och kontakt
             </p>
-            <ul className="space-y-1 [&_a]:py-2.5 [&_a]:block">
+            <ul className="space-y-1 [&_a]:block [&_a]:py-3">
               <li>
                 <Link href="/kopvillkor" className="hover:text-white transition-colors">
                   Köpvillkor
