@@ -168,6 +168,8 @@ export const CHAPTERS = [
       primaryAlt: "Uppsamlingslådan utdragen med synliga förseglade påsar",
       secondaryAlt: "Hand släpper en förseglad påse i en vanlig soptunna",
     },
+    imageNote:
+      "Bild för illustration – i verkligheten ligger påsarna lösare i lådan.",
   },
 ] as const;
 

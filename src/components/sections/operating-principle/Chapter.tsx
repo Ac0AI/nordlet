@@ -12,6 +12,7 @@ type Props = {
 
 export function Chapter({ chapter, index }: Props) {
   const reverse = index % 2 === 1; // växlar sida varje kapitel
+  const imageNote = (chapter as { imageNote?: string }).imageNote;
   return (
     <section
       id={chapter.slug}
@@ -72,6 +73,9 @@ export function Chapter({ chapter, index }: Props) {
                 />
               </div>
             </div>
+            {imageNote && (
+              <p className="mt-3 text-xs text-text-light">{imageNote}</p>
+            )}
           </AnimateOnScroll>
         </div>
       </Container>
