@@ -149,10 +149,10 @@ export const CHAPTERS = [
     body: "När du tryckt på knappen drar NordLet Pro ihop folien runt innehållet och värmeförseglar den till en lufttät påse. Varje besök får sin egen förslutning. När påsen är förseglad matas ny, ren folie automatiskt fram och skålen är klar för nästa gång. Ingen kemikalie, ingen doft som väntar på dig i skåpet, ingen mekanik som du själv behöver hantera.",
     stat: "Lufttät försegling - även sommartid när värmen står still ovanför husbilen.",
     images: {
-      primary: "/images/how-it-works/steg3-primary.png",
-      secondary: "/images/how-it-works/steg3-secondary.png",
-      primaryAlt: "Genomskärning av värmeförseglingen inuti NordLet Pro",
-      secondaryAlt: "Genomskärning som visar ny folie som matas fram",
+      primary: "/images/products/7188ca89abd25eb1c85082ebab82a95d.png",
+      secondary: "/images/products/4d146aeeb7bd2624355dcf7d371c42f6.png",
+      primaryAlt: "NordLet Pro med öppet lock och påsringen synlig",
+      secondaryAlt: "Uppsamlingslådan utdragen med förseglade påsar",
     },
   },
   {
