@@ -18,7 +18,7 @@ export const SITE = {
   category: "NordLet Pro",
   tagline: "NordLet Pro. Vattenlös enkelhet för ett friare husbilsliv.",
   description:
-    "Nordens vattenlösa toalett för husbilar och husvagnar. Värmeförsegling, batteridrift och en renare resa utan kassettank eller kemikalier.",
+    "Nordens vattenlösa toalett för husbilar och husvagnar. Värmeförsegling, batteridrift och en renare resa utan kassettank eller flytande sanitetsvätska att dosera.",
   email: "info@nordlet.se",
   phone: process.env.NEXT_PUBLIC_PHONE ?? "",
   company: {
@@ -42,7 +42,7 @@ export const NAV_LINKS = [
 
 // Honest product-fact "stats" replacing fabricated popularity numbers.
 export const SOCIAL_PROOF_STATS = [
-  { number: "0%", label: "Kemikalier" },
+  { number: "0 L", label: "Vatten" },
   { number: "30 d", label: "Öppet köp" },
   { number: "CE", label: "Europeisk säkerhet" },
 ];
@@ -58,7 +58,7 @@ export const PAIN_POINTS = [
     icon: FlaskConical,
     title: "Trött på toamedel och kemikalier?",
     description:
-      "Sanitetsvätskor kostar, luktar och följer med i varje resa. NordLet Pro fungerar helt utan kemikalier.",
+      "Sanitetsvätskor kostar, luktar och följer med i varje resa. Med NordLet Pro slipper du den flytande sanitetsvätskan helt.",
   },
   {
     icon: Wind,
@@ -89,9 +89,9 @@ export const FEATURES = [
   },
   {
     icon: ShieldCheck,
-    title: "Utan kemikalier",
+    title: "Ingen sanitetsvätska att dosera",
     description:
-      "Ingen sanitetsvätska, inga tillsatser och inget extra att bära med sig. Renare för dig och skonsammare för miljön.",
+      "Ingen flytande sanitetsvätska att hälla, mäta eller dosera. Ett granulat binder vätska och lukt automatiskt - du sköter inget själv.",
   },
   {
     icon: Hand,
@@ -133,7 +133,7 @@ export const CHAPTERS = [
     title: "Precis som hemma. Bara utan vatten.",
     lead: "Sätt dig, gör ditt, stäng locket, tryck på knappen.",
     body: "Sitsen är i standardhöjd och känns som en vanlig toalett. När du är klar stänger du locket och väljer litet eller stort program på kontrollpanelen. Du behöver inte hälla i något toamedel, inte mäta ut någon vätska och inte spola. NordLet Pro sköter resten själv.",
-    stat: "Dubbelt läge för flytande och fast. Noll kemikalier.",
+    stat: "Dubbelt läge för flytande och fast. Ingen sanitetsvätska att dosera.",
     images: {
       primary: "/images/how-it-works/steg2-primary.png",
       secondary: "/images/how-it-works/steg2-secondary.png",
@@ -146,7 +146,7 @@ export const CHAPTERS = [
     slug: "forseglingen",
     title: "Det tysta jobbet under locket",
     lead: "Det här är den del som gör att du aldrig behöver tömma en kassettank igen.",
-    body: "När du tryckt på knappen drar NordLet Pro ihop folien runt innehållet och värmeförseglar den till en lufttät påse. Varje besök får sin egen förslutning. När påsen är förseglad matas ny, ren folie automatiskt fram och skålen är klar för nästa gång. Ingen kemikalie, ingen doft som väntar på dig i skåpet, ingen mekanik som du själv behöver hantera.",
+    body: "När du tryckt på knappen drar NordLet Pro ihop folien runt innehållet och värmeförseglar den till en lufttät påse. Varje besök får sin egen förslutning. När påsen är förseglad matas ny, ren folie automatiskt fram och skålen är klar för nästa gång. Inget toamedel att dosera själv, ingen doft som väntar på dig i skåpet, ingen mekanik som du själv behöver hantera.",
     stat: "Lufttät försegling - även sommartid när värmen står still ovanför husbilen.",
     images: {
       primary: "/images/how-it-works/steg3-primary.png",
@@ -218,7 +218,7 @@ export const FAQS = [
   {
     question: "Hur funkar det egentligen?",
     answer:
-      "Du använder toaletten som vanligt. När du aktiverar förseglingen paketeras avfallet i en påse som försluts lufttätt. Inget vatten, inga kemikalier och ingen manuell hantering.",
+      "Du använder toaletten som vanligt. När du aktiverar förseglingen paketeras avfallet i en påse som försluts lufttätt. Inget vatten att spola, ingen sanitetsvätska att dosera och ingen manuell hantering.",
   },
   {
     question: "Är det inte som PACTO-toan som luktade?",

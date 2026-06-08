@@ -17,8 +17,8 @@ export function OperatingCTA() {
             </p>
             <p className="text-lg sm:text-xl text-white/80 leading-relaxed mb-10">
               Fyra steg som tillsammans ersätter kassettank, tömningsstation,
-              svartvattenslang och sanitetsvätskor med en rullfolie och ett
-              knapptryck.
+              svartvattenslang och flytande sanitetsvätska med en rullfolie, ett
+              granulat och ett knapptryck.
             </p>
             <h2
               className="text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight font-display"

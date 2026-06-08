@@ -67,7 +67,7 @@ export function Hero() {
               className="mt-7 max-w-md text-lg leading-relaxed text-white/75 sm:text-xl"
             >
               NordLet Pro &ndash; den vattenlösa toaletten som förseglar varje
-              besök lufttätt. Ingen kassettank, inga kemikalier, inga omvägar
+              besök lufttätt. Ingen kassettank, ingen sanitetsvätska att dosera, inga omvägar
               till tömningsstationen.
             </motion.p>
 

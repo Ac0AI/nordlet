@@ -15,7 +15,7 @@ type Row = {
 // Alla rader formuleras som fördelar -> grön bock betyder alltid "bra/ja".
 const cassetteRows: Row[] = [
   { feature: "Slipper kassettank", other: false, nordlet: true },
-  { feature: "Utan kemikalier/toamedel", other: false, nordlet: true },
+  { feature: "Ingen sanitetsvätska att dosera", other: false, nordlet: true },
   { feature: "Ingen tömningsstation", other: false, nordlet: true },
   { feature: "Helt vattenlös", other: false, nordlet: true },
   { feature: "Luktfri försegling", other: false, nordlet: true },

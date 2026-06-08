@@ -52,7 +52,7 @@ FAKTA OM PRODUKTEN (håll dig till dessa, hitta inte på):
 - Vattenlös. Ingen kassettank, ingen vattenanslutning, ingen fast installation.
 - Värmeförsegling: varje besök kapslas in i en egen lufttät påse på sekunder.
 - Förseglade påsar slängs i vanliga hushållssoporna (restavfall). De är INTE biologiskt nedbrytbara – påstå aldrig det.
-- Inga kemikalier eller sanitetsvätskor. Vanligt toalettpapper funkar.
+- Ingen flytande sanitetsvätska att hälla och dosera. Ett granulat binder vätska och lukt automatiskt. Säg ALDRIG "helt utan kemikalier" – skriv "utan flytande sanitetsvätska att dosera". Vanligt toalettpapper funkar.
 - Batteridrift, laddas via USB eller 12V. ~30 användningar per folierulle.
 - 30 dagars öppet köp, fri leverans i Sverige.
 

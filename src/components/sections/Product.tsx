@@ -9,7 +9,7 @@ import { Check } from "lucide-react";
 
 const highlights = [
   "Ingen kassettank att tömma",
-  "Utan kemikalier eller toamedel",
+  "Ingen sanitetsvätska att hälla och dosera",
   "Lufttät försegling även under varma dagar",
   "Förseglade påsar som går i hushållssoporna",
   "Kompakt format för husbilar och husvagnar",
@@ -67,8 +67,8 @@ export function Product() {
             </h2>
             <p className="mt-5 text-text-muted leading-relaxed text-lg">
               NordLet Pro ersätter den traditionella kassettoaletten med en
-              vattenlös, fristående lösning. Ingen svartvattentank, inget
-              toamedel och ingen fast installation. Placera den på plats och
+              vattenlös, fristående lösning. Ingen svartvattentank, ingen
+              flytande sanitetsvätska och ingen fast installation. Placera den på plats och
               börja använda den direkt.
             </p>
 

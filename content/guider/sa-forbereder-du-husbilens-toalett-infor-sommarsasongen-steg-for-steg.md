@@ -1,6 +1,6 @@
 ---
 title: "Så förbereder du husbilens toalett inför sommarsäsongen – steg för steg"
-description: "Ludvig går igenom hur du gör husbilens toalett redo för sommaren med NordLet Pro – utan kemikalier, utan krångel."
+description: "Ludvig går igenom hur du gör husbilens toalett redo för sommaren med NordLet Pro – utan att dosera sanitetsvätska, utan krångel."
 excerpt: "En kort genomgång av hur du förbereder NordLet Pro inför sommarsäsongen så att de första veckorna på vägen blir helt bekymmersfria."
 date: "2026-06-06"
 keywords:
@@ -28,7 +28,7 @@ Det är tre saker jag alltid går igenom:
 
 **Batterinivån.** NordLet Pro laddas via USB eller 12V, precis som telefonen eller en portabel lampa. Jag ansluter den till husbilens 12V-uttag under den allra första natten på campingplatsen, men inför säsongsstarten kopplar jag alltid in den hemma och ser till att den är fullt laddad innan vi kör iväg.
 
-**Toalettpappret.** Vanligt hushållspapper fungerar utmärkt. Inga specialprodukter, inga kemikalier, inget att hålla reda på. Det är en liten sak, men det är skönt att ha tillräckligt i husbilen redan från start.
+**Toalettpappret.** Vanligt hushållspapper fungerar utmärkt. Inga specialprodukter och ingen sanitetsvätska att dosera. Det är en liten sak, men det är skönt att ha tillräckligt i husbilen redan från start.
 
 ## Hur fungerar det praktiskt när sommarsemestern väl är igång?
 

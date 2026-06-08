@@ -1,6 +1,6 @@
 ---
 title: "Husbilssemestern på sommaren – hur hanterar du toalettfrågan utan krångel?"
-description: "Ludvig delar sina bästa tips för att lösa toaletten under sommarsemestern i husbil – utan kemikalier, utan tömning och utan stress."
+description: "Ludvig delar sina bästa tips för att lösa toaletten under sommarsemestern i husbil – utan att dosera sanitetsvätska, utan tömning och utan stress."
 excerpt: "En vattenlös toalett förenklar sommarsemestern i husbil mer än du kanske tror – här är allt du behöver veta innan du kör iväg."
 date: "2026-06-06"
 keywords:
@@ -36,7 +36,7 @@ Toaletten drivs på batteri och laddas via USB eller 12V, vilket passar perfekt 
 
 ## Behöver jag ta med speciellt toalettpapper?
 
-Nej, och det är en av de saker jag verkligen uppskattade direkt. Vanligt toalettpapper fungerar. Inga kemikalier, inga sanitetsvätskor, inga specialprodukter. Det förenklar packingen och innebär en sak mindre att komma ihåg.
+Nej, och det är en av de saker jag verkligen uppskattade direkt. Vanligt toalettpapper fungerar. Ingen flytande sanitetsvätska och inga specialprodukter att dosera. Det förenklar packingen och innebär en sak mindre att komma ihåg.
 
 ## Är NordLet Pro rätt val för en längre sommarresa?
 

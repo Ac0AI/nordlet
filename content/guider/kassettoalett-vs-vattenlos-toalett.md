@@ -15,7 +15,7 @@ Jag får ofta frågan rakt ut: är det verkligen värt att byta från en vanlig 
 
 **Kassettoaletten** samlar avfallet i en tank med sanitetsvätska. Du tömmer tanken på en station, sköljer den och doserar ny vätska. Det fungerar, men det styr resan: du planerar efter stationer och bär med dig kemikalier.
 
-**Den vattenlösa toaletten** kapslar in varje besök i en egen lufttät påse med värmeförsegling. Påsarna går i vanliga soporna. Ingen tank, inget vatten, inga kemikalier.
+**Den vattenlösa toaletten** kapslar in varje besök i en egen lufttät påse med värmeförsegling. Påsarna går i vanliga soporna. Ingen tank, inget vatten, ingen sanitetsvätska att dosera.
 
 ## Vad kostar de över tid?
 

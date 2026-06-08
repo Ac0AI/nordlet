@@ -1,7 +1,7 @@
 ---
 title: "Vattenlös toalett för husbil: så fungerar den egentligen"
 description: "Hur fungerar en vattenlös toalett med värmeförsegling i husbil och husvagn? Ludvig förklarar tekniken, vardagen och vad som faktiskt händer när du trycker på knappen."
-excerpt: "Ingen tank, inget vatten, ingen kemikalie. Men hur fungerar det i praktiken? Jag går igenom vad som händer varje gång du trycker på knappen."
+excerpt: "Ingen tank, inget vatten, ingen sanitetsvätska att dosera. Men hur fungerar det i praktiken? Jag går igenom vad som händer varje gång du trycker på knappen."
 date: "2026-05-10"
 keywords:
   - vattenlös toalett husbil
