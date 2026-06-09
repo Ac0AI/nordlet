@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
-import { useRef } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import { SOCIAL_PROOF_STATS, SITE } from "@/lib/constants";
@@ -9,18 +8,8 @@ import { IMAGES } from "@/lib/images";
 import { Phone, ShieldCheck } from "lucide-react";
 
 export function Hero() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const reduce = useReducedMotion();
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start start", "end start"],
-  });
-  // Subtil parallax: produkten dröjer kvar och glider långsammare än sidan.
-  const productY = useTransform(scrollYProgress, [0, 1], ["-5%", "6%"]);
-
   return (
     <section
-      ref={sectionRef}
       className="relative grid min-h-[90vh] grid-cols-1 overflow-hidden lg:grid-cols-2"
     >
       {/* Vänster: skog + slogan */}
@@ -46,7 +35,7 @@ export function Hero() {
               transition={{ duration: 0.55 }}
               className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-white/80 backdrop-blur-md sm:text-xs"
             >
-              Vattenlös frihet för husbilen
+              För husbil, husvagn, båt & landställe
             </motion.p>
 
             <motion.h1
@@ -55,9 +44,13 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="text-5xl leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl font-display"
             >
-              Svara naturen.
+              Vattenlös toalett{" "}
               <br />
-              <span className="text-accent-light italic">Var som helst.</span>
+              för resa och fritid.{" "}
+              <br />
+              <span className="text-accent-light italic">
+                Utan kassettank.
+              </span>
             </motion.h1>
 
             <motion.p
@@ -66,9 +59,9 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="mt-7 max-w-md text-lg leading-relaxed text-white/75 sm:text-xl"
             >
-              NordLet Pro &ndash; den vattenlösa toaletten som förseglar varje
-              besök lufttätt. Ingen kassettank, ingen sanitetsvätska att dosera, inga omvägar
-              till tömningsstationen.
+              NordLet Pro förseglar varje besök lufttätt med värme. För
+              husbil, husvagn, båt, stuga och andra platser där du vill slippa
+              vattenanslutning, kassettank och sanitetsvätska.
             </motion.p>
 
             <motion.div
@@ -149,11 +142,7 @@ export function Hero() {
 
       {/* Höger: produkt på mörk bakgrund – bilden fyller hela panelen kant-till-kant */}
       <div className="relative min-h-[58vh] overflow-hidden bg-primary-dark lg:min-h-0">
-        {/* Parallax-lager: överscannad så translaten aldrig avslöjar kanter */}
-        <motion.div
-          style={reduce ? undefined : { y: productY }}
-          className="absolute -inset-[8%]"
-        >
+        <motion.div className="absolute -inset-[8%]">
           <motion.div
             initial={{ opacity: 0, scale: 1.04 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -162,7 +151,7 @@ export function Hero() {
           >
             <Image
               src={IMAGES.heroProduct}
-              alt="NordLet Pro, vattenlös toalett för husbil"
+              alt="NordLet Pro, fristående vattenlös toalett"
               fill
               className="object-cover"
               priority

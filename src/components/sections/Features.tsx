@@ -6,7 +6,10 @@ import { FEATURES } from "@/lib/constants";
 
 export function Features() {
   return (
-    <section id="fordelar" className="py-20 sm:py-28 bg-primary-dark">
+    <section
+      id="fordelar"
+      className="scroll-mt-24 bg-primary-dark py-20 sm:scroll-mt-28 sm:py-28"
+    >
       <Container>
         <AnimateOnScroll>
           <div className="text-center mb-16 max-w-2xl mx-auto">

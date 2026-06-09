@@ -9,7 +9,10 @@ import { CHAPTERS } from "@/lib/constants";
 
 export function HowItWorks() {
   return (
-    <section id="sa-fungerar-det" className="py-20 sm:py-28">
+    <section
+      id="sa-fungerar-det"
+      className="scroll-mt-24 py-20 sm:scroll-mt-28 sm:py-28"
+    >
       <Container>
         <AnimateOnScroll>
           <div className="text-center mb-14 max-w-2xl mx-auto">

@@ -50,8 +50,13 @@ const packages = [
 ];
 
 export function Pricing() {
+  const anyCheckoutConfigured = Object.values(SITE.checkoutUrls).some(Boolean);
+
   return (
-    <section id="bestall" className="py-20 sm:py-28 bg-bg-warm">
+    <section
+      id="bestall"
+      className="scroll-mt-24 bg-bg-warm py-20 sm:scroll-mt-28 sm:py-28"
+    >
       <Container>
         <AnimateOnScroll>
           <div className="text-center mb-14">
@@ -64,7 +69,8 @@ export function Pricing() {
               Välj ditt paket
             </h2>
             <p className="mt-3 text-text-muted text-lg max-w-lg mx-auto">
-              Fri leverans i hela Sverige, 30 dagars öppet köp och tydliga villkor.
+              Fri leverans i hela Sverige, leverans normalt inom 1-5
+              arbetsdagar och 30 dagars öppet köp.
             </p>
           </div>
         </AnimateOnScroll>
@@ -135,6 +141,9 @@ export function Pricing() {
           {packages.map((pkg, i) => {
             const monthly =
               Math.ceil(Number(pkg.price.replace(/\s/g, "")) / 36 / 10) * 10;
+            const checkoutUrl = SITE.checkoutUrls[pkg.checkoutKey];
+            const hasCheckout = Boolean(checkoutUrl);
+            const fallbackUrl = `mailto:${SITE.email}?subject=Beställning: ${pkg.name}`;
             return (
             <AnimateOnScroll key={pkg.name} delay={i * 0.1}>
               <div
@@ -202,18 +211,19 @@ export function Pricing() {
 
                 <div className="mt-8">
                   <Button
-                    href={
-                      SITE.checkoutUrls[pkg.checkoutKey] ||
-                      `mailto:${SITE.email}?subject=Beställning: ${pkg.name}`
-                    }
+                    href={checkoutUrl || fallbackUrl}
                     variant={pkg.popular ? "primary" : "outline"}
                     className="w-full justify-center"
                   >
-                    Beställ {pkg.name}
+                    {hasCheckout
+                      ? `Beställ ${pkg.name}`
+                      : "Beställ via e-post"}
                   </Button>
                   {/* Micro-copy under CTA */}
                   <p className="text-center text-xs text-text-light mt-3">
-                    Fri leverans, 30 dagars öppet köp och svensk support.
+                    {hasCheckout
+                      ? "Säker kassa, fri leverans, 30 dagars öppet köp och svensk support."
+                      : "Vi svarar med nästa steg, leveransinformation och betalningslänk."}
                   </p>
                 </div>
               </div>
@@ -248,7 +258,9 @@ export function Pricing() {
             </div>
             <p className="flex items-center gap-1.5 text-xs text-text-light">
               <Lock size={12} className="flex-shrink-0" />
-              Trygg betalning. Faktura och delbetalning via Klarna.
+              {anyCheckoutConfigured
+                ? "Trygg betalning. Faktura och delbetalning via Klarna."
+                : "Klarna, Swish och kortbetalning visas i kassan när betalningslänk skickas."}
             </p>
           </div>
         </AnimateOnScroll>

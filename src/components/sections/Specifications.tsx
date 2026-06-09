@@ -6,7 +6,10 @@ import { SPECS } from "@/lib/constants";
 
 export function Specifications() {
   return (
-    <section id="specifikationer" className="py-20 sm:py-28">
+    <section
+      id="specifikationer"
+      className="scroll-mt-24 py-20 sm:scroll-mt-28 sm:py-28"
+    >
       <Container>
         <div className="max-w-3xl mx-auto">
           <AnimateOnScroll>

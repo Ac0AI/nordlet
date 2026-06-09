@@ -12,12 +12,15 @@ const highlights = [
   "Ingen sanitetsvätska att hälla och dosera",
   "Lufttät försegling även under varma dagar",
   "Förseglade påsar som går i hushållssoporna",
-  "Kompakt format för husbilar och husvagnar",
+  "Kompakt format för små toautrymmen",
 ];
 
 export function Product() {
   return (
-    <section id="produkt" className="py-20 sm:py-28 bg-bg-alt">
+    <section
+      id="produkt"
+      className="scroll-mt-24 bg-bg-alt py-20 sm:scroll-mt-28 sm:py-28"
+    >
       <Container>
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image */}
@@ -63,13 +66,14 @@ export function Product() {
             <h2
               className="text-3xl sm:text-4xl tracking-tight text-text leading-snug font-display"
             >
-              Ett mer genomtänkt toalettval för husbilen.
+              Ett mer genomtänkt toalettval där vatten och avlopp saknas.
             </h2>
             <p className="mt-5 text-text-muted leading-relaxed text-lg">
               NordLet Pro ersätter den traditionella kassettoaletten med en
               vattenlös, fristående lösning. Ingen svartvattentank, ingen
-              flytande sanitetsvätska och ingen fast installation. Placera den på plats och
-              börja använda den direkt.
+              flytande sanitetsvätska och ingen fast installation. Placera den
+              stabilt i husbilen, husvagnen, båten, stugan eller på
+              landstället och börja använda den direkt.
             </p>
 
             <ul className="mt-8 space-y-4">

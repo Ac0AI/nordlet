@@ -7,18 +7,36 @@ import { cn } from "@/lib/utils";
 
 export function StickyMobileCTA() {
   const [visible, setVisible] = useState(false);
+  const [inOrderSection, setInOrderSection] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 600);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const updateState = () => {
+      setVisible(window.scrollY > 600);
+
+      const orderSection = document.getElementById("bestall");
+      if (!orderSection) {
+        return;
+      }
+
+      const rect = orderSection.getBoundingClientRect();
+      setInOrderSection(rect.top < window.innerHeight - 120 && rect.bottom > 120);
+    };
+
+    updateState();
+    window.addEventListener("scroll", updateState, { passive: true });
+    window.addEventListener("resize", updateState);
+
+    return () => {
+      window.removeEventListener("scroll", updateState);
+      window.removeEventListener("resize", updateState);
+    };
   }, []);
 
   return (
     <div
       className={cn(
         "fixed bottom-0 left-0 right-0 z-50 lg:hidden transition-all duration-300",
-        visible
+        visible && !inOrderSection
           ? "translate-y-0 opacity-100"
           : "translate-y-full opacity-0"
       )}

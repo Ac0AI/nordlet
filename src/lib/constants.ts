@@ -16,9 +16,10 @@ import {
 export const SITE = {
   name: "NordLet",
   category: "NordLet Pro",
-  tagline: "NordLet Pro. Vattenlös enkelhet för ett friare husbilsliv.",
+  tagline:
+    "NordLet Pro. Vattenlös enkelhet för husbil, husvagn, båt och landställe.",
   description:
-    "Nordens vattenlösa toalett för husbilar och husvagnar. Värmeförsegling, batteridrift och en renare resa utan kassettank eller flytande sanitetsvätska att dosera.",
+    "Fristående vattenlös toalett för husbil, husvagn, båt och platser utan avlopp. Värmeförsegling, batteridrift och en renare vardag utan kassettank eller flytande sanitetsvätska att dosera.",
   email: "info@nordlet.se",
   phone: process.env.NEXT_PUBLIC_PHONE ?? "",
   company: {
@@ -73,7 +74,7 @@ export const FEATURES = [
     icon: Droplets,
     title: "Ingen kassettank",
     description:
-      "Ingen svartvattentank, ingen vattenanslutning och ingen avloppskoppling. Bara en mer genomtänkt lösning för livet på vägen.",
+      "Ingen svartvattentank, ingen vattenanslutning och ingen avloppskoppling. Bara en mer genomtänkt lösning för platser där avlopp saknas.",
   },
   {
     icon: Thermometer,
@@ -85,7 +86,7 @@ export const FEATURES = [
     icon: BatteryCharging,
     title: "Batteridrift",
     description:
-      "Inbyggt uppladdningsbart batteri som räcker i flera dagar. Laddas enkelt via USB eller 12V i husbilen.",
+      "Inbyggt uppladdningsbart batteri som räcker i flera dagar. Laddas enkelt via USB eller 12V där du använder den.",
   },
   {
     icon: ShieldCheck,
@@ -105,7 +106,7 @@ export const SPECS = [
   { label: "Mått", value: "355 × 488 × 515 mm (b × d × h)" },
   { label: "Strömförsörjning", value: "12V, 70W" },
   { label: "Batteri", value: "Litium-jon, 5 200 mAh" },
-  { label: "Laddning", value: "USB eller 12V i husbilen" },
+  { label: "Laddning", value: "USB eller 12V" },
   { label: "Lägen", value: "Dubbelt läge (fast & flytande)" },
   { label: "Kapacitet", value: "30 användningar per rulle" },
   { label: "Indikator", value: "LED visar när det är dags att byta" },
@@ -137,7 +138,7 @@ export const CHAPTERS = [
     images: {
       primary: "/images/how-it-works/steg2-primary.png",
       secondary: "/images/how-it-works/steg2-secondary.png",
-      primaryAlt: "NordLet Pro i ett husbilsbadrum med varmt dagsljus",
+      primaryAlt: "NordLet Pro i ett kompakt toautrymme med varmt dagsljus",
       secondaryAlt: "Närbild av NordLet Pros kontrollpanel och lägesknappar",
     },
   },
@@ -147,7 +148,7 @@ export const CHAPTERS = [
     title: "Det tysta jobbet under locket",
     lead: "Det här är den del som gör att du aldrig behöver tömma en kassettank igen.",
     body: "När du tryckt på knappen drar NordLet Pro ihop folien runt innehållet och värmeförseglar den till en lufttät påse. Varje besök får sin egen förslutning. När påsen är förseglad matas ny, ren folie automatiskt fram och skålen är klar för nästa gång. Inget toamedel att dosera själv, ingen doft som väntar på dig i skåpet, ingen mekanik som du själv behöver hantera.",
-    stat: "Lufttät försegling - även sommartid när värmen står still ovanför husbilen.",
+    stat: "Lufttät försegling - även under varma dagar när luften står still.",
     images: {
       primary: "/images/how-it-works/steg3-primary.png",
       secondary: "/images/how-it-works/steg3-secondary.png",
@@ -158,7 +159,7 @@ export const CHAPTERS = [
   {
     number: "04",
     slug: "tomning",
-    title: "Från husbilen till hushållssoporna",
+    title: "Från toaletten till hushållssoporna",
     lead: "Inga tömningsstationer. Inga söndagsköer. Inga sanitetsvätskor.",
     body: "När uppsamlingslådan är full tänds LED-indikatorn på kontrollpanelen. Dra ut lådan i nederdelen. Eftersom varje påse är förseglad för sig finns ingen lukt och ingen risk för spill. Du lägger dem i vanliga hushållssoporna - vid nästa rastplats, på campingen eller hemma i köket när resan är slut.",
     stat: "Varje påse förseglas för sig och går i det vanliga restavfallet.",
@@ -241,14 +242,14 @@ export const FAQS = [
       "Nej, använd det toalettpapper du vill. Inget behov av vattenlösligt eller speciellt poröst papper. Allt hamnar i påsen och förseglas.",
   },
   {
-    question: "Passar den i min husbil/husvagn?",
+    question: "Passar den i min husbil, husvagn eller båt?",
     answer:
-      "NordLet Pro är fristående och kräver ingen anslutning. Den är kompakt (355 mm bred, 488 mm djup) och den svängbara basen gör att den passar även i trånga toautrymmen. Ingen installation behövs, du ställer den bara på plats.",
+      "NordLet Pro är fristående och kräver ingen vatten- eller avloppsanslutning. Den är kompakt (355 mm bred, 488 mm djup) och passar i många trånga toautrymmen i husbil, husvagn, båt, stuga eller landställe. Kontrollera måtten och ställ den på en stabil plats.",
   },
   {
     question: "Hur lång tid räcker batteriet?",
     answer:
-      "Det inbyggda litium-jon-batteriet räcker för flera dagars normal användning. Laddas enkelt via USB eller 12V-uttaget i husbilen medan du kör.",
+      "Det inbyggda litium-jon-batteriet räcker för flera dagars normal användning. Laddas enkelt via USB eller 12V-uttag där du använder den.",
   },
   {
     question: "Kan jag returnera om jag inte är nöjd?",

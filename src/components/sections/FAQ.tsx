@@ -62,7 +62,10 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-20 sm:py-28 bg-bg-alt">
+    <section
+      id="faq"
+      className="scroll-mt-24 bg-bg-alt py-20 sm:scroll-mt-28 sm:py-28"
+    >
       <Container>
         <div className="max-w-3xl mx-auto">
           <AnimateOnScroll>

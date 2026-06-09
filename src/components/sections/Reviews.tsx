@@ -21,7 +21,7 @@ export function Reviews() {
             </h2>
             <p className="mt-3 text-text-muted text-lg">
               Vi är ett nytt företag. De här är några av de första som provat
-              NordLet Pro på riktigt – i husvagn, husbil och på landstället.
+              NordLet Pro på riktigt - i husvagn, husbil och på landstället.
             </p>
           </div>
         </AnimateOnScroll>

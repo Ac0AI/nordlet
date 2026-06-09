@@ -17,9 +17,9 @@ export function Footer() {
               {SITE.name}
             </span>
             <p className="text-white/55 leading-relaxed max-w-sm">
-              NordLet Pro. Vattenlös toalett för husbilar och husvagnar.
-              Utvecklad för skandinaviska förhållanden, levererad från
-              svenskt lager.
+              NordLet Pro. Vattenlös toalett för husbil, husvagn, båt och
+              platser utan avlopp. Utvecklad för skandinaviska förhållanden,
+              levererad från svenskt lager.
             </p>
             {(SITE.company.orgNr || SITE.company.address) && (
               <p className="mt-5 text-xs text-white/40 leading-relaxed">

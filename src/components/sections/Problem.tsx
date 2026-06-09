@@ -11,11 +11,12 @@ export function Problem() {
         <AnimateOnScroll>
           <div className="max-w-xl mb-14">
             <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-text">
-              Friheten med husbil är svårslagen.
+              Friheten på vägen, vid vattnet och på landstället är svårslagen.
             </h2>
             <p className="mt-3 text-text-muted text-lg">
-              Toalettlösningen är det inte alltid. Därför väljer allt fler ett
-              mer genomtänkt alternativ.
+              Toalettlösningen är det inte alltid. Därför väljer fler ett mer
+              genomtänkt alternativ för platser där vatten och avlopp inte ska
+              styra vardagen.
             </p>
           </div>
         </AnimateOnScroll>
@@ -46,7 +47,7 @@ export function Problem() {
 
         <AnimateOnScroll delay={0.3}>
           <p className="font-display mt-16 max-w-2xl text-2xl sm:text-3xl text-text leading-snug">
-            Det finns ett mer genomtänkt sätt att resa.
+            Det finns ett mer genomtänkt sätt att vara fri.
           </p>
         </AnimateOnScroll>
       </Container>
