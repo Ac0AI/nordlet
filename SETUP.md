@@ -15,31 +15,53 @@ NEXT_PUBLIC_COMPANY_ADDRESS=Exempelgatan 1, 123 45 Exempelstad
 
 Alla tre fälten visas i Footer + Köpvillkor + Integritetspolicy så fort de är ifyllda.
 
-## 2. Stripe Payment Links (betalningar)
+## 2. Kustom Checkout (betalningar)
 
-1. Logga in på [dashboard.stripe.com](https://dashboard.stripe.com).
-2. Gå till **Payment Links** → **New payment link**.
-3. Skapa **Produkt 1** — *Frihetstoa* (14 900 kr inkl. moms).
-4. I samma flöde:
-   - **Collect customer address** → **Shipping address** → `Sverige` enbart
-   - **Confirmation email** → på (Stripe skickar kvitto)
-   - **After payment** → **Redirect customers to your site** → `https://nordlet.vercel.app/tack`
-   - Optional: aktivera **Adjust quantity** om du vill tillåta mängdval
-5. Kopiera den genererade URL:en.
-6. Gör samma sak för **Produkt 2** — *Säsongspaketet* (16 900 kr).
-7. Klistra in i `.env.local`:
+Kassan är färdigbyggd i koden (`src/lib/kustom.ts`, `/kassa`, `/kassa/bekraftelse`,
+`/api/kustom/push`) och ligger vilande tills API-nycklarna sätts. Tills dess visar
+alla beställ-knappar e-postfallbacken, så inget går sönder.
+
+**Förutsättning:** registrerat aktiebolag (Nordic Selective AB). Kustom godkänner
+inte merchant-ansökan utan org.nr.
+
+### När bolaget är godkänt
+
+1. Ansök om merchant-konto på [kustom.co](https://www.kustom.co) (Kustom Checkout,
+   f.d. Klarna Checkout). Du behöver org.nr, bankuppgifter och sajt-URL.
+2. Du får API-credentials i Kustoms merchantportal: användarnamn (kopplat till
+   merchant-ID) och lösenord. Det finns separata credentials för **playground**
+   (testmiljö) och **production**.
+3. Sätt i `.env.local` och i Vercel (Settings → Environment Variables):
 
 ```
-NEXT_PUBLIC_CHECKOUT_URL_FRIHETSTOA=https://buy.stripe.com/xxx
-NEXT_PUBLIC_CHECKOUT_URL_SASONGSPAKET=https://buy.stripe.com/yyy
+KUSTOM_API_USERNAME=PK_xxxxx
+KUSTOM_API_PASSWORD=xxxxx
+KUSTOM_ENV=playground
+NEXT_PUBLIC_KUSTOM_ENABLED=true
+NEXT_PUBLIC_SITE_URL=https://nordlet.se
 ```
 
-Om någon av URL:erna saknas faller den knappen tillbaka till `mailto:info@nordlet.se`,
-så du kan rulla ut en produkt i taget utan att andra knappen går sönder.
+4. Testa hela flödet i playground: lägg en order på `/kassa?paket=refill-1`,
+   betala med [Kustoms testdata](https://docs.kustom.co), kontrollera att
+   bekräftelsesidan visas och att pushen loggas i Vercel-loggarna.
+5. Byt till production-credentials + `KUSTOM_ENV=production` och gör ett riktigt
+   testköp med eget kort (kan återbetalas i merchantportalen).
 
-**Viktigt:** sätt Stripe till **Live mode** (inte Test) innan du deployar skarpt.
-Test-länkar börjar med `https://buy.stripe.com/test_...` och accepterar bara
-testkort. Live-länkar har ingen `test_` i URL:en.
+### Hur flödet hänger ihop
+
+- Beställ-knappar pekar på `/kassa?paket=<nyckel>` (nycklar i `src/lib/products.ts`)
+- `/kassa` skapar ordern via `POST /checkout/v3/orders` och bäddar in Kustoms
+  kassa-iframe (Klarna, Swish, kort - styrs av merchant-avtalet)
+- Efter betalning skickas kunden till `/kassa/bekraftelse?order_id=...`
+- Kustom POST:ar till `/api/kustom/push` som bekräftar ordern (acknowledge)
+- Priser och produkter ändras i `src/lib/products.ts` - en fil, ett ställe
+
+### Valfri override per paket
+
+Om en hostad betalningslänk ska användas för ett enskilt paket i stället för
+Kustom-kassan kan `NEXT_PUBLIC_CHECKOUT_URL_FRIHETSTOA` /
+`NEXT_PUBLIC_CHECKOUT_URL_SASONGSPAKET` sättas till en URL. De har högst
+prioritet. Lämna tomma i normalfallet.
 
 ## 3. Telefonnummer (valfritt)
 
@@ -76,7 +98,7 @@ Eller låt `git push origin main` trigga auto-deploy om repo:t är länkat.
 Följande sidor autogenereras baserat på `SITE.company.*`-värdena:
 
 - `/kopvillkor` — Distansavtalslagen-kompatibel. 14 dagars ångerrätt + 30 dagars öppet köp.
-- `/integritetspolicy` — GDPR-baserad. Stripe, Vercel, fraktpartners listade som delade parter.
+- `/integritetspolicy` — GDPR-baserad. Kustom, Vercel, fraktpartners listade som delade parter.
 - `/tack` — post-checkout success-sida.
 
 **Innan riktiga kunder tas emot:** läs igenom båda juridiska sidorna minst en gång

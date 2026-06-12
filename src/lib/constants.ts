@@ -31,6 +31,9 @@ export const SITE = {
     frihetstoa: process.env.NEXT_PUBLIC_CHECKOUT_URL_FRIHETSTOA ?? "",
     sasongspaket: process.env.NEXT_PUBLIC_CHECKOUT_URL_SASONGSPAKET ?? "",
   },
+  // Slås på (true) när Kustom-kontot är godkänt och API-nycklarna satta.
+  // Styr om beställ-knappar pekar på /kassa eller faller tillbaka till e-post.
+  kustomEnabled: process.env.NEXT_PUBLIC_KUSTOM_ENABLED === "true",
 };
 
 export const NAV_LINKS = [
@@ -230,6 +233,11 @@ export const FAQS = [
     question: "Vad gör jag med påsarna? Kan man slänga dem i vanliga soporna?",
     answer:
       "Ja. Påsarna slängs i vanliga hushållssoporna, precis som blöjor. Varje rulle räcker till 30 användningar.",
+  },
+  {
+    question: "Var köper jag fler påsrullar?",
+    answer:
+      "Direkt här på nordlet.se, under Beställ. Rullarna finns som 1-pack, 3-pack och 5-pack och skickas fraktfritt från svenskt lager, normalt inom 1-5 arbetsdagar.",
   },
   {
     question: "Jag har SOG idag. Är det här bättre?",

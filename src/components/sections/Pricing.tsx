@@ -14,6 +14,50 @@ import {
   CalendarCheck,
 } from "lucide-react";
 import { SITE } from "@/lib/constants";
+import { PRODUCTS, type ProductKey } from "@/lib/products";
+
+// Var beställ-knappen pekar, i prioritetsordning:
+// 1. extern checkout-länk via env, 2. Kustom-kassan, 3. e-post (fallback)
+function checkoutHref(key: ProductKey, name: string): {
+  href: string;
+  hasCheckout: boolean;
+} {
+  const externalUrl =
+    key in SITE.checkoutUrls
+      ? SITE.checkoutUrls[key as keyof typeof SITE.checkoutUrls]
+      : "";
+  if (externalUrl) return { href: externalUrl, hasCheckout: true };
+  if (SITE.kustomEnabled)
+    return { href: `/kassa?paket=${key}`, hasCheckout: true };
+  return {
+    href: `mailto:${SITE.email}?subject=Beställning: ${name}`,
+    hasCheckout: false,
+  };
+}
+
+const REFILL_PACKS = [
+  {
+    key: "refill-1" as const,
+    label: "1 rulle",
+    uses: "30 användningar",
+    note: "Testa eller fyll på",
+    popular: false,
+  },
+  {
+    key: "refill-3" as const,
+    label: "3-pack",
+    uses: "90 användningar",
+    note: "Räcker hela semestern",
+    popular: true,
+  },
+  {
+    key: "refill-5" as const,
+    label: "5-pack",
+    uses: "150 användningar",
+    note: "En hel säsong",
+    popular: false,
+  },
+];
 
 const packages = [
   {
@@ -141,9 +185,10 @@ export function Pricing() {
           {packages.map((pkg, i) => {
             const monthly =
               Math.ceil(Number(pkg.price.replace(/\s/g, "")) / 36 / 10) * 10;
-            const checkoutUrl = SITE.checkoutUrls[pkg.checkoutKey];
-            const hasCheckout = Boolean(checkoutUrl);
-            const fallbackUrl = `mailto:${SITE.email}?subject=Beställning: ${pkg.name}`;
+            const { href: pkgHref, hasCheckout } = checkoutHref(
+              pkg.checkoutKey,
+              pkg.name
+            );
             return (
             <AnimateOnScroll key={pkg.name} delay={i * 0.1}>
               <div
@@ -211,7 +256,7 @@ export function Pricing() {
 
                 <div className="mt-8">
                   <Button
-                    href={checkoutUrl || fallbackUrl}
+                    href={pkgHref}
                     variant={pkg.popular ? "primary" : "outline"}
                     className="w-full justify-center"
                   >
@@ -231,6 +276,78 @@ export function Pricing() {
             );
           })}
         </div>
+
+        {/* Refill: påsrullar */}
+        <AnimateOnScroll delay={0.1}>
+          <div id="pasrullar" className="max-w-4xl mx-auto mt-16 scroll-mt-24">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl sm:text-3xl tracking-tight text-text font-display">
+                Påsrullar - refill
+              </h3>
+              <p className="mt-2 text-text-muted max-w-xl mx-auto">
+                Originalrullar till NordLet Pro. Alltid i lager i Sverige och
+                fraktfritt hem till dig, så att påsarna aldrig blir ett
+                orosmoment.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-3 gap-5">
+              {REFILL_PACKS.map((pack) => {
+                const product = PRODUCTS[pack.key];
+                const perUse = Math.round(
+                  product.priceKr /
+                    (Number(pack.uses.replace(/\D/g, "")) || 30)
+                );
+                const { href: refillHref, hasCheckout: refillCheckout } =
+                  checkoutHref(pack.key, product.name);
+                return (
+                  <div
+                    key={pack.key}
+                    className={`relative rounded-2xl p-6 flex flex-col bg-surface ${
+                      pack.popular
+                        ? "border-2 border-accent shadow-lg shadow-accent/10"
+                        : "border border-border"
+                    }`}
+                  >
+                    {pack.popular && (
+                      <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                        <span className="inline-flex items-center gap-1 bg-accent text-white text-[11px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                          <Star size={10} className="fill-white" />
+                          Mest valda
+                        </span>
+                      </div>
+                    )}
+                    <p className="font-semibold text-text">{pack.label}</p>
+                    <p className="text-xs text-text-muted mt-0.5">
+                      {pack.uses} · {pack.note}
+                    </p>
+                    <div className="mt-4 flex items-baseline gap-1.5">
+                      <span className="text-3xl font-bold text-text font-display">
+                        {product.priceKr.toLocaleString("sv-SE")}
+                      </span>
+                      <span className="text-text-muted">kr</span>
+                    </div>
+                    <p className="text-xs text-text-light mt-1 flex-grow">
+                      ca {perUse} kr per användning · fri frakt
+                    </p>
+                    <div className="mt-5">
+                      <Button
+                        href={refillHref}
+                        variant={pack.popular ? "primary" : "outline"}
+                        className="w-full justify-center !px-4 !py-3 !text-sm"
+                      >
+                        {refillCheckout ? "Beställ" : "Beställ via e-post"}
+                      </Button>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <p className="text-center text-xs text-text-light mt-5">
+              Varje rulle räcker till 30 användningar - ungefär en resevecka
+              för två. LED-indikatorn visar när det är dags att byta.
+            </p>
+          </div>
+        </AnimateOnScroll>
 
         {/* Betalmetoder */}
         <AnimateOnScroll delay={0.15}>
