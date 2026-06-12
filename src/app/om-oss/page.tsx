@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function OmOssPage() {
   return (
     <>
-      <Header />
+      <Header solid />
       <main className="pt-32 pb-20 sm:pt-40 sm:pb-28">
         <Container>
           <div className="max-w-2xl">

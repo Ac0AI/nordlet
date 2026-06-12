@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function TackPage() {
   return (
     <>
-      <Header />
+      <Header solid />
       <main className="pt-32 pb-20 sm:pt-40 sm:pb-28 min-h-[70vh]">
         <Container>
           <div className="max-w-2xl mx-auto text-center">

@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function KopvillkorPage() {
-  const updated = "2026-04-16";
+  const updated = "2026-06-12";
   return (
     <>
-      <Header />
+      <Header solid />
       <main className="pt-32 pb-20 sm:pt-40 sm:pb-28">
         <Container>
           <article className="max-w-3xl mx-auto prose-custom">
@@ -63,9 +63,12 @@ export default function KopvillkorPage() {
                 om inget annat anges.
               </p>
               <p>
-                Betalning sker via Stripe, som hanterar kortbetalning och andra
-                betalningsmetoder säkert enligt PCI DSS-standard. NordLet
-                lagrar inte kortuppgifter.
+                Betalning sker via Kustom Checkout, som hanterar kortbetalning,
+                Klarna (faktura och delbetalning), Swish och andra
+                betalningsmetoder säkert enligt PCI DSS-standard. Vid
+                delbetalning eller faktura gäller Klarnas villkor, och exakt
+                belopp och eventuell ränta visas alltid i kassan innan du
+                slutför köpet. NordLet lagrar inte kortuppgifter.
               </p>
             </Section>
 

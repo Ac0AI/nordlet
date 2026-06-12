@@ -7,9 +7,12 @@ import { NAV_LINKS, SITE } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 
-export function Header() {
-  const [scrolled, setScrolled] = useState(false);
+export function Header({ solid = false }: { solid?: boolean }) {
+  // solid används på sidor med ljus bakgrund överst - där skulle den
+  // transparenta varianten ge vit text mot ljus yta.
+  const [scrolledState, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const scrolled = solid || scrolledState;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);

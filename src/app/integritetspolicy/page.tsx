@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function IntegritetspolicyPage() {
-  const updated = "2026-04-16";
+  const updated = "2026-06-12";
   return (
     <>
-      <Header />
+      <Header solid />
       <main className="pt-32 pb-20 sm:pt-40 sm:pb-28">
         <Container>
           <article className="max-w-3xl mx-auto">
@@ -66,7 +66,8 @@ export default function IntegritetspolicyPage() {
               </ul>
               <p>
                 Kortuppgifter och detaljer om betalningen hanteras direkt av
-                Stripe och lagras aldrig hos NordLet.
+                Kustom och den betalmetod du väljer i kassan (t.ex. Klarna
+                eller Swish). De lagras aldrig hos NordLet.
               </p>
             </Section>
 
@@ -99,14 +100,17 @@ export default function IntegritetspolicyPage() {
               <p>Vi delar uppgifter med följande betrodda parter:</p>
               <ul>
                 <li>
-                  <strong>Stripe</strong> — betalningshantering. Stripe är
-                  PCI DSS-certifierat.{" "}
+                  <strong>Kustom</strong> — betalningshantering via Kustom
+                  Checkout (Kustom AB, Stockholm). Kustom är PCI
+                  DSS-certifierat. Väljer du Klarna eller Swish i kassan
+                  behandlar även de dina uppgifter enligt sina respektive
+                  villkor.{" "}
                   <a
-                    href="https://stripe.com/privacy"
+                    href="https://www.kustom.co/legal"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Stripes integritetspolicy
+                    Kustoms villkor och integritetspolicy
                   </a>
                   .
                 </li>
@@ -137,8 +141,9 @@ export default function IntegritetspolicyPage() {
 
             <Section title="6. Överföring utanför EU/EES">
               <p>
-                Stripe och Vercel är amerikanska företag. Överföring sker enligt
-                EU-kommissionens standardavtalsklausuler (SCC) för att
+                Kustom är ett svenskt bolag och behandlar betalningar inom
+                EU/EES. Vercel är ett amerikanskt företag - överföring dit sker
+                enligt EU-kommissionens standardavtalsklausuler (SCC) för att
                 säkerställa tillräcklig skyddsnivå.
               </p>
             </Section>
