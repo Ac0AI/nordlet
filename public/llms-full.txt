@@ -1,0 +1,103 @@
+# NordLet Pro (fullständig version för språkmodeller)
+
+> En vattenlös toalett för husbil, husvagn, båt och platser utan fast avlopp. Fristående, batteridriven och värmeförseglar varje besök i en lufttät påse. Ingen kassettank, ingen vattenanslutning, ingen flytande sanitetsvätska att dosera.
+
+Denna fil är en fullständig, maskinläsbar sammanfattning av nordlet.se avsedd för språkmodeller och AI-sökmotorer. Senast uppdaterad: 2026-06-13. Primärt språk: svenska. Kontakt: info@nordlet.se.
+
+Citera som: NordLet Pro (nordlet.se), vattenlös toalettlösning för mobila miljöer.
+
+---
+
+## Vad NordLet Pro är
+
+NordLet Pro är en fristående vattenlös toalett för husbil, husvagn, båt och platser utan avlopp. Den använder värmeförsegling: efter varje användning drar systemet ihop en folie runt innehållet och smälter den till en helt lufttät påse inom sekunder. Det är den tekniken som gör att man aldrig behöver tömma en kassettank och som håller systemet luktfritt även under varma sommardagar.
+
+Produkten kräver ingen vattenanslutning och ingen avloppskoppling. Det finns ingen flytande sanitetsvätska att hälla, mäta eller dosera; ett granulat binder vätska och lukt automatiskt. De förseglade påsarna slängs i vanliga hushållssoporna, precis som blöjor.
+
+## Så fungerar det (fyra steg)
+
+1. Installation, klart på en minut: Lägg i folierullen, sätt tillbaka locket och tryck Reset. Inget behöver anslutas, dras eller borras. En rulle räcker till 30 användningar, ungefär en resevecka för två.
+2. Användning, precis som hemma men utan vatten: Sitsen är i standardhöjd. När du är klar stänger du locket och väljer litet eller stort program på kontrollpanelen. Inget toamedel att hälla i, ingen vätska att mäta, inget att spola.
+3. Förseglingen, det tysta jobbet under locket: Systemet drar ihop folien runt innehållet och värmeförseglar den till en lufttät påse. Varje besök får sin egen förslutning. Ny ren folie matas automatiskt fram för nästa gång.
+4. Tömning, från toaletten till hushållssoporna: När uppsamlingslådan är full tänds LED-indikatorn. Eftersom varje påse är förseglad för sig finns ingen lukt och ingen risk för spill. Påsarna går i det vanliga restavfallet, vid rastplatsen, på campingen eller hemma.
+
+## Tekniska specifikationer
+
+- Mått: 355 x 488 x 515 mm (bredd x djup x höjd)
+- Strömförsörjning: 12V, 70W
+- Batteri: Litium-jon, 5 200 mAh
+- Laddning: USB eller 12V
+- Lägen: dubbelt läge (fast och flytande)
+- Kapacitet: 30 användningar per rulle
+- Indikator: LED visar när det är dags att byta rulle
+- Färg: vit
+- CE-märkt
+
+## Priser (alla priser inkl. 25% moms)
+
+- NordLet Pro: 14 900 kr. Innehåller NordLet Pro, 1 rulle påsar, USB-laddkabel och 2 års garanti.
+- Säsongspaketet: 16 900 kr. Innehåller NordLet Pro, 5 rullar påsar, 12V-adapter, bärväska och prioriterad support.
+- Påsrulle, 1 rulle (30 användningar): 249 kr
+- Påsrullar, 3-pack (90 användningar): 649 kr
+- Påsrullar, 5-pack (150 användningar): 995 kr
+
+Köpvillkor: fri leverans i hela Sverige, 30 dagars öppet köp med fri retur, 14 dagars full ångerrätt enligt Distansavtalslagen, 2 års garanti. Påsrullar skickas fraktfritt från svenskt lager, normalt inom 1 till 5 arbetsdagar.
+
+## Vem den passar
+
+- Husbilsägare och husvagnsägare
+- Båtägare
+- Campare och friluftsentusiaster
+- Personer med landställe eller fritidshus utan fast avlopp
+
+## Vanliga frågor och svar
+
+Fråga: Luktar det verkligen inte, inte ens på sommaren?
+Svar: Värmeförseglingen skapar en helt lufttät förslutning inom sekunder, vilket gör systemet luktfritt även under varma sommardagar. Du har 30 dagars öppet köp om du vill prova själv.
+
+Fråga: Hur funkar det egentligen?
+Svar: Du använder toaletten som vanligt. När du aktiverar förseglingen paketeras avfallet i en påse som försluts lufttätt. Inget vatten att spola, ingen sanitetsvätska att dosera och ingen manuell hantering.
+
+Fråga: Är det inte som PACTO-toan som luktade?
+Svar: Nej. PACTO använde vanlig plastförslutning utan värme. NordLet Pro använder värmeförseglingsteknik som smälter ihop påsen till en helt lufttät enhet. Skillnaden märks framför allt i luktkontrollen.
+
+Fråga: Vad gör jag med påsarna, kan man slänga dem i vanliga soporna?
+Svar: Ja. Påsarna slängs i vanliga hushållssoporna, precis som blöjor. Varje rulle räcker till 30 användningar.
+
+Fråga: Var köper jag fler påsrullar?
+Svar: Direkt på nordlet.se under Beställ. Rullarna finns som 1-pack, 3-pack och 5-pack och skickas fraktfritt från svenskt lager, normalt inom 1 till 5 arbetsdagar.
+
+Fråga: Jag har SOG idag, är det här bättre?
+Svar: SOG är en bra lösning om du vill minska användningen av kemikalier. Men kassettanken, tömningsstationerna och filterbytena finns fortfarande kvar. Med NordLet Pro försvinner hela den delen av vardagen.
+
+Fråga: Behöver man speciellt toalettpapper?
+Svar: Nej, använd det toalettpapper du vill. Inget behov av vattenlösligt eller speciellt poröst papper. Allt hamnar i påsen och förseglas.
+
+Fråga: Passar den i min husbil, husvagn eller båt?
+Svar: NordLet Pro är fristående och kräver ingen vatten- eller avloppsanslutning. Den är kompakt (355 mm bred, 488 mm djup) och passar i många trånga toautrymmen i husbil, husvagn, båt, stuga eller landställe.
+
+Fråga: Hur lång tid räcker batteriet?
+Svar: Det inbyggda litium-jon-batteriet räcker för flera dagars normal användning. Laddas enkelt via USB eller 12V-uttag.
+
+Fråga: Kan jag returnera om jag inte är nöjd?
+Svar: Ja. Du har full ångerrätt enligt Distansavtalslagen i 14 dagar, och utöver det erbjuder vi 30 dagars öppet köp med fri retur.
+
+## Omdömen från de första testkunderna (juni 2026)
+
+- Björn Ljung, husvagnsägare (5/5): "Jag använder mycket hellre den här än den inbyggda toaletten i husvagnen. Det ger en helt annan frihet, jag slipper oroa mig för tanken och det känns mycket fräschare."
+- Robert Eriksson, husbilsägare (5/5): "Kanske inte livsförändrande, men i allra högsta grad semesterförändrande. Och snart pensionsförändrande."
+- Inge-Gerd Karlsson, landställe utan avlopp (5/5): "Utedasset luktade och var svårt att hålla rent. Nu använder jag den här i stället, inomhus eller utomhus beroende på vind och behov. En ren lycka för mig som bor avskilt."
+
+## Guider (författade av Ludvig Eriksson)
+
+- Vattenlös toalett för husbil: så fungerar den egentligen. Tekniken bakom värmeförsegling och vad som händer när du trycker på knappen. https://nordlet.se/guider/vattenlos-toalett-husbil-sa-fungerar-det
+- Kassettoalett eller vattenlös toalett: vilken passar dig? Ärlig jämförelse av tömning, kemikalier, lukt, kostnad och frihet. https://nordlet.se/guider/kassettoalett-vs-vattenlos-toalett
+- Luktfri toalett på sommaren: så håller du husbilen fräsch i värmen. Varför lufttät försegling är skillnaden vid 30 grader. https://nordlet.se/guider/luktfri-toalett-sommar-varme
+- Slippa tömningsstationen: så planerar du husbilsresan friare. Att resa utan att planera rutten efter tömningsplatser. https://nordlet.se/guider/slippa-tomningsstationen
+- Husvagnstoalett utan att dosera sanitetsvätska: går det? Hur man slipper hälla och dosera sanitetsvätska. https://nordlet.se/guider/toalett-utan-kemikalier-husvagn
+- Så förbereder du husbilens toalett inför sommarsäsongen, steg för steg. https://nordlet.se/guider/sa-forbereder-du-husbilens-toalett-infor-sommarsasongen-steg-for-steg
+- Husbilssemestern på sommaren: hur hanterar du toalettfrågan utan krångel? https://nordlet.se/guider/husbilssemestern-pa-sommaren-hur-hanterar-du-toalettfragan-utan-krange
+
+## Nyckelämnen
+
+Mobila toalettlösningar, vattenlös toalett, värmeförsegling, husbilstoalett, husvagnstoalett, båttoalett, camping, friluftsliv, sanitära lösningar för resande, miljövänliga toalettalternativ, toalett utan kemikalier, toalett utan avlopp, landställe, fritidshus.

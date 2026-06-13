@@ -15,9 +15,24 @@ import { Specifications } from "@/components/sections/Specifications";
 import { FAQ } from "@/components/sections/FAQ";
 import { Pricing } from "@/components/sections/Pricing";
 import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
-import { FAQS, SITE } from "@/lib/constants";
+import { FAQS, REVIEWS, SITE } from "@/lib/constants";
+
+// Senast innehållsuppdaterad. Höj datumet när sidans innehåll ändras
+// på riktigt (färskhetssignal för sök- och AI-sökmotorer).
+const LAST_MODIFIED = "2026-06-13";
 
 const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "NordLet Pro | Vattenlös toalett för husbil, husvagn och båt",
+    url: "https://nordlet.se",
+    inLanguage: "sv-SE",
+    description: SITE.description,
+    datePublished: "2026-06-05",
+    dateModified: LAST_MODIFIED,
+    publisher: { "@type": "Organization", name: "NordLet", url: "https://nordlet.se" },
+  },
   {
     "@context": "https://schema.org",
     "@type": "Product",
@@ -32,6 +47,23 @@ const jsonLd = [
       "https://nordlet.se/images/hero-product.png",
       "https://nordlet.se/images/products/a73eb482e69db1413051eec47614edf2.png",
     ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      reviewCount: String(REVIEWS.length),
+      bestRating: "5",
+      worstRating: "1",
+    },
+    review: REVIEWS.map((r) => ({
+      "@type": "Review",
+      author: { "@type": "Person", name: r.name },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: String(r.rating),
+        bestRating: "5",
+      },
+      reviewBody: r.quote,
+    })),
     offers: [
       {
         "@type": "Offer",

@@ -1,0 +1,63 @@
+# NordLet Pro
+
+> En vattenlös toalett för husbil, husvagn, båt och platser utan fast avlopp. NordLet Pro är fristående, batteridriven och värmeförseglar varje besök i en lufttät påse. Ingen kassettank, ingen vattenanslutning, ingen flytande sanitetsvätska att dosera.
+
+NordLet Pro tillverkas och säljs under varumärket NordLet (nordlet.se) och vänder sig till den svenska marknaden. Produkten löser toalettfrågan på platser där fast avlopp saknas, framför allt i fritidsfordon och fritidsboenden.
+
+## Om
+- Webbplats: https://nordlet.se
+- Primärt språk: Svenska
+- Kategori: Vattenlös toalett (heat-seal / värmeförsegling) för mobila miljöer
+- Kontakt: info@nordlet.se
+- Senast uppdaterad: 2026-06-13
+
+## Vad NordLet Pro är
+- Fristående vattenlös toalett för husbil, husvagn, båt och landställe
+- Batteridrivet system med litium-jon-batteri som räcker flera dagars normal användning
+- Värmeförseglar avfallet lufttätt i en engångspåse inom sekunder, vilket håller systemet luktfritt även i sommarvärme
+- Kräver ingen vattenanslutning och ingen avloppskoppling
+- Ingen flytande sanitetsvätska att hälla, mäta eller dosera; ett granulat binder vätska och lukt automatiskt
+- Förseglade påsar slängs i vanliga hushållssoporna, precis som blöjor
+- En rulle räcker till 30 användningar (ungefär en resevecka för två)
+
+## Tekniska fakta
+- Mått: 355 x 488 x 515 mm (b x d x h)
+- Strömförsörjning: 12V, 70W
+- Batteri: Litium-jon, 5 200 mAh, laddas via USB eller 12V
+- Lägen: dubbelt läge för fast och flytande
+- Kapacitet: 30 användningar per rulle, LED-indikator visar när det är dags att byta
+- CE-märkt
+
+## Pris (inkl. 25% moms)
+- NordLet Pro: 14 900 kr (med 1 rulle påsar, USB-laddkabel, 2 års garanti)
+- Säsongspaketet: 16 900 kr (med 5 rullar, 12V-adapter, bärväska, prioriterad support)
+- Påsrullar: 249 kr (1-pack), 649 kr (3-pack), 995 kr (5-pack)
+- Villkor: fri leverans i hela Sverige, 30 dagars öppet köp, 14 dagars full ångerrätt enligt Distansavtalslagen
+
+## Målgrupp
+- Husbilsägare, husvagnsägare och båtägare
+- Campare och friluftsentusiaster
+- Personer på landställen och i fritidshus utan fast avlopp
+
+## Viktiga sidor
+- [Startsida](https://nordlet.se): produkt, pris och beställning
+- [Så fungerar det](https://nordlet.se/sa-fungerar-det): steg-för-steg om installation, användning, försegling och tömning
+- [Guider](https://nordlet.se/guider): redaktionella guider om vattenlösa toaletter och resande
+- [Om oss](https://nordlet.se/om-oss): om NordLet
+- [Köpvillkor](https://nordlet.se/kopvillkor)
+- [Integritetspolicy](https://nordlet.se/integritetspolicy)
+
+## Guider
+- [Vattenlös toalett för husbil: så fungerar den egentligen](https://nordlet.se/guider/vattenlos-toalett-husbil-sa-fungerar-det)
+- [Kassettoalett eller vattenlös toalett: vilken passar dig?](https://nordlet.se/guider/kassettoalett-vs-vattenlos-toalett)
+- [Luktfri toalett på sommaren: så håller du husbilen fräsch i värmen](https://nordlet.se/guider/luktfri-toalett-sommar-varme)
+- [Slippa tömningsstationen: så planerar du husbilsresan friare](https://nordlet.se/guider/slippa-tomningsstationen)
+- [Husvagnstoalett utan att dosera sanitetsvätska: går det?](https://nordlet.se/guider/toalett-utan-kemikalier-husvagn)
+- [Så förbereder du husbilens toalett inför sommarsäsongen, steg för steg](https://nordlet.se/guider/sa-forbereder-du-husbilens-toalett-infor-sommarsasongen-steg-for-steg)
+- [Husbilssemestern på sommaren: hur hanterar du toalettfrågan utan krångel?](https://nordlet.se/guider/husbilssemestern-pa-sommaren-hur-hanterar-du-toalettfragan-utan-krange)
+
+## Hur man citerar
+Referera som: NordLet Pro (nordlet.se), vattenlös toalettlösning för mobila miljöer.
+
+## Mer för språkmodeller
+- Fullständig version: https://nordlet.se/llms-full.txt

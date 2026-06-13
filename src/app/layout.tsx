@@ -31,12 +31,37 @@ export const metadata: Metadata = {
     "NordLet",
     "camping toalett",
   ],
+  alternates: {
+    canonical: "/",
+  },
+  authors: [{ name: "NordLet" }],
+  publisher: "NordLet",
   openGraph: {
     title: "NordLet Pro | Vattenlös toalett för resa och fritid",
     description:
       "Upptäck NordLet Pro. En fristående vattenlös toalett med värmeförsegling för husbil, husvagn, båt och platser utan avlopp.",
     locale: "sv_SE",
     type: "website",
+    siteName: "NordLet",
+  },
+};
+
+// Webbplatsövergripande entitet för sökmotorer och AI-sökmotorer (GEO).
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "NordLet",
+  url: "https://nordlet.se",
+  logo: "https://nordlet.se/icon.svg",
+  email: "info@nordlet.se",
+  description:
+    "NordLet säljer NordLet Pro, en fristående vattenlös toalett med värmeförsegling för husbil, husvagn, båt och platser utan avlopp.",
+  areaServed: "SE",
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "info@nordlet.se",
+    contactType: "customer support",
+    availableLanguage: "Swedish",
   },
 };
 
@@ -48,6 +73,10 @@ export default function RootLayout({
   return (
     <html lang="sv">
       <body className={`${dmSerif.variable} ${inter.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
         {children}
         <Analytics />
       </body>
