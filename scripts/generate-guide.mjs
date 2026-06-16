@@ -26,13 +26,17 @@ function season(month) {
 }
 
 function slugify(s) {
-  return s
+  const base = s
     .toLowerCase()
     .replace(/[åä]/g, "a")
     .replace(/ö/g, "o")
     .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "")
-    .slice(0, 70);
+    .replace(/(^-|-$)/g, "");
+  if (base.length <= 70) return base;
+  // Kapa vid närmaste ordgräns under 70 tecken, inte mitt i ett ord.
+  const cut = base.slice(0, 70);
+  const lastDash = cut.lastIndexOf("-");
+  return (lastDash > 0 ? cut.slice(0, lastDash) : cut).replace(/-$/, "");
 }
 
 const now = new Date();
