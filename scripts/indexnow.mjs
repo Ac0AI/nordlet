@@ -5,28 +5,37 @@
 // IndexNow ger snabbare indexering i Bing/Copilot, vilket i sin tur är
 // en förutsättning för att bli citerad av Microsoft Copilot.
 
+import { readdirSync } from "node:fs";
+import { fileURLToPath } from "node:url";
+import { dirname, join } from "node:path";
+
 const HOST = "nordlet.se";
 const KEY = "854e7099686c43cbd9b10a8287d7bdcd";
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 
+// Körs auto i Vercel-builden (via "build"-scriptet). Med --vercel-prod-only
+// ping:ar vi BARA på production-deploys – preview/PR-builds och lokala builds
+// hoppas över. Manuell körning (node scripts/indexnow.mjs) ping:ar alltid.
+if (process.argv.includes("--vercel-prod-only") && process.env.VERCEL_ENV !== "production") {
+  console.log(`IndexNow: hoppar över (VERCEL_ENV=${process.env.VERCEL_ENV ?? "unset"}, inte production).`);
+  process.exit(0);
+}
+
+// Håll i synk med src/app/sitemap.ts (samma indexerbara sidor).
 const STATIC_PATHS = [
   "",
-  "/sa-fungerar-det",
   "/guider",
   "/om-oss",
+  "/sa-fungerar-det",
   "/kopvillkor",
   "/integritetspolicy",
 ];
 
-const GUIDE_SLUGS = [
-  "vattenlos-toalett-husbil-sa-fungerar-det",
-  "kassettoalett-vs-vattenlos-toalett",
-  "luktfri-toalett-sommar-varme",
-  "slippa-tomningsstationen",
-  "toalett-utan-kemikalier-husvagn",
-  "sa-forbereder-du-husbilens-toalett-infor-sommarsasongen-steg-for-steg",
-  "husbilssemestern-pa-sommaren-hur-hanterar-du-toalettfragan-utan-krange",
-];
+// Läs guide-slugs från filsystemet så listan aldrig driver isär från innehållet.
+const GUIDER_DIR = join(dirname(fileURLToPath(import.meta.url)), "..", "content", "guider");
+const GUIDE_SLUGS = readdirSync(GUIDER_DIR)
+  .filter((f) => f.endsWith(".md"))
+  .map((f) => f.replace(/\.md$/, ""));
 
 const urlList = [
   ...STATIC_PATHS.map((p) => `https://${HOST}${p}`),
