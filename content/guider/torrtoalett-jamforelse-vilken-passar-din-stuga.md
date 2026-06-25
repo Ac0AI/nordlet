@@ -17,16 +17,16 @@ En sak märkte jag när jag läste de svenska guiderna inför den här texten: n
 
 ## Snabb översikt
 
-| Typ | Pris (kr) | Driftkostnad | El/ström | Var avfallet hamnar | Passar för |
-|---|---|---|---|---|---|
-| **Värmeförsegling** | ca 14 900 | ca 7–8 kr/besök (folie) | Batteri, USB/12V | Förseglad påse i restavfallet | Husbil, båt, stuga – vill slippa tömning och kemikalier |
-| **Förbränning** | ca 20 000–43 000 | ca 1 kr/besök + el ~3 kr | 230V (gasmodell: gasol + 12V) | Lite aska | Stuga med el, mycket användning |
-| **Mulltoa/förmultning** | ca 3 500–23 000 | strö ~1,5 kr/besök | Passiv: ingen. Aktiv: 12V-fläkt | Kompost på tomten | Stuga med plats, vill ha kretslopp |
-| **Separerande (Separett)** | ca 5 800–9 500 | påse ~14–16 kr/fyllning | Weekend: ingen. Villa: 12V-fläkt | Fast i påse, urin via avlopp | Fast installation i stuga |
-| **Kemtoa/kassett** | ca 600–3 000 | vätska ~250–500 kr/säsong | Ingen | Töms på tömningsstation | Kort bruk, låg budget |
-| **Frystoalett** | ca 25 000+ | påse + el | 230V (fryser) | Fryst påse | Permanentnära, el finns |
+| Typ | Pris (kr) | Driftkostnad | El | Passar för |
+|---|---|---|---|---|
+| **Värmeförsegling** | ca 14 900 | ca 7–8 kr/besök | Batteri (USB/12V) | Husbil, båt, stuga |
+| **Förbränning** | ca 20 000–43 000 | ca 1 kr/besök + el | 230V (gas: 12V) | Stuga med el |
+| **Mulltoa/förmultning** | ca 3 500–23 000 | strö ~1,5 kr/besök | Ingen / 12V-fläkt | Stuga, kretslopp |
+| **Separerande (Separett)** | ca 5 800–9 500 | påse ~14–16 kr | Ingen / 12V-fläkt | Fast i stuga |
+| **Kemtoa/kassett** | ca 600–3 000 | vätska ~250–500 kr/säsong | Ingen | Kort bruk, budget |
+| **Frystoalett** | ca 25 000+ | påse + el | 230V | Permanentnära |
 
-Priserna är ungefärliga spann från svenska återförsäljare 2026, och siffrorna per besök är uppskattningar – din verklighet beror på hur ni använder toaletten. Nedan går jag igenom varje typ för sig.
+Priserna är ungefärliga spann från svenska återförsäljare 2026, och siffrorna per besök är uppskattningar – din verklighet beror på hur ni använder toaletten. Var avfallet faktiskt hamnar går jag igenom i ett eget avsnitt längre ner. Nedan tar jag varje typ för sig.
 
 ## Värmeförseglande toalett – den nyaste
 

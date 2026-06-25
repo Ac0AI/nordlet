@@ -73,17 +73,20 @@ const md = {
   ),
   table: (p: React.HTMLAttributes<HTMLTableElement>) => (
     <div className="my-8 -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
-      <table className="w-full border-collapse text-left text-[15px] leading-snug" {...p} />
+      <table
+        className="w-full min-w-[40rem] border-collapse text-left text-[13px] leading-snug sm:text-[15px] [&_td:first-child]:whitespace-nowrap [&_td:first-child]:font-medium [&_td:first-child]:text-text [&_td:nth-child(2)]:whitespace-nowrap"
+        {...p}
+      />
     </div>
   ),
   thead: (p: React.HTMLAttributes<HTMLTableSectionElement>) => (
     <thead className="border-b border-border" {...p} />
   ),
   th: (p: React.HTMLAttributes<HTMLTableCellElement>) => (
-    <th className="px-3 py-2.5 align-top font-semibold text-text" {...p} />
+    <th className="whitespace-nowrap px-2.5 py-2 align-top font-semibold text-text" {...p} />
   ),
   td: (p: React.HTMLAttributes<HTMLTableCellElement>) => (
-    <td className="border-b border-border/60 px-3 py-2.5 align-top text-text-muted" {...p} />
+    <td className="border-b border-border/60 px-2.5 py-2 align-top text-text-muted" {...p} />
   ),
 };
 
