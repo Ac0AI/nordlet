@@ -3,12 +3,14 @@
 import { Container } from "@/components/ui/Container";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 import { Button } from "@/components/ui/Button";
-import { SITE, TRUST_BADGES } from "@/lib/constants";
-import { Mail, Phone, ShieldCheck } from "lucide-react";
+import { TRUST_BADGES } from "@/lib/constants";
+import { ShieldCheck } from "lucide-react";
 
+// Avslutande CTA längst ned på startsidan. Leder tillbaka till beställ-sektionen
+// (#bestall) som har den riktiga kassalogiken - ingen egen mailto här.
 export function CTA() {
   return (
-    <section className="py-20 sm:py-28">
+    <section className="bg-bg-warm py-20 sm:py-28">
       <Container>
         <AnimateOnScroll>
           <div className="max-w-3xl mx-auto text-center">
@@ -30,42 +32,17 @@ export function CTA() {
             </div>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button
-                href={`mailto:${SITE.email}?subject=Beställning NordLet Pro`}
-                size="large"
-              >
-                <Mail size={18} className="mr-2.5" />
-                Beställ via e-post
+              <Button href="#bestall" size="large">
+                Beställ NordLet Pro
               </Button>
-              <Button
-                href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-                variant="secondary"
-                size="large"
-              >
-                <Phone size={18} className="mr-2.5" />
-                Ring oss direkt
+              <Button href="#sa-fungerar-det" variant="outline" size="large">
+                Se hur det fungerar
               </Button>
             </div>
 
-            <p className="mt-4 text-sm text-accent font-medium">
-              Begränsat antal i lager. Leverans inom 1-2 arbetsdagar från Sverige.
+            <p className="mt-4 text-sm text-text-light">
+              Fri leverans i hela Sverige. Leverans normalt inom 1-5 arbetsdagar.
             </p>
-
-            <div className="mt-6 text-text-muted text-base">
-              <a
-                href={`mailto:${SITE.email}`}
-                className="hover:text-accent transition-colors"
-              >
-                {SITE.email}
-              </a>
-              <span className="mx-3 text-border">|</span>
-              <a
-                href={`tel:${SITE.phone.replace(/\s/g, "")}`}
-                className="hover:text-accent transition-colors"
-              >
-                {SITE.phone}
-              </a>
-            </div>
 
             <div className="mt-12 flex flex-wrap justify-center gap-6 sm:gap-10">
               {TRUST_BADGES.map((badge) => {

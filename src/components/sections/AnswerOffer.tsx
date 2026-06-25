@@ -9,7 +9,7 @@ const facts = [
   {
     icon: BatteryCharging,
     label: "Från ca 420 kr/mån",
-    detail: "Delbetalning via Klarna när kassan är aktiverad.",
+    detail: "Dela upp eller betala om 30 dagar med Klarna.",
   },
   {
     icon: Truck,

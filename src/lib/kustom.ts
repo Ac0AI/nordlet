@@ -40,6 +40,9 @@ export type KustomOrder = {
   order_id: string;
   status: string;
   html_snippet: string;
+  // Finns i Kustoms orderrespons; används för Purchase-värde i annonsspårning.
+  order_amount?: number; // i ören (minor units)
+  purchase_currency?: string;
 };
 
 /**

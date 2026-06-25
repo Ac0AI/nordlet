@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
 import { KustomSnippet } from "@/components/checkout/KustomSnippet";
+import { MetaTrack } from "@/components/analytics/MetaTrack";
 import { fetchCheckoutOrder, isKustomConfigured } from "@/lib/kustom";
 import { CheckCircle2 } from "lucide-react";
 
@@ -22,10 +23,14 @@ export default async function BekraftelsePage({
   const { order_id } = await searchParams;
 
   let snippet: string | null = null;
+  let purchaseValue: number | undefined;
   if (order_id && isKustomConfigured()) {
     try {
       const order = await fetchCheckoutOrder(order_id);
       snippet = order.html_snippet;
+      if (typeof order.order_amount === "number") {
+        purchaseValue = order.order_amount / 100; // ören -> kronor
+      }
     } catch (error) {
       console.error("Kustom confirmation error:", error);
     }
@@ -34,6 +39,13 @@ export default async function BekraftelsePage({
   return (
     <>
       <Header solid />
+      <MetaTrack
+        event="Purchase"
+        params={{
+          currency: "SEK",
+          ...(purchaseValue !== undefined ? { value: purchaseValue } : {}),
+        }}
+      />
       <main className="pt-32 pb-20 sm:pt-36 sm:pb-28 min-h-[70vh] bg-bg-warm">
         <Container>
           <div className="max-w-2xl mx-auto">

@@ -140,31 +140,30 @@ export function Hero() {
       {/* Accentlinje mellan panelerna (som Clesana) */}
       <div className="absolute inset-y-0 left-1/2 z-20 hidden w-px -translate-x-1/2 bg-accent/60 lg:block" />
 
-      {/* Höger: produkt på mörk bakgrund – bilden fyller hela panelen kant-till-kant */}
-      <div className="relative min-h-[58vh] overflow-hidden bg-primary-dark lg:min-h-0">
-        <motion.div className="absolute -inset-[8%]">
-          <motion.div
-            initial={{ opacity: 0, scale: 1.04 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.9, delay: 0.2 }}
-            className="relative h-full w-full"
-          >
+      {/* Höger: riktigt produktfoto i ett vitt kort på varm, ljus panel.
+          Kortet är vitt = produktbildens vita bakgrund smälter in utan synlig ruta. */}
+      <div className="relative flex min-h-[58vh] items-center justify-center overflow-hidden bg-gradient-to-br from-bg-alt to-bg-warm px-6 py-12 lg:min-h-0 lg:px-10">
+        <motion.div
+          initial={{ opacity: 0, y: 18, scale: 0.98 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="relative z-10 w-full max-w-[440px] rounded-[2rem] bg-white p-6 shadow-[0_40px_80px_-30px_rgba(13,37,48,0.35)] sm:p-9"
+        >
+          <div className="relative aspect-square w-full">
             <Image
-              src={IMAGES.heroProduct}
-              alt="NordLet Pro, fristående vattenlös toalett"
+              src={IMAGES.productFront}
+              alt="NordLet Pro, fristående vattenlös toalett med värmeförsegling"
               fill
-              className="object-cover"
+              className="object-contain"
               priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
+              sizes="(max-width: 1024px) 70vw, 36vw"
             />
-          </motion.div>
+          </div>
         </motion.div>
-        {/* Mjuk vinjett för djup och kontrast mot brickan */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_42%,transparent_45%,rgba(8,23,31,0.55)_100%)]" />
 
         {/* Äkta märkning (ingen falsk 'Made in')-bricka */}
-        <div className="absolute bottom-6 right-6 z-10 flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/80 backdrop-blur-md">
-          <ShieldCheck size={14} className="text-accent-light" />
+        <div className="absolute bottom-6 right-6 z-20 flex items-center gap-2 rounded-full border border-border bg-surface/90 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-text backdrop-blur-md">
+          <ShieldCheck size={14} className="text-accent" />
           CE-märkt &middot; Svensk support
         </div>
       </div>

@@ -13,8 +13,10 @@ import { Reviews } from "@/components/sections/Reviews";
 import { SavingsCalculator } from "@/components/sections/SavingsCalculator";
 import { Specifications } from "@/components/sections/Specifications";
 import { FAQ } from "@/components/sections/FAQ";
+import { CTA } from "@/components/sections/CTA";
 import { Pricing } from "@/components/sections/Pricing";
 import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
+import { MetaTrack } from "@/components/analytics/MetaTrack";
 import { FAQS, REVIEWS, SITE } from "@/lib/constants";
 
 // Senast innehållsuppdaterad. Höj datumet när sidans innehåll ändras
@@ -44,8 +46,8 @@ const jsonLd = [
     category: "Vattenlös toalett för husbil, husvagn, båt och platser utan avlopp",
     description: SITE.description,
     image: [
-      "https://nordlet.se/images/hero-product.png",
       "https://nordlet.se/images/products/a73eb482e69db1413051eec47614edf2.png",
+      "https://nordlet.se/images/products/06403af0d7a8673f549f5d4aa192c629.png",
     ],
     aggregateRating: {
       "@type": "AggregateRating",
@@ -106,6 +108,16 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <main>
+        <MetaTrack
+          event="ViewContent"
+          params={{
+            content_name: "NordLet Pro",
+            content_type: "product",
+            content_ids: ["NLP-100"],
+            value: 14900,
+            currency: "SEK",
+          }}
+        />
         <Hero />
         <AnswerOffer />
         <Problem />
@@ -120,6 +132,7 @@ export default function Home() {
         <SavingsCalculator />
         <Specifications />
         <FAQ />
+        <CTA />
       </main>
       <Footer />
       <StickyMobileCTA />

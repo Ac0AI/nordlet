@@ -10,9 +10,10 @@ export const IMAGES = {
   road: "/images/photo_2026-03-10_20-39-08.jpg",
   // Nature camping: Motorhome in nature
   nature: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&h=600&fit=crop&q=80",
-  // Hero-banner (tvådelad): genererad nordisk skog + riktig produkt på mörk bakgrund
+  // Hero-banner (tvådelad): stämningsbild nordisk skog (vänster) + riktigt
+  // produktfoto (höger, IMAGES.productFront). Den tidigare AI-renderade
+  // hero-product.png används inte längre.
   heroForest: "/images/hero-forest.png",
-  heroProduct: "/images/hero-product.png",
   // Riktiga produktfoton från leverantören (ersätter de tidigare mockuparna)
   productFront: "/images/products/a73eb482e69db1413051eec47614edf2.png", // 3/4-vy, lock stängt (hero)
   productSide: "/images/products/06403af0d7a8673f549f5d4aa192c629.png", // ren sidoprofil

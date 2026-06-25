@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
 import { KustomSnippet } from "@/components/checkout/KustomSnippet";
+import { MetaTrack } from "@/components/analytics/MetaTrack";
 import { createCheckoutOrder, isKustomConfigured } from "@/lib/kustom";
 import { PRODUCTS, isProductKey } from "@/lib/products";
 import { SITE } from "@/lib/constants";
@@ -35,6 +36,16 @@ export default async function KassaPage({
   return (
     <>
       <Header solid />
+      <MetaTrack
+        event="InitiateCheckout"
+        params={{
+          content_name: product.name,
+          content_ids: [product.reference],
+          num_items: quantity,
+          value: totalKr,
+          currency: "SEK",
+        }}
+      />
       <main className="pt-32 pb-20 sm:pt-36 sm:pb-28 min-h-[70vh] bg-bg-warm">
         <Container>
           <div className="max-w-2xl mx-auto">

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { DM_Serif_Display, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { MetaPixel } from "@/components/analytics/MetaPixel";
+import { CookieConsent } from "@/components/analytics/CookieConsent";
 import "./globals.css";
 
 const dmSerif = DM_Serif_Display({
@@ -40,9 +42,16 @@ export const metadata: Metadata = {
     title: "NordLet Pro | Vattenlös toalett för resa och fritid",
     description:
       "Upptäck NordLet Pro. En fristående vattenlös toalett med värmeförsegling för husbil, husvagn, båt och platser utan avlopp.",
+    url: "https://nordlet.se",
     locale: "sv_SE",
     type: "website",
     siteName: "NordLet",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NordLet Pro | Vattenlös toalett för resa och fritid",
+    description:
+      "Fristående vattenlös toalett med värmeförsegling för husbil, husvagn, båt och platser utan avlopp.",
   },
 };
 
@@ -79,6 +88,8 @@ export default function RootLayout({
         />
         {children}
         <Analytics />
+        <MetaPixel />
+        <CookieConsent />
       </body>
     </html>
   );

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
+import { MetaTrack } from "@/components/analytics/MetaTrack";
 import { CheckCircle2 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -14,6 +15,7 @@ export default function TackPage() {
   return (
     <>
       <Header solid />
+      <MetaTrack event="Purchase" params={{ currency: "SEK" }} />
       <main className="pt-32 pb-20 sm:pt-40 sm:pb-28 min-h-[70vh]">
         <Container>
           <div className="max-w-2xl mx-auto text-center">

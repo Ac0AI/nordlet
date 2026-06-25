@@ -3,6 +3,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
 import { SITE } from "@/lib/constants";
+import { trackingConfigured } from "@/lib/consent";
 
 export const metadata: Metadata = {
   title: "Integritetspolicy | NordLet",
@@ -151,11 +152,32 @@ export default function IntegritetspolicyPage() {
             <Section title="7. Cookies">
               <p>
                 Webbplatsen använder tekniskt nödvändiga cookies för att
-                funktionen ska fungera. Vi använder för närvarande inga
-                analyscookies, marknadsföringscookies eller cookies från tredje
-                part. Om detta ändras uppdaterar vi denna policy och ber om
-                ditt samtycke.
+                funktionen ska fungera. De kräver inte samtycke.
               </p>
+              {trackingConfigured ? (
+                <>
+                  <p>
+                    Med ditt samtycke använder vi även marknadsföringscookies
+                    från Meta (Meta-pixeln) för att mäta och förbättra våra
+                    annonser på Facebook och Instagram. Pixeln laddas först när
+                    du valt &quot;Acceptera alla&quot; i cookierutan. Väljer du
+                    &quot;Endast nödvändiga&quot; sätts inga sådana cookies.
+                  </p>
+                  <p>
+                    Meta Platforms behandlar uppgifterna även i USA. Överföringen
+                    sker enligt EU-kommissionens standardavtalsklausuler (SCC).
+                    Du kan när som helst ändra eller återkalla ditt samtycke
+                    genom att rensa cookies för den här webbplatsen i din
+                    webbläsare.
+                  </p>
+                </>
+              ) : (
+                <p>
+                  Vi använder för närvarande inga analyscookies,
+                  marknadsföringscookies eller cookies från tredje part. Om detta
+                  ändras uppdaterar vi denna policy och ber om ditt samtycke.
+                </p>
+              )}
             </Section>
 
             <Section title="8. Dina rättigheter">

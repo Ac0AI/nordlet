@@ -63,6 +63,42 @@ Kustom-kassan kan `NEXT_PUBLIC_CHECKOUT_URL_FRIHETSTOA` /
 `NEXT_PUBLIC_CHECKOUT_URL_SASONGSPAKET` sättas till en URL. De har högst
 prioritet. Lämna tomma i normalfallet.
 
+## 2b. Meta Pixel (Facebook-annonsering)
+
+Spårningen är förbyggd och **vilande tills ett pixel-ID sätts** - exakt som
+Kustom. Inget laddas, ingen cookie-ruta visas, och integritetspolicyn säger
+fortfarande "inga marknadsföringscookies" så länge ID:t är tomt.
+
+### När du vill börja annonsera
+
+1. Skapa en pixel i [Meta Events Manager](https://business.facebook.com)
+   (Datakällor → Pixlar → Skapa). Kopiera pixel-ID:t (bara siffror).
+2. Lägg till i `.env.local` och i Vercel (Settings → Environment Variables):
+
+```
+NEXT_PUBLIC_META_PIXEL_ID=1234567890
+```
+
+3. Deploya. Då händer detta automatiskt:
+   - En GDPR-cookieruta visas (Acceptera alla / Endast nödvändiga).
+   - Pixeln laddas **först efter** "Acceptera alla" och skickar `PageView`.
+   - Integritetspolicyns cookie-avsnitt byter automatiskt till Meta-texten.
+4. Verifiera med [Meta Pixel Helper](https://chromewebstore.google.com/detail/meta-pixel-helper)
+   (Chrome-tillägg) - acceptera cookies och se att PageView triggas.
+
+### Events som redan är inkopplade
+
+| Event | Var | Värde |
+|-------|-----|-------|
+| `PageView` | alla sidor | - |
+| `ViewContent` | startsidan | 14 900 kr |
+| `InitiateCheckout` | `/kassa` | paketets pris |
+| `Purchase` | `/tack` + `/kassa/bekraftelse` | orderbelopp (Kustom) |
+
+`InitiateCheckout` och `Purchase` triggas så fort kassan (avsnitt 2) är aktiv -
+ingen extra kod behövs då. Tips: lägg ID:t i `.env.example` också (raden
+`NEXT_PUBLIC_META_PIXEL_ID=`) så `sync-env`/onboarding plockar upp den.
+
 ## 3. Telefonnummer (valfritt)
 
 Om du vill publicera telefonnummer för beställningar:
