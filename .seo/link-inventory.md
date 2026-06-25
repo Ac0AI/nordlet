@@ -45,7 +45,9 @@
 
 | URL | Title | Type | Inbound links from | Anchor-text variations |
 |---|---|---|---|---|
-| /guider/torrtoalett-jamforelse-vilken-passar-din-stuga | Torrtoaletter jämförda: vilken passar din stuga? | comparison | /guider/vattenlos-toalett-husbil-sa-fungerar-det · /guider/kassettoalett-vs-vattenlos-toalett | se anchors nedan |
+| /guider/torrtoalett-jamforelse-vilken-passar-din-stuga | Torrtoaletter jämförda: vilken passar din stuga? | comparison | /guider/vattenlos-toalett-husbil-sa-fungerar-det · /guider/kassettoalett-vs-vattenlos-toalett · /guider/toalett-i-bat-utan-avlopp · /guider/toalett-till-stuga-fritidshus | se anchors nedan |
+| /guider/toalett-i-bat-utan-avlopp-vilken-far-du-ha | Toalett i båt utan avlopp – vilken får du ha? | guide | jämförelsen (båt-bullet) · stuga-guiden | se anchors nedan |
+| /guider/toalett-till-stuga-fritidshus-utan-avlopp | Toalett till stuga och fritidshus utan avlopp | guide | jämförelsen (stuga-bullet) · båt-guiden | se anchors nedan |
 
 ---
 
@@ -69,3 +71,17 @@ För /guider/torrtoalett-jamforelse-vilken-passar-din-stuga:
 - "vilken torrtoalett passar dig"
 - "värmeförsegling vs förbränning, mulltoa och separett"
 - "toaletter utan avlopp jämförda"
+
+För /guider/toalett-i-bat-utan-avlopp-vilken-far-du-ha:
+- "guiden om toalett i båt utan avlopp"
+- "vilken toalett får du ha i båten"
+- "toalett ombord utan septitank"
+- "båt-guiden"
+- "reglerna och alternativen för båttoalett"
+
+För /guider/toalett-till-stuga-fritidshus-utan-avlopp:
+- "egen guide för toalett till stuga utan avlopp"
+- "toalett till stuga och fritidshus utan avlopp"
+- "så väljer du toalett till stugan"
+- "hela situationen genomgången – el, vatten, tillstånd"
+- "stuga-guiden"

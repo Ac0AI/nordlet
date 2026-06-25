@@ -117,9 +117,9 @@ Så svaret på "behöver jag tillstånd?" är ärligt: **det beror på din kommu
 ## Vilken passar dig?
 
 - **Husbil eller husvagn utan landström:** en värmeförseglande toalett eller en kassettoalett. Förbränningselmodellen faller bort utan 230V.
-- **Båt:** sedan 2015 är det förbjudet att tömma svartvatten i sjön för alla fritidsbåtar, och avfallet ska tömmas vid en toatömningsstation. En toalett som inte samlar svartvatten alls – som den värmeförseglande – gör att du slipper både tank och station.
+- **Båt:** sedan 2015 är det förbjudet att tömma svartvatten i sjön för alla fritidsbåtar, och avfallet ska tömmas vid en toatömningsstation. En toalett som inte samlar svartvatten alls – som den värmeförseglande – gör att du slipper både tank och station. Mer om reglerna och alternativen i [guiden om toalett i båt utan avlopp](/guider/toalett-i-bat-utan-avlopp-vilken-far-du-ha).
 - **Stuga med el och mycket användning:** förbränning, om du vill tömma sällan och inte stör dig på inköpspriset.
-- **Stuga eller kolonilott med plats och trädgård:** en mulltoa, om kretsloppet lockar och du orkar sköta komposten.
+- **Stuga eller kolonilott med plats och trädgård:** en mulltoa, om kretsloppet lockar och du orkar sköta komposten. Har du en stuga utan avlopp och vill ha hela situationen genomgången – el, vatten, tillstånd – finns en [egen guide för toalett till stuga utan avlopp](/guider/toalett-till-stuga-fritidshus-utan-avlopp).
 - **Vill flytta toaletten mellan flera platser:** en fristående lösning utan installation, alltså värmeförsegling eller kassett.
 
 ## Vanliga frågor
