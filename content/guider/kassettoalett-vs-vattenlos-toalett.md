@@ -34,4 +34,4 @@ På svala dagar är skillnaden liten. På varma dagar är den tydlig. Eftersom d
 
 ## Min slutsats
 
-Jag bytte och har inte ångrat mig. Det var inte tekniken i sig som vann mig, utan friheten: att välja plats först och inte behöva tänka på tanken. Är du nyfiken kan du prova utan risk med [30 dagars öppet köp](/#bestall) och själv känna efter om det passar ditt resande.
+Jag bytte och har inte ångrat mig. Det var inte tekniken i sig som vann mig, utan friheten: att välja plats först och inte behöva tänka på tanken. Vill du väga den vattenlösa toaletten mot fler alternativ än kassett – som förbränning, mulltoa och separett – har jag samlat allt i en [stor jämförelse av toaletter utan avlopp](/guider/torrtoalett-jamforelse-vilken-passar-din-stuga). Är du nyfiken kan du prova utan risk med [30 dagars öppet köp](/#bestall) och själv känna efter om det passar ditt resande.

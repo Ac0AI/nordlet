@@ -1,0 +1,17 @@
+{
+  "domain": "https://nordlet.se",
+  "stack": "next",
+  "language": "md",
+  "content_dir": "content/guider",
+  "content_layout": "src/app/guider/[slug]/page.tsx",
+  "output_url_prefix": "/guider",
+  "ahrefs_project_id": null,
+  "keyword_tool": "none",
+  "content_store": {
+    "type": "files",
+    "format": "markdown",
+    "frontmatter_fields": ["title", "description", "excerpt", "date", "keywords"],
+    "author_source": "src/lib/guider.ts (AUTHOR const — Ludvig Eriksson)",
+    "indexnow_script": "scripts/indexnow.mjs (auto-runs on prod deploy)"
+  }
+}

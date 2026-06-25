@@ -71,6 +71,20 @@ const md = {
       {...p}
     />
   ),
+  table: (p: React.HTMLAttributes<HTMLTableElement>) => (
+    <div className="my-8 -mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
+      <table className="w-full border-collapse text-left text-[15px] leading-snug" {...p} />
+    </div>
+  ),
+  thead: (p: React.HTMLAttributes<HTMLTableSectionElement>) => (
+    <thead className="border-b border-border" {...p} />
+  ),
+  th: (p: React.HTMLAttributes<HTMLTableCellElement>) => (
+    <th className="px-3 py-2.5 align-top font-semibold text-text" {...p} />
+  ),
+  td: (p: React.HTMLAttributes<HTMLTableCellElement>) => (
+    <td className="border-b border-border/60 px-3 py-2.5 align-top text-text-muted" {...p} />
+  ),
 };
 
 export default async function GuidePage({

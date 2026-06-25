@@ -37,4 +37,4 @@ Ja, men inte mer än att det är enkelt. NordLet Pro har ett inbyggt uppladdning
 
 För mig var svaret ja efter första helgen. Jag slapp oroa mig för tanken, jag slapp söndagsköerna vid tömningsstationen och jag kunde använda toaletten precis när jag behövde. Det är den där känslan av frihet som är svår att sätta ord på innan man provat.
 
-Vill du läsa mer om hela vardagen runt produkten finns det fler guider här. Och är du nyfiken på att prova själv har du [30 dagars öppet köp](/#bestall) – du behöver inte bestämma dig förrän du faktiskt använt den.
+Funderar du på hur den står sig mot andra lösningar som förbränning, mulltoa och separett, har jag gjort en [stor jämförelse av toaletter utan avlopp](/guider/torrtoalett-jamforelse-vilken-passar-din-stuga). Och är du nyfiken på att prova själv har du [30 dagars öppet köp](/#bestall) – du behöver inte bestämma dig förrän du faktiskt använt den.

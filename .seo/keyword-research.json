@@ -1,0 +1,10 @@
+{
+  "baseline": {
+    "domain_rating": 4,
+    "source": "estimated — Ahrefs-free fallback; nordlet.se live ~2026-06-05, new domain with few backlinks",
+    "as_of": "2026-06-24",
+    "winnability_cap_note": "Target KD <= DR + 10 (≈ KD <= 14) while DR climbs. Swedish long-tail is mostly low-KD, so this is workable."
+  },
+  "clusters": {},
+  "candidates": []
+}
