@@ -16,6 +16,7 @@ export const IMAGES = {
   heroForest: "/images/hero-forest.png",
   // Riktiga produktfoton från leverantören (ersätter de tidigare mockuparna)
   productFront: "/images/products/a73eb482e69db1413051eec47614edf2.png", // 3/4-vy, lock stängt (hero)
+  productFrontCutout: "/images/products/frihetstoan-hero-v4.png", // frilagd produktbild (transparent bakgrund, levererad av ägaren). Serveras lossless (unoptimized) så kanten inte ringar i WebP. Versionerat filnamn = cache-bust.
   productSide: "/images/products/06403af0d7a8673f549f5d4aa192c629.png", // ren sidoprofil
   productDimensions: "/images/products/4d146aeeb7bd2624355dcf7d371c42f6.png", // utdragen uppsamlingslåda
   productDetail: "/images/products/7188ca89abd25eb1c85082ebab82a95d.png", // öppet lock med refill-/påsring
