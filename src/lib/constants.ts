@@ -23,7 +23,7 @@ export const SITE = {
   email: "info@nordlet.se",
   phone: process.env.NEXT_PUBLIC_PHONE ?? "",
   company: {
-    name: process.env.NEXT_PUBLIC_COMPANY_NAME ?? "NordLet",
+    name: process.env.NEXT_PUBLIC_COMPANY_NAME ?? "Nordic Selective AB",
     orgNr: process.env.NEXT_PUBLIC_ORG_NR ?? "",
     address: process.env.NEXT_PUBLIC_COMPANY_ADDRESS ?? "",
   },
@@ -262,7 +262,7 @@ export const FAQS = [
   {
     question: "Kan jag returnera om jag inte är nöjd?",
     answer:
-      "Ja. Du har full ångerrätt enligt Distansavtalslagen i 14 dagar, och utöver det erbjuder vi 30 dagars öppet köp med fri retur.",
+      "Ja. Du har full ångerrätt enligt Distansavtalslagen i 14 dagar, och utöver det erbjuder vi 30 dagars öppet köp. Returfrakt och villkor framgår i köpvillkoren.",
   },
 ];
 

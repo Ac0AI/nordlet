@@ -20,14 +20,14 @@ export function CTA() {
               Redo för en mer genomtänkt toalettlösning?
             </h2>
             <p className="mt-5 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl mx-auto">
-              Välj NordLet Pro om du vill ha en vattenlös lösning med fri retur,
+              Välj NordLet Pro om du vill ha en vattenlös lösning med öppet köp,
               svensk rådgivning och en vardag på vägen som kräver mindre av dig.
             </p>
 
             <div className="mt-8 inline-flex items-center gap-2 bg-green-light rounded-full px-5 py-2.5">
               <ShieldCheck size={18} className="text-green" />
               <span className="text-sm font-semibold text-green">
-                30 dagars öppet köp och fri retur.
+                30 dagars öppet köp och 2 års garanti.
               </span>
             </div>
 

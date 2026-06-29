@@ -67,6 +67,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/manual" className="hover:text-white transition-colors">
+                  Manual
+                </Link>
+              </li>
+              <li>
                 <Link href="/om-oss" className="hover:text-white transition-colors">
                   Om oss
                 </Link>
@@ -83,6 +88,11 @@ export function Footer() {
               <li>
                 <Link href="/kopvillkor" className="hover:text-white transition-colors">
                   Köpvillkor
+                </Link>
+              </li>
+              <li>
+                <Link href="/kopvillkor#retur" className="hover:text-white transition-colors">
+                  Retur och reklamation
                 </Link>
               </li>
               <li>

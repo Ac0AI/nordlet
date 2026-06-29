@@ -30,7 +30,7 @@ export default function KopvillkorPage() {
               Senast uppdaterad: {updated}
             </p>
 
-            <Section title="1. Säljare">
+            <Section id="saljare" title="1. Säljare">
               <p>
                 {SITE.company.name}
                 {SITE.company.orgNr && (
@@ -56,7 +56,7 @@ export default function KopvillkorPage() {
               </p>
             </Section>
 
-            <Section title="2. Priser och betalning">
+            <Section id="betalning" title="2. Priser och betalning">
               <p>
                 Priserna som anges på nordlet.se är i svenska kronor (SEK) och
                 inkluderar moms (25%). Fraktkostnader inom Sverige är inkluderade
@@ -72,7 +72,7 @@ export default function KopvillkorPage() {
               </p>
             </Section>
 
-            <Section title="3. Leverans">
+            <Section id="leverans" title="3. Leverans">
               <p>
                 Produkten skickas normalt inom 3 arbetsdagar från mottagen
                 betalning. Leveranstiden är vanligtvis 1-5 arbetsdagar inom
@@ -86,7 +86,7 @@ export default function KopvillkorPage() {
               </p>
             </Section>
 
-            <Section title="4. Ångerrätt">
+            <Section id="retur" title="4. Ångerrätt och öppet köp">
               <p>
                 Som konsument har du enligt Distansavtalslagen (SFS 2005:59) 14
                 dagars full ångerrätt från det att du mottagit varan. Utöver
@@ -118,7 +118,7 @@ export default function KopvillkorPage() {
               </p>
             </Section>
 
-            <Section title="5. Garanti och reklamation">
+            <Section id="reklamation" title="5. Garanti och reklamation">
               <p>
                 Enligt Konsumentköplagen (SFS 2022:260) har du som konsument
                 reklamationsrätt i tre år från köpet. Utöver det erbjuder
@@ -136,7 +136,7 @@ export default function KopvillkorPage() {
               </p>
             </Section>
 
-            <Section title="6. Tvist">
+            <Section id="tvist" title="6. Tvist">
               <p>
                 Vid tvist som vi inte kan lösa tillsammans följer vi
                 rekommendationer från Allmänna reklamationsnämnden (ARN).
@@ -155,7 +155,7 @@ export default function KopvillkorPage() {
               </p>
             </Section>
 
-            <Section title="7. Kontakt">
+            <Section id="kontakt" title="7. Kontakt">
               <p>
                 Frågor om dessa villkor eller om en beställning besvaras av{" "}
                 <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
@@ -170,14 +170,16 @@ export default function KopvillkorPage() {
 }
 
 function Section({
+  id,
   title,
   children,
 }: {
+  id?: string;
   title: string;
   children: React.ReactNode;
 }) {
   return (
-    <section className="mb-10">
+    <section id={id} className="mb-10 scroll-mt-28">
       <h2
         className="text-xl sm:text-2xl tracking-tight text-text mb-4 font-display"
       >

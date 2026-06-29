@@ -5,6 +5,7 @@ import { AnswerOffer } from "@/components/sections/AnswerOffer";
 import { Problem } from "@/components/sections/Problem";
 import { Product } from "@/components/sections/Product";
 import { Authority } from "@/components/sections/Authority";
+import { TrustDetails } from "@/components/sections/TrustDetails";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { LifestyleBanner } from "@/components/sections/LifestyleBanner";
 import { Comparison } from "@/components/sections/Comparison";
@@ -21,7 +22,7 @@ import { FAQS, REVIEWS, SITE } from "@/lib/constants";
 
 // Senast innehållsuppdaterad. Höj datumet när sidans innehåll ändras
 // på riktigt (färskhetssignal för sök- och AI-sökmotorer).
-const LAST_MODIFIED = "2026-06-13";
+const LAST_MODIFIED = "2026-06-29";
 
 const jsonLd = [
   {
@@ -122,6 +123,7 @@ export default function Home() {
         <AnswerOffer />
         <Problem />
         <Product />
+        <TrustDetails />
         <Authority />
         <Pricing />
         <HowItWorks />

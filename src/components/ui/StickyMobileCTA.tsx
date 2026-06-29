@@ -59,7 +59,7 @@ export function StickyMobileCTA() {
         )}
       </div>
       <p className="bg-surface/95 text-center text-xs text-text-light pb-2 px-4">
-        30 dagars öppet köp. Fri retur.
+        30 dagars öppet köp. 2 års garanti.
       </p>
     </div>
   );

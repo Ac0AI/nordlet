@@ -3,6 +3,7 @@ import { DM_Serif_Display, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { MetaPixel } from "@/components/analytics/MetaPixel";
 import { CookieConsent } from "@/components/analytics/CookieConsent";
+import { SITE } from "@/lib/constants";
 import "./globals.css";
 
 const dmSerif = DM_Serif_Display({
@@ -60,15 +61,17 @@ const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "NordLet",
+  legalName: SITE.company.name,
+  ...(SITE.company.orgNr ? { taxID: SITE.company.orgNr } : {}),
   url: "https://nordlet.se",
   logo: "https://nordlet.se/icon.svg",
-  email: "info@nordlet.se",
+  email: SITE.email,
   description:
     "NordLet säljer NordLet Pro, en fristående vattenlös toalett med värmeförsegling för husbil, husvagn, båt och platser utan avlopp.",
   areaServed: "SE",
   contactPoint: {
     "@type": "ContactPoint",
-    email: "info@nordlet.se",
+    email: SITE.email,
     contactType: "customer support",
     availableLanguage: "Swedish",
   },
