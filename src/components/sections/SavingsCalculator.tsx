@@ -2,6 +2,11 @@
 
 import { Container } from "@/components/ui/Container";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
+import { PRODUCTS } from "@/lib/products";
+
+// Lägsta pris per användning (5-pack). Avväpnar "dyra påsrullar"-oron genom att
+// visa att det inte tillkommer tömningsavgifter/kemikalier ovanpå.
+const perUse = Math.round(PRODUCTS["refill-5"].priceKr / 150);
 
 const costs = [
   { label: "Toamedel & sanitetsvätskor", perYear: "1 200 kr" },
@@ -65,6 +70,12 @@ export function SavingsCalculator() {
                 Plus tiden du slipper lägga på tömning och omvägar
               </p>
             </div>
+
+            <p className="text-center text-xs text-text-light mt-5">
+              Påsåtgång från ca {perUse} kr per användning – och inga
+              tömningsavgifter, ingen sanitetsvätska eller specialpapper ovanpå
+              det.
+            </p>
           </div>
         </AnimateOnScroll>
       </Container>

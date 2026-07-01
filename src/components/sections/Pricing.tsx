@@ -17,6 +17,7 @@ import { SITE, EARLY_ACCESS } from "@/lib/constants";
 import { PRODUCTS, type ProductKey } from "@/lib/products";
 import { track } from "@/lib/analytics";
 import { openBuyModal } from "@/lib/buyModal";
+import { TrustStrip } from "@/components/ui/TrustStrip";
 
 // Var beställ-knappen pekar, i prioritetsordning:
 // 1. extern checkout-länk via env, 2. Kustom-kassan, 3. e-post (fallback)
@@ -293,6 +294,11 @@ export function Pricing() {
             );
           })}
         </div>
+
+        {/* Förtroende-rad direkt under köp-knapparna */}
+        <AnimateOnScroll delay={0.15}>
+          <TrustStrip className="mt-12 max-w-4xl mx-auto" />
+        </AnimateOnScroll>
 
         {/* Refill: påsrullar – döljs under early access (inget att fylla på än) */}
         {!EARLY_ACCESS && (
