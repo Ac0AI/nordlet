@@ -44,13 +44,16 @@ const discountKr = PRELAUNCH_OFFER.discountKr.toLocaleString("sv-SE");
  */
 export async function sendLeadEmails(lead: Lead): Promise<void> {
   // 1. Bekräftelse till kunden – ärlig, inget utlovat exakt datum.
+  // reply_to: nordlet.se saknar egen inkorg (ingen MX), så svar måste gå
+  // till en adress som faktiskt läses.
   await resendPost("/emails", {
     from: FROM,
     to: [lead.email],
+    reply_to: NOTIFY,
     subject: "Du står på listan – NordLet Pro",
     html: `
       <div style="font-family:Inter,Arial,sans-serif;color:#202826;line-height:1.6">
-        <p>Hej ${escapeHtml(lead.name)},</p>
+        <p>Hej${lead.name ? ` ${escapeHtml(lead.name)}` : ""},</p>
         <p>Tack! Du står nu på listan för NordLet Pro.</p>
         <p>Den är slut i lager just nu, men så fort nästa leverans släpps hör vi
         av oss – och du får <strong>${discountKr} kr rabatt</strong> på din
@@ -66,7 +69,7 @@ export async function sendLeadEmails(lead: Lead): Promise<void> {
   await resendPost("/emails", {
     from: FROM,
     to: [NOTIFY],
-    subject: `Ny intresseanmälan: ${lead.name}`,
+    subject: `Ny intresseanmälan: ${lead.name || lead.email}`,
     html: `
       <div style="font-family:Inter,Arial,sans-serif;color:#202826">
         <p><strong>Namn:</strong> ${escapeHtml(lead.name)}</p>
@@ -84,7 +87,7 @@ export async function sendLeadEmails(lead: Lead): Promise<void> {
   if (AUDIENCE) {
     await resendPost(`/audiences/${AUDIENCE}/contacts`, {
       email: lead.email,
-      first_name: lead.name,
+      ...(lead.name ? { first_name: lead.name } : {}),
       unsubscribed: false,
     }).catch((err) => {
       console.error("Kunde inte lägga till kontakt i audience:", err);

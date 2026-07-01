@@ -284,8 +284,10 @@ export const FAQS = [
   },
   {
     question: "Var köper jag fler påsrullar?",
-    answer:
-      "Direkt här på nordlet.se, under Beställ. Rullarna finns som 1-pack, 3-pack och 5-pack och skickas fraktfritt från svenskt lager, normalt inom 1-5 arbetsdagar.",
+    // Under early access är refills dolda i butiken – lova inget som inte syns.
+    answer: EARLY_ACCESS
+      ? "Direkt här på nordlet.se. Rullarna finns som 1-pack, 3-pack och 5-pack och säljs i butiken så snart NordLet Pro är åter i lager. De skickas fraktfritt från svenskt lager, normalt inom 1-5 arbetsdagar."
+      : "Direkt här på nordlet.se, under Beställ. Rullarna finns som 1-pack, 3-pack och 5-pack och skickas fraktfritt från svenskt lager, normalt inom 1-5 arbetsdagar.",
   },
   {
     question: "Jag har SOG idag. Är det här bättre?",

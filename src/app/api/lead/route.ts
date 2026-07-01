@@ -27,7 +27,8 @@ export async function POST(req: NextRequest) {
   const phone = String(body.phone ?? "").trim();
   const product = String(body.product ?? "frihetstoa").trim();
 
-  if (name.length < 2 || !EMAIL_RE.test(email)) {
+  // Namnet är valfritt i formuläret – kräv bara en giltig e-postadress.
+  if (!EMAIL_RE.test(email)) {
     return json(400, { error: "validation" });
   }
 

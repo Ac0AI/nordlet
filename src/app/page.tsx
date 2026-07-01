@@ -19,11 +19,17 @@ import { CTA } from "@/components/sections/CTA";
 import { Pricing } from "@/components/sections/Pricing";
 import { StickyMobileCTA } from "@/components/ui/StickyMobileCTA";
 import { MetaTrack } from "@/components/analytics/MetaTrack";
-import { FAQS, REVIEWS, SITE } from "@/lib/constants";
+import { EARLY_ACCESS, FAQS, REVIEWS, SITE } from "@/lib/constants";
 
 // Senast innehållsuppdaterad. Höj datumet när sidans innehåll ändras
 // på riktigt (färskhetssignal för sök- och AI-sökmotorer).
 const LAST_MODIFIED = "2026-06-29";
+
+// Måste spegla vad köpflödet faktiskt säger: under early access är produkten
+// slut i lager (popupen säger "åter inom cirka 10 dagar") = BackOrder.
+const AVAILABILITY = EARLY_ACCESS
+  ? "https://schema.org/BackOrder"
+  : "https://schema.org/InStock";
 
 const jsonLd = [
   {
@@ -75,7 +81,7 @@ const jsonLd = [
         price: "14900",
         priceCurrency: "SEK",
         url: "https://nordlet.se/#bestall",
-        availability: "https://schema.org/InStock",
+        availability: AVAILABILITY,
       },
       {
         "@type": "Offer",
@@ -83,7 +89,7 @@ const jsonLd = [
         price: "16900",
         priceCurrency: "SEK",
         url: "https://nordlet.se/#bestall",
-        availability: "https://schema.org/InStock",
+        availability: AVAILABILITY,
       },
     ],
   },
