@@ -36,6 +36,32 @@ export const SITE = {
   kustomEnabled: process.env.NEXT_PUBLIC_KUSTOM_ENABLED === "true",
 };
 
+// Kan sidan ta betalt just nu? Sant så fort Kustom är på eller en extern
+// betalningslänk är satt. Så länge det är falskt kör vi "early access".
+export const CHECKOUT_LIVE =
+  SITE.kustomEnabled || Object.values(SITE.checkoutUrls).some(Boolean);
+
+// Early access = intresseanmälan/reservation i stället för köp. På automatiskt
+// tills kassan är live. Sätt NEXT_PUBLIC_EARLY_ACCESS=false för att i stället
+// falla tillbaka till e-postbeställning (gamla mailto-läget).
+export const EARLY_ACCESS =
+  !CHECKOUT_LIVE && process.env.NEXT_PUBLIC_EARLY_ACCESS !== "false";
+
+// Grundarerbjudandet under early access. Priset MÅSTE hållas om det visas –
+// och "50 första" ska vara en gräns ni faktiskt respekterar (annars byt till
+// tidsbunden framing). Läses i Pricing + reservationsformuläret.
+export const FOUNDING = {
+  product: "frihetstoa" as const,
+  limit: 50,
+  priceKr: 12900,
+  ordinaryKr: 14900,
+} as const;
+
+// Primär-CTA:ns text byts i hela sidan beroende på läge. En källa, ett ställe.
+export const CTA_PRIMARY_LABEL = EARLY_ACCESS
+  ? "Säkra grundarpriset"
+  : "Beställ NordLet Pro";
+
 export const NAV_LINKS = [
   { label: "Så fungerar det", href: "/#sa-fungerar-det" },
   { label: "Fördelar", href: "/#fordelar" },

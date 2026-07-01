@@ -3,7 +3,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
 import { SITE } from "@/lib/constants";
-import { trackingConfigured } from "@/lib/consent";
+import { trackingConfigured, PIXEL_ID, POSTHOG_KEY } from "@/lib/consent";
 
 export const metadata: Metadata = {
   title: "Integritetspolicy | NordLet",
@@ -12,7 +12,10 @@ export const metadata: Metadata = {
 };
 
 export default function IntegritetspolicyPage() {
-  const updated = "2026-06-12";
+  const updated = "2026-07-01";
+  const resendConfigured = Boolean(process.env.RESEND_API_KEY);
+  const posthogConfigured = POSTHOG_KEY.length > 0;
+  const pixelConfigured = PIXEL_ID.length > 0;
   return (
     <>
       <Header solid />
@@ -69,6 +72,13 @@ export default function IntegritetspolicyPage() {
                 Kortuppgifter och detaljer om betalningen hanteras direkt av
                 Kustom och den betalmetod du väljer i kassan (t.ex. Klarna
                 eller Swish). De lagras aldrig hos NordLet.
+              </p>
+              <p>
+                Gör du en <strong>intresseanmälan</strong> (early access)
+                behandlar vi ditt namn, din e-postadress och eventuellt
+                telefonnummer för att kunna kontakta dig om lanseringen och
+                skicka din köplänk. Rättslig grund: samtycke. Du kan när som
+                helst be oss ta bort dig genom att svara på ett av våra mejl.
               </p>
             </Section>
 
@@ -133,6 +143,36 @@ export default function IntegritetspolicyPage() {
                   </a>
                   .
                 </li>
+                {resendConfigured && (
+                  <li>
+                    <strong>Resend</strong> — e-postutskick (bekräftelser och
+                    information om lanseringen). Namn och e-postadress behandlas
+                    för att skicka och leverera meddelanden.{" "}
+                    <a
+                      href="https://resend.com/legal/privacy-policy"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Resends integritetspolicy
+                    </a>
+                    .
+                  </li>
+                )}
+                {posthogConfigured && (
+                  <li>
+                    <strong>PostHog</strong> — webbanalys för att förstå och
+                    förbättra sajten. Data behandlas inom EU och laddas först
+                    efter ditt samtycke till marknadsföringscookies.{" "}
+                    <a
+                      href="https://posthog.com/privacy"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      PostHogs integritetspolicy
+                    </a>
+                    .
+                  </li>
+                )}
               </ul>
               <p>
                 Vi säljer aldrig dina uppgifter till tredje part och använder
@@ -147,6 +187,18 @@ export default function IntegritetspolicyPage() {
                 enligt EU-kommissionens standardavtalsklausuler (SCC) för att
                 säkerställa tillräcklig skyddsnivå.
               </p>
+              {resendConfigured && (
+                <p>
+                  Resend (e-postutskick) är ett amerikanskt företag. Överföring
+                  dit sker enligt EU-kommissionens standardavtalsklausuler (SCC).
+                </p>
+              )}
+              {posthogConfigured && (
+                <p>
+                  PostHog (webbanalys) behandlar data inom EU/EES och innebär
+                  ingen överföring till tredjeland.
+                </p>
+              )}
             </Section>
 
             <Section title="7. Cookies">
@@ -157,15 +209,27 @@ export default function IntegritetspolicyPage() {
               {trackingConfigured ? (
                 <>
                   <p>
-                    Med ditt samtycke använder vi även marknadsföringscookies
-                    från Meta (Meta-pixeln) för att mäta och förbättra våra
-                    annonser på Facebook och Instagram. Pixeln laddas först när
-                    du valt &quot;Acceptera alla&quot; i cookierutan. Väljer du
-                    &quot;Endast nödvändiga&quot; sätts inga sådana cookies.
+                    Med ditt samtycke använder vi även cookies från tredje part.
+                    De laddas först när du valt &quot;Acceptera alla&quot; i
+                    cookierutan. Väljer du &quot;Endast nödvändiga&quot; sätts
+                    inga sådana cookies.
                   </p>
+                  {pixelConfigured && (
+                    <p>
+                      <strong>Meta-pixeln</strong> mäter och förbättrar våra
+                      annonser på Facebook och Instagram. Meta Platforms
+                      behandlar uppgifterna även i USA – överföringen sker enligt
+                      EU-kommissionens standardavtalsklausuler (SCC).
+                    </p>
+                  )}
+                  {posthogConfigured && (
+                    <p>
+                      <strong>PostHog</strong> är webbanalys som hjälper oss
+                      förstå hur sajten används och göra den bättre. Data
+                      behandlas inom EU.
+                    </p>
+                  )}
                   <p>
-                    Meta Platforms behandlar uppgifterna även i USA. Överföringen
-                    sker enligt EU-kommissionens standardavtalsklausuler (SCC).
                     Du kan när som helst ändra eller återkalla ditt samtycke
                     genom att rensa cookies för den här webbplatsen i din
                     webbläsare.

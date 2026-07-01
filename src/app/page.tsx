@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { AnswerOffer } from "@/components/sections/AnswerOffer";
+import { SocialProofStrip } from "@/components/sections/SocialProofStrip";
 import { Problem } from "@/components/sections/Problem";
 import { Product } from "@/components/sections/Product";
 import { Authority } from "@/components/sections/Authority";
@@ -127,17 +128,19 @@ export default function Home() {
         />
         <Hero />
         <AnswerOffer />
+        <SocialProofStrip />
         <Problem />
         <Product />
         <TrustDetails />
         <Authority />
+        {/* Kostnaden för alternativet direkt före priset – förankrar värdet. */}
+        <SavingsCalculator />
         <Pricing />
         <HowItWorks />
         <LifestyleBanner />
         <Comparison />
         <Features />
         <Reviews />
-        <SavingsCalculator />
         <Specifications />
         <FAQ />
         <CTA />

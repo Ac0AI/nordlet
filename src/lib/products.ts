@@ -14,6 +14,8 @@ export type Product = {
   reference: string;
   name: string;
   priceKr: number;
+  /** Rabatterat grundarpris under early access. Visas struket mot priceKr. */
+  foundingPriceKr?: number;
   description: string;
 };
 
@@ -23,6 +25,7 @@ export const PRODUCTS: Record<ProductKey, Product> = {
     reference: "NLP-100",
     name: "NordLet Pro",
     priceKr: 14900,
+    foundingPriceKr: 12900,
     description: "NordLet Pro med 1 rulle påsar, USB-laddkabel och 2 års garanti.",
   },
   sasongspaket: {

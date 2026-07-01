@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { DM_Serif_Display, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import { MetaPixel } from "@/components/analytics/MetaPixel";
+import { PostHogAnalytics } from "@/components/analytics/PostHogAnalytics";
 import { CookieConsent } from "@/components/analytics/CookieConsent";
 import { SITE } from "@/lib/constants";
 import "./globals.css";
@@ -94,6 +95,7 @@ export default function RootLayout({
         {children}
         <Analytics />
         <MetaPixel />
+        <PostHogAnalytics />
         <CookieConsent />
       </body>
     </html>

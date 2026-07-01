@@ -7,9 +7,16 @@ export const CONSENT_EVENT = "nordlet:consent-change";
 
 export type ConsentValue = "all" | "necessary";
 
-/** Är någon form av spårning ens konfigurerad? Styr om samtycke behövs alls. */
+/** Meta Pixel. Tomt = pixeln laddas aldrig. */
 export const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? "";
-export const trackingConfigured = PIXEL_ID.length > 0;
+
+/** PostHog produktanalys. Tomt = PostHog initieras aldrig. EU-host som standard. */
+export const POSTHOG_KEY = process.env.NEXT_PUBLIC_POSTHOG_KEY ?? "";
+export const POSTHOG_HOST =
+  process.env.NEXT_PUBLIC_POSTHOG_HOST ?? "https://eu.i.posthog.com";
+
+/** Är någon form av spårning ens konfigurerad? Styr om samtycke behövs alls. */
+export const trackingConfigured = PIXEL_ID.length > 0 || POSTHOG_KEY.length > 0;
 
 export function readConsent(): ConsentValue | null {
   if (typeof document === "undefined") return null;

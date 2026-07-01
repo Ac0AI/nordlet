@@ -13,8 +13,13 @@ import {
   Truck,
   CalendarCheck,
 } from "lucide-react";
-import { SITE } from "@/lib/constants";
+import { SITE, EARLY_ACCESS, FOUNDING, CTA_PRIMARY_LABEL } from "@/lib/constants";
 import { PRODUCTS, type ProductKey } from "@/lib/products";
+import { EarlyAccessForm } from "@/components/sections/EarlyAccessForm";
+import { track } from "@/lib/analytics";
+
+const foundingKr = FOUNDING.priceKr.toLocaleString("sv-SE");
+const foundingOrdinaryKr = FOUNDING.ordinaryKr.toLocaleString("sv-SE");
 
 // Var beställ-knappen pekar, i prioritetsordning:
 // 1. extern checkout-länk via env, 2. Kustom-kassan, 3. e-post (fallback)
@@ -105,19 +110,28 @@ export function Pricing() {
         <AnimateOnScroll>
           <div className="text-center mb-14">
             <p className="text-accent font-semibold text-sm tracking-widest uppercase mb-4">
-              Beställ
+              {EARLY_ACCESS ? "Grundarerbjudande" : "Beställ"}
             </p>
             <h2
               className="text-3xl sm:text-4xl tracking-tight text-text font-display"
             >
-              Välj ditt paket
+              {EARLY_ACCESS ? "Säkra din plats bland de första" : "Välj ditt paket"}
             </h2>
             <p className="mt-3 text-text-muted text-lg max-w-lg mx-auto">
-              Fri leverans i hela Sverige, leverans normalt inom 1-5
-              arbetsdagar och 30 dagars öppet köp.
+              {EARLY_ACCESS
+                ? "Kassan öppnar inom kort. Reservera grundarpriset nu – ingen betalning i dag, du mejlas din köplänk när vi öppnar."
+                : "Fri leverans i hela Sverige, leverans normalt inom 1-5 arbetsdagar och 30 dagars öppet köp."}
             </p>
           </div>
         </AnimateOnScroll>
+
+        {EARLY_ACCESS && (
+          <AnimateOnScroll>
+            <div className="mb-14">
+              <EarlyAccessForm />
+            </div>
+          </AnimateOnScroll>
+        )}
 
         {/* Prova-innan-du-betalar / Nöjd-Kundgaranti */}
         <AnimateOnScroll>
@@ -183,12 +197,30 @@ export function Pricing() {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {packages.map((pkg, i) => {
+            const isFlagship = pkg.checkoutKey === "frihetstoa";
+            const showFounding = EARLY_ACCESS && isFlagship;
+            const displayPrice = showFounding ? foundingKr : pkg.price;
+            const strikePrice = showFounding
+              ? foundingOrdinaryKr
+              : pkg.originalPrice;
+            const monthlyBase = showFounding ? String(FOUNDING.priceKr) : pkg.price;
             const monthly =
-              Math.ceil(Number(pkg.price.replace(/\s/g, "")) / 36 / 10) * 10;
-            const { href: pkgHref, hasCheckout } = checkoutHref(
+              Math.ceil(Number(monthlyBase.replace(/\s/g, "")) / 36 / 10) * 10;
+            const { href: checkoutUrl, hasCheckout } = checkoutHref(
               pkg.checkoutKey,
               pkg.name
             );
+            const pkgHref = EARLY_ACCESS ? "#reservera" : checkoutUrl;
+            const ctaLabel = EARLY_ACCESS
+              ? CTA_PRIMARY_LABEL
+              : hasCheckout
+                ? `Beställ ${pkg.name}`
+                : "Beställ via e-post";
+            const ctaMicro = EARLY_ACCESS
+              ? "Ingen betalning nu – vi mejlar din köplänk när kassan öppnar."
+              : hasCheckout
+                ? "Säker kassa, fri leverans, 30 dagars öppet köp och svensk support."
+                : "Vi svarar med nästa steg, leveransinformation och betalningslänk.";
             return (
             <AnimateOnScroll key={pkg.name} delay={i * 0.1}>
               <div
@@ -214,21 +246,23 @@ export function Pricing() {
                   <span
                     className="text-4xl sm:text-5xl font-bold text-text font-display"
                   >
-                    {pkg.price}
+                    {displayPrice}
                   </span>
                   <span className="text-text-muted text-lg">kr</span>
-                  {pkg.originalPrice && (
+                  {strikePrice && (
                     <span className="text-text-light line-through text-lg ml-2">
-                      {pkg.originalPrice} kr
+                      {strikePrice} kr
                     </span>
                   )}
                 </div>
 
                 {/* Cost comparison anchor */}
                 <p className="mt-2 text-sm text-accent font-medium">
-                  {pkg.popular
-                    ? "Samlad lösning för en längre säsong"
-                    : "Ett långsiktigt val för ett friare reseliv"}
+                  {showFounding
+                    ? `Grundarpris – för de ${FOUNDING.limit} första`
+                    : pkg.popular
+                      ? "Samlad lösning för en längre säsong"
+                      : "Ett långsiktigt val för ett friare reseliv"}
                 </p>
 
                 {/* Klarna betalalternativ */}
@@ -259,16 +293,19 @@ export function Pricing() {
                     href={pkgHref}
                     variant={pkg.popular ? "primary" : "outline"}
                     className="w-full justify-center"
+                    onClick={() =>
+                      track("cta_click", {
+                        location: "pricing",
+                        plan: pkg.checkoutKey,
+                        mode: EARLY_ACCESS ? "early_access" : "checkout",
+                      })
+                    }
                   >
-                    {hasCheckout
-                      ? `Beställ ${pkg.name}`
-                      : "Beställ via e-post"}
+                    {ctaLabel}
                   </Button>
                   {/* Micro-copy under CTA */}
                   <p className="text-center text-xs text-text-light mt-3">
-                    {hasCheckout
-                      ? "Säker kassa, fri leverans, 30 dagars öppet köp och svensk support."
-                      : "Vi svarar med nästa steg, leveransinformation och betalningslänk."}
+                    {ctaMicro}
                   </p>
                 </div>
               </div>
@@ -277,7 +314,8 @@ export function Pricing() {
           })}
         </div>
 
-        {/* Refill: påsrullar */}
+        {/* Refill: påsrullar – döljs under early access (inget att fylla på än) */}
+        {!EARLY_ACCESS && (
         <AnimateOnScroll delay={0.1}>
           <div id="pasrullar" className="max-w-4xl mx-auto mt-16 scroll-mt-24">
             <div className="text-center mb-8">
@@ -348,6 +386,7 @@ export function Pricing() {
             </p>
           </div>
         </AnimateOnScroll>
+        )}
 
         {/* Betalmetoder */}
         <AnimateOnScroll delay={0.15}>

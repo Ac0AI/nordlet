@@ -8,12 +8,18 @@ export function Button({
   variant = "primary",
   size = "default",
   className,
+  onClick,
+  type = "button",
+  disabled,
 }: {
   children: React.ReactNode;
   href?: string;
   variant?: "primary" | "secondary" | "outline";
   size?: "default" | "large";
   className?: string;
+  onClick?: () => void;
+  type?: "button" | "submit";
+  disabled?: boolean;
 }) {
   const base =
     "inline-flex items-center justify-center font-semibold transition-all duration-300 cursor-pointer tracking-wide";
@@ -36,11 +42,20 @@ export function Button({
 
   if (href) {
     return (
-      <a href={href} className={classes}>
+      <a href={href} className={classes} onClick={onClick}>
         {children}
       </a>
     );
   }
 
-  return <button className={classes}>{children}</button>;
+  return (
+    <button
+      className={classes}
+      onClick={onClick}
+      type={type}
+      disabled={disabled}
+    >
+      {children}
+    </button>
+  );
 }

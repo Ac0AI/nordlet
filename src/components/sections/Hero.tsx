@@ -3,9 +3,17 @@
 import { motion, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
-import { SOCIAL_PROOF_STATS } from "@/lib/constants";
+import {
+  SOCIAL_PROOF_STATS,
+  EARLY_ACCESS,
+  CTA_PRIMARY_LABEL,
+  FOUNDING,
+} from "@/lib/constants";
+import { track } from "@/lib/analytics";
 import { IMAGES } from "@/lib/images";
 import { ShieldCheck } from "lucide-react";
+
+const foundingKr = FOUNDING.priceKr.toLocaleString("sv-SE");
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -87,8 +95,12 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.28 }}
             className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center"
           >
-            <Button href="#bestall" size="large">
-              Beställ NordLet Pro
+            <Button
+              href="#bestall"
+              size="large"
+              onClick={() => track("cta_click", { location: "hero" })}
+            >
+              {CTA_PRIMARY_LABEL}
             </Button>
             <Button
               href="#sa-fungerar-det"
@@ -99,6 +111,17 @@ export function Hero() {
               Se hur det fungerar
             </Button>
           </motion.div>
+
+          {EARLY_ACCESS && (
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.36 }}
+              className="mt-5 text-sm font-semibold text-accent-light"
+            >
+              Just nu: grundarpris {foundingKr} kr för de {FOUNDING.limit} första
+            </motion.p>
+          )}
 
           <motion.p
             initial={{ opacity: 0 }}

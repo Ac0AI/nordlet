@@ -92,12 +92,78 @@ NEXT_PUBLIC_META_PIXEL_ID=1234567890
 |-------|-----|-------|
 | `PageView` | alla sidor | - |
 | `ViewContent` | startsidan | 14 900 kr |
+| `Lead` | reservationsformuläret (early access) | 12 900 kr |
 | `InitiateCheckout` | `/kassa` | paketets pris |
 | `Purchase` | `/tack` + `/kassa/bekraftelse` | orderbelopp (Kustom) |
 
-`InitiateCheckout` och `Purchase` triggas så fort kassan (avsnitt 2) är aktiv -
-ingen extra kod behövs då. Tips: lägg ID:t i `.env.example` också (raden
-`NEXT_PUBLIC_META_PIXEL_ID=`) så `sync-env`/onboarding plockar upp den.
+`Lead` triggas när en intresseanmälan skickas (kräver att Resend är satt, se
+2d). `InitiateCheckout` och `Purchase` triggas så fort kassan (avsnitt 2) är
+aktiv - ingen extra kod behövs då.
+
+**Viktigt för annonsoptimering:** så länge kassan är vilande finns inget
+`Purchase`-event. Optimera då Meta-kampanjen mot **`Lead`** (intresseanmälan),
+inte mot sidvisningar. Det kräver att Resend är konfigurerat (2d).
+
+## 2c. PostHog (produktanalys)
+
+Förbyggd och **vilande tills en nyckel sätts** - samma logik som pixeln. Laddas
+bara efter "Acceptera alla" och skickar data till EU-regionen.
+
+1. Skapa ett projekt på [posthog.com](https://posthog.com) - välj **EU**-region.
+   Använd ett projekt som hör till NordLet/Nordic Selective (blanda inte in
+   NordLet-data i ett projekt för ett annat bolag - det är rörigt och sämre för
+   GDPR).
+2. Kopiera projekt-API-nyckeln (`phc_...`) och lägg i `.env.local` + Vercel:
+
+```
+NEXT_PUBLIC_POSTHOG_KEY=phc_xxxxx
+NEXT_PUBLIC_POSTHOG_HOST=https://eu.i.posthog.com
+```
+
+3. Deploya. PostHog laddas efter cookie-samtycke och fångar:
+   - `$pageview` (varje sidbyte)
+   - `cta_click` (alla primära CTA:er, med `location` + `mode`)
+   - `lead_submitted` (skickad intresseanmälan - din north star i early access)
+4. Bygg en funnel i PostHog: `$pageview` → `cta_click` → `lead_submitted`.
+
+## 2d. Early access - intresseanmälan (Resend)
+
+Så länge kassan är vilande kör sidan **early access**: primär-CTA blir "Säkra
+grundarpriset", grundarpriset (12 900 kr, ord. 14 900) visas, och ett
+reservationsformulär tar namn + e-post + valfritt telefon i beställ-sektionen.
+
+**Styrs av:** `NEXT_PUBLIC_EARLY_ACCESS`. På automatiskt tills kassan slås på.
+Sätt `=false` för att i stället falla tillbaka till gamla e-postbeställningen.
+
+**Så fångas anmälningarna (Resend):**
+
+```
+RESEND_API_KEY=re_xxxxx
+RESEND_FROM_EMAIL=NordLet <info@nordlet.se>
+LEAD_NOTIFY_EMAIL=info@nordlet.se
+RESEND_AUDIENCE_ID=            # valfritt: lägg anmälningar i en maillista
+```
+
+1. Skapa konto på [resend.com](https://resend.com), lägg till domänen
+   **nordlet.se** och verifiera DNS (SPF/DKIM). DNS ligger hos Simply.com
+   (konto S636939), inte Porkbun.
+2. Skapa en API-nyckel, sätt variablerna ovan i `.env.local` + Vercel.
+3. (Valfritt) skapa en Audience i Resend och sätt `RESEND_AUDIENCE_ID` så att
+   varje anmälan hamnar i en lista du kan maila vid lansering.
+
+**Utan `RESEND_API_KEY`:** formuläret faller tillbaka till en förifylld
+`mailto` (ingen anmälan tappas), men `Lead`-eventet triggas inte. **Sätt därför
+Resend innan du startar annonser.**
+
+### När kassan öppnar (byt från early access till försäljning)
+
+1. Följ avsnitt 2 (Kustom) och sätt `NEXT_PUBLIC_KUSTOM_ENABLED=true`.
+   Då stängs early access av automatiskt: CTA:er blir "Beställ", formuläret
+   göms, refill-paketen visas och köp-knapparna pekar på `/kassa`.
+2. Maila listan från Resend med den personliga köplänken och grundarpriset.
+
+_Tips: lägg pixel-ID, PostHog-nyckel och Resend-nyckeln i `.env.example` (utan
+värden) så plockar onboarding/sync upp raderna._
 
 ## 3. Telefonnummer (valfritt)
 

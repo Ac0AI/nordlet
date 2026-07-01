@@ -4,6 +4,8 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
+import { CTA_PRIMARY_LABEL } from "@/lib/constants";
+import { track } from "@/lib/analytics";
 import { IMAGES } from "@/lib/images";
 import { Check } from "lucide-react";
 
@@ -88,7 +90,12 @@ export function Product() {
             </ul>
 
             <div className="mt-10">
-              <Button href="#bestall">Beställ NordLet Pro</Button>
+              <Button
+                href="#bestall"
+                onClick={() => track("cta_click", { location: "product" })}
+              >
+                {CTA_PRIMARY_LABEL}
+              </Button>
             </div>
           </AnimateOnScroll>
         </div>

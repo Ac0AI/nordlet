@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { SITE } from "@/lib/constants";
+import { SITE, CTA_PRIMARY_LABEL } from "@/lib/constants";
+import { track } from "@/lib/analytics";
 import { Phone } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -44,9 +45,10 @@ export function StickyMobileCTA() {
       <div className="bg-surface/95 backdrop-blur-md border-t border-border px-4 py-3 flex items-center gap-3">
         <a
           href="#bestall"
+          onClick={() => track("cta_click", { location: "sticky_mobile" })}
           className="flex-1 bg-accent text-white font-semibold py-3.5 rounded-xl text-center text-base hover:bg-accent-light transition-all shadow-lg shadow-accent/20"
         >
-          Beställ NordLet Pro
+          {CTA_PRIMARY_LABEL}
         </a>
         {SITE.phone && (
           <a

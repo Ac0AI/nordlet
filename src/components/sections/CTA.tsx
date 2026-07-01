@@ -3,7 +3,8 @@
 import { Container } from "@/components/ui/Container";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 import { Button } from "@/components/ui/Button";
-import { TRUST_BADGES } from "@/lib/constants";
+import { TRUST_BADGES, EARLY_ACCESS, CTA_PRIMARY_LABEL } from "@/lib/constants";
+import { track } from "@/lib/analytics";
 import { ShieldCheck } from "lucide-react";
 
 // Avslutande CTA längst ned på startsidan. Leder tillbaka till beställ-sektionen
@@ -20,8 +21,9 @@ export function CTA() {
               Redo för en mer genomtänkt toalettlösning?
             </h2>
             <p className="mt-5 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl mx-auto">
-              Välj NordLet Pro om du vill ha en vattenlös lösning med öppet köp,
-              svensk rådgivning och en vardag på vägen som kräver mindre av dig.
+              {EARLY_ACCESS
+                ? "Reservera grundarpriset som en av de första. Ingen betalning i dag – du får din köplänk så fort kassan öppnar, med öppet köp och svensk rådgivning."
+                : "Välj NordLet Pro om du vill ha en vattenlös lösning med öppet köp, svensk rådgivning och en vardag på vägen som kräver mindre av dig."}
             </p>
 
             <div className="mt-8 inline-flex items-center gap-2 bg-green-light rounded-full px-5 py-2.5">
@@ -32,8 +34,12 @@ export function CTA() {
             </div>
 
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button href="#bestall" size="large">
-                Beställ NordLet Pro
+              <Button
+                href="#bestall"
+                size="large"
+                onClick={() => track("cta_click", { location: "footer_cta" })}
+              >
+                {CTA_PRIMARY_LABEL}
               </Button>
               <Button href="#sa-fungerar-det" variant="outline" size="large">
                 Se hur det fungerar
