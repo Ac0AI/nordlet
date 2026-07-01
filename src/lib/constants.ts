@@ -62,6 +62,9 @@ export const CTA_PRIMARY_LABEL = EARLY_ACCESS
   ? "Säkra grundarpriset"
   : "Beställ NordLet Pro";
 
+// Kortare variant för header-knappen (px-6, får inte bli för bred).
+export const CTA_HEADER_LABEL = EARLY_ACCESS ? "Säkra platsen" : "Beställ nu";
+
 export const NAV_LINKS = [
   { label: "Så fungerar det", href: "/#sa-fungerar-det" },
   { label: "Fördelar", href: "/#fordelar" },
