@@ -1,6 +1,6 @@
 ---
 title: "Husvagnstoalett utan att dosera sanitetsvätska – går det?"
-description: "Sanitetsvätskor kostar, luktar och måste doseras. Går det att slippa hälla och dosera sanitetsvätska i husvagnen? Ludvig om hur det fungerar i praktiken."
+description: "Sanitetsvätskor kostar, luktar och måste doseras. Går det att slippa hälla och dosera sanitetsvätska i husvagnen? Erik om hur det fungerar i praktiken."
 excerpt: "Sanitetsvätskan följde alltid med på resan. Här är hur jag slutade hälla och dosera sanitetsvätska – och ändå fick det fräschare."
 date: "2026-05-24"
 keywords:

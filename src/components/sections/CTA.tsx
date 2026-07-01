@@ -22,7 +22,7 @@ export function CTA() {
             </h2>
             <p className="mt-5 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl mx-auto">
               {EARLY_ACCESS
-                ? "Reservera grundarpriset som en av de första. Ingen betalning i dag – du får din köplänk så fort kassan öppnar, med öppet köp och svensk rådgivning."
+                ? "NordLet Pro är slut i lager just nu. Anmäl dig så får du notis när nästa leverans släpps – och 900 kr rabatt på din första beställning, med öppet köp och svensk rådgivning."
                 : "Välj NordLet Pro om du vill ha en vattenlös lösning med öppet köp, svensk rådgivning och en vardag på vägen som kräver mindre av dig."}
             </p>
 

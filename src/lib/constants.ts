@@ -41,29 +41,33 @@ export const SITE = {
 export const CHECKOUT_LIVE =
   SITE.kustomEnabled || Object.values(SITE.checkoutUrls).some(Boolean);
 
-// Early access = intresseanmälan/reservation i stället för köp. På automatiskt
-// tills kassan är live. Sätt NEXT_PUBLIC_EARLY_ACCESS=false för att i stället
-// falla tillbaka till e-postbeställning (gamla mailto-läget).
+// Förlanserings-/väntelisteläge: produkten är slut i lager tills kassan öppnar.
+// Köpknappen dämpas och den primära handlingen blir e-postanmälan (notis +
+// rabatt på första ordern). På automatiskt tills kassan är live. Sätt
+// NEXT_PUBLIC_EARLY_ACCESS=false för att i stället falla tillbaka till mailto.
 export const EARLY_ACCESS =
   !CHECKOUT_LIVE && process.env.NEXT_PUBLIC_EARLY_ACCESS !== "false";
 
-// Grundarerbjudandet under early access. Priset MÅSTE hållas om det visas –
-// och "50 första" ska vara en gräns ni faktiskt respekterar (annars byt till
-// tidsbunden framing). Läses i Pricing + reservationsformuläret.
-export const FOUNDING = {
+// Erbjudandet under förlansering. Rabatten MÅSTE hållas mot dem som anmält sig.
+// FOMO byggs på ÄKTA knapphet (slut i lager, begränsad nästa leverans, rabatt
+// före släpp) – aldrig påhittade köp-siffror.
+export const PRELAUNCH_OFFER = {
   product: "frihetstoa" as const,
-  limit: 50,
-  priceKr: 12900,
-  ordinaryKr: 14900,
+  discountKr: 900,
 } as const;
+
+// Lagerstatus som visas på köpknappar och badge under förlansering.
+export const STOCK_LABEL = "Slut i lager";
 
 // Primär-CTA:ns text byts i hela sidan beroende på läge. En källa, ett ställe.
 export const CTA_PRIMARY_LABEL = EARLY_ACCESS
-  ? "Säkra grundarpriset"
+  ? `Få ${PRELAUNCH_OFFER.discountKr} kr rabatt`
   : "Beställ NordLet Pro";
 
 // Kortare variant för header-knappen (px-6, får inte bli för bred).
-export const CTA_HEADER_LABEL = EARLY_ACCESS ? "Säkra platsen" : "Beställ nu";
+export const CTA_HEADER_LABEL = EARLY_ACCESS
+  ? `Få ${PRELAUNCH_OFFER.discountKr} kr rabatt`
+  : "Beställ nu";
 
 export const NAV_LINKS = [
   { label: "Så fungerar det", href: "/#sa-fungerar-det" },
@@ -196,13 +200,11 @@ export const CHAPTERS = [
     body: "När uppsamlingslådan är full tänds LED-indikatorn på kontrollpanelen. Dra ut lådan i nederdelen. Eftersom varje påse är förseglad för sig finns ingen lukt och ingen risk för spill. Du lägger dem i vanliga hushållssoporna - vid nästa rastplats, på campingen eller hemma i köket när resan är slut.",
     stat: "Varje påse förseglas för sig och går i det vanliga restavfallet.",
     images: {
-      primary: "/images/how-it-works/steg4-primary.png",
+      primary: "/images/products/4d146aeeb7bd2624355dcf7d371c42f6.png",
       secondary: "/images/how-it-works/steg4-secondary.png",
-      primaryAlt: "Uppsamlingslådan utdragen med synliga förseglade påsar",
+      primaryAlt: "Riktig produktbild: NordLet Pro med utdragen uppsamlingslåda",
       secondaryAlt: "Hand släpper en förseglad påse i en vanlig soptunna",
     },
-    imageNote:
-      "Bild för illustration – i verkligheten ligger påsarna lösare i lådan.",
   },
 ] as const;
 

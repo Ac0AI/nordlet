@@ -92,7 +92,7 @@ NEXT_PUBLIC_META_PIXEL_ID=1234567890
 |-------|-----|-------|
 | `PageView` | alla sidor | - |
 | `ViewContent` | startsidan | 14 900 kr |
-| `Lead` | reservationsformuläret (early access) | 12 900 kr |
+| `Lead` | notis-formuläret (slut i lager) | 14 900 kr |
 | `InitiateCheckout` | `/kassa` | paketets pris |
 | `Purchase` | `/tack` + `/kassa/bekraftelse` | orderbelopp (Kustom) |
 
@@ -126,14 +126,20 @@ NEXT_PUBLIC_POSTHOG_HOST=https://eu.i.posthog.com
    - `lead_submitted` (skickad intresseanmälan - din north star i early access)
 4. Bygg en funnel i PostHog: `$pageview` → `cta_click` → `lead_submitted`.
 
-## 2d. Early access - intresseanmälan (Resend)
+## 2d. Slut i lager - notis + rabatt (Resend)
 
-Så länge kassan är vilande kör sidan **early access**: primär-CTA blir "Säkra
-grundarpriset", grundarpriset (12 900 kr, ord. 14 900) visas, och ett
-reservationsformulär tar namn + e-post + valfritt telefon i beställ-sektionen.
+Så länge kassan är vilande kör sidan **förlansering / slut i lager**:
+köpknappen på priskorten är dämpad ("Slut i lager"), primär-CTA blir "Få 900 kr
+rabatt", och ett notis-formulär tar namn + e-post + valfritt telefon i
+beställ-sektionen. Den som anmäler sig får notis när produkten är åter i lager
+och **900 kr rabatt på första beställningen**.
 
 **Styrs av:** `NEXT_PUBLIC_EARLY_ACCESS`. På automatiskt tills kassan slås på.
 Sätt `=false` för att i stället falla tillbaka till gamla e-postbeställningen.
+
+**Ärlighet:** rabatten (900 kr) måste hållas mot dem som anmält sig. FOMO byggs
+på äkta knapphet (slut i lager, begränsad nästa leverans, rabatt före släpp) -
+lägg aldrig till påhittade "X köpte just nu"-siffror.
 
 **Så fångas anmälningarna (Resend):**
 
@@ -160,7 +166,7 @@ Resend innan du startar annonser.**
 1. Följ avsnitt 2 (Kustom) och sätt `NEXT_PUBLIC_KUSTOM_ENABLED=true`.
    Då stängs early access av automatiskt: CTA:er blir "Beställ", formuläret
    göms, refill-paketen visas och köp-knapparna pekar på `/kassa`.
-2. Maila listan från Resend med den personliga köplänken och grundarpriset.
+2. Maila listan från Resend med köplänken och 900 kr-rabattkoden.
 
 _Tips: lägg pixel-ID, PostHog-nyckel och Resend-nyckeln i `.env.example` (utan
 värden) så plockar onboarding/sync upp raderna._

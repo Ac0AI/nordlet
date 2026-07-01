@@ -1,6 +1,6 @@
 ---
 title: "Så förbereder du husbilens toalett inför sommarsäsongen – steg för steg"
-description: "Ludvig går igenom hur du gör husbilens toalett redo för sommaren med NordLet Pro – utan att dosera sanitetsvätska, utan krångel."
+description: "Erik går igenom hur du gör husbilens toalett redo för sommaren med NordLet Pro – utan att dosera sanitetsvätska, utan krångel."
 excerpt: "En kort genomgång av hur du förbereder NordLet Pro inför sommarsäsongen så att de första veckorna på vägen blir helt bekymmersfria."
 date: "2026-06-06"
 keywords:

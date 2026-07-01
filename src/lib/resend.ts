@@ -1,7 +1,7 @@
 // Tunn Resend-klient (REST, ingen extra dependency) för intresseanmälan.
 // Vilande tills RESEND_API_KEY är satt – precis som Kustom och Meta-pixeln.
 
-import { FOUNDING } from "@/lib/constants";
+import { PRELAUNCH_OFFER } from "@/lib/constants";
 
 const RESEND_API = "https://api.resend.com";
 
@@ -35,8 +35,7 @@ async function resendPost(path: string, body: unknown): Promise<void> {
   }
 }
 
-const priceKr = FOUNDING.priceKr.toLocaleString("sv-SE");
-const ordinaryKr = FOUNDING.ordinaryKr.toLocaleString("sv-SE");
+const discountKr = PRELAUNCH_OFFER.discountKr.toLocaleString("sv-SE");
 
 /**
  * Skickar bekräftelse till kunden och notis till oss, samt lägger (om
@@ -44,19 +43,19 @@ const ordinaryKr = FOUNDING.ordinaryKr.toLocaleString("sv-SE");
  * bekräftelsen misslyckas så att API-routen kan falla tillbaka till mailto.
  */
 export async function sendLeadEmails(lead: Lead): Promise<void> {
-  // 1. Bekräftelse till kunden – ärlig, ingen utlovad exakt datum.
+  // 1. Bekräftelse till kunden – ärlig, inget utlovat exakt datum.
   await resendPost("/emails", {
     from: FROM,
     to: [lead.email],
-    subject: "Din plats är reserverad – NordLet Pro",
+    subject: "Du står på listan – NordLet Pro",
     html: `
       <div style="font-family:Inter,Arial,sans-serif;color:#202826;line-height:1.6">
         <p>Hej ${escapeHtml(lead.name)},</p>
-        <p>Tack! Din plats bland de första att köpa NordLet Pro är reserverad.</p>
-        <p>Som en av de ${FOUNDING.limit} första får du <strong>grundarpriset
-        ${priceKr} kr</strong> (ord. ${ordinaryKr} kr). Vi öppnar kassan inom
-        kort och mejlar dig då en personlig länk för att slutföra köpet – med
-        30 dagars öppet köp och 2 års garanti som vanligt.</p>
+        <p>Tack! Du står nu på listan för NordLet Pro.</p>
+        <p>Den är slut i lager just nu, men så fort nästa leverans släpps hör vi
+        av oss – och du får <strong>${discountKr} kr rabatt</strong> på din
+        första beställning, med 30 dagars öppet köp och 2 års garanti som
+        vanligt.</p>
         <p>Har du en fråga innan dess går det bra att svara på det här mejlet.</p>
         <p>Vänliga hälsningar,<br/>NordLet</p>
       </div>

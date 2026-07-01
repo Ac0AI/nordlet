@@ -13,13 +13,12 @@ import {
   Truck,
   CalendarCheck,
 } from "lucide-react";
-import { SITE, EARLY_ACCESS, FOUNDING, CTA_PRIMARY_LABEL } from "@/lib/constants";
+import { SITE, EARLY_ACCESS, PRELAUNCH_OFFER, STOCK_LABEL } from "@/lib/constants";
 import { PRODUCTS, type ProductKey } from "@/lib/products";
-import { EarlyAccessForm } from "@/components/sections/EarlyAccessForm";
+import { NotifyForm } from "@/components/sections/NotifyForm";
 import { track } from "@/lib/analytics";
 
-const foundingKr = FOUNDING.priceKr.toLocaleString("sv-SE");
-const foundingOrdinaryKr = FOUNDING.ordinaryKr.toLocaleString("sv-SE");
+const discountKr = PRELAUNCH_OFFER.discountKr.toLocaleString("sv-SE");
 
 // Var beställ-knappen pekar, i prioritetsordning:
 // 1. extern checkout-länk via env, 2. Kustom-kassan, 3. e-post (fallback)
@@ -110,16 +109,16 @@ export function Pricing() {
         <AnimateOnScroll>
           <div className="text-center mb-14">
             <p className="text-accent font-semibold text-sm tracking-widest uppercase mb-4">
-              {EARLY_ACCESS ? "Grundarerbjudande" : "Beställ"}
+              {EARLY_ACCESS ? "Slut i lager" : "Beställ"}
             </p>
             <h2
               className="text-3xl sm:text-4xl tracking-tight text-text font-display"
             >
-              {EARLY_ACCESS ? "Säkra din plats bland de första" : "Välj ditt paket"}
+              {EARLY_ACCESS ? "Slut i lager – snart åter" : "Välj ditt paket"}
             </h2>
             <p className="mt-3 text-text-muted text-lg max-w-lg mx-auto">
               {EARLY_ACCESS
-                ? "Kassan öppnar inom kort. Reservera grundarpriset nu – ingen betalning i dag, du mejlas din köplänk när vi öppnar."
+                ? `Efterfrågan är hög inför sommaren och nästa leverans är begränsad. Anmäl dig så får du notis när den släpps – och ${discountKr} kr rabatt på din första beställning.`
                 : "Fri leverans i hela Sverige, leverans normalt inom 1-5 arbetsdagar och 30 dagars öppet köp."}
             </p>
           </div>
@@ -128,7 +127,7 @@ export function Pricing() {
         {EARLY_ACCESS && (
           <AnimateOnScroll>
             <div className="mb-14">
-              <EarlyAccessForm />
+              <NotifyForm />
             </div>
           </AnimateOnScroll>
         )}
@@ -197,30 +196,18 @@ export function Pricing() {
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {packages.map((pkg, i) => {
-            const isFlagship = pkg.checkoutKey === "frihetstoa";
-            const showFounding = EARLY_ACCESS && isFlagship;
-            const displayPrice = showFounding ? foundingKr : pkg.price;
-            const strikePrice = showFounding
-              ? foundingOrdinaryKr
-              : pkg.originalPrice;
-            const monthlyBase = showFounding ? String(FOUNDING.priceKr) : pkg.price;
             const monthly =
-              Math.ceil(Number(monthlyBase.replace(/\s/g, "")) / 36 / 10) * 10;
-            const { href: checkoutUrl, hasCheckout } = checkoutHref(
+              Math.ceil(Number(pkg.price.replace(/\s/g, "")) / 36 / 10) * 10;
+            const { href: pkgHref, hasCheckout } = checkoutHref(
               pkg.checkoutKey,
               pkg.name
             );
-            const pkgHref = EARLY_ACCESS ? "#reservera" : checkoutUrl;
-            const ctaLabel = EARLY_ACCESS
-              ? CTA_PRIMARY_LABEL
-              : hasCheckout
-                ? `Beställ ${pkg.name}`
-                : "Beställ via e-post";
-            const ctaMicro = EARLY_ACCESS
-              ? "Ingen betalning nu – vi mejlar din köplänk när kassan öppnar."
-              : hasCheckout
-                ? "Säker kassa, fri leverans, 30 dagars öppet köp och svensk support."
-                : "Vi svarar med nästa steg, leveransinformation och betalningslänk.";
+            const ctaLabel = hasCheckout
+              ? `Beställ ${pkg.name}`
+              : "Beställ via e-post";
+            const ctaMicro = hasCheckout
+              ? "Säker kassa, fri leverans, 30 dagars öppet köp och svensk support."
+              : "Vi svarar med nästa steg, leveransinformation och betalningslänk.";
             return (
             <AnimateOnScroll key={pkg.name} delay={i * 0.1}>
               <div
@@ -246,36 +233,43 @@ export function Pricing() {
                   <span
                     className="text-4xl sm:text-5xl font-bold text-text font-display"
                   >
-                    {displayPrice}
+                    {pkg.price}
                   </span>
                   <span className="text-text-muted text-lg">kr</span>
-                  {strikePrice && (
+                  {pkg.originalPrice && (
                     <span className="text-text-light line-through text-lg ml-2">
-                      {strikePrice} kr
+                      {pkg.originalPrice} kr
                     </span>
                   )}
                 </div>
 
-                {/* Cost comparison anchor */}
-                <p className="mt-2 text-sm text-accent font-medium">
-                  {showFounding
-                    ? `Grundarpris – för de ${FOUNDING.limit} första`
-                    : pkg.popular
+                {EARLY_ACCESS ? (
+                  <p className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-text-muted">
+                    <span className="inline-block h-2 w-2 rounded-full bg-accent" />
+                    {STOCK_LABEL} – ny leverans snart
+                  </p>
+                ) : (
+                  /* Cost comparison anchor */
+                  <p className="mt-2 text-sm text-accent font-medium">
+                    {pkg.popular
                       ? "Samlad lösning för en längre säsong"
                       : "Ett långsiktigt val för ett friare reseliv"}
-                </p>
+                  </p>
+                )}
 
-                {/* Klarna betalalternativ */}
-                <div className="mt-4 rounded-xl bg-bg-warm border border-border px-4 py-3">
-                  <p className="flex items-center gap-2 text-sm font-medium text-text">
-                    <CreditCard size={15} className="text-accent flex-shrink-0" />
-                    Dela upp med Klarna – från ca {monthly} kr/mån
-                  </p>
-                  <p className="text-text-light text-xs mt-1">
-                    Eller betala om 30 dagar. Exakt belopp och ränta visas i
-                    Klarnas kassa.
-                  </p>
-                </div>
+                {/* Klarna betalalternativ – döljs medan produkten är slut */}
+                {!EARLY_ACCESS && (
+                  <div className="mt-4 rounded-xl bg-bg-warm border border-border px-4 py-3">
+                    <p className="flex items-center gap-2 text-sm font-medium text-text">
+                      <CreditCard size={15} className="text-accent flex-shrink-0" />
+                      Dela upp med Klarna – från ca {monthly} kr/mån
+                    </p>
+                    <p className="text-text-light text-xs mt-1">
+                      Eller betala om 30 dagar. Exakt belopp och ränta visas i
+                      Klarnas kassa.
+                    </p>
+                  </div>
+                )}
 
                 <ul className="mt-8 space-y-3 flex-grow">
                   {pkg.features.map((f) => (
@@ -289,24 +283,53 @@ export function Pricing() {
                 </ul>
 
                 <div className="mt-8">
-                  <Button
-                    href={pkgHref}
-                    variant={pkg.popular ? "primary" : "outline"}
-                    className="w-full justify-center"
-                    onClick={() =>
-                      track("cta_click", {
-                        location: "pricing",
-                        plan: pkg.checkoutKey,
-                        mode: EARLY_ACCESS ? "early_access" : "checkout",
-                      })
-                    }
-                  >
-                    {ctaLabel}
-                  </Button>
-                  {/* Micro-copy under CTA */}
-                  <p className="text-center text-xs text-text-light mt-3">
-                    {ctaMicro}
-                  </p>
+                  {EARLY_ACCESS ? (
+                    <>
+                      {/* Köpknappen dämpad medan produkten är slut i lager */}
+                      <button
+                        type="button"
+                        disabled
+                        aria-disabled="true"
+                        className="w-full cursor-not-allowed rounded-full border border-border bg-bg-alt px-8 py-4 text-base font-semibold text-text-light"
+                      >
+                        {STOCK_LABEL}
+                      </button>
+                      <a
+                        href="#reservera"
+                        onClick={() =>
+                          track("cta_click", {
+                            location: "pricing",
+                            plan: pkg.checkoutKey,
+                            mode: "notify",
+                          })
+                        }
+                        className="mt-3 block text-center text-sm font-semibold text-accent transition-colors hover:text-accent-light"
+                      >
+                        Få {discountKr} kr rabatt när den släpps →
+                      </a>
+                    </>
+                  ) : (
+                    <>
+                      <Button
+                        href={pkgHref}
+                        variant={pkg.popular ? "primary" : "outline"}
+                        className="w-full justify-center"
+                        onClick={() =>
+                          track("cta_click", {
+                            location: "pricing",
+                            plan: pkg.checkoutKey,
+                            mode: "checkout",
+                          })
+                        }
+                      >
+                        {ctaLabel}
+                      </Button>
+                      {/* Micro-copy under CTA */}
+                      <p className="text-center text-xs text-text-light mt-3">
+                        {ctaMicro}
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
             </AnimateOnScroll>

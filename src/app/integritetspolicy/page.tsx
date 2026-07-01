@@ -74,11 +74,11 @@ export default function IntegritetspolicyPage() {
                 eller Swish). De lagras aldrig hos NordLet.
               </p>
               <p>
-                Gör du en <strong>intresseanmälan</strong> (early access)
-                behandlar vi ditt namn, din e-postadress och eventuellt
-                telefonnummer för att kunna kontakta dig om lanseringen och
-                skicka din köplänk. Rättslig grund: samtycke. Du kan när som
-                helst be oss ta bort dig genom att svara på ett av våra mejl.
+                Anmäler du dig för <strong>notis</strong> när produkten är åter
+                i lager behandlar vi ditt namn, din e-postadress och eventuellt
+                telefonnummer för att kunna meddela dig och skicka din rabatt.
+                Rättslig grund: samtycke. Du kan när som helst be oss ta bort
+                dig genom att svara på ett av våra mejl.
               </p>
             </Section>
 

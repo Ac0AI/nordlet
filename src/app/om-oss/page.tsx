@@ -3,7 +3,9 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { AUTHOR } from "@/lib/guider";
+
+// Ludvigs egen profil – frikopplad från guide-författaren (som nu är Erik).
+const LUDVIG_URL = "https://www.linkedin.com/in/ludvig-eriksson-540519a8/";
 
 export const metadata: Metadata = {
   title: "Om oss | NordLet Pro",
@@ -45,10 +47,10 @@ const jsonLd = {
     {
       "@type": "Person",
       "@id": "https://nordlet.se/om-oss#ludvig-eriksson",
-      name: AUTHOR.name,
+      name: "Ludvig Eriksson",
       jobTitle: "Medgrundare",
-      url: AUTHOR.url,
-      sameAs: [AUTHOR.url],
+      url: LUDVIG_URL,
+      sameAs: [LUDVIG_URL],
       worksFor: { "@id": "https://nordlet.se/#organization" },
     },
   ],
@@ -122,14 +124,14 @@ export default function OmOssPage() {
               <div className="border-t border-border pt-5">
                 <p className="font-semibold text-text">Erik Martling</p>
                 <p className="text-text-muted text-sm mt-1">
-                  Medgrundare. Åren inom omsorgsprodukter sitter i ryggraden –
-                  vet hur man gör vardagen värdigare.
+                  Medgrundare. Skriver guiderna här – gärna med en kaffe i
+                  husbilsdörren.
                 </p>
               </div>
               <div className="border-t border-border pt-5">
                 <p className="font-semibold text-text">
                   <a
-                    href={AUTHOR.url}
+                    href={LUDVIG_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-accent transition-colors"
@@ -138,8 +140,8 @@ export default function OmOssPage() {
                   </a>
                 </p>
                 <p className="text-text-muted text-sm mt-1">
-                  Medgrundare. Skriver guiderna här – gärna med en kaffe i
-                  husbilsdörren.
+                  Medgrundare. Åren inom omsorgsprodukter sitter i ryggraden –
+                  vet hur man gör vardagen värdigare.
                 </p>
               </div>
             </div>

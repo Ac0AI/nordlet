@@ -5,9 +5,11 @@ import matter from "gray-matter";
 const GUIDER_DIR = path.join(process.cwd(), "content", "guider");
 
 export const AUTHOR = {
-  name: "Ludvig Eriksson",
-  bio: "Ludvig skriver om livet på vägen, vattenlösa toaletter och hur man reser friare med husbil och husvagn.",
-  url: "https://www.linkedin.com/in/ludvig-eriksson-540519a8/",
+  name: "Erik Martling",
+  bio: "Erik skriver om livet på vägen, vattenlösa toaletter och hur man reser friare med husbil och husvagn.",
+  // Författarsida (Erik beskrivs på om-oss). Byt till hans egen profil-URL
+  // om/när den finns.
+  url: "https://nordlet.se/om-oss",
 };
 
 export type Guide = {

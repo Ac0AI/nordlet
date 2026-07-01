@@ -1,6 +1,6 @@
 ---
 title: "Husbilssemester med barn – hur klarar ni toalettfrågan när ni rör er fritt?"
-description: "Ludvig berättar hur NordLet Pro löser toalettlogistiken för barnfamiljer på husbilssemester – utan tömningsstopp eller krångel."
+description: "Erik berättar hur NordLet Pro löser toalettlogistiken för barnfamiljer på husbilssemester – utan tömningsstopp eller krångel."
 excerpt: "När man reser med barn på husbilssemester behöver toaletten fungera utan diskussion – här är hur vi löste det på riktigt."
 date: "2026-07-01"
 keywords:

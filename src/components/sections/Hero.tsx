@@ -7,13 +7,13 @@ import {
   SOCIAL_PROOF_STATS,
   EARLY_ACCESS,
   CTA_PRIMARY_LABEL,
-  FOUNDING,
+  PRELAUNCH_OFFER,
 } from "@/lib/constants";
 import { track } from "@/lib/analytics";
 import { IMAGES } from "@/lib/images";
 import { ShieldCheck } from "lucide-react";
 
-const foundingKr = FOUNDING.priceKr.toLocaleString("sv-SE");
+const discountKr = PRELAUNCH_OFFER.discountKr.toLocaleString("sv-SE");
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -117,9 +117,10 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.36 }}
-              className="mt-5 text-sm font-semibold text-accent-light"
+              className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent-light"
             >
-              Just nu: grundarpris {foundingKr} kr för de {FOUNDING.limit} första
+              <span className="inline-block h-2 w-2 rounded-full bg-accent-light" />
+              Slut i lager · {discountKr} kr rabatt när den släpps igen
             </motion.p>
           )}
 

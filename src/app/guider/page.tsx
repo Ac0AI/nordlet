@@ -9,7 +9,7 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Guider | NordLet Pro – vattenlös toalett för husbil & husvagn",
   description:
-    "Praktiska guider om vattenlösa toaletter, livet på vägen och hur du reser friare med husbil och husvagn. Skrivet av Ludvig Eriksson.",
+    "Praktiska guider om vattenlösa toaletter, livet på vägen och hur du reser friare med husbil och husvagn. Skrivet av Erik Martling.",
   alternates: { canonical: "/guider" },
 };
 
@@ -31,7 +31,7 @@ export default function GuiderPage() {
             </h1>
             <p className="mt-5 text-lg text-text-muted leading-relaxed">
               Praktiska guider om vattenlösa toaletter och friare husbilsliv –
-              skrivna av Ludvig Eriksson.
+              skrivna av Erik Martling.
             </p>
           </div>
 

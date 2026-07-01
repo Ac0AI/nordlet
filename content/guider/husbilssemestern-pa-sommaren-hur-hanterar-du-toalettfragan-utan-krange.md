@@ -1,6 +1,6 @@
 ---
 title: "Husbilssemestern på sommaren – hur hanterar du toalettfrågan utan krångel?"
-description: "Ludvig delar sina bästa tips för att lösa toaletten under sommarsemestern i husbil – utan att dosera sanitetsvätska, utan tömning och utan stress."
+description: "Erik delar sina bästa tips för att lösa toaletten under sommarsemestern i husbil – utan att dosera sanitetsvätska, utan tömning och utan stress."
 excerpt: "En vattenlös toalett förenklar sommarsemestern i husbil mer än du kanske tror – här är allt du behöver veta innan du kör iväg."
 date: "2026-06-06"
 keywords:

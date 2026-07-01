@@ -2,31 +2,31 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Check, ShieldCheck, RotateCcw, CreditCard } from "lucide-react";
+import { Check, BellRing, Tag, ShieldCheck } from "lucide-react";
 import { Button } from "@/components/ui/Button";
-import { FOUNDING, SITE } from "@/lib/constants";
+import { PRELAUNCH_OFFER, SITE } from "@/lib/constants";
+import { PRODUCTS } from "@/lib/products";
 import { trackLead } from "@/lib/analytics";
 
-const foundingKr = FOUNDING.priceKr.toLocaleString("sv-SE");
-const ordinaryKr = FOUNDING.ordinaryKr.toLocaleString("sv-SE");
+const discountKr = PRELAUNCH_OFFER.discountKr.toLocaleString("sv-SE");
 
 const perks = [
-  { icon: CreditCard, text: "Ingen betalning nu – du reserverar bara priset" },
-  { icon: RotateCcw, text: "30 dagars öppet köp när du köper" },
-  { icon: ShieldCheck, text: "2 års garanti och svensk support" },
+  { icon: Tag, text: `${discountKr} kr rabatt på din första beställning` },
+  { icon: BellRing, text: "Först i kön när nästa leverans släpps" },
+  { icon: ShieldCheck, text: "30 dagars öppet köp och 2 års garanti" },
 ];
 
 type Status = "idle" | "sending" | "done";
 
-export function EarlyAccessForm() {
+export function NotifyForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
   function mailtoFallback() {
-    const subject = "Intresseanmälan: NordLet Pro (grundarpris)";
-    const body = `Namn: ${name}\nE-post: ${email}\nTelefon: ${phone || "-"}\n\nJag vill säkra grundarpriset som en av de första.`;
+    const subject = `Notis + ${discountKr} kr rabatt: NordLet Pro`;
+    const body = `Namn: ${name}\nE-post: ${email}\nTelefon: ${phone || "-"}\n\nMeddela mig när NordLet Pro är åter i lager – jag vill ha ${discountKr} kr rabatt på min första beställning.`;
     window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
@@ -44,19 +44,18 @@ export function EarlyAccessForm() {
           name,
           email,
           phone,
-          product: FOUNDING.product,
+          product: PRELAUNCH_OFFER.product,
         }),
       });
       if (res.ok) {
         trackLead({
-          value: FOUNDING.priceKr,
+          value: PRODUCTS.frihetstoa.priceKr,
           currency: "SEK",
-          product: FOUNDING.product,
+          product: PRELAUNCH_OFFER.product,
         });
         setStatus("done");
         return;
       }
-      // Inte konfigurerat (503) eller fel – tappa ingen anmälan, öppna mailto.
       mailtoFallback();
       setStatus("idle");
     } catch {
@@ -76,35 +75,29 @@ export function EarlyAccessForm() {
             <Check size={28} />
           </span>
           <h3 className="font-display text-2xl text-text sm:text-3xl">
-            Tack{name ? `, ${name.split(" ")[0]}` : ""} – din plats är reserverad.
+            Tack{name ? `, ${name.split(" ")[0]}` : ""} – du står på listan.
           </h3>
           <p className="mt-4 text-text-muted leading-relaxed">
-            Vi öppnar kassan inom kort och mejlar dig en personlig länk till
-            grundarpriset {foundingKr} kr. Kolla din inkorg (och skräpposten för
-            säkerhets skull) – bekräftelsen är på väg.
+            Vi mejlar dig – med din {discountKr} kr-rabatt – så fort NordLet Pro
+            är åter i lager. Kolla din inkorg (och skräpposten för säkerhets
+            skull) – bekräftelsen är på väg.
           </p>
         </div>
       ) : (
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_360px] lg:items-center">
           {/* Värdet */}
           <div>
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent">
-              Grundarerbjudande
+            <span className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-accent">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" />
+              Slut i lager
             </span>
             <h3 className="mt-4 font-display text-2xl text-text sm:text-3xl">
-              Bli en av de {FOUNDING.limit} första
+              Få {discountKr} kr rabatt när den är åter i lager
             </h3>
-            <div className="mt-4 flex items-baseline gap-3">
-              <span className="font-display text-4xl font-bold text-text sm:text-5xl">
-                {foundingKr} kr
-              </span>
-              <span className="text-lg text-text-light line-through">
-                {ordinaryKr} kr
-              </span>
-            </div>
-            <p className="mt-3 max-w-md text-text-muted leading-relaxed">
-              Kassan öppnar inom kort. Reservera grundarpriset nu, så mejlar vi
-              din personliga köplänk så fort den är igång. Ingen betalning i dag.
+            <p className="mt-4 max-w-md text-text-muted leading-relaxed">
+              NordLet Pro är slut i lager just nu och nästa leverans är
+              begränsad. Lämna din e-post så hör du av oss först när den släpps –
+              och får {discountKr} kr rabatt på din första beställning.
             </p>
             <ul className="mt-6 space-y-2.5">
               {perks.map((perk) => {
@@ -163,11 +156,10 @@ export function EarlyAccessForm() {
               disabled={status === "sending"}
               className="mt-2 w-full justify-center"
             >
-              {status === "sending" ? "Skickar…" : "Säkra grundarpriset"}
+              {status === "sending" ? "Skickar…" : `Få ${discountKr} kr rabatt`}
             </Button>
             <p className="text-center text-xs leading-relaxed text-text-light">
-              Genom att anmäla dig godkänner du att vi kontaktar dig om NordLet
-              Pro.{" "}
+              Vi hör bara av oss om NordLet Pro och din rabatt.{" "}
               <Link
                 href="/integritetspolicy"
                 className="underline underline-offset-2 hover:text-accent"
