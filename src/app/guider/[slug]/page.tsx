@@ -26,6 +26,9 @@ export async function generateMetadata({
     title: `${guide.title} | NordLet Pro`,
     description: guide.description,
     keywords: guide.keywords,
+    // Namnge den verkliga författaren på guiderna (åsidosätter varumärket
+    // "NordLet" som annars ärvs från layouten) – matchar byline + Person-schema.
+    authors: [{ name: AUTHOR.name, url: AUTHOR.url }],
     alternates: { canonical: `/guider/${slug}` },
     openGraph: {
       title: guide.title,
