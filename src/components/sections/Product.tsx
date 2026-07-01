@@ -4,8 +4,9 @@ import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
-import { CTA_PRIMARY_LABEL } from "@/lib/constants";
+import { CTA_PRIMARY_LABEL, EARLY_ACCESS } from "@/lib/constants";
 import { track } from "@/lib/analytics";
+import { openBuyModal } from "@/lib/buyModal";
 import { IMAGES } from "@/lib/images";
 import { Check } from "lucide-react";
 
@@ -91,8 +92,12 @@ export function Product() {
 
             <div className="mt-10">
               <Button
-                href="#bestall"
-                onClick={() => track("cta_click", { location: "product" })}
+                href={EARLY_ACCESS ? undefined : "#bestall"}
+                onClick={() =>
+                  EARLY_ACCESS
+                    ? openBuyModal("product")
+                    : track("cta_click", { location: "product" })
+                }
               >
                 {CTA_PRIMARY_LABEL}
               </Button>

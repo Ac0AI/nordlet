@@ -56,18 +56,21 @@ export const PRELAUNCH_OFFER = {
   discountKr: 900,
 } as const;
 
-// Lagerstatus som visas på köpknappar och badge under förlansering.
+// Lagerstatus som visas i köp-popupen under förlansering.
 export const STOCK_LABEL = "Slut i lager";
 
-// Primär-CTA:ns text byts i hela sidan beroende på läge. En källa, ett ställe.
+// Uppskattad återlansering – visas i köp-popupen. Håll den sann; ändra här.
+export const RESTOCK_ESTIMATE = "inom cirka 10 dagar";
+
+// Under förlansering ser sidan ut som vanligt ("Köp"), men köp-knappen öppnar
+// en popup (slut i lager + rabatt + e-postbevakning) i stället för kassan.
+// Syftet är att mäta köpintention innan kassan är live.
 export const CTA_PRIMARY_LABEL = EARLY_ACCESS
-  ? `Få ${PRELAUNCH_OFFER.discountKr} kr rabatt`
+  ? "Köp NordLet Pro"
   : "Beställ NordLet Pro";
 
 // Kortare variant för header-knappen (px-6, får inte bli för bred).
-export const CTA_HEADER_LABEL = EARLY_ACCESS
-  ? `Få ${PRELAUNCH_OFFER.discountKr} kr rabatt`
-  : "Beställ nu";
+export const CTA_HEADER_LABEL = EARLY_ACCESS ? "Köp nu" : "Beställ nu";
 
 export const NAV_LINKS = [
   { label: "Så fungerar det", href: "/#sa-fungerar-det" },

@@ -5,6 +5,7 @@ import { AnimateOnScroll } from "@/components/ui/AnimateOnScroll";
 import { Button } from "@/components/ui/Button";
 import { TRUST_BADGES, EARLY_ACCESS, CTA_PRIMARY_LABEL } from "@/lib/constants";
 import { track } from "@/lib/analytics";
+import { openBuyModal } from "@/lib/buyModal";
 import { ShieldCheck } from "lucide-react";
 
 // Avslutande CTA längst ned på startsidan. Leder tillbaka till beställ-sektionen
@@ -21,9 +22,8 @@ export function CTA() {
               Redo för en mer genomtänkt toalettlösning?
             </h2>
             <p className="mt-5 text-lg sm:text-xl text-text-muted leading-relaxed max-w-2xl mx-auto">
-              {EARLY_ACCESS
-                ? "NordLet Pro är slut i lager just nu. Anmäl dig så får du notis när nästa leverans släpps – och 900 kr rabatt på din första beställning, med öppet köp och svensk rådgivning."
-                : "Välj NordLet Pro om du vill ha en vattenlös lösning med öppet köp, svensk rådgivning och en vardag på vägen som kräver mindre av dig."}
+              Välj NordLet Pro om du vill ha en vattenlös lösning med öppet köp,
+              svensk rådgivning och en vardag på vägen som kräver mindre av dig.
             </p>
 
             <div className="mt-8 inline-flex items-center gap-2 bg-green-light rounded-full px-5 py-2.5">
@@ -35,9 +35,13 @@ export function CTA() {
 
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button
-                href="#bestall"
+                href={EARLY_ACCESS ? undefined : "#bestall"}
                 size="large"
-                onClick={() => track("cta_click", { location: "footer_cta" })}
+                onClick={() =>
+                  EARLY_ACCESS
+                    ? openBuyModal("footer_cta")
+                    : track("cta_click", { location: "footer_cta" })
+                }
               >
                 {CTA_PRIMARY_LABEL}
               </Button>

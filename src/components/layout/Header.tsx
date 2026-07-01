@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
-import { NAV_LINKS, SITE, CTA_HEADER_LABEL } from "@/lib/constants";
+import { NAV_LINKS, SITE, CTA_HEADER_LABEL, EARLY_ACCESS } from "@/lib/constants";
 import { track } from "@/lib/analytics";
+import { openBuyModal } from "@/lib/buyModal";
 import { Container } from "@/components/ui/Container";
 import { cn } from "@/lib/utils";
 
@@ -60,7 +61,14 @@ export function Header({ solid = false }: { solid?: boolean }) {
           ))}
           <Link
             href="/#bestall"
-            onClick={() => track("cta_click", { location: "header" })}
+            onClick={(e) => {
+              if (EARLY_ACCESS) {
+                e.preventDefault();
+                openBuyModal("header");
+              } else {
+                track("cta_click", { location: "header" });
+              }
+            }}
             className="ml-2 rounded-full border border-white/10 bg-accent px-6 py-3 text-sm font-semibold tracking-wide text-white shadow-lg shadow-black/15 transition-all hover:bg-accent-light"
           >
             {CTA_HEADER_LABEL}
@@ -96,8 +104,13 @@ export function Header({ solid = false }: { solid?: boolean }) {
             ))}
             <Link
               href="/#bestall"
-              onClick={() => {
-                track("cta_click", { location: "header_mobile" });
+              onClick={(e) => {
+                if (EARLY_ACCESS) {
+                  e.preventDefault();
+                  openBuyModal("header_mobile");
+                } else {
+                  track("cta_click", { location: "header_mobile" });
+                }
                 setMenuOpen(false);
               }}
               className="mt-2 rounded-full bg-accent px-6 py-3 text-center text-base font-semibold tracking-wide text-white"

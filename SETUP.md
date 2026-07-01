@@ -126,13 +126,15 @@ NEXT_PUBLIC_POSTHOG_HOST=https://eu.i.posthog.com
    - `lead_submitted` (skickad intresseanmälan - din north star i early access)
 4. Bygg en funnel i PostHog: `$pageview` → `cta_click` → `lead_submitted`.
 
-## 2d. Slut i lager - notis + rabatt (Resend)
+## 2d. Slut i lager - köp-popup med notis + rabatt (Resend)
 
-Så länge kassan är vilande kör sidan **förlansering / slut i lager**:
-köpknappen på priskorten är dämpad ("Slut i lager"), primär-CTA blir "Få 900 kr
-rabatt", och ett notis-formulär tar namn + e-post + valfritt telefon i
-beställ-sektionen. Den som anmäler sig får notis när produkten är åter i lager
-och **900 kr rabatt på första beställningen**.
+Så länge kassan är vilande ser sidan ut som en **vanlig butik** (knappen säger
+"Köp"), men ett klick på köp öppnar en **popup** (`BuyModal`) i stället för
+kassan: den berättar att produkten är slut i lager, ger uppskattad återlansering
+(`RESTOCK_ESTIMATE` i constants) och fångar e-post mot **900 kr rabatt** på
+första beställningen. Syftet är att mäta köpintention (PostHog-eventet
+`buy_intent` när popupen öppnas, `lead_submitted` när e-post skickas) innan
+kassan är live.
 
 **Styrs av:** `NEXT_PUBLIC_EARLY_ACCESS`. På automatiskt tills kassan slås på.
 Sätt `=false` för att i stället falla tillbaka till gamla e-postbeställningen.
