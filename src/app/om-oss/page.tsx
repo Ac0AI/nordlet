@@ -8,13 +8,59 @@ import { AUTHOR } from "@/lib/guider";
 export const metadata: Metadata = {
   title: "Om oss | NordLet Pro",
   description:
-    "NordLet grundades av Erik och Ludvig efter många år med omsorgsprodukter – och en enkel fråga från deras föräldrar om bekvämare liv och hygien på vägarna.",
+    "NordLet grundades av Erik Martling och Ludvig Eriksson efter många år med omsorgsprodukter – och en enkel fråga från deras föräldrar om bekvämare liv och hygien på vägarna.",
   alternates: { canonical: "/om-oss" },
+};
+
+// Explicit entitetsgraf: kopplar de två grundarna till NordLet-organisationen
+// (samma @id som i layouten). Ger E-E-A-T-signaler och namngivna personer.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": "https://nordlet.se/om-oss",
+      url: "https://nordlet.se/om-oss",
+      name: "Om oss | NordLet",
+      inLanguage: "sv-SE",
+      about: { "@id": "https://nordlet.se/#organization" },
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://nordlet.se/#organization",
+      name: "NordLet",
+      url: "https://nordlet.se",
+      founder: [
+        { "@id": "https://nordlet.se/om-oss#erik-martling" },
+        { "@id": "https://nordlet.se/om-oss#ludvig-eriksson" },
+      ],
+    },
+    {
+      "@type": "Person",
+      "@id": "https://nordlet.se/om-oss#erik-martling",
+      name: "Erik Martling",
+      jobTitle: "Medgrundare",
+      worksFor: { "@id": "https://nordlet.se/#organization" },
+    },
+    {
+      "@type": "Person",
+      "@id": "https://nordlet.se/om-oss#ludvig-eriksson",
+      name: AUTHOR.name,
+      jobTitle: "Medgrundare",
+      url: AUTHOR.url,
+      sameAs: [AUTHOR.url],
+      worksFor: { "@id": "https://nordlet.se/#organization" },
+    },
+  ],
 };
 
 export default function OmOssPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Header solid />
       <main className="pt-32 pb-20 sm:pt-40 sm:pb-28">
         <Container>
@@ -74,7 +120,7 @@ export default function OmOssPage() {
             {/* Grundare */}
             <div className="mt-12 grid gap-8 sm:grid-cols-2 max-w-xl">
               <div className="border-t border-border pt-5">
-                <p className="font-semibold text-text">Erik</p>
+                <p className="font-semibold text-text">Erik Martling</p>
                 <p className="text-text-muted text-sm mt-1">
                   Medgrundare. Åren inom omsorgsprodukter sitter i ryggraden –
                   vet hur man gör vardagen värdigare.

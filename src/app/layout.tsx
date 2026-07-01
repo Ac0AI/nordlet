@@ -37,6 +37,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  robots: { index: true, follow: true },
   authors: [{ name: "NordLet" }],
   publisher: "NordLet",
   openGraph: {
@@ -60,6 +61,7 @@ export const metadata: Metadata = {
 const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
+  "@id": "https://nordlet.se/#organization",
   name: "NordLet",
   legalName: SITE.company.name,
   ...(SITE.company.orgNr ? { taxID: SITE.company.orgNr } : {}),

@@ -104,10 +104,16 @@ export default function Home() {
   return (
     <>
       <Header />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {/* Ett script per schema-typ: vissa AI-crawlers och enklare parsers läser
+          bara första objektet i en JSON-LD-array, så Product/FAQPage kan annars
+          missas. Google klarar båda formaten – detta garanterar att alla ser alla. */}
+      {jsonLd.map((schema) => (
+        <script
+          key={schema["@type"]}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       <main>
         <MetaTrack
           event="ViewContent"

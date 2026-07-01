@@ -99,22 +99,39 @@ export default async function GuidePage({
   const guide = getGuide(slug);
   if (!guide) notFound();
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: guide.title,
-    description: guide.description,
-    datePublished: guide.date,
-    dateModified: guide.date,
-    inLanguage: "sv-SE",
-    author: { "@type": "Person", name: AUTHOR.name, url: AUTHOR.url },
-    publisher: {
-      "@type": "Organization",
-      name: "NordLet",
-      url: "https://nordlet.se",
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: guide.title,
+      description: guide.description,
+      datePublished: guide.date,
+      dateModified: guide.date,
+      inLanguage: "sv-SE",
+      author: { "@type": "Person", name: AUTHOR.name, url: AUTHOR.url },
+      publisher: {
+        "@type": "Organization",
+        "@id": "https://nordlet.se/#organization",
+        name: "NordLet",
+        url: "https://nordlet.se",
+      },
+      mainEntityOfPage: `https://nordlet.se/guider/${slug}`,
     },
-    mainEntityOfPage: `https://nordlet.se/guider/${slug}`,
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Hem", item: "https://nordlet.se" },
+        { "@type": "ListItem", position: 2, name: "Guider", item: "https://nordlet.se/guider" },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: guide.title,
+          item: `https://nordlet.se/guider/${slug}`,
+        },
+      ],
+    },
+  ];
 
   return (
     <>
@@ -184,10 +201,13 @@ export default async function GuidePage({
         </Container>
       </main>
       <Footer />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {jsonLd.map((schema) => (
+        <script
+          key={schema["@type"]}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
     </>
   );
 }
