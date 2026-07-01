@@ -172,7 +172,7 @@ export const CHAPTERS = [
     body: "Sitsen är i standardhöjd och känns som en vanlig toalett. När du är klar stänger du locket och väljer litet eller stort program på kontrollpanelen. Du behöver inte hälla i något toamedel, inte mäta ut någon vätska och inte spola. NordLet Pro sköter resten själv.",
     stat: "Dubbelt läge för flytande och fast. Ingen sanitetsvätska att dosera.",
     images: {
-      primary: "/images/how-it-works/steg2-primary.png",
+      primary: "/images/how-it-works/steg2-primary-v2.png",
       secondary: "/images/how-it-works/steg2-secondary.png",
       primaryAlt: "NordLet Pro i ett kompakt toautrymme med varmt dagsljus",
       secondaryAlt: "Närbild av NordLet Pros kontrollpanel och lägesknappar",
