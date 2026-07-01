@@ -11,6 +11,7 @@ import {
   Route,
   FlaskConical,
   Wind,
+  Sprout,
 } from "lucide-react";
 
 export const SITE = {
@@ -109,6 +110,12 @@ export const PAIN_POINTS = [
 ];
 
 export const FEATURES = [
+  {
+    icon: Sprout,
+    title: "Noll vatten – spara en bristvara",
+    description:
+      "En vanlig spolning drar flera liter rent vatten varje gång. NordLet Pro använder inget alls - skönt på landstället, under torka och där vatten inte är självklart.",
+  },
   {
     icon: Droplets,
     title: "Ingen kassettank",
@@ -236,6 +243,13 @@ export const REVIEWS = [
     rating: 5,
     quote:
       "Utedasset luktade och var svårt att hålla rent. Nu använder jag den här i stället – inomhus eller utomhus beroende på vind och behov. En ren lycka för mig som bor avskilt.",
+  },
+  {
+    name: "Svante Karlsson",
+    context: "Fritidshus utan indraget vatten",
+    rating: 5,
+    quote:
+      "Vi har aldrig haft indraget vatten på stället, så toaletten har alltid varit det som skavt. Den här har vi kört hela sommaren – ingen lukt, inget släpande på vatten, och påsen går rakt i soporna. Ärligt talat den bästa lösningen vi haft här ute.",
   },
 ];
 

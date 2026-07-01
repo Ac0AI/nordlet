@@ -16,7 +16,9 @@ export function Problem() {
             <p className="mt-3 text-text-muted text-lg">
               Toalettlösningen är det inte alltid. Därför väljer fler ett mer
               genomtänkt alternativ för platser där vatten och avlopp inte ska
-              styra vardagen.
+              styra vardagen. På landstället, i sommarens torka, är rent vatten
+              dessutom en bristvara – då är en toalett som inte drar en droppe
+              helt enkelt smartare.
             </p>
           </div>
         </AnimateOnScroll>
